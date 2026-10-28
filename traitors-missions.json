@@ -1,0 +1,233 @@
+[
+ {
+  "id": "kennis",
+  "kind": "quiz",
+  "title": "Kennis is goud",
+  "where": "Binnen",
+  "minutes": 10,
+  "per_correct": 100,
+  "questions": 8,
+  "text": "Acht vragen op het grote scherm. Overleg samen en kies één antwoord. Elk goed antwoord brengt €100 in de pot."
+ },
+ {
+  "id": "toren",
+  "kind": "free",
+  "title": "Toren van vertrouwen",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 500,
+  "text": "Bouw in vijf minuten met bekers, kaarten of wat er ligt de hoogste vrijstaande toren. Blijft hij tien seconden staan? Elke 10 cm is €50 voor de pot."
+ },
+ {
+  "id": "blind",
+  "kind": "free",
+  "title": "Blinde koerier",
+  "where": "Binnen of buiten",
+  "minutes": 15,
+  "suggested": 600,
+  "shield": true,
+  "text": "Eén speler is geblinddoekt en wordt alleen met woorden door een parcours geleid. Elke bereikte post is €100. De koerier die het snelst finisht, verdient een schild."
+ },
+ {
+  "id": "kluis",
+  "kind": "free",
+  "title": "De kluis",
+  "where": "Binnen",
+  "minutes": 15,
+  "suggested": 800,
+  "text": "Verstop vooraf vier cijfers in de ruimte. De groep zoekt ze en kraakt de code van de kluis (een doos met slot of een papiertje). Binnen 10 minuten: €800, daarna €400."
+ },
+ {
+  "id": "schatten",
+  "kind": "free",
+  "title": "Schatten en wegen",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 400,
+  "text": "Schat samen vijf dingen: het gewicht van een tas, het aantal snoepjes in een pot, de lengte van de tafel… Elke schatting binnen 10% van de waarheid is €80."
+ },
+ {
+  "id": "stilte",
+  "kind": "free",
+  "title": "Stille post tekenen",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 300,
+  "text": "Een woord gaat via tekeningen de rij langs, zonder praten. Komt het originele woord aan het eind terug? Drie rondes, €100 per gelukte ronde."
+ },
+ {
+  "id": "estafette",
+  "kind": "free",
+  "title": "Waterestafette",
+  "where": "Buiten",
+  "minutes": 15,
+  "suggested": 500,
+  "text": "Breng met bekers zo veel mogelijk water van emmer A naar emmer B in vijf minuten. Elke volle liter is €50."
+ },
+ {
+  "id": "geheugen",
+  "kind": "free",
+  "title": "Wie weet het nog?",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 400,
+  "shield": true,
+  "text": "Laat dertig seconden twintig voorwerpen op tafel zien en dek ze af. Iedereen schrijft op wat hij nog weet. Elk voorwerp dat de groep samen noemt is €20. De beste speler krijgt een schild."
+ },
+ {
+  "id": "touw",
+  "kind": "free",
+  "title": "Knoop in het touw",
+  "where": "Binnen of buiten",
+  "minutes": 10,
+  "suggested": 400,
+  "text": "Iedereen pakt een stuk van één lang touw. Leg er samen een knoop in zonder los te laten. Lukt het binnen drie minuten: €400."
+ },
+ {
+  "id": "fotojacht",
+  "kind": "free",
+  "title": "Fotojacht",
+  "where": "Buiten",
+  "minutes": 30,
+  "suggested": 700,
+  "text": "Maak in kleine groepjes foto's van tien opdrachten: iets roods, een bankje met z'n allen erop, een vreemde, een dier… Elke goedgekeurde foto is €70."
+ },
+ {
+  "id": "kogelvrij",
+  "kind": "free",
+  "title": "Kogelvrij vertrouwen",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 300,
+  "shield": true,
+  "text": "Iedereen staat in een kring en laat zich achterover vallen in de handen van twee anderen. Wie het durft, verdient €50 voor de pot. Wie de groep het meest vertrouwt (de groep wijst aan), krijgt een schild."
+ },
+ {
+  "id": "veiling",
+  "kind": "free",
+  "title": "De schildveiling",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 0,
+  "shield": true,
+  "text": "Eén schild ligt op tafel. Spelers bieden geld uit de pot: het hoogste bod krijgt het schild en dat bedrag gaat uit de pot. Voer het bod in als negatief bedrag."
+ },
+ {
+  "id": "doolhof",
+  "kind": "free",
+  "title": "Mijnenveld",
+  "where": "Buiten",
+  "minutes": 15,
+  "suggested": 500,
+  "text": "Leg een raster van 5 bij 5 tegels of papiertjes. Alleen de spelleider kent de veilige route. Spelers proberen om de beurt; een mijn betekent terug naar het begin. Binnen tien minuten de overkant: €500."
+ },
+ {
+  "id": "reactie",
+  "kind": "free",
+  "title": "Wie is het snelst?",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 300,
+  "shield": true,
+  "text": "Snelheidsduels: twee spelers, één voorwerp in het midden. Wie het eerst pakt na het startsignaal, gaat door. De winnaar krijgt een schild; elk duel brengt €30 in de pot."
+ },
+ {
+  "id": "verhaal",
+  "kind": "free",
+  "title": "Het geheime woord",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 400,
+  "text": "Iedereen krijgt van de spelleider een geheim woord en moet dat tijdens het eten ongemerkt in een gesprek gebruiken. Elk woord dat niemand opmerkt, is €40 voor de pot."
+ },
+ {
+  "id": "ballon",
+  "kind": "free",
+  "title": "Hoog houden",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 400,
+  "text": "Houd met de hele groep drie ballonnen tegelijk in de lucht, zonder je handen te gebruiken. Elke volle minuut is €100 voor de pot (maximaal vier)."
+ },
+ {
+  "id": "volgorde",
+  "kind": "free",
+  "title": "Op volgorde",
+  "where": "Binnen of buiten",
+  "minutes": 10,
+  "suggested": 400,
+  "text": "Ga zonder te praten in een rij staan op geboortedatum (dag en maand). Klopt de volgorde helemaal: €400. Per fout gaat er €100 af."
+ },
+ {
+  "id": "zin",
+  "kind": "free",
+  "title": "Eén woord per persoon",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 300,
+  "text": "Vertel samen een verhaal waarin ieder om de beurt één woord zegt. Het verhaal moet het woord \"verraad\" bevatten zonder dat iemand het zegt binnen de eerste drie rondes. Lukt het: €300."
+ },
+ {
+  "id": "memory",
+  "kind": "free",
+  "title": "Het groepsgeheugen",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 400,
+  "text": "De spelleider legt twintig voorwerpen dertig seconden neer en dekt ze af. Noem samen zoveel mogelijk voorwerpen. Elk goed voorwerp is €25."
+ },
+ {
+  "id": "tekenen",
+  "kind": "free",
+  "title": "Blind tekenen",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 300,
+  "text": "Eén speler beschrijft een eenvoudige tekening; de rest tekent geblinddoekt op één groot vel. Herkent de spelleider het onderwerp: €300."
+ },
+ {
+  "id": "bekers",
+  "kind": "free",
+  "title": "Bekerpiramide",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 500,
+  "text": "Bouw met tien bekers en een elastiek met touwtjes eraan een piramide, zonder de bekers met je handen aan te raken. Staat hij binnen vijf minuten: €500."
+ },
+ {
+  "id": "raadsel",
+  "kind": "free",
+  "title": "Het verloren raadsel",
+  "where": "Binnen of buiten",
+  "minutes": 15,
+  "suggested": 600,
+  "text": "De spelleider verstopt vijf briefjes met een letter. Vind ze en maak er het geheime woord van. Elk gevonden briefje €60, het juiste woord nog eens €300."
+ },
+ {
+  "id": "estafette2",
+  "kind": "free",
+  "title": "Lepel-en-ei-estafette",
+  "where": "Buiten",
+  "minutes": 15,
+  "suggested": 500,
+  "text": "Twee groepen lopen een estafette met een ei (of balletje) op een lepel. Valt het ei, dan begint die loper opnieuw. Beide groepen binnen vier minuten klaar: €500."
+ },
+ {
+  "id": "stemmen",
+  "kind": "free",
+  "title": "Raad de stem",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 400,
+  "text": "Eén speler staat met de rug naar de groep. Iemand zegt \"Ik ben getrouw\" met een verdraaide stem. Raadt de speler wie het was: €50 per goede gok, acht beurten."
+ },
+ {
+  "id": "vertrouwen",
+  "kind": "free",
+  "title": "Spiegelbeeld",
+  "where": "Binnen",
+  "minutes": 10,
+  "suggested": 300,
+  "text": "Ga in tweetallen tegenover elkaar staan. Eén van de twee leidt, de ander spiegelt alle bewegingen. Raadt de spelleider na dertig seconden niet wie leidt: €50 voor de pot. Zes tweetallen."
+ }
+]

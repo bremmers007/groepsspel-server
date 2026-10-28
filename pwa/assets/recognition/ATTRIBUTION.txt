@@ -1,0 +1,4 @@
+Twemoji graphics, upstream jdecked/twemoji (originally Twitter Twemoji). Licensed CC BY 4.0.
+https://github.com/jdecked/twemoji
+https://creativecommons.org/licenses/by/4.0/
+Graphics are used unmodified.

@@ -1,0 +1,63 @@
+GROEPSSPEL 0.15.0 · ONLINE SPELSERVER (TELEFOONSPELLEN ZONDER PC)
+
+WAT IS HET?
+Dezelfde spelserver als in de Windows-app, maar dan op internet. Iedere groep maakt een eigen
+spelkamer met een code van zes tekens. Spelers doen mee met hun telefoon via mobiel internet of
+wifi, ook als ze niet op hetzelfde netwerk zitten. Er is geen pc nodig tijdens het spelen.
+
+  https://<jouw-adres>/            startpagina: nieuwe spelkamer of meedoen met een code
+  https://<jouw-adres>/k/ABC123    directe link naar spelkamer ABC123 (staat ook in de QR-codes)
+  https://<jouw-adres>/app/        de Groepsspel-app (tablet, spelshows, instellingen)
+
+BEVEILIGING EN PRIVACY
+- Iedere spelkamer heeft een eigen, gescheiden speltoestand. Kamers zien elkaar nooit.
+- Alleen wie de kamer maakte (of de beheerlink opent) kan het spel leiden. Die rechten staan in een
+  beveiligde cookie (HttpOnly, Secure, SameSite=Lax).
+- Verzoeken vanaf andere websites worden geweigerd. Onbekende adressen (Host) worden geweigerd.
+- Grenzen: 6 nieuwe kamers per uur per IP-adres, 20 onjuiste kamercodes per 10 minuten, maximaal
+  200 kamers (instelbaar), 400 MB opslag per kamer (foto's en video's van Gekke 88).
+- Kamers die 48 uur niet gebruikt zijn, worden met alle gegevens automatisch verwijderd.
+- De server bewaart geen accounts, e-mailadressen of IP-adressen op schijf. Gedeelde locaties bij
+  Opgejaagd worden alleen bewaard zolang de speler dat aan heeft staan (alleen de laatste plek).
+- Draai de server ALTIJD achter https. Locatie delen en de app-installatie werken alleen via https.
+
+SNELSTE WEG: DE WINDOWS-APP VIA MOBIEL INTERNET (GEEN HOSTING NODIG)
+Kies in het Startmenu 'Groepsspel via mobiel internet'. De pc maakt dan een Cloudflare-tunnel en krijgt
+een tijdelijk adres zoals https://woord-woord-woord.trycloudflare.com. De browser opent dat adres; maak
+een spelkamer en kies een spel. Spelers doen mee via hun eigen 4G/5G, ook ver buiten de wifi.
+  - Gratis en zonder account. Het adres verandert bij iedere start; de QR-code in het spel klopt altijd.
+  - De pc moet aan blijven en internet hebben (wifi, kabel of een 4G-dongle/hotspot is goed).
+  - Stoppen: Startmenu → 'Groepsspel stoppen'. Spelkamers worden bewaard in %LOCALAPPDATA%\Groepsspel\mobiel.
+  - Cloudflare Quick Tunnels zijn bedoeld voor proberen en kleine groepen; er is geen beschikbaarheidsgarantie.
+
+ZELF ONLINE ZETTEN (EENMALIG, ± 15 MINUTEN)
+Je hebt een account nodig bij een hostingdienst die Docker-containers draait met een vaste schijf
+en automatisch https. Kosten bij de meeste diensten: een paar euro per maand.
+
+Optie A · Render (render.com), zonder eigen server
+  1. Zet deze map (Broncode) in een eigen GitHub-repository.
+  2. Render → New → Blueprint → kies de repository. render.yaml wordt automatisch gebruikt.
+  3. Vul bij GROEPSSPEL_PUBLIC_URL het adres in dat Render toont, bijvoorbeeld
+     https://groepsspel-abcd.onrender.com (of later je eigen domein).
+  4. Klaar. Open het adres, tik op 'Nieuwe spelkamer' en kies een spel.
+
+Optie B · Eigen VPS of NAS met Docker
+  docker build -t groepsspel .
+  docker run -d --name groepsspel --restart unless-stopped -p 8080:8080 \
+     -e GROEPSSPEL_PUBLIC_URL=https://spel.jouwdomein.nl -v groepsspel-data:/data groepsspel
+  Zet er een https-proxy voor (bijvoorbeeld Caddy: 'spel.jouwdomein.nl { reverse_proxy localhost:8080 }').
+
+Optie C · Zonder Docker (Python 3.12 of nieuwer)
+  python server.py --online --public-url https://spel.jouwdomein.nl --port 8080 --bind 127.0.0.1 --data ./data --trust-proxy
+  en een https-proxy ervoor. Gebruik --trust-proxy alleen als de proxy X-Forwarded-For zet.
+
+SPELEN
+  Spelleider: open https://<jouw-adres>/, tik op 'Nieuwe spelkamer', kies een spel. In de lobby staat
+  de QR-code; die brengt spelers automatisch in de juiste kamer.
+  Spelers: scan de QR-code, of ga naar https://<jouw-adres>/ en vul de kamercode in.
+  Ander apparaat als spelleider (bijvoorbeeld een laptop aan de beamer): open daar de beheerlink
+  (in de spelkamer onder 'Beheer op een ander apparaat'). Deel die link niet met spelers.
+
+NIET GETEST
+De online server is lokaal getest met meerdere browsers en kamers tegelijk, niet bij een echte
+hostingdienst en niet onder zware belasting. Doe eerst een proefavond.

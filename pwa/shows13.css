@@ -1,0 +1,26 @@
+/* Groepsspel 0.13 — spelnamen en afgeronde quizmasterspellen */
+.e11-inspired{display:block;margin:-4px 0 8px;font-size:12px;opacity:.72;font-style:italic}
+.inspired-note{margin:-6px 0 12px;font-size:13px;opacity:.75;font-style:italic}
+.e13-panel ol{padding-left:20px;line-height:1.6}
+.big-year{font-size:clamp(56px,10vw,120px);font-weight:900;line-height:1;letter-spacing:2px;margin:10px 0;display:block}
+.time-icon{font-size:clamp(56px,9vw,110px);line-height:1;margin:8px 0}
+.answer.right{outline:3px solid #2fbf71;background:#2fbf7122}
+.chase-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,240px);gap:20px;align-items:start}
+.chase-board{display:grid;gap:4px}
+.chase-board div{min-height:34px;border-radius:8px;border:1px solid #ffffff2a;background:#ffffff0d;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;padding:4px 8px;text-align:center}
+.chase-board .hunter{background:#d6334d;color:#fff;border-color:transparent}
+.chase-board .cand{background:#2f7cf6;color:#fff;border-color:transparent}
+.chase-board .caught{background:#7a1020;color:#fff}
+.chase-board .home{background:#2fbf71;color:#fff;border-color:transparent}
+.final-track{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.final-track>div:not(.bar){border:1px solid #ffffff2a;border-radius:12px;padding:10px 14px;text-align:center}
+.final-track span{display:block;font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.75}
+.final-track b{font-size:clamp(30px,5vw,56px)}
+.final-track .bar{grid-column:1/-1;position:relative;height:16px;border-radius:9px;background:#ffffff14;overflow:hidden}
+.final-track .bar i{position:absolute;left:0;top:0;height:100%;border-radius:9px}
+.final-track .bar .team{background:#2f7cf6}.final-track .bar .hunter{background:#d6334dcc;height:50%;top:25%}
+.task-card{border:2px dashed currentColor;border-radius:16px;padding:22px 24px;margin:12px 0;background:#ffffff08}
+.task-card span{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800;opacity:.75}
+.task-card h1{margin:8px 0}
+.task-card p{font-size:clamp(17px,2vw,24px);line-height:1.5}
+@media(max-width:760px){.chase-wrap{grid-template-columns:1fr}.final-track{grid-template-columns:1fr 1fr}}

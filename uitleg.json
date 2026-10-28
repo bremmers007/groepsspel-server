@@ -1,0 +1,477 @@
+{
+ "verraders": {
+  "title": "Het Verraad",
+  "kort": "Tussen jullie zitten verraders. Overdag vullen jullie samen de pot met opdrachten; aan de ronde tafel verbannen jullie wie je verdenkt; 's nachts slaan de verraders toe.",
+  "spelers": "5–24 spelers, ieder met een eigen telefoon",
+  "duur": "Een middag tot een heel weekend",
+  "voorbereiding": [
+   "Start Groepsspel op de pc en sluit de beamer aan (Win + P → Uitbreiden).",
+   "Open Het Verraad op de pc en het beamerscherm via 'Open beamer'.",
+   "Iedereen gebruikt dezelfde wifi en scant de QR-code.",
+   "Eerste keer of kleine groep? Kies \"Eenvoudige variant\": één verrader, eindspel bij drie spelers, geen ultimatum."
+  ],
+  "regels": [
+   "Bij 5–7 spelers is er 1 verrader, bij 8–12 zijn er 2, bij 13–17 zijn er 3, vanaf 18 zijn er 4. De spelleider kan dit aanpassen.",
+   "Verraders kennen elkaar. Getrouwen weten van niemand iets.",
+   "Opdrachten vullen de prijzenpot. Sommige opdrachten leveren een schild op: dat beschermt één nacht tegen moord.",
+   "Aan de ronde tafel stemt iedereen op zijn telefoon. Een stem is definitief. Bij gelijke stand volgt een herstemming; is het dan weer gelijk, dan beslist het lot.",
+   "'s Nachts kiezen de verraders samen een slachtoffer. Iedereen tikt op Welterusten, zodat niemand opvalt.",
+   "Is er een verrader verbannen, dan mogen de verraders 's nachts ook iemand rekruteren in plaats van vermoorden.",
+   "Bij het eindspel (standaard 4 spelers over) kiest iedereen: stoppen of nog iemand verbannen. Alleen als iedereen stopt, eindigt het spel. Zit er dan nog een verrader tussen, dan krijgen de verraders de hele pot.",
+   "De Getrouwen winnen meteen als alle verraders weg zijn. De verraders winnen meteen als ze net zo groot zijn als de rest."
+  ],
+  "verloop": [
+   {
+    "fase": "Lobby",
+    "wat": "Iedereen meldt zich aan met zijn naam en bewaart zijn persoonlijke code."
+   },
+   {
+    "fase": "De selectie",
+    "wat": "Iedereen bekijkt zijn rol in stilte en tikt op 'Ik heb mijn rol gezien'."
+   },
+   {
+    "fase": "Dag",
+    "wat": "Kies een of meer opdrachten op de pc. Voer het bedrag in en geef eventueel een schild."
+   },
+   {
+    "fase": "Ronde tafel",
+    "wat": "Gesprek, daarna stemmen op de telefoon. De pc onthult stem voor stem."
+   },
+   {
+    "fase": "Verbannen",
+    "wat": "De verbannene mag iets zeggen, daarna onthult de pc de rol."
+   },
+   {
+    "fase": "Nacht",
+    "wat": "Telefoons: Welterusten. De verraders kiezen. Daarna 'De ochtend breekt aan'."
+   },
+   {
+    "fase": "Ontbijt",
+    "wat": "De pc onthult wie er ontbreekt."
+   }
+  ],
+  "script": [
+   "Welkom aan tafel. Kijk elkaar goed aan: tussen jullie zitten verraders.",
+   "Pak je telefoon, tik op de kaart en bekijk je rol. Laat niemand meekijken.",
+   "Het is dag. Vandaag spelen we de opdracht … De pot staat op …",
+   "Neem plaats aan de ronde tafel. Wie verdenk jij, en waarom?",
+   "Pak je telefoon en stem. Je stem is definitief.",
+   "… is verbannen. Wil je nog iets zeggen? Dan onthullen we je rol.",
+   "De nacht valt. Tik op Welterusten en leg je telefoon met het scherm naar beneden.",
+   "Goedemorgen. Iedereen komt één voor één binnen voor het ontbijt…"
+  ],
+  "tips": [
+   "De pc toont nooit wie de verraders zijn: de spelleider kan gewoon meespelen.",
+   "Speel 's avonds een ronde tafel en een nacht, en overdag de opdrachten.",
+   "Kwijtgeraakte code? Op de pc onder 'Speler vertrekt of is zijn code kwijt'."
+  ]
+ },
+ "moord": {
+  "title": "Het Moordspel",
+  "kort": "Een moordmysterie waarin iedereen een personage speelt. Iedereen heeft een geheim en een alibi, en één van jullie is de dader. In drie rondes komt het bewijs boven tafel; daarna beschuldigt iedereen in het geheim.",
+  "spelers": "6–12 spelers, ieder met een eigen telefoon",
+  "duur": "90–150 minuten",
+  "voorbereiding": [
+   "Kies op de pc een scenario en de lengte van een ronde (standaard 25 minuten).",
+   "Leg eventueel verkleedspullen klaar die bij de personages passen.",
+   "Zet het beamerscherm aan: daar komen de opening, de plattegrond, het bewijs en de ontknoping.",
+   "Kies de moeilijkheid: makkelijk (daderaanwijzingen een ronde eerder, drie keer delen per ronde), normaal of moeilijk (een ronde later, één keer delen)."
+  ],
+  "regels": [
+   "Elk scenario heeft drie mogelijke daders. De app kiest er willekeurig één, dus je kunt een scenario vaker spelen.",
+   "Je mag liegen over je eigen geheim, maar nooit over feiten die op je telefoon staan. De dader mag liegen over zijn eigen route.",
+   "Per ronde mag je twee van je aanwijzingen delen met een andere speler. Die ziet ze dan op zijn eigen telefoon.",
+   "Aanwijzingen van personages die niet meespelen, komen bij een ander personage terecht. Er gaat dus geen bewijs verloren.",
+   "In de beschuldigingsronde kies je: wie, met welk middel en om welk motief.",
+   "Punten: juiste dader 3, juist middel 1, juist motief 1. Wijst minder dan de helft de dader aan, dan ontsnapt de dader en krijgt die 5 punten."
+  ],
+  "verloop": [
+   {
+    "fase": "Personages",
+    "wat": "Iedereen leest personage, geheim en alibi en tikt op Klaar. De dader leest wat er echt gebeurd is."
+   },
+   {
+    "fase": "Ronde 1 · eerste verhoren",
+    "wat": "Eerste aanwijzingen. Praat met iedereen."
+   },
+   {
+    "fase": "Ronde 2 · het bewijs",
+    "wat": "Nieuwe aanwijzingen en een bewijsstuk op de beamer."
+   },
+   {
+    "fase": "Ronde 3 · de wending",
+    "wat": "De laatste aanwijzingen en een wending. De dader krijgt een afleidingsopdracht."
+   },
+   {
+    "fase": "Beschuldiging",
+    "wat": "Iedereen levert in het geheim een beschuldiging in."
+   },
+   {
+    "fase": "Ontknoping",
+    "wat": "De pc reconstrueert stap voor stap wat er gebeurde. Daarna volgen de dader en de punten."
+   }
+  ],
+  "script": [
+   "Lees de opening voor die op de beamer staat.",
+   "Pak je telefoon. Lees je personage, je geheim en je alibi. Laat niemand meekijken. Tik op Klaar.",
+   "Ronde 1: jullie hebben … minuten. Praat met iedereen. Lieg over je geheim als je wilt, maar niet over feiten op je telefoon.",
+   "Ronde 2: er is nieuw bewijs gevonden (zie beamer). Je mag nu twee aanwijzingen delen.",
+   "Ronde 3: de wending. Kijk naar de beamer en lees je nieuwe aanwijzingen.",
+   "Tijd om te beschuldigen. Kies op je telefoon wie, hoe en waarom.",
+   "De ontknoping: druk op 'Volgende stap' en lees de reconstructie voor."
+  ],
+  "tips": [
+   "De pc-console toont nooit wie de dader is: de spelleider kan meespelen.",
+   "Gebruik 'Ronde +5 min' als de gesprekken goed lopen.",
+   "Kies personages zo dat de belangrijkste zes (de kernrollen) altijd meedoen."
+  ]
+ },
+ "stratego": {
+  "title": "Rangen & Vlaggen",
+  "kort": "Twee teams, twee basissen, twee vlaggen. Iedereen heeft een geheime rang op zijn telefoon. Tik je een tegenstander, dan beslist een duel wie terug naar de basis moet. Breng de vlag van de ander naar je eigen basis.",
+  "spelers": "8–60 spelers in twee teams",
+  "duur": "45–75 minuten",
+  "voorbereiding": [
+   "Zoek een terrein (bos, park, camping) en spreek duidelijke grenzen af.",
+   "Kies twee basissen op minstens 150 meter van elkaar, elk met een vlag of lint.",
+   "Print de basiscodes van de pc of schrijf ze op een bordje bij elke basis.",
+   "De telefoons hebben geen wifi nodig in het veld; ze versturen alles zodra ze terug zijn bij wifi.",
+   "Leg bij \"Speelgebied & veiligheid\" de grenzen van het speelveld vast. Spelers zien dit op hun telefoon."
+  ],
+  "regels": [
+   "Rangen: 10 Maarschalk, 9 Generaal, 8–4 officieren, 3 Mineur, 2 Verkenner, 1 Spion en B Bom.",
+   "Hogere rang wint. Gelijke rang: allebei terug naar de basis.",
+   "De Spion verslaat de Maarschalk, maar alleen als de Spion tikt.",
+   "De Bom blijft binnen 5 meter van de eigen vlag. Wie de Bom tikt, verliest, behalve de Mineur.",
+   "Een Verkenner kan elke 10 minuten de code van een tegenstander scannen en zo diens rang zien zonder duel.",
+   "Wie verliest, loopt terug naar de eigen basis en tikt daar de basiscode in. Na drie keer verliezen krijg je een nieuwe rang.",
+   "Wie de vlag van de ander in de eigen basis brengt, wint. Is de tijd op, dan wint het team met de meeste gewonnen duels."
+  ],
+  "verloop": [
+   {
+    "fase": "Teams",
+    "wat": "Iedereen meldt zich aan en kiest een team; de pc kan eerlijk verdelen."
+   },
+   {
+    "fase": "Opstelling",
+    "wat": "De rangen staan op de telefoons. De teams verstoppen de vlag. Hang de basiscodes op."
+   },
+   {
+    "fase": "Spel",
+    "wat": "Tikken, duelleren met de duelcode, terug naar de basis en opnieuw."
+   },
+   {
+    "fase": "Einde",
+    "wat": "Vlag veroverd (de spelleider bevestigt op de pc) of tijd op."
+   }
+  ],
+  "script": [
+   "Iedereen scant de QR-code en kiest Rood of Blauw.",
+   "Kijk in het geheim naar je rang. Onthoud je duelcode van drie tekens.",
+   "Verstop jullie vlag binnen 20 meter van de basis. De Bom blijft bij de vlag.",
+   "Uitleg duel: tik iemand, laat elkaar je code zien en typ de code van de ander in. De telefoon zegt meteen wie wint.",
+   "Klaar? Start! (druk op Start op de pc)",
+   "Na de tijd of bij de vlag: iedereen terug naar de pc, telefoons op de wifi om te synchroniseren."
+  ],
+  "tips": [
+   "Laat iedereen 'Ik tikte' of 'Ik werd getikt' kiezen: dat telt alleen bij Spion tegen Maarschalk.",
+   "Twijfel over een duel? De spelleider kan het op de pc schrappen.",
+   "Gebruik een fluitje of de toeter op de pc voor het eindsignaal."
+  ]
+ },
+ "holland": {
+  "title": "Echt Hollands!",
+  "kort": "Een tv-show met twee teams en een presentator. Zes rondes over Nederland: kennis, dialect, gezegden, uitbeelden, schatten en een finale met dubbele punten.",
+  "spelers": "2 teams van 1–8 spelers, plus een presentator",
+  "duur": "60–90 minuten",
+  "voorbereiding": [
+   "De presentator bedient de pc en speelt zelf niet mee: bij de buzzervragen ziet de pc het antwoord.",
+   "Zet het beamerscherm aan voor het publiek.",
+   "Elk teamlid kan meedoen met de eigen telefoon; één telefoon per team is genoeg."
+  ],
+  "regels": [
+   "Ronde 1 · Hollandse kennis: wie het eerst drukt, mag antwoorden. Fout? Dan mag het andere team. 1 punt.",
+   "Ronde 2 · Wat betekent het?: dialect en oude woorden, meerkeuze op de telefoon. 1 punt per goed antwoord.",
+   "Ronde 3 · Maak het af: typ hoe het gezegde verdergaat. De presentator kan een antwoord alsnog goedkeuren. 1 punt.",
+   "Ronde 4 · Zonder woorden: per team beeldt één speler 60 seconden uit. De woorden staan alleen op diens telefoon. 1 punt per geraden woord.",
+   "Ronde 5 · Hoeveel ongeveer?: het team dat het dichtst zit, krijgt 2 punten.",
+   "Ronde 6 · De finale: buzzer met dubbele punten. Bij gelijke stand beslist één schatvraag."
+  ],
+  "verloop": [
+   {
+    "fase": "Lobby",
+    "wat": "Teams aanmelden en teamnamen kiezen."
+   },
+   {
+    "fase": "Rondes",
+    "wat": "Elke ronde begint met een titelkaart op de beamer; daarna volgen de vragen."
+   },
+   {
+    "fase": "Einde",
+    "wat": "Eindstand en winnaar op de beamer."
+   }
+  ],
+  "script": [
+   "Welkom bij Echt Hollands! Vanavond strijden … en … om de titel echte Hollander.",
+   "Ronde 1: ik lees de vraag voor, jullie drukken op de telefoon.",
+   "Ronde 2: wat betekent dit woord? Kies samen op de telefoon.",
+   "Ronde 3: maak het gezegde af. Typ jullie antwoord.",
+   "Ronde 4: wie beeldt er uit? Pak de telefoon, 60 seconden, daar gaan we.",
+   "Ronde 5: hoeveel ongeveer? Overleg en vul een getal in.",
+   "De finale! Alle punten tellen dubbel.",
+   "En de winnaar van Echt Hollands! is…"
+  ],
+  "tips": [
+   "Lees bij de buzzervragen het antwoord van de pc pas voor als er gedrukt is.",
+   "Bij 'Maak het af' kun je met 'Alsnog goed' een creatieve schrijfwijze goedkeuren.",
+   "Elke show kiest nieuwe vragen; je kunt hem een paar keer spelen zonder herhaling."
+  ]
+ },
+ "crazy88": {
+  "title": "Gekke 88",
+  "kort": "88 gekke opdrachten. Teams kiezen zelf welke ze doen en sturen tekst, een foto of een video als bewijs. De spelleider keurt goed op de pc; de beamer toont de ranglijst en een fotomuur.",
+  "spelers": "Teams van 2–6 spelers",
+  "duur": "1–4 uur",
+  "voorbereiding": [
+   "Spreek een speelgebied en een eindtijd af.",
+   "Zorg voor wat materiaal: papier, pennen, bekers, sokken, lepel en mand.",
+   "Teams mogen de stad of het dorp in: bewijs blijft op de telefoon bewaard tot er weer wifi is.",
+   "Filter de opdrachten op plek, benodigdheden, duur en de leeftijd van de jongste speler. Leg bij \"Speelgebied & veiligheid\" de grenzen vast; spelers zien die op hun telefoon."
+  ],
+  "regels": [
+   "Elke opdracht levert 2 punten op, de opdrachten 67–77 3 punten.",
+   "Per opdracht stuurt een team één keer bewijs in. Is het afgekeurd, dan mag het opnieuw.",
+   "De spelleider keurt goed, af, of geeft minder of meer punten (tot 3 extra voor een topuitvoering).",
+   "Bewijs dat na de eindtijd is gemaakt, telt niet.",
+   "Goedgekeurde foto's komen op de fotomuur op de beamer (tenzij de spelleider dat uitzet)."
+  ],
+  "verloop": [
+   {
+    "fase": "Lobby",
+    "wat": "Iedereen kiest of maakt een team."
+   },
+   {
+    "fase": "Spel",
+    "wat": "Teams kiezen opdrachten en sturen bewijs; de spelleider beoordeelt doorlopend."
+   },
+   {
+    "fase": "Uitslag",
+    "wat": "Na de eindtijd drukt de spelleider op 'Uitslag'."
+   }
+  ],
+  "script": [
+   "Iedereen in een team? Op de telefoon staan 88 opdrachten. Jullie kiezen zelf.",
+   "Bewijs: foto, filmpje of tekst. Zonder wifi wacht het op je telefoon tot je terug bent.",
+   "Om … uur is iedereen terug. Wat daarna gemaakt is, telt niet.",
+   "Tijd! Kijk op de beamer naar de fotomuur en de eindstand."
+  ],
+  "tips": [
+   "Beoordeel tussendoor, dan blijft de ranglijst spannend.",
+   "Video's kunnen groot zijn: houd ze kort (onder 30 seconden).",
+   "Gebruik 'Bonus' voor de meest creatieve uitvoering."
+  ]
+ },
+ "smokkel": {
+  "title": "Smokkeltocht",
+  "kort": "Smokkelteams brengen lading van de haven via tussenposten naar de markt. De douane probeert ze onderweg te betrappen. Alles gaat via de telefoon van de smokkelaar, ook zonder wifi.",
+  "spelers": "6–60 spelers: 2–4 smokkelteams en een douaneploeg",
+  "duur": "45–90 minuten",
+  "voorbereiding": [
+   "Kies vier plekken in het terrein: de haven, de molen (middenpost), de toren en de markt.",
+   "Druk na 'Posten klaarmaken' op de pc op 'Postbordjes' en hang bij elke post het bordje met de code op.",
+   "Ongeveer één op de vijf spelers is douanier. Hun telefoon toont een eigen pincode.",
+   "Leg bij \"Speelgebied & veiligheid\" de grenzen vast (geen drukke wegen of water). Spelers zien dit op hun telefoon."
+  ],
+  "regels": [
+   "Laden kan alleen in de haven. Je draagt maximaal gewicht 3.",
+   "Koffie (gewicht 1, 2 punten) is legaal en mag rechtstreeks naar de markt.",
+   "Chocolade (gewicht 2, 5 punten) moet eerst langs de molen.",
+   "Goud (gewicht 3, 10 punten) moet eerst langs de molen en dan langs de toren.",
+   "Bij een post tik je de code van het bordje in. Op de markt lever je af wat zijn route heeft afgemaakt.",
+   "Een douanier die je tikt, typt zijn pincode op jouw telefoon. Heb je verboden waar bij je, dan is die in beslag genomen (punten voor de douane) en moet je terug naar de haven. Alleen koffie of niets? Dan is het vals alarm: douane −2, jouw team +1.",
+   "Dezelfde douanier mag dezelfde smokkelaar pas na vijf minuten opnieuw controleren."
+  ],
+  "verloop": [
+   {
+    "fase": "Lobby",
+    "wat": "Teams kiezen, inclusief de douane."
+   },
+   {
+    "fase": "Posten klaarmaken",
+    "wat": "De pc maakt postcodes en pincodes. Print en hang de bordjes op."
+   },
+   {
+    "fase": "Spel",
+    "wat": "Laden, posten langs, afleveren, controleren."
+   },
+   {
+    "fase": "Einde",
+    "wat": "Iedereen terug op de wifi; de pc toont de uitslag."
+   }
+  ],
+  "script": [
+   "Iedereen kiest een team. De douane herkent elkaar aan … (petje, hesje).",
+   "Smokkelaars: laden in de haven, tussenposten voor chocolade en goud, afleveren op de markt.",
+   "Douane: tik een smokkelaar en typ je pincode op zijn telefoon.",
+   "Klaar? Start!",
+   "Tijd! Iedereen terug naar de basis, telefoons op de wifi. De uitslag staat op de beamer."
+  ],
+  "tips": [
+   "Koffie is de bluf: wie veel koffie draagt, lokt valse controles uit.",
+   "Houd de posten op loopafstand (2–5 minuten).",
+   "Correcties kunnen op de pc via 'Correctie'."
+  ]
+ },
+ "missies": {
+  "title": "Geheime missies",
+  "kort": "Iedereen krijgt op de eigen telefoon een geheime opdracht, zoals iemand laten zingen of een high five laten geven. Lukt het zonder dat je betrapt wordt, dan scoor je punten. Denk je dat een ander bezig is? Ontmasker hem!",
+  "spelers": "3–40 spelers, ieder met een eigen telefoon",
+  "duur": "1 uur tot een heel weekend",
+  "voorbereiding": [
+   "Start Groepsspel op de pc of gebruik de online spelserver.",
+   "Kies de speelduur: een avond of een heel weekend.",
+   "Kies wie een gelukte missie controleert: het 'slachtoffer' op zijn eigen telefoon of alleen de spelleider.",
+   "Kies of jullie vooral binnen of buiten zijn; dan krijgt niemand een missie die op die plek niet uitvoerbaar is."
+  ],
+  "regels": [
+   "Je missie is geheim. Lees hem als niemand meekijkt.",
+   "Je mag mensen nooit dwingen, en alles moet vriendelijk en veilig blijven. Een missie die iemand ongemakkelijk maakt, telt niet.",
+   "Gelukt? Tik op 'Missie gelukt' en kies bij wie het lukte. Die persoon krijgt de vraag of het klopt. Ja: je krijgt de punten. Nee: de spelleider beslist.",
+   "Makkelijke missies leveren 2 punten op, gemiddelde 3 en moeilijke 5.",
+   "Ontmaskeren: kies een speler en raad welke van de drie opdrachten hij heeft. Goed: +2 en zijn missie mislukt. Fout: −1 en je moet tien minuten wachten.",
+   "Een ontmaskerde speler krijgt na twee minuten een nieuwe missie.",
+   "Je mag je missie twee keer inruilen voor een andere."
+  ],
+  "verloop": [
+   {
+    "fase": "Lobby",
+    "wat": "Iedereen meldt zich aan met de QR-code."
+   },
+   {
+    "fase": "Spel",
+    "wat": "Missies uitvoeren, bevestigen en ontmaskeren. De beamer toont de onthulde missies."
+   },
+   {
+    "fase": "Einde",
+    "wat": "Alle lopende missies worden onthuld; de ranglijst bepaalt de winnaar."
+   }
+  ],
+  "script": [
+   "Iedereen krijgt zo een geheime missie op zijn telefoon. Lees hem stiekem.",
+   "Doe gewoon normaal, maar probeer ondertussen je missie te laten lukken.",
+   "Lukt het? Meld het op je telefoon. Degene bij wie het lukte, moet het bevestigen.",
+   "Wantrouw je iemand? Ontmasker hem, maar pas op: fout raden kost een punt.",
+   "Tijd! De beamer onthult alle missies."
+  ],
+  "tips": [
+   "Speel het als achtergrondspel tijdens een etentje of weekend.",
+   "Laat de beamer de onthulde missies tonen; dat zorgt voor veel gelach.",
+   "Een missie inruilen is slim als je opdracht niet bij de groep past."
+  ]
+ },
+ "opgejaagd": {
+  "title": "Opgejaagd",
+  "kort": "Vluchtteams lopen langs drie posten naar een geheim extractiepunt. De jagers proberen ze te tikken. Op vaste momenten krijgen de jagers een 'ping' met de laatst bekende plek van elk vluchtteam.",
+  "spelers": "6–60 spelers: één jagersteam en 2–6 vluchtteams",
+  "duur": "45–180 minuten",
+  "voorbereiding": [
+   "Kies een begrensd, veilig speelgebied zonder drukke wegen. Spreek grenzen en een verzamelpunt af.",
+   "Kies drie posten en een extractiepunt. Vul de namen in op de pc.",
+   "Druk op 'Codes en bordjes maken', print de bordjes en hang ze op. Vertel de vluchters nog niet waar de extractie is.",
+   "Jagers herkennen elkaar aan een hesje of petje.",
+   "Leg bij \"Speelgebied & veiligheid\" de grenzen en eventueel een straal vast. Wie locatie deelt, krijgt een waarschuwing buiten het speelgebied."
+  ],
+  "regels": [
+   "Vluchtteams halen de drie posten in volgorde. Bij een post tik je de code van het bordje in: +3 punten, maar de jagers zien meteen dat jullie daar waren.",
+   "Elke vluchter heeft een eigen vangcode. Word je getikt, dan laat je die zien en de jager typt hem in: de jagers krijgen +3 en jij bent gevangen.",
+   "Op elk pingmoment zien de jagers de laatst bekende plek van elk vluchtteam: de gedeelde locatie als een vluchter dat zelf heeft aangezet, anders de laatste post.",
+   "In de laatste minuten gaat de extractie open. Vluchters van een team dat alle drie de posten heeft gehaald, tikken daar de code in: +5 per ontsnapte speler.",
+   "Het spel eindigt als de tijd om is of als er geen vrije vluchters meer zijn.",
+   "Rennen mag, maar veiligheid gaat altijd voor: geen wegen oversteken zonder te kijken en geen privéterrein."
+  ],
+  "verloop": [
+   {
+    "fase": "Lobby",
+    "wat": "Teams kiezen: jagers en vluchtteams."
+   },
+   {
+    "fase": "Voorbereiding",
+    "wat": "Bordjes printen en ophangen. Vluchters lezen hun vangcode."
+   },
+   {
+    "fase": "Jacht",
+    "wat": "Posten, pings, vangen. De spelleider kan meldingen sturen."
+   },
+   {
+    "fase": "Extractie",
+    "wat": "Het extractiepunt wordt bekend bij de vluchters."
+   },
+   {
+    "fase": "Einde",
+    "wat": "Iedereen terug naar het verzamelpunt; de pc toont de uitslag."
+   }
+  ],
+  "script": [
+   "Jagers: jullie geven de vluchters vijf minuten voorsprong.",
+   "Vluchters: haal de posten in volgorde. Melden levert punten op, maar verraadt jullie plek.",
+   "Word je getikt? Laat je vangcode zien. Wees eerlijk en sportief.",
+   "Let op de pings: daar zien de jagers waar jullie het laatst waren.",
+   "De extractie is open! Wie er op tijd is, ontsnapt."
+  ],
+  "tips": [
+   "Speel je buiten de wifi? Start op de pc 'Groepsspel via mobiel internet' (Startmenu) of gebruik de online spelserver. Dan doen spelers mee via 4G/5G en werkt ook locatie delen (https). Via de gewone pc-server in de wifi zien de jagers alleen de laatste post.",
+   "Stuur als spelleider af en toe een melding, bijvoorbeeld een hint voor de jagers.",
+   "Houd de posten 3–8 minuten lopen uit elkaar."
+  ]
+ },
+ "bingo": {
+  "title": "Muziekbingo",
+  "kort": "Ieder team heeft een eigen bingokaart met nummers op de telefoon. De DJ draait muziek via de eigen muziek-app; teams herkennen het nummer en strepen af. Eerst om een rij, daarna om een volle kaart.",
+  "spelers": "2–80 spelers in teams",
+  "duur": "30–60 minuten",
+  "voorbereiding": [
+   "Zorg voor een muziek-app en speakers. Groepsspel speelt zelf geen muziek af.",
+   "Gebruik de startlijst van 150 nummers of plak een eigen lijst (titel - artiest).",
+   "Kies de kaartgrootte: 3×3 is kort, 5×5 duurt lang.",
+   "Na een bingo kun je met \"Nieuwe ronde\" nieuwe kaarten uitdelen; de scores lopen door en gedraaide nummers komen niet meteen terug."
+  ],
+  "regels": [
+   "De DJ klikt op 'Volgend nummer' en draait het nummer dat op de pc staat.",
+   "Start de DJ het volgende nummer, dan verschijnt de titel van het vorige nummer vanzelf in de lijst 'Al bekendgemaakt'.",
+   "Herken je een nummer op jullie kaart? Tik het vakje aan.",
+   "Eerst spelen we om een rij: horizontaal, verticaal of schuin. Daarna om een volle kaart.",
+   "Druk op BINGO als jullie een rij of volle kaart hebben. De server telt alleen vakjes die echt al gespeeld zijn.",
+   "Een rij levert 5 punten op, een volle kaart 10. Wie binnen vijf seconden na de eerste geldige bingo ook bingo heeft, deelt mee.",
+   "Een valse bingo kost 2 punten; vakjes die nog niet gespeeld zijn, worden dan weer vrijgemaakt."
+  ],
+  "verloop": [
+   {
+    "fase": "Lobby",
+    "wat": "Teams melden zich aan; kaartgrootte en muzieklijst kiezen."
+   },
+   {
+    "fase": "Rij",
+    "wat": "Nummers draaien tot iemand een rij heeft."
+   },
+   {
+    "fase": "Volle kaart",
+    "wat": "Doorspelen tot iemand een volle kaart heeft."
+   },
+   {
+    "fase": "Einde",
+    "wat": "De pc toont de uitslag."
+   }
+  ],
+  "script": [
+   "Iedereen heeft een kaart op de telefoon. Ik draai zo het eerste nummer.",
+   "Herken je hem? Tik het vakje aan. Twijfel je? Wacht tot de titel op de beamer komt.",
+   "We spelen eerst om een rij. Roep BINGO via de knop op je telefoon!",
+   "De rij is gevallen! Nu gaan we door voor een volle kaart."
+  ],
+  "tips": [
+   "Laat elk nummer zo'n 30 seconden spelen en zet daarna de titel op de beamer.",
+   "Een eigen lijst met jullie favoriete nummers maakt het persoonlijker.",
+   "Speel 4×4 voor een avond met 6–10 teams."
+  ]
+ }
+}

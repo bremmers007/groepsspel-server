@@ -1,0 +1,1108 @@
+[
+ {
+  "id": "theekop",
+  "title": "De laatste theekop",
+  "tagline": "Een vriendenweekend in een oud landhuis. Na het diner wordt de schatbewaarder dood gevonden in de bibliotheek.",
+  "audience": "Volwassenen en jongeren vanaf 14 jaar",
+  "victim": "Otto",
+  "opening": "Het is zaterdagavond, half tien. Otto, de schatbewaarder van onze vriendengroep, wordt levenloos gevonden in de bibliotheek. Naast hem staat zijn vaste theekop met het rode streepje, met resten van wit poeder. Niemand heeft het huis verlaten. Een van ons weet meer dan hij zegt.",
+  "setting": [
+   "Hal met de trap naar boven",
+   "Keuken met deur naar de tuin",
+   "Bibliotheek met codeslot (stond op dagstand)",
+   "Lounge met open haard",
+   "Badkamer boven met medicijnkastje",
+   "Tuin met schuur"
+  ],
+  "facts": [
+   "20:30 · Het diner is afgelopen.",
+   "20:45 · Groepsfoto in de hal.",
+   "20:50 · De thee wordt in de keuken klaargezet.",
+   "21:30 · De gastheer vindt Otto in de bibliotheek."
+  ],
+  "means": [
+   "Fijngemalen slaappillen in de thee",
+   "Een klap met een kandelaar",
+   "Gewurgd met een sjaal",
+   "Een duw van de bibliotheektrap"
+  ],
+  "motives": [
+   "Otto ontdekte dat er geld uit de groepspot verdween",
+   "Otto dreigde het restaurant bij de inspectie aan te geven",
+   "Otto wilde het huis met de tuin verkopen",
+   "Jaloezie om een oude liefde"
+  ],
+  "characters": [
+   {
+    "id": "gastheer",
+    "name": "De gastheer",
+    "core": true,
+    "bio": "Organiseerde het weekend en kent iedereen al twintig jaar.",
+    "secret": "Je bent bijna blut en hoopt dat niemand vraagt waarom het weekend zo goedkoop is.",
+    "alibi": "Van 21:00 tot 21:20 vervang je met de huisbeheerder een lamp in de hal."
+   },
+   {
+    "id": "cateraar",
+    "name": "De cateraar",
+    "core": true,
+    "bio": "Kookt voor de groep en heeft een eigen restaurant in de stad.",
+    "secret": "Je restaurant kreeg vorig jaar een slechte beoordeling van de inspectie. Dat weet bijna niemand.",
+    "alibi": "Je zette om 20:50 de thee klaar en ruimde daarna de keuken op."
+   },
+   {
+    "id": "penningmeester",
+    "name": "De penningmeester",
+    "core": true,
+    "bio": "Beheert samen met Otto de groepspot.",
+    "secret": "Je hebt een paar keer geld uit de pot geleend. Je wilt niet dat iemand de boekhouding bekijkt.",
+    "alibi": "Je zat na de foto in de lounge en las de krant."
+   },
+   {
+    "id": "tuinliefhebber",
+    "name": "De tuinliefhebber",
+    "core": true,
+    "bio": "Groene vingers; zorgt al jaren voor de tuin van dit huis.",
+    "secret": "Je hoopt het huis ooit zelf over te nemen. De tuin is jouw levenswerk.",
+    "alibi": "Van 21:00 tot 21:20 stond je in de tuin te roken."
+   },
+   {
+    "id": "fotograaf",
+    "name": "De fotograaf",
+    "core": true,
+    "bio": "Legt elk weekend vast en mist niets.",
+    "secret": "Je hebt stiekem foto's van het huis aan een makelaar gestuurd, voor een vriend.",
+    "alibi": "Na de groepsfoto zat je alleen in de eetkamer foto's te sorteren op je laptop."
+   },
+   {
+    "id": "huisbeheerder",
+    "name": "De huisbeheerder",
+    "core": true,
+    "bio": "Kent elk slot en elke kast van het huis.",
+    "secret": "Je gebruikt zelf slaappillen en bewaart ze in het medicijnkastje boven. Je schaamt je ervoor.",
+    "alibi": "Van 21:00 tot 21:20 vervang je met de gastheer een lamp in de hal."
+   },
+   {
+    "id": "buurvrouw",
+    "name": "De buurvrouw",
+    "core": false,
+    "fallback": "huisbeheerder",
+    "bio": "Woont naast het landhuis en kwam een taart brengen.",
+    "secret": "Je bent eigenlijk gekomen om te horen of het huis te koop gaat.",
+    "alibi": "Je zat van 21:00 tot 21:30 aan de keukentafel met een stuk taart."
+   },
+   {
+    "id": "chauffeur",
+    "name": "De chauffeur",
+    "core": false,
+    "fallback": "gastheer",
+    "bio": "Bracht de helft van de groep met het busje.",
+    "secret": "Je hebt vanmiddag met het busje een paaltje geraakt en zegt niets.",
+    "alibi": "Je zat om 21:00 in het busje te bellen met je vriendin."
+   },
+   {
+    "id": "nicht",
+    "name": "De nicht uit Maastricht",
+    "core": false,
+    "fallback": "fotograaf",
+    "bio": "Nicht van Otto. Komt dit jaar voor het eerst mee.",
+    "secret": "Otto heeft je vorige maand geld geleend voor je studie.",
+    "alibi": "Je zat in de lounge met de penningmeester, tot je om 21:05 naar de wc ging."
+   },
+   {
+    "id": "muzikant",
+    "name": "De muzikant",
+    "core": false,
+    "fallback": "gastheer",
+    "bio": "Speelt elke avond gitaar bij het vuur.",
+    "secret": "Je hebt een liedje over Otto geschreven dat niet erg aardig is.",
+    "alibi": "Je stemde om 21:00 je gitaar in de lounge."
+   },
+   {
+    "id": "schrijver",
+    "name": "De schrijver",
+    "core": false,
+    "fallback": "huisbeheerder",
+    "bio": "Werkt aan een detectiveroman en observeert iedereen.",
+    "secret": "Je schrijft stiekem over deze groep. Iedereen staat in je boek.",
+    "alibi": "Je zat op de trap aantekeningen te maken."
+   },
+   {
+    "id": "oudcollega",
+    "name": "De oud-collega",
+    "core": false,
+    "fallback": "fotograaf",
+    "bio": "Werkte jaren met Otto bij de bank.",
+    "secret": "Otto heeft je ooit een promotie afgepakt. Je bent het nooit vergeten.",
+    "alibi": "Je stond om 21:10 buiten op het terras met een glas wijn."
+   }
+  ],
+  "clues": [
+   {
+    "to": "gastheer",
+    "round": 1,
+    "text": "De bibliotheekdeur heeft een codeslot, maar stond vanaf 20:30 op de dagstand. Iedereen kon dus naar binnen."
+   },
+   {
+    "to": "gastheer",
+    "round": 2,
+    "text": "Je vond Otto om 21:30. Zijn thee was nog lauw: hij moet tussen 21:05 en 21:20 gedronken hebben."
+   },
+   {
+    "to": "huisbeheerder",
+    "round": 1,
+    "text": "In het medicijnkastje boven staan slaappillen. Iedereen die boven op de wc was, kon erbij."
+   },
+   {
+    "to": "huisbeheerder",
+    "round": 2,
+    "text": "Je bevestigt: de gastheer stond van 21:00 tot 21:20 de hele tijd bij jou op de ladder in de hal."
+   },
+   {
+    "to": "cateraar",
+    "round": 1,
+    "text": "Otto drinkt altijd uit zijn eigen kop met een rood streepje. Je zette die om 20:50 vol thee op het aanrecht."
+   },
+   {
+    "to": "fotograaf",
+    "round": 1,
+    "text": "Je maakte om 20:45 een groepsfoto in de hal. Je kunt op je telefoon terugkijken wie erop staat en wat ze dragen."
+   },
+   {
+    "to": "tuinliefhebber",
+    "round": 1,
+    "text": "Het tuinpad was vanavond nat: je hebt om 20:40 de planten water gegeven."
+   },
+   {
+    "to": "penningmeester",
+    "round": 1,
+    "text": "Otto vroeg je vanmiddag om de afschriften van de groepspot mee te nemen naar het weekend."
+   },
+   {
+    "to": "buurvrouw",
+    "round": 1,
+    "text": "Vanaf de keukentafel zag je dat de tuindeur de hele avond op een kier stond."
+   },
+   {
+    "to": "buurvrouw",
+    "round": 2,
+    "text": "Om 21:05 liep iemand langs de keuken naar de hal. Je zag alleen een schim."
+   },
+   {
+    "to": "chauffeur",
+    "round": 1,
+    "text": "Vanuit het busje zag je om 21:00 dat de lamp in de hal uit was en twee mensen met een ladder bezig waren."
+   },
+   {
+    "to": "nicht",
+    "round": 2,
+    "text": "Otto vertelde je vanmiddag: 'Na het eten moet ik met iemand een ernstig gesprek voeren.'"
+   },
+   {
+    "to": "muzikant",
+    "round": 1,
+    "text": "Vanuit de lounge hoorde je om 21:10 de bibliotheekdeur dichtgaan."
+   },
+   {
+    "to": "schrijver",
+    "round": 2,
+    "text": "Je notitieboek: 21:05 iemand loopt de trap af · 21:12 voetstappen van de bibliotheek richting achterkant van het huis."
+   },
+   {
+    "to": "oudcollega",
+    "round": 1,
+    "text": "Otto was vroeger heel precies met geld. 'Eén euro die niet klopt, vind ik altijd', zei hij."
+   }
+  ],
+  "evidence": [
+   {
+    "round": 1,
+    "title": "De theekop",
+    "text": "Otto's eigen kop met het rode streepje. Op de bodem wit poeder: fijngemalen slaappillen."
+   },
+   {
+    "round": 3,
+    "title": "De wending",
+    "text": "In de prullenbak van de hal ligt een lege strip slaappillen. De strip komt uit het kastje boven."
+   }
+  ],
+  "culprits": {
+   "penningmeester": {
+    "means": 0,
+    "motive": 0,
+    "task": "Zorg dat minstens twee mensen de cateraar verdenken, zonder zelf te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. Otto ontdekte dat jij geld uit de groepspot haalde. Om 21:00 haalde je boven de slaappillen, om 21:08 pakte je de kop met het rode streepje uit de keuken en bracht hem om 21:10 naar de bibliotheek. Je droeg je groene vest. Lieg over waar je om 21:10 was, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "fotograaf",
+      "round": 1,
+      "text": "Op je groepsfoto van 20:45 draagt alleen de penningmeester een groen vest."
+     },
+     {
+      "to": "tuinliefhebber",
+      "round": 2,
+      "text": "Vanuit de tuin zag je om 21:12 iemand in een groen vest de bibliotheek uit komen."
+     },
+     {
+      "to": "cateraar",
+      "round": 2,
+      "text": "Toen je om 21:08 terugkwam in de keuken, liep de penningmeester net weg. De kop met het rode streepje was weg."
+     },
+     {
+      "to": "gastheer",
+      "round": 3,
+      "text": "Otto zei je voor het eten: 'Er zitten gaten in de groepspot. Ik spreek de verantwoordelijke vanavond aan.'"
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Een bonnetje",
+      "text": "In een jaszak in de hal zit een bonnetje van een overboeking van de groepsrekening naar een privérekening."
+     },
+     {
+      "round": 3,
+      "title": "Otto's briefje",
+      "text": "In Otto's boek: 'Ik weet wat je met de pot gedaan hebt. Na het eten praten we.'"
+     }
+    ],
+    "reconstruction": [
+     "Otto ontdekte dat er geld uit de groepspot verdween en wilde de penningmeester na het eten aanspreken.",
+     "Rond 21:00 haalde de penningmeester slaappillen uit het kastje boven en maalde ze fijn.",
+     "Om 21:08 nam de penningmeester Otto's kop met het rode streepje uit de keuken; de cateraar zag hem weglopen.",
+     "Om 21:10 bracht de penningmeester de thee naar de bibliotheek. Om 21:12 liep hij in zijn groene vest weer naar buiten.",
+     "Het bonnetje en Otto's briefje geven het motief. De lege strip in de prullenbak was een poging om de huisbeheerder verdacht te maken."
+    ]
+   },
+   "cateraar": {
+    "means": 0,
+    "motive": 1,
+    "task": "Zorg dat minstens twee mensen de penningmeester verdenken, zonder zelf te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. Otto wilde de inspectie bellen over je restaurant; dat zou je zaak kosten. Om 20:40 haalde je boven de slaappillen, je deed ze in zijn thee en bracht de kop om 21:10 zelf naar de bibliotheek, nog met je witte keukenschort aan. Lieg over de route van de kop, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "huisbeheerder",
+      "round": 2,
+      "text": "Om 20:40 kwam je de cateraar tegen op de trap naar boven. 'Even naar de wc', zei ze."
+     },
+     {
+      "to": "fotograaf",
+      "round": 1,
+      "text": "Op je groepsfoto van 20:45 ontbreekt de cateraar. Iemand zei: 'Die is nog boven.'"
+     },
+     {
+      "to": "tuinliefhebber",
+      "round": 2,
+      "text": "Vanuit de tuin zag je om 21:10 iemand met een witte schort de bibliotheek in gaan."
+     },
+     {
+      "to": "gastheer",
+      "round": 3,
+      "text": "Otto zei je voor het eten: 'Die keuken is een schande. Morgen bel ik de inspectie.'"
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Een verscheurde brief",
+      "text": "In de keukenafvalbak ligt een verscheurde brief van de inspectie: 'laatste waarschuwing'."
+     },
+     {
+      "round": 3,
+      "title": "Otto's agenda",
+      "text": "Voor maandag staat in Otto's agenda: 'Inspectie bellen over restaurant.'"
+     }
+    ],
+    "reconstruction": [
+     "Otto zag tijdens het koken hoe het er in de keuken aan toeging en wilde maandag de inspectie bellen.",
+     "Om 20:40 ging de cateraar naar boven en pakte slaappillen uit het medicijnkastje; daarom stond ze niet op de foto van 20:45.",
+     "Om 20:50 zette ze de thee klaar en deed het poeder in de kop met het rode streepje.",
+     "Om 21:10 bracht ze de kop zelf naar de bibliotheek, nog in haar witte schort.",
+     "De verscheurde inspectiebrief en Otto's agenda geven het motief. De lege strip in de hal moest de huisbeheerder verdacht maken."
+    ]
+   },
+   "tuinliefhebber": {
+    "means": 0,
+    "motive": 2,
+    "task": "Zorg dat minstens twee mensen de fotograaf verdenken, zonder zelf te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. Otto wilde het huis, met jouw tuin, verkopen. Om 21:05 kwam je via de tuindeur binnen voor 'een glas water', pakte de klaargezette kop en deed er de slaappillen in die je eerder boven had gepakt. Om 21:10 bracht je de kop naar de bibliotheek en ging via de achterkant terug de tuin in. Je schoenen waren nat. Lieg over hoe lang je buiten stond, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "cateraar",
+      "round": 2,
+      "text": "Om 21:05 kwam de tuinliefhebber door de tuindeur de keuken in 'voor een glas water'. Daarna was de kop met het rode streepje weg."
+     },
+     {
+      "to": "huisbeheerder",
+      "round": 2,
+      "text": "Toen je om 21:20 van de ladder kwam, zag je natte voetstappen van de tuindeur naar de bibliotheek en terug."
+     },
+     {
+      "to": "fotograaf",
+      "round": 1,
+      "text": "Je fotografeerde om 21:08 de maan vanuit de eetkamer. De tuin op je foto is leeg: niemand rookt daar."
+     },
+     {
+      "to": "gastheer",
+      "round": 3,
+      "text": "Otto zei je voor het eten: 'Ik heb een koper voor het huis. De tuin gaat eraf, er komt een parkeerplaats.'"
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Een makelaarsbrief",
+      "text": "Op het bureau in de bibliotheek ligt een concept-koopovereenkomst voor het landhuis, door Otto ondertekend."
+     },
+     {
+      "round": 3,
+      "title": "Een tuinhandschoen",
+      "text": "Achter de bibliotheekdeur ligt een natte tuinhandschoen met wit poeder op de vingertoppen."
+     }
+    ],
+    "reconstruction": [
+     "Otto had een koper voor het landhuis gevonden; de tuin zou verdwijnen.",
+     "De tuinliefhebber pakte eerder op de avond slaappillen uit het kastje boven.",
+     "Om 21:05 kwam hij via de natte tuin de keuken in, nam de kop met het rode streepje en deed het poeder erin.",
+     "Om 21:10 bracht hij de thee naar de bibliotheek en ging via de achterkant weer naar buiten: natte voetstappen en een lege tuin op de foto van 21:08.",
+     "De koopovereenkomst geeft het motief; de handschoen met poeder het bewijs."
+    ]
+   }
+  }
+ },
+ {
+  "id": "kasteel",
+  "title": "Diner op Kasteel Ter Borcht",
+  "tagline": "Een galadiner op een Limburgs kasteel. Na het dessert wordt de baron dood gevonden in de wijnkelder.",
+  "audience": "Volwassenen",
+  "victim": "Baron Hubert",
+  "opening": "Kasteel Ter Borcht, tien over half elf. Het dessert is op, de koffie wordt geschonken. De butler komt bleek de zaal in: baron Hubert ligt dood in de wijnkelder, tussen de scherven van een fles. Niemand heeft de slotgracht overgestoken. De dader zit nog aan tafel.",
+  "setting": [
+   "Grote zaal",
+   "Keuken met raam op de kelderdeur",
+   "Kelderdeur en wenteltrap",
+   "Wijnkelder",
+   "Hal met het grote schilderij",
+   "Bibliotheek"
+  ],
+  "facts": [
+   "20:00 · Begin van het diner.",
+   "21:45 · Dessert in de grote zaal.",
+   "22:00 · De baron gaat zelf naar de kelder om een fles van 1982 te halen.",
+   "22:40 · De butler vindt de baron in de kelder."
+  ],
+  "means": [
+   "Een klap met een wijnfles",
+   "Vergiftigde wijn",
+   "Een duw van de keldertrap",
+   "Opgesloten in de kelder"
+  ],
+  "motives": [
+   "De baron ontdekte fraude met de wijnvoorraad",
+   "De baron wilde zijn testament veranderen",
+   "De baron ontdekte dat zijn schilderij vals was",
+   "Een ruzie over het loon"
+  ],
+  "characters": [
+   {
+    "id": "gastvrouw",
+    "name": "De gastvrouw",
+    "core": true,
+    "bio": "Zus van de baron. Woont al dertig jaar op het kasteel.",
+    "secret": "Je hebt stiekem een kamer van het kasteel verhuurd zonder dat je broer het wist.",
+    "alibi": "Van 22:00 tot 22:30 schonk je met de butler koffie in de grote zaal."
+   },
+   {
+    "id": "sommelier",
+    "name": "De sommelier",
+    "core": true,
+    "bio": "Beheert de beroemde wijnkelder van het kasteel.",
+    "secret": "Je hebt een paar dure flessen privé verkocht en vervangen door goedkopere.",
+    "alibi": "Je zegt dat je van 22:00 tot 22:30 in de zaal de digestieven klaarzette."
+   },
+   {
+    "id": "neef",
+    "name": "De neef",
+    "core": true,
+    "bio": "Enige erfgenaam van de baron. Kostbare smaak.",
+    "secret": "Je hebt grote schulden bij een casino in Aken.",
+    "alibi": "Je zegt dat je om 22:00 buiten op de binnenplaats een sigaar rookte. In werkelijkheid stond je van 22:00 tot 22:20 bij de kapstok in de hal te bellen met het casino. Dat verzwijg je liever."
+   },
+   {
+    "id": "kunstexpert",
+    "name": "De kunstexpert",
+    "core": true,
+    "bio": "Verkocht de baron vorig jaar het grote schilderij in de hal.",
+    "secret": "Je bent niet helemaal zeker van de echtheid van dat schilderij.",
+    "alibi": "Je zegt dat je om 22:05 in de bibliotheek een telefoontje pleegde."
+   },
+   {
+    "id": "kok",
+    "name": "De kok",
+    "core": true,
+    "bio": "Kookt al twaalf jaar op het kasteel.",
+    "secret": "Je had vanmiddag ruzie met de baron over je loon en dreigde op te stappen.",
+    "alibi": "Van 22:00 tot 22:30 waste je af in de keuken. Vanuit het raam zie je de kelderdeur."
+   },
+   {
+    "id": "butler",
+    "name": "De butler",
+    "core": true,
+    "bio": "Kent alle sleutels van het kasteel.",
+    "secret": "Je drinkt soms stiekem een glas van de beste wijn.",
+    "alibi": "Van 22:00 tot 22:30 schonk je met de gastvrouw koffie in de grote zaal."
+   },
+   {
+    "id": "tuinman",
+    "name": "De tuinman",
+    "core": false,
+    "fallback": "kok",
+    "bio": "Onderhoudt de kasteeltuin en de slotgracht.",
+    "secret": "Je vist stiekem in de slotgracht.",
+    "alibi": "Je zat om 22:00 in het tuinhuis met een kop soep."
+   },
+   {
+    "id": "pianist",
+    "name": "De pianist",
+    "core": false,
+    "fallback": "gastvrouw",
+    "bio": "Speelde tijdens het diner.",
+    "secret": "Je bent verliefd op de gastvrouw.",
+    "alibi": "Je speelde van 21:45 tot 22:30 piano in de grote zaal."
+   },
+   {
+    "id": "journalist",
+    "name": "De journalist",
+    "core": false,
+    "fallback": "butler",
+    "bio": "Schrijft een stuk over kastelen in Limburg.",
+    "secret": "Je bent eigenlijk hier voor een onderzoek naar wijnfraude.",
+    "alibi": "Je maakte om 22:10 foto's van de hal."
+   },
+   {
+    "id": "burgemeester",
+    "name": "De burgemeester",
+    "core": false,
+    "fallback": "gastvrouw",
+    "bio": "Eregast van het diner.",
+    "secret": "Je wilt het kasteel graag kopen voor de gemeente.",
+    "alibi": "Je zat van 21:45 tot 22:30 in de zaal naast de pianist."
+   },
+   {
+    "id": "notaris",
+    "name": "De notaris",
+    "core": false,
+    "fallback": "butler",
+    "bio": "Al dertig jaar de notaris van de familie.",
+    "secret": "Je bent een document van de baron kwijtgeraakt.",
+    "alibi": "Je zat in de zaal en ging om 22:15 even naar de hal."
+   },
+   {
+    "id": "chauffeur",
+    "name": "De chauffeur",
+    "core": false,
+    "fallback": "kok",
+    "bio": "Rijdt de baron al jaren rond.",
+    "secret": "Je leent soms de auto van de baron voor je eigen uitjes.",
+    "alibi": "Je poetste om 22:00 de auto op de binnenplaats."
+   }
+  ],
+  "clues": [
+   {
+    "to": "butler",
+    "round": 1,
+    "text": "Er zijn twee sleutels van de wijnkelder: één heeft de sommelier, de andere hangt aan het bord in de keuken."
+   },
+   {
+    "to": "butler",
+    "round": 2,
+    "text": "Je bevestigt: de gastvrouw stond van 22:00 tot 22:30 met jou koffie te schenken."
+   },
+   {
+    "to": "gastvrouw",
+    "round": 1,
+    "text": "De baron ging om 22:00 zelf naar de kelder voor 'de 1982'. Hij liet niemand anders aan die fles komen."
+   },
+   {
+    "to": "kok",
+    "round": 1,
+    "text": "Vanuit het keukenraam zie je de kelderdeur. Je stond er van 22:00 tot 22:30 af te wassen, maar je keek niet de hele tijd."
+   },
+   {
+    "to": "kok",
+    "round": 2,
+    "text": "De sleutel aan het bord in de keuken hing er om 22:30 niet meer."
+   },
+   {
+    "to": "sommelier",
+    "round": 1,
+    "text": "De baron hield zelf een kelderboek bij met alle flessen en wat ze waard zijn."
+   },
+   {
+    "to": "neef",
+    "round": 1,
+    "text": "De baron belde vanmiddag lang met de notaris. Je weet niet waarover."
+   },
+   {
+    "to": "kunstexpert",
+    "round": 1,
+    "text": "De baron vroeg tijdens het diner hardop: 'Zeg, waar zit dat atelierstempel eigenlijk op mijn schilderij?'"
+   },
+   {
+    "to": "tuinman",
+    "round": 1,
+    "text": "Vanuit het tuinhuis zag je om 22:10 licht branden in de kelder, door het kleine raampje bij de grond."
+   },
+   {
+    "to": "pianist",
+    "round": 1,
+    "text": "Vanaf de piano zag je om 22:05 iemand de zaal verlaten richting hal. Je weet niet wie."
+   },
+   {
+    "to": "journalist",
+    "round": 2,
+    "text": "Op je foto van 22:10 is de hal leeg, maar de deur naar de kelderwenteltrap staat open."
+   },
+   {
+    "to": "burgemeester",
+    "round": 1,
+    "text": "De baron zei om 21:50 tegen jou: 'Vanavond ga ik met iemand een hartig woordje spreken.'"
+   },
+   {
+    "to": "notaris",
+    "round": 2,
+    "text": "Om 22:15 hoorde je vanuit de hal een harde klap uit de kelder."
+   },
+   {
+    "to": "chauffeur",
+    "round": 1,
+    "text": "Niemand is via de binnenplaats naar buiten gegaan: je stond daar de hele tijd bij de auto."
+   }
+  ],
+  "evidence": [
+   {
+    "round": 1,
+    "title": "De plaats delict",
+    "text": "De baron ligt onder aan het wijnrek. Naast hem de scherven van een fles. De klap kwam van achteren."
+   },
+   {
+    "round": 3,
+    "title": "De wending",
+    "text": "Het kelderboek van de baron is weg. Op de trap ligt een opengescheurde envelop."
+   }
+  ],
+  "culprits": {
+   "sommelier": {
+    "means": 0,
+    "motive": 0,
+    "task": "Zorg dat minstens twee mensen de neef verdenken, zonder zelf te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. De baron had ontdekt dat de etiketten op zijn dure flessen niet klopten. Om 22:05 liep je met je eigen sleutel de kelder in, en toen hij je ermee confronteerde, sloeg je hem om 22:15 met een fles neer. Je mouw zat onder de rode wijn. Lieg over waar je om 22:15 was, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "gastvrouw",
+      "round": 1,
+      "text": "Bij het dessert keek de sommelier steeds naar de deur van de wijnkelder. Zijn dessert liet hij staan."
+     },
+     {
+      "to": "kok",
+      "round": 2,
+      "text": "Om 22:05 zag je door het raam de sommelier met een sleutel de kelderdeur opendoen."
+     },
+     {
+      "to": "butler",
+      "round": 2,
+      "text": "Om 22:30 zat de rechtermouw van de sommelier onder de rode wijn. 'Een fles omgestoten', zei hij."
+     },
+     {
+      "to": "gastvrouw",
+      "round": 3,
+      "text": "Je broer zei vanavond: 'Na het dessert controleer ik zelf de etiketten. Er klopt iets niet met mijn wijn.'"
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Valse etiketten",
+      "text": "In de kelder ligt een stapel nieuwe etiketten van een duur wijnhuis, nog niet opgeplakt."
+     },
+     {
+      "round": 3,
+      "title": "Het kelderboek",
+      "text": "Het kelderboek wordt gevonden in de kast van de sommelier. Bij twaalf flessen staat in de hand van de baron: 'Vals?'"
+     }
+    ],
+    "reconstruction": [
+     "De baron vermoedde dat zijn dure flessen waren vervangen en wilde na het dessert zelf de etiketten controleren.",
+     "Om 22:05 opende de sommelier met zijn eigen sleutel de kelderdeur; de kok zag het.",
+     "In de kelder werd de sommelier geconfronteerd. Om 22:15 sloeg hij de baron met een fles neer; de notaris hoorde de klap.",
+     "Hij nam het kelderboek mee en kwam om 22:30 terug met een mouw vol wijn.",
+     "De valse etiketten en het kelderboek met 'Vals?' geven het motief."
+    ]
+   },
+   "neef": {
+    "means": 0,
+    "motive": 1,
+    "task": "Zorg dat minstens twee mensen de sommelier verdenken, zonder zelf te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. Je oom wilde maandag bij de notaris zijn testament veranderen: alles naar een goed doel. Om 21:50 vroeg je de butler om de keukensleutel 'om oom te helpen', om 22:12 ging je de keldertrap af en sloeg je hem om 22:15 met een fles neer. Lieg over je sigaar op de binnenplaats, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "gastvrouw",
+      "round": 1,
+      "text": "Je neef zat het hele diner op zijn telefoon en vroeg twee keer hoe laat oom naar de kelder zou gaan."
+     },
+     {
+      "to": "butler",
+      "round": 2,
+      "text": "Om 21:50 vroeg de neef je waar de keldersleutel hing. 'Om oom te helpen met de fles', zei hij."
+     },
+     {
+      "to": "kok",
+      "round": 2,
+      "text": "Om 22:12 zag je door het raam de neef de keldertrap af gaan."
+     },
+     {
+      "to": "gastvrouw",
+      "round": 3,
+      "text": "Je broer vertelde je: 'Maandag ga ik naar de notaris. Mijn neef krijgt geen cent meer.'"
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Een nieuw testament",
+      "text": "Op het bureau van de baron ligt een concept-testament: 'Mijn bezit gaat naar de stichting voor het kasteel.'"
+     },
+     {
+      "round": 3,
+      "title": "Een manchetknoop",
+      "text": "Onder het wijnrek ligt een gouden manchetknoop met de initialen van de neef."
+     }
+    ],
+    "reconstruction": [
+     "De baron wilde maandag zijn testament veranderen; de neef zou niets meer erven.",
+     "Om 21:50 vroeg de neef de butler waar de keldersleutel hing en nam hem van het bord in de keuken.",
+     "Om 22:12 zag de kok de neef de keldertrap af gaan. Er was geen sigaar op de binnenplaats; de chauffeur zag hem daar niet.",
+     "Om 22:15 sloeg de neef de baron neer met een fles; de notaris hoorde de klap.",
+     "Het concepttestament en de manchetknoop maken het bewijs rond."
+    ]
+   },
+   "kunstexpert": {
+    "means": 0,
+    "motive": 2,
+    "task": "Zorg dat minstens twee mensen de kok verdenken, zonder zelf te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. De baron had ontdekt dat het schilderij dat je hem verkocht vals is en wilde morgen een taxateur bellen. Om 22:05 verliet je de zaal 'om te bellen', ging naar de kelder en sloeg hem om 22:15 met een fles neer. Je kwam om 22:25 buiten adem terug. Lieg over je telefoontje, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "butler",
+      "round": 1,
+      "text": "Toen de baron tijdens het diner over het atelierstempel op zijn schilderij begon, viel de kunstexpert opvallend stil."
+     },
+     {
+      "to": "gastvrouw",
+      "round": 2,
+      "text": "De kunstexpert ging om 22:05 de zaal uit 'om even te bellen' en kwam om 22:25 buiten adem terug."
+     },
+     {
+      "to": "kok",
+      "round": 2,
+      "text": "Om 22:08 zag je door het raam de kunstexpert in de gang naar de kelderdeur lopen."
+     },
+     {
+      "to": "butler",
+      "round": 3,
+      "text": "De baron vroeg je vanochtend om morgen een taxateur uit Maastricht te bellen 'over dat schilderij in de hal'."
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Een taxatiebrief",
+      "text": "In de bibliotheek ligt een brief van een museum: 'Het doek in uw hal is na 1950 geschilderd.'"
+     },
+     {
+      "round": 3,
+      "title": "Een oorbel",
+      "text": "Bij de keldertrap ligt een parelen oorbel. De kunstexpert draagt er nog maar één."
+     }
+    ],
+    "reconstruction": [
+     "De baron had ontdekt dat zijn schilderij een vervalsing was, verkocht door de kunstexpert.",
+     "Om 22:05 verliet de kunstexpert de zaal 'om te bellen'; de pianist zag iemand weggaan.",
+     "Om 22:08 zag de kok haar naar de kelderdeur lopen.",
+     "Om 22:15 sloeg ze de baron in de kelder neer met een fles en verloor ze een oorbel op de trap.",
+     "De taxatiebrief geeft het motief; de oorbel het bewijs."
+    ]
+   }
+  }
+ },
+ {
+  "id": "polonaise",
+  "title": "De laatste polonaise",
+  "tagline": "Elfde van de elfde in café De Kroon. Midden in het feest wordt prins Lei dood gevonden in de kelder.",
+  "audience": "Volwassenen en jongeren vanaf 14 jaar",
+  "victim": "Prins Lei",
+  "opening": "Het is 11 november, kwart voor elf in de avond. Café De Kroon zit vol voor de opening van het carnavalsseizoen. Prins Lei, die net is uitgeroepen, wordt dood gevonden onderaan de keldertrap. Naast hem ligt zijn eigen scepter. Niemand heeft het café verlaten. Een van ons weet meer dan hij zegt.",
+  "setting": [
+   "Gelagkamer met de bar en het podium",
+   "Keldertrap achter de bar",
+   "Kelder met bier en onderdelen van de praalwagen",
+   "Werkplaats van de praalwagen met een achterdeur naar de kelder",
+   "Garderobe en toiletten",
+   "Terras aan de straatkant"
+  ],
+  "facts": [
+   "22:00 · De prinsenreceptie is afgelopen.",
+   "22:15 · Groepsfoto bij de praalwagen.",
+   "22:25 · Lei gaat naar de kelder.",
+   "22:30 · Het licht gaat vijf minuten uit voor de polonaise.",
+   "22:50 · De tapper vindt Lei in de kelder."
+  ],
+  "means": [
+   "Een klap met de scepter van de prins",
+   "Vergif in zijn bier",
+   "Een duw van de keldertrap",
+   "Opgesloten in de koelcel"
+  ],
+  "motives": [
+   "Lei ontdekte dat er geld uit de prinsenkas verdween",
+   "Lei had de praalwagen afgekeurd en zocht een nieuwe bouwer",
+   "Lei wilde de hermenie vervangen door een dj",
+   "Lei wilde de vereniging naar een ander café verhuizen"
+  ],
+  "characters": [
+   {
+    "id": "kastelein",
+    "name": "De kastelein",
+    "core": true,
+    "bio": "Eigenaar van café De Kroon, al dertig jaar het clubhuis van de vereniging.",
+    "secret": "Je hebt al maanden een achterstand bij de brouwerij en vreest dat de vereniging vertrekt.",
+    "alibi": "Je tapte de hele avond en liep tijdens de polonaise vlak achter de adjudant."
+   },
+   {
+    "id": "adjudant",
+    "name": "De adjudant",
+    "core": true,
+    "bio": "Staat de prins het hele seizoen terzijde.",
+    "secret": "Je wilde zelf prins worden en bent teleurgesteld dat het Lei werd.",
+    "alibi": "Je liep tijdens de polonaise voorop in de rij."
+   },
+   {
+    "id": "vorst",
+    "name": "De vorst",
+    "core": true,
+    "bio": "Voorzitter van de carnavalsvereniging, met cape en ambtsketen.",
+    "secret": "Je beheert samen met Lei de prinsenkas. De boekhouding is al een tijd niet bijgewerkt.",
+    "alibi": "Je zegt dat je tijdens de polonaise bij de garderobe stond."
+   },
+   {
+    "id": "kapelmeester",
+    "name": "De kapelmeester",
+    "core": true,
+    "bio": "Dirigent van de zaate hermenie, altijd met witte handschoenen.",
+    "secret": "De hermenie heeft dit jaar veel leden verloren; je bent bang dat het de laatste keer is.",
+    "alibi": "Je zegt dat je de polonaise dirigeerde."
+   },
+   {
+    "id": "wagenbouwer",
+    "name": "De wagenbouwer",
+    "core": true,
+    "bio": "Bouwt al twintig jaar de praalwagen in de werkplaats achter het café.",
+    "secret": "Je hebt onderdelen van de vereniging voor een eigen klus gebruikt.",
+    "alibi": "Je zegt dat je tijdens de polonaise in de werkplaats een lamp repareerde."
+   },
+   {
+    "id": "verslaggever",
+    "name": "De verslaggever",
+    "core": true,
+    "bio": "Schrijft voor de lokale krant en fotografeert alles.",
+    "secret": "Je hebt het nieuws over de nieuwe prins al doorgegeven vóór de officiële onthulling.",
+    "alibi": "Na de groepsfoto zat je aan de bar je foto's te bekijken."
+   },
+   {
+    "id": "tapper",
+    "name": "De tapper",
+    "core": false,
+    "bio": "Helpt de kastelein elk weekend achter de bar.",
+    "secret": "Je drinkt stiekem tijdens je dienst.",
+    "alibi": "Je spoelde tijdens de polonaise glazen achter de bar.",
+    "fallback": "kastelein"
+   },
+   {
+    "id": "tonpraoter",
+    "name": "De tonpraoter",
+    "core": false,
+    "bio": "Treedt straks op met een buut over het afgelopen jaar.",
+    "secret": "Je buut gaat over Lei, en hij is niet erg vriendelijk.",
+    "alibi": "Je oefende tijdens de polonaise je buut in de toiletten.",
+    "fallback": "adjudant"
+   },
+   {
+    "id": "dansmarieke",
+    "name": "Het dansmarieke",
+    "core": false,
+    "bio": "Danste vanavond op het podium.",
+    "secret": "Je wilt stoppen met dansen maar durft het niemand te vertellen.",
+    "alibi": "Je stond tijdens de polonaise bij het podium.",
+    "fallback": "verslaggever"
+   },
+   {
+    "id": "oudprins",
+    "name": "De oud-prins",
+    "core": false,
+    "bio": "Was vorig jaar prins en geeft Lei goede raad.",
+    "secret": "Je had gehoopt nog een jaar prins te blijven.",
+    "alibi": "Je liep tijdens de polonaise achteraan in de rij.",
+    "fallback": "wagenbouwer"
+   },
+   {
+    "id": "buurman",
+    "name": "De buurman",
+    "core": false,
+    "bio": "Woont naast het café en komt elk jaar kijken.",
+    "secret": "Je hebt vorige week geklaagd bij de gemeente over het lawaai.",
+    "alibi": "Je zat tijdens de polonaise op het terras.",
+    "fallback": "kastelein"
+   },
+   {
+    "id": "nichtje",
+    "name": "Het nichtje van de prins",
+    "core": false,
+    "bio": "Nichtje van Lei, voor het eerst bij de opening.",
+    "secret": "Lei heeft je beloofd dat je volgend jaar het dansmarieke wordt.",
+    "alibi": "Je stond tijdens de polonaise naast het dansmarieke.",
+    "fallback": "adjudant"
+   }
+  ],
+  "clues": [
+   {
+    "to": "kastelein",
+    "round": 1,
+    "text": "De kelder is alleen via de trap achter de bar en via de achterdeur van de werkplaats te bereiken. Vanaf 22:20 stond de kelderdeur achter de bar open voor een nieuw vat."
+   },
+   {
+    "to": "kastelein",
+    "round": 2,
+    "text": "Om 22:30 ging, zoals elk jaar, het licht vijf minuten uit voor de polonaise. In het donker kon iedereen ongezien achter de bar komen."
+   },
+   {
+    "to": "adjudant",
+    "round": 1,
+    "text": "Lei zei om 22:25: \"Ik moet even iets regelen in de kelder.\" Hij gaf jou zijn prinsenmuts te bewaren, maar nam zijn scepter mee."
+   },
+   {
+    "to": "adjudant",
+    "round": 2,
+    "text": "Je liep tijdens de polonaise voorop. De kastelein liep de hele tijd vlak achter je."
+   },
+   {
+    "to": "verslaggever",
+    "round": 1,
+    "text": "Je maakte om 22:15 een groepsfoto bij de praalwagen. Je kunt op je telefoon terugkijken wie erop staat en wat ze dragen."
+   },
+   {
+    "to": "wagenbouwer",
+    "round": 1,
+    "text": "In de kelder liggen onderdelen van de praalwagen en overal vers zaagsel. Wie beneden was, heeft het aan zijn schoenen of kleren."
+   },
+   {
+    "to": "vorst",
+    "round": 1,
+    "text": "Lei zei vanmiddag tegen je: \"Vanavond stel ik orde op zaken in de vereniging.\" Meer wilde hij niet zeggen."
+   },
+   {
+    "to": "kapelmeester",
+    "round": 1,
+    "text": "De polonaise duurde van 22:30 tot 22:40; het licht ging om 22:35 weer aan."
+   },
+   {
+    "to": "tapper",
+    "round": 1,
+    "text": "Om 22:50 ging je naar de kelder voor een nieuw vat en vond je Lei onderaan de trap. Naast hem lag zijn scepter."
+   },
+   {
+    "to": "tapper",
+    "round": 2,
+    "text": "Rond 22:33 hoorde je beneden in de kelder harde stemmen en daarna een doffe klap."
+   },
+   {
+    "to": "tonpraoter",
+    "round": 1,
+    "text": "Vanuit de toiletten hoorde je rond 22:34 iemand haastig de keldertrap op komen."
+   },
+   {
+    "to": "dansmarieke",
+    "round": 1,
+    "text": "Na de polonaise, om 22:40, telde je het gezelschap: iedereen leek weer in de gelagkamer te zijn."
+   },
+   {
+    "to": "oudprins",
+    "round": 1,
+    "text": "Lei vertelde je vorige week dat hij \"iets ontdekt had dat de vereniging op zijn kop zet\"."
+   },
+   {
+    "to": "buurman",
+    "round": 1,
+    "text": "Om 22:20 zag je door het raam Lei aan de bar praten met iemand van het bestuur. Ze leken het oneens."
+   },
+   {
+    "to": "nichtje",
+    "round": 1,
+    "text": "Lei had een opgevouwen brief in zijn binnenzak die hij vanavond \"aan de juiste persoon\" wilde geven. Bij het lichaam is geen brief gevonden."
+   }
+  ],
+  "evidence": [
+   {
+    "round": 1,
+    "title": "De scepter",
+    "text": "De zware scepter van de prins lag naast het lichaam. In de gouden knop zit een deuk."
+   },
+   {
+    "round": 3,
+    "title": "De wending",
+    "text": "Achter het biervat ligt een brillenkoker van de wagenbouwer. Maar die werkt hier elke dag; hij kan hem al eerder verloren hebben."
+   }
+  ],
+  "culprits": {
+   "vorst": {
+    "means": 0,
+    "motive": 0,
+    "task": "Zorg dat minstens twee mensen de wagenbouwer verdenken, zonder te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. Je leende al maanden geld uit de prinsenkas. Lei ontdekte het en wilde je vanavond een brief geven. Om 22:31, in het donker, liep je tegen de polonaise in naar de kelder. Na een ruzie sloeg je hem met zijn eigen scepter en nam je de brief mee. Je bent de enige met een cape met gouden rand. Lieg over waar je in het donker was, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "verslaggever",
+      "round": 1,
+      "text": "Op je groepsfoto van 22:15 draagt alleen de vorst een cape met een gouden rand."
+     },
+     {
+      "to": "kastelein",
+      "round": 2,
+      "text": "Toen het licht om 22:35 weer aanging, stond de vorst buiten adem naast de bar. Er zat zaagsel aan de onderkant van zijn cape."
+     },
+     {
+      "to": "wagenbouwer",
+      "round": 2,
+      "text": "Om 22:33 hoorde je de keldertrap kraken. Door het werkplaatsraampje zag je een gouden rand van een cape naar boven verdwijnen."
+     },
+     {
+      "to": "adjudant",
+      "round": 3,
+      "text": "De vorst vroeg je vanmiddag nerveus of Lei \"iets over de kas\" had gezegd."
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Het kasboek",
+      "text": "Achter de bar ligt het kasboek van de prinsenkas. Er zijn drie bladzijden uitgescheurd."
+     },
+     {
+      "round": 3,
+      "title": "De snippers",
+      "text": "In de prullenbak bij de garderobe liggen snippers van een brief: \"…geld uit de kas… jij als vorst…\""
+     }
+    ],
+    "reconstruction": [
+     "Lei ontdekte dat er geld uit de prinsenkas verdween en schreef de vorst een brief.",
+     "Om 22:25 ging Lei naar de kelder; hij had met de vorst afgesproken daar te praten.",
+     "Om 22:31, in het donker van de polonaise, liep de vorst tegen de rij in naar de kelder.",
+     "Na een ruzie sloeg de vorst Lei met de scepter, nam de brief mee en kwam om 22:34 met zaagsel aan zijn cape weer boven.",
+     "Het kasboek en de snippers geven het motief. De brillenkoker van de wagenbouwer lag er al eerder."
+    ]
+   },
+   "wagenbouwer": {
+    "means": 0,
+    "motive": 1,
+    "task": "Zorg dat minstens twee mensen de kapelmeester verdenken, zonder te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. Je bouwde twintig jaar de praalwagen. Vanmiddag vertelde Lei dat het bestuur een nieuwe bouwer zoekt. Om 22:31 ging je via de achterdeur van de werkplaats de kelder in, waar Lei stond. In een ruzie sloeg je hem met zijn scepter. Om 22:34 was je terug in de werkplaats. Je droeg je blauwe kiel en werkschoenen. Lieg over waar je in het donker was, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "verslaggever",
+      "round": 1,
+      "text": "Op je groepsfoto van 22:15 is de wagenbouwer de enige met een blauwe kiel en zware werkschoenen."
+     },
+     {
+      "to": "kastelein",
+      "round": 2,
+      "text": "De achterdeur van de werkplaats naar de kelder stond om 22:40 open. Die deur gebruikt eigenlijk alleen de wagenbouwer."
+     },
+     {
+      "to": "vorst",
+      "round": 2,
+      "text": "Lei vertelde je dat hij de wagenbouwer vanavond zou zeggen dat het bestuur een nieuwe bouwer zoekt."
+     },
+     {
+      "to": "kapelmeester",
+      "round": 3,
+      "text": "Bij het licht van de praalwagen zag je tijdens de polonaise een blauwe kiel naar de werkplaats glippen."
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "Het bestuursbesluit",
+      "text": "In Lei's jas zit een concept: \"Vanaf volgend jaar wordt de praalwagen elders gebouwd.\""
+     },
+     {
+      "round": 3,
+      "title": "Voetafdrukken",
+      "text": "Op de keldertrap aan de kant van de werkplaats staan afdrukken van zware werkschoenen in het zaagsel."
+     }
+    ],
+    "reconstruction": [
+     "Lei wilde de praalwagen volgend jaar door een ander laten bouwen en vertelde dat de wagenbouwer vanmiddag.",
+     "Om 22:25 ging Lei naar de kelder om de onderdelen te bekijken.",
+     "Om 22:31, in het donker, kwam de wagenbouwer via de achterdeur van de werkplaats de kelder in.",
+     "Na een ruzie sloeg hij Lei met de scepter en ging om 22:34 terug naar de werkplaats; zijn werkschoenen lieten sporen na in het zaagsel.",
+     "Het bestuursbesluit geeft het motief. Zijn brillenkoker lag er inderdaad, maar was geen bewijs op zich."
+    ]
+   },
+   "kapelmeester": {
+    "means": 0,
+    "motive": 2,
+    "task": "Zorg dat minstens twee mensen de vorst verdenken, zonder te liegen over iets wat op hun telefoon staat.",
+    "confession": "Jij bent de dader. Lei wilde volgend jaar een dj in plaats van de hermenie. Om 22:30 gaf je je dirigeerstok aan de tamboer en zei je dat je naar de wc ging. Je ging naar de kelder, sloeg Lei in een ruzie met zijn scepter en kwam om 22:34 weer boven. Je verloor daarbij een witte handschoen. Lieg over waar je in het donker was, maar verzin geen bewijs dat de app tegenspreekt.",
+    "clues": [
+     {
+      "to": "verslaggever",
+      "round": 1,
+      "text": "Op je groepsfoto van 22:15 draagt alleen de kapelmeester witte handschoenen."
+     },
+     {
+      "to": "kastelein",
+      "round": 2,
+      "text": "Om 22:36 vond je achter de bar één witte handschoen met zaagsel erop."
+     },
+     {
+      "to": "adjudant",
+      "round": 2,
+      "text": "Lei zei je vanavond: \"Na de polonaise vertel ik de kapelmeester dat we volgend jaar met een dj gaan.\""
+     },
+     {
+      "to": "wagenbouwer",
+      "round": 3,
+      "text": "Tijdens de polonaise speelde de hermenie zonder dirigent: de tamboer stond vooraan met de dirigeerstok te zwaaien."
+     }
+    ],
+    "evidence": [
+     {
+      "round": 2,
+      "title": "De offerte",
+      "text": "Op de bar ligt een offerte van een dj voor het volgende seizoen, met Lei's handtekening."
+     },
+     {
+      "round": 3,
+      "title": "De lessenaar",
+      "text": "In de kelder ligt een lessenaarlampje van de hermenie dat nog aan staat."
+     }
+    ],
+    "reconstruction": [
+     "Lei wilde volgend seizoen een dj in plaats van de hermenie en wilde het de kapelmeester na de polonaise vertellen.",
+     "Om 22:30 gaf de kapelmeester de dirigeerstok aan de tamboer en verdween hij \"naar de wc\".",
+     "In de kelder kregen hij en Lei ruzie; de kapelmeester sloeg hem met de scepter.",
+     "Om 22:34 kwam hij de trap op; achter de bar verloor hij een witte handschoen met zaagsel.",
+     "De dj-offerte geeft het motief. De brillenkoker van de wagenbouwer lag er al eerder."
+    ]
+   }
+  }
+ }
+]

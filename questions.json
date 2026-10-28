@@ -1,0 +1,8638 @@
+{
+ "nl": [
+  {
+   "q": "Welk dier is een zoogdier?",
+   "options": [
+    "Haai",
+    "Dolfijn",
+    "Krokodil",
+    "Pinguïn"
+   ],
+   "correct": 1,
+   "explanation": "Een dolfijn ademt met longen en voedt zijn jongen met melk.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel zijden heeft een zeshoek?",
+   "options": [
+    "Vijf",
+    "Zes",
+    "Zeven",
+    "Acht"
+   ],
+   "correct": 1,
+   "explanation": "Een zeshoek heeft zes zijden en zes hoeken.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke planeet staat het dichtst bij de zon?",
+   "options": [
+    "Venus",
+    "Aarde",
+    "Mercurius",
+    "Mars"
+   ],
+   "correct": 2,
+   "explanation": "Vanaf de zon is de volgorde: Mercurius, Venus, Aarde, Mars.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Waarmee ademt een vis onder water?",
+   "options": [
+    "Longen",
+    "Kieuwen",
+    "Vinnen",
+    "Schubben"
+   ],
+   "correct": 1,
+   "explanation": "Kieuwen halen zuurstof uit het water.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "In welk land ligt de stad Florence?",
+   "options": [
+    "Frankrijk",
+    "Spanje",
+    "Italië",
+    "Griekenland"
+   ],
+   "correct": 2,
+   "explanation": "Florence ligt in de Italiaanse regio Toscane.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel minuten zitten er in anderhalf uur?",
+   "options": [
+    "75",
+    "80",
+    "90",
+    "100"
+   ],
+   "correct": 2,
+   "explanation": "Een uur is 60 minuten; een half uur is 30 minuten.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welk instrument heeft meestal 88 toetsen?",
+   "options": [
+    "Viool",
+    "Trompet",
+    "Piano",
+    "Gitaar"
+   ],
+   "correct": 2,
+   "explanation": "Een moderne standaardpiano heeft 52 witte en 36 zwarte toetsen.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke kleur krijg je door blauwe en gele verf te mengen?",
+   "options": [
+    "Paars",
+    "Groen",
+    "Oranje",
+    "Rood"
+   ],
+   "correct": 1,
+   "explanation": "Bij het mengen van gewone blauwe en gele verf ontstaat groen.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welk werelddeel is het grootst qua oppervlakte?",
+   "options": [
+    "Afrika",
+    "Europa",
+    "Azië",
+    "Zuid-Amerika"
+   ],
+   "correct": 2,
+   "explanation": "Azië is het grootste werelddeel qua oppervlakte.",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Door welke stad stroomt de Seine?",
+   "options": [
+    "Londen",
+    "Parijs",
+    "Rome",
+    "Berlijn"
+   ],
+   "correct": 1,
+   "explanation": "De Seine stroomt door Parijs.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welk land heeft de vorm van een laars?",
+   "options": [
+    "Noorwegen",
+    "Portugal",
+    "Italië",
+    "Kroatië"
+   ],
+   "correct": 2,
+   "explanation": "Italië wordt vaak vergeleken met een laars.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke stad ligt in twee werelddelen, Europa en Azië?",
+   "options": [
+    "Istanbul",
+    "Athene",
+    "Caïro",
+    "Wenen"
+   ],
+   "correct": 0,
+   "explanation": "Istanbul ligt aan beide zijden van de Bosporus.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke woestijn ligt in het noorden van Afrika?",
+   "options": [
+    "Gobi",
+    "Sahara",
+    "Atacama",
+    "Kalahari"
+   ],
+   "correct": 1,
+   "explanation": "De Sahara strekt zich uit over het noorden van Afrika.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Van welk land is Oslo de hoofdstad?",
+   "options": [
+    "Zweden",
+    "Denemarken",
+    "Noorwegen",
+    "Finland"
+   ],
+   "correct": 2,
+   "explanation": "Oslo is de hoofdstad van Noorwegen.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke berg is gemeten vanaf zeeniveau de hoogste ter wereld?",
+   "options": [
+    "Mont Blanc",
+    "Kilimanjaro",
+    "Mount Everest",
+    "Matterhorn"
+   ],
+   "correct": 2,
+   "explanation": "De top van Mount Everest ligt het hoogst boven zeeniveau.",
+   "category": "De wereld"
+  },
+  {
+   "q": "In welk land ligt de oude stad Machu Picchu?",
+   "options": [
+    "Mexico",
+    "Peru",
+    "Chili",
+    "Brazilië"
+   ],
+   "correct": 1,
+   "explanation": "Machu Picchu ligt in de Andes in Peru.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welk land grenst direct ten zuiden aan Nederland?",
+   "options": [
+    "Frankrijk",
+    "Luxemburg",
+    "België",
+    "Zwitserland"
+   ],
+   "correct": 2,
+   "explanation": "België grenst aan het zuiden van Nederland.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welk land ligt op het Iberisch Schiereiland, naast Spanje?",
+   "options": [
+    "Italië",
+    "Griekenland",
+    "Portugal",
+    "Ierland"
+   ],
+   "correct": 2,
+   "explanation": "Portugal ligt aan de westkant van het Iberisch Schiereiland.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke rivier stroomt door Londen?",
+   "options": [
+    "Rijn",
+    "Donau",
+    "Theems",
+    "Seine"
+   ],
+   "correct": 2,
+   "explanation": "De Theems stroomt door Londen.",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke kleur heeft de leiderstrui van het algemeen klassement in de Tour de France?",
+   "options": [
+    "Groen",
+    "Geel",
+    "Rood",
+    "Wit"
+   ],
+   "correct": 1,
+   "explanation": "De leider van het algemeen klassement draagt de gele trui.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoeveel vakjes heeft een standaard schaakbord?",
+   "options": [
+    "32",
+    "48",
+    "64",
+    "100"
+   ],
+   "correct": 2,
+   "explanation": "Acht rijen maal acht kolommen is 64 vakjes.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Bij welke sport hoort de term “hole-in-one”?",
+   "options": [
+    "Darts",
+    "Golf",
+    "Bowlen",
+    "Cricket"
+   ],
+   "correct": 1,
+   "explanation": "Bij golf gaat de bal bij een hole-in-one met één slag in de hole.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoeveel ogen hebben tegenoverliggende zijden van een gewone dobbelsteen samen?",
+   "options": [
+    "Zes",
+    "Zeven",
+    "Acht",
+    "Negen"
+   ],
+   "correct": 1,
+   "explanation": "De paren zijn 1 en 6, 2 en 5, en 3 en 4: samen steeds zeven.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoeveel spelers per team staan bij regulier veldvoetbal aan het begin op het veld?",
+   "options": [
+    "Negen",
+    "Tien",
+    "Elf",
+    "Twaalf"
+   ],
+   "correct": 2,
+   "explanation": "Een regulier voetbalteam start met elf spelers, inclusief de keeper.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoeveel punten is de buitenste bull bij standaard darts waard?",
+   "options": [
+    "20",
+    "25",
+    "40",
+    "50"
+   ],
+   "correct": 1,
+   "explanation": "De buitenste bull is 25 punten waard; de binnenste bull 50.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoe lang is een officiële marathon?",
+   "options": [
+    "40 km",
+    "41,195 km",
+    "42,195 km",
+    "43 km"
+   ],
+   "correct": 2,
+   "explanation": "De officiële marathonafstand is 42 kilometer en 195 meter.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Met welk schaakstuk kun je over andere stukken heen springen?",
+   "options": [
+    "Toren",
+    "Paard",
+    "Dame",
+    "Loper"
+   ],
+   "correct": 1,
+   "explanation": "Het paard kan bij zijn zet over andere stukken heen springen.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Bij welke sport gebruik je een puck?",
+   "options": [
+    "Waterpolo",
+    "IJshockey",
+    "Basketbal",
+    "Handbal"
+   ],
+   "correct": 1,
+   "explanation": "IJshockey speel je met een puck.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoeveel ringen heeft het olympische symbool?",
+   "options": [
+    "Vier",
+    "Vijf",
+    "Zes",
+    "Zeven"
+   ],
+   "correct": 1,
+   "explanation": "Het olympische symbool bestaat uit vijf ringen.",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Welke band maakte het nummer “Bohemian Rhapsody”?",
+   "options": [
+    "ABBA",
+    "Queen",
+    "U2",
+    "The Beatles"
+   ],
+   "correct": 1,
+   "explanation": "Bohemian Rhapsody is een nummer van Queen.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Uit welk land komt ABBA?",
+   "options": [
+    "Noorwegen",
+    "Denemarken",
+    "Zweden",
+    "Finland"
+   ],
+   "correct": 2,
+   "explanation": "ABBA is een Zweedse popgroep.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Hoe heet de cowboy in Toy Story?",
+   "options": [
+    "Woody",
+    "Buzz",
+    "Andy",
+    "Rex"
+   ],
+   "correct": 0,
+   "explanation": "Woody is de cowboy; Buzz Lightyear is de ruimteheld.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Welk instrument bespeel je met een strijkstok?",
+   "options": [
+    "Trompet",
+    "Viool",
+    "Piano",
+    "Drumstel"
+   ],
+   "correct": 1,
+   "explanation": "Een viool bespeel je meestal met een strijkstok.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Welke tovenaar heeft een litteken in de vorm van een bliksemschicht?",
+   "options": [
+    "Merlijn",
+    "Gandalf",
+    "Harry Potter",
+    "Dumbledore"
+   ],
+   "correct": 2,
+   "explanation": "Harry Potter heeft een bliksemvormig litteken op zijn voorhoofd.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Welke groep zong “Dancing Queen”?",
+   "options": [
+    "Queen",
+    "ABBA",
+    "Boney M.",
+    "Bee Gees"
+   ],
+   "correct": 1,
+   "explanation": "Dancing Queen is een nummer van ABBA.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Hoe heet de sneeuwpop uit Frozen?",
+   "options": [
+    "Sven",
+    "Olaf",
+    "Kristoff",
+    "Hans"
+   ],
+   "correct": 1,
+   "explanation": "Olaf is de sneeuwpop. Sven is het rendier.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Hoeveel snaren heeft een standaardgitaar meestal?",
+   "options": [
+    "Vier",
+    "Vijf",
+    "Zes",
+    "Acht"
+   ],
+   "correct": 2,
+   "explanation": "Een standaardgitaar heeft zes snaren.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Welke filmreeks speelt zich onder meer af op de planeet Tatooine?",
+   "options": [
+    "Star Wars",
+    "Jurassic Park",
+    "Shrek",
+    "The Hunger Games"
+   ],
+   "correct": 0,
+   "explanation": "Tatooine is een planeet uit Star Wars.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Welke artiest stond bekend als de “King of Pop”?",
+   "options": [
+    "Elvis Presley",
+    "Michael Jackson",
+    "Prince",
+    "David Bowie"
+   ],
+   "correct": 1,
+   "explanation": "Michael Jackson stond bekend als de King of Pop.",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Wat is de chemische formule van water?",
+   "options": [
+    "CO₂",
+    "H₂O",
+    "O₂",
+    "NaCl"
+   ],
+   "correct": 1,
+   "explanation": "Een watermolecuul bestaat uit twee waterstofatomen en één zuurstofatoom.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel centimeter is één meter?",
+   "options": [
+    "10",
+    "50",
+    "100",
+    "1000"
+   ],
+   "correct": 2,
+   "explanation": "Een meter is honderd centimeter.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke vrucht groeit aan een eik?",
+   "options": [
+    "Kastanje",
+    "Eikel",
+    "Walnoot",
+    "Hazelnoot"
+   ],
+   "correct": 1,
+   "explanation": "Eikels zijn de vruchten van een eik.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke stad is de hoofdstad van Frankrijk?",
+   "options": [
+    "Lyon",
+    "Marseille",
+    "Parijs",
+    "Nice"
+   ],
+   "correct": 2,
+   "explanation": "Parijs is de hoofdstad van Frankrijk.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel dagen heeft april?",
+   "options": [
+    "28",
+    "29",
+    "30",
+    "31"
+   ],
+   "correct": 2,
+   "explanation": "April heeft dertig dagen.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel wielen heeft een driewieler?",
+   "options": [
+    "Twee",
+    "Drie",
+    "Vier",
+    "Zes"
+   ],
+   "correct": 1,
+   "explanation": "Zoals de naam zegt: drie wielen.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welk dier maakt honing?",
+   "options": [
+    "Mier",
+    "Wesp",
+    "Honingbij",
+    "Vlinder"
+   ],
+   "correct": 2,
+   "explanation": "Honingbijen maken honing uit verzamelde nectar.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Wat gebruik je om temperatuur te meten?",
+   "options": [
+    "Barometer",
+    "Thermometer",
+    "Kompas",
+    "Liniaal"
+   ],
+   "correct": 1,
+   "explanation": "Een thermometer meet temperatuur.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoe heet het jong van een paard?",
+   "options": [
+    "Kalf",
+    "Lam",
+    "Veulen",
+    "Welpen"
+   ],
+   "correct": 2,
+   "explanation": "Een jong paard heet een veulen.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel uur zitten er in twee dagen?",
+   "options": [
+    "24",
+    "36",
+    "48",
+    "72"
+   ],
+   "correct": 2,
+   "explanation": "Twee maal 24 is 48 uur.",
+   "difficulty": "easy",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welk metaal is bij gewone kamertemperatuur vloeibaar?",
+   "options": [
+    "IJzer",
+    "Kwik",
+    "Koper",
+    "Zilver"
+   ],
+   "correct": 1,
+   "explanation": "Kwik is een metaal dat bij gewone kamertemperatuur vloeibaar is.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke eenheid hoort bij elektrische weerstand?",
+   "options": [
+    "Volt",
+    "Ampère",
+    "Ohm",
+    "Watt"
+   ],
+   "correct": 2,
+   "explanation": "Weerstand wordt uitgedrukt in ohm.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel graden heeft een volledige cirkel?",
+   "options": [
+    "90",
+    "180",
+    "270",
+    "360"
+   ],
+   "correct": 3,
+   "explanation": "Een volledige omwenteling is 360 graden.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke wetenschapper formuleerde de relativiteitstheorie?",
+   "options": [
+    "Newton",
+    "Einstein",
+    "Darwin",
+    "Pasteur"
+   ],
+   "correct": 1,
+   "explanation": "Albert Einstein formuleerde de speciale en algemene relativiteitstheorie.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Wat is 15 procent van 200?",
+   "options": [
+    "15",
+    "20",
+    "30",
+    "40"
+   ],
+   "correct": 2,
+   "explanation": "Tien procent is 20 en vijf procent is 10; samen 30.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke taal werd in het oude Rome gesproken?",
+   "options": [
+    "Latijn",
+    "Spaans",
+    "Frans",
+    "Duits"
+   ],
+   "correct": 0,
+   "explanation": "Latijn was de taal van het oude Rome.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Wat is het kleinste priemgetal?",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "correct": 2,
+   "explanation": "Twee is het kleinste priemgetal en het enige even priemgetal.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Hoeveel nullen heeft één miljoen?",
+   "options": [
+    "Vier",
+    "Vijf",
+    "Zes",
+    "Zeven"
+   ],
+   "correct": 2,
+   "explanation": "Een miljoen schrijf je als 1.000.000.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Wat meet een barometer?",
+   "options": [
+    "Luchtdruk",
+    "Windsnelheid",
+    "Temperatuur",
+    "Afstand"
+   ],
+   "correct": 0,
+   "explanation": "Een barometer meet luchtdruk.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "Welke planeet staat bekend om haar opvallende ringen?",
+   "options": [
+    "Mars",
+    "Mercurius",
+    "Saturnus",
+    "Venus"
+   ],
+   "correct": 2,
+   "explanation": "Saturnus heeft een opvallend en uitgebreid ringenstelsel.",
+   "difficulty": "normal",
+   "category": "Algemene kennis"
+  },
+  {
+   "q": "In welk land ligt Barcelona?",
+   "options": [
+    "Portugal",
+    "Spanje",
+    "Italië",
+    "Frankrijk"
+   ],
+   "correct": 1,
+   "explanation": "Barcelona ligt in Spanje.",
+   "difficulty": "normal",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke zee ligt tussen Europa en Noord-Afrika?",
+   "options": [
+    "Noordzee",
+    "Baltische Zee",
+    "Middellandse Zee",
+    "Kaspische Zee"
+   ],
+   "correct": 2,
+   "explanation": "De Middellandse Zee ligt tussen Zuid-Europa en Noord-Afrika.",
+   "difficulty": "normal",
+   "category": "De wereld"
+  },
+  {
+   "q": "Van welk land is Tokio de hoofdstad?",
+   "options": [
+    "China",
+    "Japan",
+    "Zuid-Korea",
+    "Thailand"
+   ],
+   "correct": 1,
+   "explanation": "Tokio is de hoofdstad van Japan.",
+   "difficulty": "normal",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke taal wordt hoofdzakelijk gesproken in Argentinië?",
+   "options": [
+    "Portugees",
+    "Italiaans",
+    "Spaans",
+    "Frans"
+   ],
+   "correct": 2,
+   "explanation": "Spaans is de officiële bestuurstaal en de meest gesproken taal.",
+   "difficulty": "normal",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welk land heeft een esdoornblad op de vlag?",
+   "options": [
+    "Canada",
+    "Australië",
+    "Nieuw-Zeeland",
+    "Zwitserland"
+   ],
+   "correct": 0,
+   "explanation": "De Canadese vlag heeft een rood esdoornblad.",
+   "difficulty": "normal",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke stad is de hoofdstad van Duitsland?",
+   "options": [
+    "Bonn",
+    "Hamburg",
+    "München",
+    "Berlijn"
+   ],
+   "correct": 3,
+   "explanation": "Berlijn is de hoofdstad van Duitsland.",
+   "difficulty": "normal",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welk dier staat bekend als het grootste landdier?",
+   "options": [
+    "Nijlpaard",
+    "Afrikaanse olifant",
+    "Neushoorn",
+    "Giraffe"
+   ],
+   "correct": 1,
+   "explanation": "De Afrikaanse savanneolifant is het grootste nog levende landdier.",
+   "difficulty": "normal",
+   "category": "De wereld"
+  },
+  {
+   "q": "Welke sport gebruikt een scrum?",
+   "options": [
+    "Rugby",
+    "Volleybal",
+    "Tennis",
+    "Basketbal"
+   ],
+   "correct": 0,
+   "explanation": "Een scrum is een spelhervatting in rugby.",
+   "difficulty": "normal",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoeveel punten levert een rake vrije worp bij basketbal op?",
+   "options": [
+    "Eén",
+    "Twee",
+    "Drie",
+    "Vier"
+   ],
+   "correct": 0,
+   "explanation": "Een rake vrije worp is één punt waard.",
+   "difficulty": "normal",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Hoeveel vakken heeft een standaard dambord van 10 bij 10?",
+   "options": [
+    "64",
+    "80",
+    "100",
+    "120"
+   ],
+   "correct": 2,
+   "explanation": "Tien maal tien is honderd vakken.",
+   "difficulty": "normal",
+   "category": "Sport & spel"
+  },
+  {
+   "q": "Welke kleur maak je met rode en gele verf?",
+   "options": [
+    "Groen",
+    "Paars",
+    "Oranje",
+    "Blauw"
+   ],
+   "correct": 2,
+   "explanation": "Rode en gele verf geven samen oranje.",
+   "difficulty": "hard",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Welke Nederlandse schilder maakte De Nachtwacht?",
+   "options": [
+    "Van Gogh",
+    "Vermeer",
+    "Rembrandt",
+    "Mondriaan"
+   ],
+   "correct": 2,
+   "explanation": "Rembrandt van Rijn schilderde De Nachtwacht.",
+   "difficulty": "hard",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Hoe heet de leeuwenwelp in The Lion King?",
+   "options": [
+    "Simba",
+    "Timon",
+    "Pumbaa",
+    "Scar"
+   ],
+   "correct": 0,
+   "explanation": "Simba is de jonge leeuw in The Lion King.",
+   "difficulty": "hard",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Hoe heet de tovenaar uit The Lord of the Rings?",
+   "options": [
+    "Gandalf",
+    "Hagrid",
+    "Merlijn",
+    "Dobby"
+   ],
+   "correct": 0,
+   "explanation": "Gandalf is een tovenaar in The Lord of the Rings.",
+   "difficulty": "hard",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Welke noot volgt op do, re, mi?",
+   "options": [
+    "La",
+    "Fa",
+    "Sol",
+    "Si"
+   ],
+   "correct": 1,
+   "explanation": "De reeks luidt do, re, mi, fa, sol, la, si.",
+   "difficulty": "hard",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Hoeveel zijden heeft een octaaf in de meetkunde?",
+   "options": [
+    "Drie",
+    "Zes",
+    "Acht",
+    "Geen: een octaaf is een muziekterm"
+   ],
+   "correct": 3,
+   "explanation": "Een octaaf is een muzikaal interval. Een achthoek heet een octagoon.",
+   "difficulty": "hard",
+   "category": "Film & muziek"
+  },
+  {
+   "q": "Hoeveel minuten zitten er in een uur?",
+   "options": [
+    "100",
+    "90",
+    "60",
+    "50"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 60.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke kleur krijg je als je blauw en geel mengt?",
+   "options": [
+    "Bruin",
+    "Groen",
+    "Paars",
+    "Oranje"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Groen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel poten heeft een spin?",
+   "options": [
+    "Twaalf",
+    "Acht",
+    "Tien",
+    "Zes"
+   ],
+   "correct": 1,
+   "explanation": "Insecten hebben er zes, spinnen acht.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel dagen heeft een schrikkeljaar?",
+   "options": [
+    "365",
+    "366",
+    "360",
+    "364"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: 366.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk getal staat in Romeinse cijfers voor X?",
+   "options": [
+    "100",
+    "50",
+    "5",
+    "10"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 10.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het tegenovergestelde van 'noord' op een kompas?",
+   "options": [
+    "Noordwest",
+    "Zuid",
+    "Oost",
+    "West"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Zuid.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel kaarten zitten er in een standaard spel kaarten zonder jokers?",
+   "options": [
+    "54",
+    "48",
+    "52",
+    "56"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 52.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel spelers staan er per team op het veld bij volleybal?",
+   "options": [
+    "Vier",
+    "Zes",
+    "Vijf",
+    "Zeven"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Zes.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk getal is in Romeinse cijfers geschreven als MCM?",
+   "options": [
+    "1100",
+    "2100",
+    "1900",
+    "1400"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 1900.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel kleuren heeft de regenboog traditioneel?",
+   "options": [
+    "Zeven",
+    "Acht",
+    "Zes",
+    "Vijf"
+   ],
+   "correct": 0,
+   "explanation": "Rood, oranje, geel, groen, blauw, indigo en violet.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk dier staat bekend als 'het schip van de woestijn'?",
+   "options": [
+    "Kameel",
+    "Struisvogel",
+    "Paard",
+    "Olifant"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Kameel.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel gram is een ons in Nederland?",
+   "options": [
+    "250 gram",
+    "50 gram",
+    "28 gram",
+    "100 gram"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 100 gram.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke maand heeft in een gewoon jaar 28 dagen?",
+   "options": [
+    "Februari",
+    "April",
+    "Juni",
+    "November"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Februari.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is een 'palindroom'?",
+   "options": [
+    "Een woord met vijf klinkers",
+    "Een woord dat achterstevoren hetzelfde is",
+    "Een rijmwoord",
+    "Een woord zonder klinkers"
+   ],
+   "correct": 1,
+   "explanation": "Voorbeelden: lepel, kayak, racecar.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel botten heeft een volwassen mens ongeveer?",
+   "options": [
+    "256",
+    "206",
+    "312",
+    "176"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: 206.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk woord gebruik je voor een groep kraaien in het Engels ('a … of crows')?",
+   "options": [
+    "Murder",
+    "Pack",
+    "School",
+    "Pride"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Murder.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de officiële taal van Brazilië?",
+   "options": [
+    "Spaans",
+    "Frans",
+    "Braziliaans",
+    "Portugees"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Portugees.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel nullen heeft één miljard?",
+   "options": [
+    "Acht",
+    "Negen",
+    "Twaalf",
+    "Zes"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Negen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de angst voor spinnen?",
+   "options": [
+    "Agorafobie",
+    "Arachnofobie",
+    "Acrofobie",
+    "Claustrofobie"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Arachnofobie.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk sterrenbeeld hoort bij iemand die op 1 januari jarig is?",
+   "options": [
+    "Vissen",
+    "Steenbok",
+    "Waterman",
+    "Boogschutter"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Steenbok.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel vierkante meter is een hectare?",
+   "options": [
+    "100",
+    "100.000",
+    "1.000",
+    "10.000"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 10.000.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk orgaan pompt het bloed rond?",
+   "options": [
+    "De lever",
+    "De longen",
+    "Het hart",
+    "De nieren"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Het hart.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk gas ademen mensen in om te leven?",
+   "options": [
+    "Helium",
+    "Koolstofdioxide",
+    "Stikstof",
+    "Zuurstof"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Zuurstof.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk dier is het grootste dier dat ooit heeft geleefd?",
+   "options": [
+    "Blauwe vinvis",
+    "Potvis",
+    "Olifant",
+    "Brachiosaurus"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Blauwe vinvis.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Bij hoeveel graden Celsius kookt water op zeeniveau?",
+   "options": [
+    "100",
+    "80",
+    "120",
+    "90"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: 100.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke planeet heeft de opvallendste ringen?",
+   "options": [
+    "Saturnus",
+    "Neptunus",
+    "Mars",
+    "Jupiter"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Saturnus.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het proces waarbij planten met zonlicht suiker maken?",
+   "options": [
+    "Gisting",
+    "Fotosynthese",
+    "Osmose",
+    "Verdamping"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Fotosynthese.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hardste natuurlijke stof?",
+   "options": [
+    "Graniet",
+    "Diamant",
+    "IJzer",
+    "Kwarts"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Diamant.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel planeten heeft ons zonnestelsel?",
+   "options": [
+    "Zeven",
+    "Negen",
+    "Acht",
+    "Tien"
+   ],
+   "correct": 2,
+   "explanation": "Pluto is sinds 2006 een dwergplaneet.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke vitamine maakt je huid aan onder invloed van zonlicht?",
+   "options": [
+    "Vitamine D",
+    "Vitamine A",
+    "Vitamine B12",
+    "Vitamine C"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Vitamine D.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie formuleerde de relativiteitstheorie?",
+   "options": [
+    "Isaac Newton",
+    "Niels Bohr",
+    "Albert Einstein",
+    "Galileo Galilei"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Albert Einstein.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de dichtstbijzijnde ster bij de aarde?",
+   "options": [
+    "Sirius",
+    "Poolster",
+    "De zon",
+    "Proxima Centauri"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: De zon.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de snelheid van licht ongeveer?",
+   "options": [
+    "30.000 km per seconde",
+    "3 miljoen km per seconde",
+    "300.000 km per seconde",
+    "3.000 km per seconde"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 300.000 km per seconde.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk bloedgroep geldt als 'universele donor' voor rode bloedcellen?",
+   "options": [
+    "AB positief",
+    "B negatief",
+    "A positief",
+    "O negatief"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: O negatief.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk element heeft het atoomnummer 1?",
+   "options": [
+    "Helium",
+    "Koolstof",
+    "Zuurstof",
+    "Waterstof"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Waterstof.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Delftenaar zag als eerste bacteriën door een zelfgemaakte microscoop?",
+   "options": [
+    "Pieter Zeeman",
+    "Hendrik Lorentz",
+    "Christiaan Huygens",
+    "Antoni van Leeuwenhoek"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Antoni van Leeuwenhoek.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlander ontdekte de ringen van Saturnus als ring en de maan Titan?",
+   "options": [
+    "Antoni van Leeuwenhoek",
+    "Christiaan Huygens",
+    "Simon Stevin",
+    "Willem Einthoven"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Christiaan Huygens.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het grootste orgaan van het menselijk lichaam?",
+   "options": [
+    "De longen",
+    "De darmen",
+    "De lever",
+    "De huid"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: De huid.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk metaal is bij kamertemperatuur vloeibaar?",
+   "options": [
+    "Tin",
+    "Lood",
+    "Kwik",
+    "Aluminium"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Kwik.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel chromosomen heeft een mens normaal gesproken?",
+   "options": [
+    "44",
+    "23",
+    "48",
+    "46"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 46.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse natuurkundige kreeg in 1902 samen met Pieter Zeeman de Nobelprijs?",
+   "options": [
+    "Christiaan Huygens",
+    "Johannes van der Waals",
+    "Hendrik Lorentz",
+    "Heike Kamerlingh Onnes"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Hendrik Lorentz.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de chemische naam van keukenzout?",
+   "options": [
+    "Kaliumchloride",
+    "Natriumcarbonaat",
+    "Calciumcarbonaat",
+    "Natriumchloride"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Natriumchloride.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke planeet draait 'liggend' om de zon, met een as die bijna plat ligt?",
+   "options": [
+    "Saturnus",
+    "Neptunus",
+    "Uranus",
+    "Venus"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Uranus.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar eindigde de Tweede Wereldoorlog in Europa?",
+   "options": [
+    "1946",
+    "1944",
+    "1945",
+    "1940"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 1945.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie was de eerste mens op de maan?",
+   "options": [
+    "Neil Armstrong",
+    "Michael Collins",
+    "Buzz Aldrin",
+    "Joeri Gagarin"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Neil Armstrong.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welke stad stond de Berlijnse Muur?",
+   "options": [
+    "Bonn",
+    "Wenen",
+    "München",
+    "Berlijn"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Berlijn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar viel de Berlijnse Muur?",
+   "options": [
+    "1991",
+    "1989",
+    "1979",
+    "1985"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: 1989.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Naar welke Nederlandse zeevaarder zijn de Tasmanzee en Tasmanië vernoemd?",
+   "options": [
+    "Jan van Riebeeck",
+    "Michiel de Ruyter",
+    "Willem Barentsz",
+    "Abel Tasman"
+   ],
+   "correct": 3,
+   "explanation": "Tasman voer in 1642 langs Tasmanië en Nieuw-Zeeland.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette het schip waarmee de Pilgrim Fathers in 1620 naar Amerika voeren?",
+   "options": [
+    "Endeavour",
+    "Batavia",
+    "Mayflower",
+    "Santa Maria"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Mayflower.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef het dagboek dat wereldberoemd werd onder de titel 'Het Achterhuis'?",
+   "options": [
+    "Corrie ten Boom",
+    "Hannie Schaft",
+    "Etty Hillesum",
+    "Anne Frank"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Anne Frank.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie werd in 1815 de eerste koning van het Koninkrijk der Nederlanden?",
+   "options": [
+    "Willem II",
+    "Willem van Oranje",
+    "Lodewijk Napoleon",
+    "Willem I"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Willem I.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar begon de Eerste Wereldoorlog?",
+   "options": [
+    "1904",
+    "1912",
+    "1914",
+    "1918"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 1914.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke stad werd in 79 na Christus bedolven door de Vesuvius?",
+   "options": [
+    "Napels",
+    "Rome",
+    "Athene",
+    "Pompeii"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Pompeii.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette de Franse keizer die in 1815 bij Waterloo verloor?",
+   "options": [
+    "Karel de Grote",
+    "Lodewijk XIV",
+    "Lodewijk XVI",
+    "Napoleon Bonaparte"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Napoleon Bonaparte.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse schilder leefde van 1606 tot 1669 en schilderde De Nachtwacht?",
+   "options": [
+    "Rembrandt van Rijn",
+    "Jan Steen",
+    "Johannes Vermeer",
+    "Frans Hals"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Rembrandt van Rijn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk land schonk de Verenigde Staten het Vrijheidsbeeld?",
+   "options": [
+    "Spanje",
+    "Frankrijk",
+    "Engeland",
+    "Nederland"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Frankrijk.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar werd de Afsluitdijk voltooid?",
+   "options": [
+    "1932",
+    "1975",
+    "1953",
+    "1918"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: 1932.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke ramp in 1953 leidde tot de Deltawerken?",
+   "options": [
+    "De Elfstedentocht",
+    "De Bijlmerramp",
+    "De Vuurwerkramp",
+    "De Watersnoodramp"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: De Watersnoodramp.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette de Romeinse naam voor de stad Maastricht ongeveer?",
+   "options": [
+    "Traiectum ad Rhenum",
+    "Mosae Trajectum",
+    "Noviomagus",
+    "Forum Hadriani"
+   ],
+   "correct": 1,
+   "explanation": "Noviomagus is Nijmegen; Traiectum is Utrecht.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse stad heette in de Romeinse tijd Noviomagus?",
+   "options": [
+    "Maastricht",
+    "Nijmegen",
+    "Heerlen",
+    "Utrecht"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Nijmegen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie was de eerste president van de Verenigde Staten?",
+   "options": [
+    "Thomas Jefferson",
+    "John Adams",
+    "Abraham Lincoln",
+    "George Washington"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: George Washington.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk verdrag uit 1992 legde de basis voor de euro?",
+   "options": [
+    "Verdrag van Rome",
+    "Verdrag van Maastricht",
+    "Verdrag van Nice",
+    "Verdrag van Lissabon"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Verdrag van Maastricht.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette het eerste Nederlandse handelsbedrijf met aandelen, opgericht in 1602?",
+   "options": [
+    "De Nederlandsche Bank",
+    "De Hanze",
+    "De WIC",
+    "De VOC"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: De VOC.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar kregen vrouwen in Nederland actief kiesrecht?",
+   "options": [
+    "1931",
+    "1919",
+    "1945",
+    "1898"
+   ],
+   "correct": 1,
+   "explanation": "In 1917 kregen vrouwen passief kiesrecht, in 1919 actief.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke farao's graf werd in 1922 vrijwel ongeschonden ontdekt?",
+   "options": [
+    "Cheops",
+    "Cleopatra",
+    "Ramses II",
+    "Toetanchamon"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Toetanchamon.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette de Romeinse muur in Noord-Engeland?",
+   "options": [
+    "Limes van Trajanus",
+    "Muur van Caesar",
+    "Muur van Hadrianus",
+    "Muur van Augustus"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Muur van Hadrianus.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Van welke vrucht wordt guacamole vooral gemaakt?",
+   "options": [
+    "Banaan",
+    "Avocado",
+    "Mango",
+    "Kiwi"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Avocado.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Uit welk land komt de pizza oorspronkelijk?",
+   "options": [
+    "Frankrijk",
+    "Griekenland",
+    "Spanje",
+    "Italië"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Italië.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat strooi je in Nederland traditioneel op een beschuit bij een geboorte?",
+   "options": [
+    "Spikkels",
+    "Muisjes",
+    "Vlokken",
+    "Hagelslag"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Muisjes.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke vis wordt traditioneel 'Hollandse Nieuwe' genoemd?",
+   "options": [
+    "Makreel",
+    "Paling",
+    "Haring",
+    "Kabeljauw"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Haring.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdingrediënt van hummus?",
+   "options": [
+    "Kikkererwten",
+    "Linzen",
+    "Witte bonen",
+    "Sesamzaad"
+   ],
+   "correct": 0,
+   "explanation": "Hummus bevat wel tahin, een pasta van sesamzaad.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Uit welk land komt de kaassoort feta oorspronkelijk?",
+   "options": [
+    "Turkije",
+    "Italië",
+    "Griekenland",
+    "Frankrijk"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Griekenland.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke specerij geeft paella zijn gele kleur?",
+   "options": [
+    "Kurkuma",
+    "Paprika",
+    "Saffraan",
+    "Kerrie"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Saffraan.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat eet je in Nederland traditioneel met oud en nieuw?",
+   "options": [
+    "Oliebollen",
+    "Poffertjes",
+    "Stroopwafels",
+    "Pannenkoeken"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Oliebollen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk Japans gerecht bestaat uit rijst met rauwe vis of groente in zeewier?",
+   "options": [
+    "Sushi",
+    "Tempura",
+    "Teriyaki",
+    "Ramen"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Sushi.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is 'krommel' op een Limburgse vlaai?",
+   "options": [
+    "Een laag slagroom",
+    "Een kruimellaag",
+    "Een laag rijstpap",
+    "Een chocoladelaag"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Een kruimellaag.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Van welk graan wordt whisky in Schotland traditioneel vooral gemaakt?",
+   "options": [
+    "Rijst",
+    "Rogge",
+    "Mais",
+    "Gerst"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Gerst.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet bier dat onder toezicht van trappistenmonniken in hun abdij wordt gebrouwen?",
+   "options": [
+    "Witbier",
+    "Lambiek",
+    "Trappist",
+    "Pils"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Trappist.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke kruidensoort geeft pesto genovese zijn groene kleur?",
+   "options": [
+    "Koriander",
+    "Peterselie",
+    "Munt",
+    "Basilicum"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Basilicum.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is 'zoervleisj' in Limburg?",
+   "options": [
+    "Zuur gestoofd vlees",
+    "Rauwe ham",
+    "Gebakken spek",
+    "Gerookte worst"
+   ],
+   "correct": 0,
+   "explanation": "Zuurvlees wordt gestoofd met azijn, stroop en peperkoek.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Uit welk land komt de kaassoort Gruyère?",
+   "options": [
+    "Oostenrijk",
+    "Frankrijk",
+    "België",
+    "Zwitserland"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Zwitserland.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke drank wordt gemaakt van gefermenteerd honingwater?",
+   "options": [
+    "Mede",
+    "Sake",
+    "Cider",
+    "Kefir"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Mede.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Van welke plant komt tequila?",
+   "options": [
+    "Cactus",
+    "Suikerriet",
+    "Agave",
+    "Maïs"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Agave.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de Italiaanse naam voor pasta 'zoals een vlinder'?",
+   "options": [
+    "Orecchiette",
+    "Penne",
+    "Farfalle",
+    "Fusilli"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Farfalle.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse kaas heeft een rode wasschil en komt uit Noord-Holland?",
+   "options": [
+    "Leerdammer",
+    "Goudse",
+    "Leidse",
+    "Edammer"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Edammer.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe noemen we in Nederland een broodje met een gefrituurde kroket?",
+   "options": [
+    "Broodje kroket",
+    "Broodje bal",
+    "Broodje kaas",
+    "Broodje frikandel"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Broodje kroket.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de langste rivier van Europa?",
+   "options": [
+    "Donau",
+    "Rijn",
+    "Loire",
+    "Wolga"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Wolga.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Op welk continent ligt Egypte?",
+   "options": [
+    "Europa",
+    "Zuid-Amerika",
+    "Azië",
+    "Afrika"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Afrika.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke oceaan ligt tussen Europa en Amerika?",
+   "options": [
+    "Stille Oceaan",
+    "Noordelijke IJszee",
+    "Atlantische Oceaan",
+    "Indische Oceaan"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Atlantische Oceaan.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is het grootste land ter wereld qua oppervlakte?",
+   "options": [
+    "Verenigde Staten",
+    "China",
+    "Canada",
+    "Rusland"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Rusland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoogste berg ter wereld?",
+   "options": [
+    "Mount Everest",
+    "Kilimanjaro",
+    "Mont Blanc",
+    "K2"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Mount Everest.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke rivier stroomt door Parijs?",
+   "options": [
+    "Maas",
+    "Seine",
+    "Loire",
+    "Rhône"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Seine.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk land heeft de meeste inwoners van Afrika?",
+   "options": [
+    "Ethiopië",
+    "Egypte",
+    "Zuid-Afrika",
+    "Nigeria"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Nigeria.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welk land ligt Machu Picchu?",
+   "options": [
+    "Mexico",
+    "Peru",
+    "Chili",
+    "Bolivia"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Peru.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke zee ligt tussen Europa en Afrika?",
+   "options": [
+    "Kaspische Zee",
+    "Middellandse Zee",
+    "Zwarte Zee",
+    "Rode Zee"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Middellandse Zee.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de grootste woestijn van Afrika?",
+   "options": [
+    "Gobi",
+    "Namib",
+    "Sahara",
+    "Kalahari"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Sahara.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welk land staat de Taj Mahal?",
+   "options": [
+    "Pakistan",
+    "Bangladesh",
+    "Iran",
+    "India"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: India.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke stad is de hoofdstad van Australië?",
+   "options": [
+    "Sydney",
+    "Melbourne",
+    "Perth",
+    "Canberra"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Canberra.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk land heeft de meeste tijdzones (met overzeese gebieden)?",
+   "options": [
+    "Rusland",
+    "China",
+    "Frankrijk",
+    "Verenigde Staten"
+   ],
+   "correct": 2,
+   "explanation": "Door de overzeese gebieden heeft Frankrijk twaalf tijdzones.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is het diepste meer ter wereld?",
+   "options": [
+    "Baikalmeer",
+    "Bovenmeer",
+    "Victoriameer",
+    "Tanganyikameer"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Baikalmeer.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke zeestraat scheidt Spanje van Marokko?",
+   "options": [
+    "Straat van Gibraltar",
+    "Straat van Messina",
+    "Straat van Dover",
+    "Bosporus"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Straat van Gibraltar.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke rivier vormt een groot deel van de grens tussen de Verenigde Staten en Mexico?",
+   "options": [
+    "Mississippi",
+    "Missouri",
+    "Colorado",
+    "Rio Grande"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Rio Grande.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoogste berg van Afrika?",
+   "options": [
+    "Tafelberg",
+    "Mount Kenya",
+    "Kilimanjaro",
+    "Toubkal"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Kilimanjaro.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Op welk eiland ligt de vulkaan Etna?",
+   "options": [
+    "Corsica",
+    "Sicilië",
+    "Kreta",
+    "Sardinië"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Sicilië.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk Europees land heeft geen kustlijn: Oostenrijk, Portugal, Ierland of Denemarken?",
+   "options": [
+    "Denemarken",
+    "Portugal",
+    "Oostenrijk",
+    "Ierland"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Oostenrijk.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Afrikaanse waterval ligt op de grens van Zambia en Zimbabwe?",
+   "options": [
+    "Niagarawatervallen",
+    "Iguaçuwatervallen",
+    "Angelwatervallen",
+    "Victoriawatervallen"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Victoriawatervallen.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel spelers staan er per team op het veld bij voetbal?",
+   "options": [
+    "Twaalf",
+    "Tien",
+    "Elf",
+    "Negen"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Elf.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "In welke sport kun je een 'hole-in-one' slaan?",
+   "options": [
+    "Tennis",
+    "Hockey",
+    "Cricket",
+    "Golf"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Golf.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welke kleur trui draagt de leider in het algemeen klassement van de Tour de France?",
+   "options": [
+    "Geel",
+    "Roze",
+    "Rood met witte bollen",
+    "Groen"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Geel.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoe vaak per vier jaar worden de Olympische Zomerspelen gehouden?",
+   "options": [
+    "Vier keer",
+    "Elk jaar",
+    "Twee keer",
+    "Eén keer"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Eén keer.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoe lang is een marathon?",
+   "options": [
+    "40 kilometer",
+    "21,1 kilometer",
+    "42,195 kilometer",
+    "45 kilometer"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 42,195 kilometer.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel kilometer is de Elfstedentocht ongeveer?",
+   "options": [
+    "100 kilometer",
+    "300 kilometer",
+    "200 kilometer",
+    "150 kilometer"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 200 kilometer.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "In welke sport is Sven Kramer wereldberoemd geworden?",
+   "options": [
+    "Atletiek",
+    "Wielrennen",
+    "Zwemmen",
+    "Schaatsen"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Schaatsen.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 2010 in de finale tegen Nederland?",
+   "options": [
+    "Spanje",
+    "Brazilië",
+    "Italië",
+    "Duitsland"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Spanje.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel punten is een 'touchdown' waard in American football (zonder extra punt)?",
+   "options": [
+    "Twee",
+    "Zeven",
+    "Drie",
+    "Zes"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Zes.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welke kleur heeft de roos (het midden) bij een dartbord meestal?",
+   "options": [
+    "Blauw",
+    "Geel",
+    "Rood",
+    "Wit"
+   ],
+   "correct": 2,
+   "explanation": "De 'bull' in het midden is rood, de ring eromheen groen.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het grastoernooi in Londen dat bekendstaat om aardbeien met room?",
+   "options": [
+    "US Open",
+    "Wimbledon",
+    "Roland Garros",
+    "Australian Open"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Wimbledon.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "In welke sport wordt de Stanley Cup uitgereikt?",
+   "options": [
+    "Honkbal",
+    "Basketbal",
+    "IJshockey",
+    "American football"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: IJshockey.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Bij welke sport spreek je van een 'birdie'?",
+   "options": [
+    "Badminton",
+    "Darts",
+    "Squash",
+    "Golf"
+   ],
+   "correct": 3,
+   "explanation": "In golf: één slag onder par.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse wielrenner won de Tour de France in 1980?",
+   "options": [
+    "Hennie Kuiper",
+    "Joop Zoetemelk",
+    "Jan Janssen",
+    "Tom Dumoulin"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Joop Zoetemelk.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "In welke stad werden de Olympische Spelen van 1928 gehouden?",
+   "options": [
+    "Berlijn",
+    "Antwerpen",
+    "Amsterdam",
+    "Parijs"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Amsterdam.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Wie werd in 1988 met Nederland Europees kampioen en scoorde een beroemde volley in de finale?",
+   "options": [
+    "Ronald Koeman",
+    "Ruud Gullit",
+    "Frank Rijkaard",
+    "Marco van Basten"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Marco van Basten.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel ringen staan er in het Olympisch logo?",
+   "options": [
+    "Zes",
+    "Zeven",
+    "Vier",
+    "Vijf"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Vijf.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Wat is de maximale score met drie pijlen in darts?",
+   "options": [
+    "150",
+    "170",
+    "160",
+    "180"
+   ],
+   "correct": 3,
+   "explanation": "Drie keer triple 20.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoe lang duurt een basketbalwedstrijd in de NBA zonder verlengingen?",
+   "options": [
+    "60 minuten",
+    "36 minuten",
+    "48 minuten",
+    "40 minuten"
+   ],
+   "correct": 2,
+   "explanation": "Vier periodes van 12 minuten.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welke sport combineert langlaufen en schieten?",
+   "options": [
+    "Moderne vijfkamp",
+    "Skeleton",
+    "Biatlon",
+    "Triatlon"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Biatlon.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel kilo weegt een officiële kogel bij kogelstoten voor mannen?",
+   "options": [
+    "5 kilo",
+    "10 kilo",
+    "7,26 kilo",
+    "4 kilo"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 7,26 kilo.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Bij welke sport hoort de term 'love' voor nul punten?",
+   "options": [
+    "Tennis",
+    "Badminton",
+    "Tafeltennis",
+    "Squash"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Tennis.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "In welke Limburgse plaats ligt de Cauberg, bekend van de Amstel Gold Race?",
+   "options": [
+    "Gulpen",
+    "Vaals",
+    "Sittard",
+    "Valkenburg"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Valkenburg.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welke voetbalclub speelt zijn thuiswedstrijden in het Philips Stadion?",
+   "options": [
+    "VVV-Venlo",
+    "PSV",
+    "Feyenoord",
+    "Ajax"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: PSV.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welke band zong 'Bohemian Rhapsody'?",
+   "options": [
+    "ABBA",
+    "The Rolling Stones",
+    "The Beatles",
+    "Queen"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Queen.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Uit welk land kwam de popgroep ABBA?",
+   "options": [
+    "Noorwegen",
+    "Denemarken",
+    "Finland",
+    "Zweden"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Zweden.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel snaren heeft een standaard gitaar?",
+   "options": [
+    "Vijf",
+    "Vier",
+    "Zes",
+    "Twaalf"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Zes.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke zanger wordt 'The King of Pop' genoemd?",
+   "options": [
+    "Freddie Mercury",
+    "Michael Jackson",
+    "Prince",
+    "Elvis Presley"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Michael Jackson.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke zanger kreeg de bijnaam 'The King'?",
+   "options": [
+    "Frank Sinatra",
+    "Elvis Presley",
+    "Johnny Cash",
+    "Michael Jackson"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Elvis Presley.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Met welk lied won ABBA het Eurovisiesongfestival van 1974?",
+   "options": [
+    "Waterloo",
+    "Dancing Queen",
+    "Fernando",
+    "Mamma Mia"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Waterloo.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse artiest won het Eurovisiesongfestival in 2019?",
+   "options": [
+    "Anouk",
+    "Glennis Grace",
+    "Duncan Laurence",
+    "Waylon"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Duncan Laurence.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Met welk lied won Duncan Laurence het Songfestival?",
+   "options": [
+    "Outlaw in 'Em",
+    "Birds",
+    "Calm After the Storm",
+    "Arcade"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Arcade.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk instrument bespeelde Ludwig van Beethoven vooral?",
+   "options": [
+    "Piano",
+    "Viool",
+    "Cello",
+    "Fluit"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Piano.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Van welke band was John Lennon lid?",
+   "options": [
+    "The Beatles",
+    "The Rolling Stones",
+    "The Who",
+    "The Kinks"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: The Beatles.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke componist schreef 'De vier jaargetijden'?",
+   "options": [
+    "Wolfgang Amadeus Mozart",
+    "Antonio Vivaldi",
+    "Joseph Haydn",
+    "Johann Sebastian Bach"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Antonio Vivaldi.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse dj scoorde in 2013 de wereldhit 'Animals'?",
+   "options": [
+    "Armin van Buuren",
+    "Tiësto",
+    "Martin Garrix",
+    "Hardwell"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Martin Garrix.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse band scoorde de wereldhit 'Radar Love'?",
+   "options": [
+    "Shocking Blue",
+    "Golden Earring",
+    "Normaal",
+    "BZN"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Golden Earring.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse band had in 1970 een nummer 1-hit in Amerika met 'Venus'?",
+   "options": [
+    "Golden Earring",
+    "Earth & Fire",
+    "Shocking Blue",
+    "Focus"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Shocking Blue.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke dialectband uit America (Limburg) scoorde met 'Bestel mar'?",
+   "options": [
+    "Rowwen Hèze",
+    "Kadanz",
+    "Normaal",
+    "Blömchen"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Rowwen Hèze.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel lijnen heeft een notenbalk?",
+   "options": [
+    "Zeven",
+    "Vier",
+    "Zes",
+    "Vijf"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Vijf.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke componist werd doof maar bleef componeren, onder meer zijn Negende Symfonie?",
+   "options": [
+    "Gustav Mahler",
+    "Ludwig van Beethoven",
+    "Franz Schubert",
+    "Johannes Brahms"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Ludwig van Beethoven.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Aan wie wordt de tekst van het Wilhelmus vaak toegeschreven?",
+   "options": [
+    "Joost van den Vondel",
+    "Filips van Marnix van Sint-Aldegonde",
+    "Constantijn Huygens",
+    "P.C. Hooft"
+   ],
+   "correct": 1,
+   "explanation": "De toeschrijving aan Marnix is omstreden; de dichter is onbekend.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke zangeres zong 'Like a Prayer'?",
+   "options": [
+    "Whitney Houston",
+    "Cyndi Lauper",
+    "Kylie Minogue",
+    "Madonna"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Madonna.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Uit welke stad kwamen The Beatles?",
+   "options": [
+    "Londen",
+    "Manchester",
+    "Birmingham",
+    "Liverpool"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Liverpool.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke muziekstijl ontstond in de jaren 70 in de Bronx in New York?",
+   "options": [
+    "Punk",
+    "Reggae",
+    "Hiphop",
+    "Disco"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Hiphop.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Op welk Frans lied is 'Het dorp' van Wim Sonneveld gebaseerd?",
+   "options": [
+    "Ne me quitte pas",
+    "Non, je ne regrette rien",
+    "La montagne (Jean Ferrat)",
+    "La vie en rose"
+   ],
+   "correct": 2,
+   "explanation": "Melodie: 'La montagne' van Jean Ferrat; tekst: Friso Wiegersma.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het grootste muziekfestival van Nederland in Landgraaf?",
+   "options": [
+    "Paaspop",
+    "Down The Rabbit Hole",
+    "Lowlands",
+    "Pinkpop"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Pinkpop.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke componist schreef 'Für Elise'?",
+   "options": [
+    "Wolfgang Amadeus Mozart",
+    "Franz Liszt",
+    "Frédéric Chopin",
+    "Ludwig van Beethoven"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Ludwig van Beethoven.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de sneeuwpop in de Disneyfilm Frozen?",
+   "options": [
+    "Kristoff",
+    "Hans",
+    "Olaf",
+    "Sven"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Olaf.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk dier is Simba in The Lion King?",
+   "options": [
+    "Leeuw",
+    "Jachtluipaard",
+    "Luipaard",
+    "Tijger"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Leeuw.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de tovenaarsschool in Harry Potter?",
+   "options": [
+    "Hogeschool Merlijn",
+    "Zweinstein",
+    "Durmstrang",
+    "Narnia"
+   ],
+   "correct": 1,
+   "explanation": "Durmstrang bestaat wel, maar Harry zit op Zweinstein (Hogwarts).",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke kleur heeft Shrek?",
+   "options": [
+    "Grijs",
+    "Paars",
+    "Groen",
+    "Blauw"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Groen.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie speelde Jack in de film Titanic (1997)?",
+   "options": [
+    "Tom Cruise",
+    "Leonardo DiCaprio",
+    "Brad Pitt",
+    "Matt Damon"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Leonardo DiCaprio.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het ruimteschip van Han Solo in Star Wars?",
+   "options": [
+    "Death Star",
+    "Enterprise",
+    "X-wing",
+    "Millennium Falcon"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Millennium Falcon.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse regisseur maakte 'Soldaat van Oranje' en 'Basic Instinct'?",
+   "options": [
+    "Paul Verhoeven",
+    "Fons Rademakers",
+    "Dick Maas",
+    "Jan de Bont"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Paul Verhoeven.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke film won in 1987 als eerste Nederlandse film een Oscar voor beste buitenlandse film?",
+   "options": [
+    "De Aanslag",
+    "Antonia",
+    "Turks Fruit",
+    "Karakter"
+   ],
+   "correct": 0,
+   "explanation": "De Aanslag (1986) won de Oscar in 1987.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk Nederlands tv-programma uit 1999 volgde bewoners 24 uur per dag in een afgesloten huis?",
+   "options": [
+    "Temptation Island",
+    "Expeditie Robinson",
+    "Big Brother",
+    "De Bus"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Big Brother.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie is de bedenker van Mickey Mouse?",
+   "options": [
+    "Hanna-Barbera",
+    "Warner Bros.",
+    "Pixar",
+    "Walt Disney (met Ub Iwerks)"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Walt Disney (met Ub Iwerks).",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welke filmreeks speelt een archeoloog met een zweep en een hoed de hoofdrol?",
+   "options": [
+    "Indiana Jones",
+    "The Mummy",
+    "National Treasure",
+    "Tomb Raider"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Indiana Jones.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de stad waar Batman het misdrijf bestrijdt?",
+   "options": [
+    "Star City",
+    "Springfield",
+    "Metropolis",
+    "Gotham City"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Gotham City.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke acteur speelde James Bond in 'Casino Royale' (2006)?",
+   "options": [
+    "Roger Moore",
+    "Daniel Craig",
+    "Pierce Brosnan",
+    "Sean Connery"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Daniel Craig.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welke tv-serie wonen Homer, Marge, Bart, Lisa en Maggie?",
+   "options": [
+    "Futurama",
+    "The Simpsons",
+    "Family Guy",
+    "South Park"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: The Simpsons.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Door welke film uit 1984 van Guido Pieters werd Danny de Munk beroemd?",
+   "options": [
+    "Abeltje",
+    "Pietje Bell",
+    "Ciske de Rat",
+    "Kruimeltje"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ciske de Rat.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het hotel in de horrorfilm 'The Shining'?",
+   "options": [
+    "Grand Budapest Hotel",
+    "Hotel California",
+    "Bates Motel",
+    "Overlook Hotel"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Overlook Hotel.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke film won de Oscar voor beste film in 1998 (over 1997)?",
+   "options": [
+    "L.A. Confidential",
+    "Titanic",
+    "As Good as It Gets",
+    "Good Will Hunting"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Titanic.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette de bekende Nederlandse kinderserie met Ernie en Bert?",
+   "options": [
+    "De Fabeltjeskrant",
+    "Klokhuis",
+    "Het Zandkasteel",
+    "Sesamstraat"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Sesamstraat.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de uil die in 'De Fabeltjeskrant' het nieuws vertelt?",
+   "options": [
+    "Bor de Wolf",
+    "Juffrouw Ooievaar",
+    "Meneer de Uil",
+    "Zoef de Haas"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Meneer de Uil.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Oscar-winnende acteur speelde Hannibal Lecter in 'The Silence of the Lambs'?",
+   "options": [
+    "Al Pacino",
+    "Anthony Hopkins",
+    "Robert De Niro",
+    "Jack Nicholson"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Anthony Hopkins.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse acteur speelde in 'Blade Runner' de replicant Roy Batty?",
+   "options": [
+    "Rutger Hauer",
+    "Derek de Lint",
+    "Huub Stapel",
+    "Jeroen Krabbé"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Rutger Hauer.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welke film zegt een personage 'I'll be back'?",
+   "options": [
+    "RoboCop",
+    "The Terminator",
+    "Predator",
+    "Die Hard"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: The Terminator.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Nederland?",
+   "options": [
+    "Amsterdam",
+    "Rotterdam",
+    "Den Haag",
+    "Utrecht"
+   ],
+   "correct": 0,
+   "explanation": "De regering zetelt in Den Haag, maar Amsterdam is de hoofdstad.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Op welke dag vieren we Koningsdag?",
+   "options": [
+    "5 december",
+    "5 mei",
+    "30 april",
+    "27 april"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 27 april.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat vieren we in Nederland op 5 mei?",
+   "options": [
+    "Koningsdag",
+    "Bevrijdingsdag",
+    "Prinsjesdag",
+    "Dodenherdenking"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Bevrijdingsdag.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel provincies heeft Nederland?",
+   "options": [
+    "Twaalf",
+    "Elf",
+    "Dertien",
+    "Tien"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Twaalf.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is het grootste Waddeneiland van Nederland?",
+   "options": [
+    "Terschelling",
+    "Ameland",
+    "Texel",
+    "Vlieland"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Texel.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is het hoogste punt van het Europese deel van Nederland?",
+   "options": [
+    "Vaalserberg",
+    "Posbank",
+    "Tafelberg",
+    "Amerongse Berg"
+   ],
+   "correct": 0,
+   "explanation": "Ruim 320 meter boven NAP, bij Vaals.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat gebeurt er op Prinsjesdag?",
+   "options": [
+    "Het kabinet treedt af",
+    "De Tweede Kamer wordt gekozen",
+    "De koning leest de troonrede voor",
+    "De koning viert zijn verjaardag"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: De koning leest de troonrede voor.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke stad staat het Rijksmuseum?",
+   "options": [
+    "Haarlem",
+    "Amsterdam",
+    "Leiden",
+    "Den Haag"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Amsterdam.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke rivier stroomt Nederland binnen bij Lobith?",
+   "options": [
+    "IJssel",
+    "Rijn",
+    "Maas",
+    "Schelde"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Rijn.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke stad heeft de grootste haven van Europa?",
+   "options": [
+    "Hamburg",
+    "Rotterdam",
+    "Antwerpen",
+    "Amsterdam"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Rotterdam.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke provincie ligt de Veluwe?",
+   "options": [
+    "Overijssel",
+    "Drenthe",
+    "Gelderland",
+    "Utrecht"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Gelderland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat betekent de afkorting NAP?",
+   "options": [
+    "Nederlands Afgesproken Peil",
+    "Normaal Amsterdams Peil",
+    "Nationaal Algemeen Peil",
+    "Noordzee-Amstel-Peil"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Normaal Amsterdams Peil.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke drie eilanden vormen 'Caribisch Nederland' (de BES-eilanden)?",
+   "options": [
+    "Aruba, Curaçao en Sint Maarten",
+    "Saba, Sint Maarten en Aruba",
+    "Bonaire, Sint Eustatius en Saba",
+    "Bonaire, Curaçao en Aruba"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Bonaire, Sint Eustatius en Saba.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke stad zetelt het Internationaal Gerechtshof?",
+   "options": [
+    "Amsterdam",
+    "Den Haag",
+    "Genève",
+    "Brussel"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Den Haag.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke provincie heeft Lelystad als hoofdstad?",
+   "options": [
+    "Overijssel",
+    "Flevoland",
+    "Gelderland",
+    "Noord-Holland"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Flevoland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse stad wordt 'Mokum' genoemd?",
+   "options": [
+    "Den Haag",
+    "Utrecht",
+    "Amsterdam",
+    "Rotterdam"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Amsterdam.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het werelderfgoed van 19 molens bij Alblasserdam?",
+   "options": [
+    "Schermerhorn",
+    "Molenwaard Noord",
+    "Zaanse Schans",
+    "Kinderdijk"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Kinderdijk.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de langste brug van Nederland?",
+   "options": [
+    "Moerdijkbrug",
+    "Van Brienenoordbrug",
+    "Zeelandbrug",
+    "Erasmusbrug"
+   ],
+   "correct": 2,
+   "explanation": "Ruim 5 kilometer, over de Oosterschelde.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke stad was in 1648 de plaats van de vrede die de Tachtigjarige Oorlog beëindigde?",
+   "options": [
+    "Breda",
+    "Antwerpen",
+    "Utrecht",
+    "Münster"
+   ],
+   "correct": 3,
+   "explanation": "De Vrede van Münster.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse provincie heeft de meeste inwoners?",
+   "options": [
+    "Gelderland",
+    "Zuid-Holland",
+    "Noord-Brabant",
+    "Noord-Holland"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Zuid-Holland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het nationale park met zandverstuivingen en het Kröller-Müller Museum?",
+   "options": [
+    "De Meinweg",
+    "De Biesbosch",
+    "De Hoge Veluwe",
+    "Dwingelderveld"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: De Hoge Veluwe.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse uitvinding uit 1963 was een kleine muziekcassette van Philips?",
+   "options": [
+    "De compact cassette",
+    "De videorecorder",
+    "De dvd",
+    "De cd"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: De compact cassette.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke stad staat het Binnenhof?",
+   "options": [
+    "Den Haag",
+    "Haarlem",
+    "Amsterdam",
+    "Utrecht"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Den Haag.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van de provincie Limburg?",
+   "options": [
+    "Venlo",
+    "Maastricht",
+    "Heerlen",
+    "Roermond"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Maastricht.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke rivier stroomt door heel Limburg van zuid naar noord?",
+   "options": [
+    "Maas",
+    "Geul",
+    "Roer",
+    "Rijn"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Maas.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk zoet gebak is typisch Limburgs?",
+   "options": [
+    "Vlaai",
+    "Tompouce",
+    "Stroopwafel",
+    "Bossche bol"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Vlaai.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk carnavalsgroet hoort bij Limburg?",
+   "options": [
+    "Alaaf",
+    "Hoi",
+    "Proost",
+    "Helau"
+   ],
+   "correct": 0,
+   "explanation": "In Limburg roept men 'Alaaf'.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Waar komen Nederland, België en Duitsland samen?",
+   "options": [
+    "Bij Venlo",
+    "Bij Kerkrade",
+    "In Maastricht",
+    "Op de Vaalserberg"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Op de Vaalserberg.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke rivier geeft Roermond zijn naam?",
+   "options": [
+    "Swalm",
+    "Geleenbeek",
+    "Maas",
+    "Roer"
+   ],
+   "correct": 3,
+   "explanation": "Roermond ligt waar de Roer in de Maas uitmondt.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk plein in Maastricht is bekend van terrassen en de Sint-Servaasbasiliek?",
+   "options": [
+    "Onze Lieve Vrouweplein",
+    "Markt",
+    "Stokstraat",
+    "Vrijthof"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Vrijthof.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke plaats staat de dierentuin GaiaZOO?",
+   "options": [
+    "Venlo",
+    "Kerkrade",
+    "Valkenburg",
+    "Maastricht"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Kerkrade.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe noemt men de streek in het zuiden van Limburg met heuvels en vakwerkhuizen?",
+   "options": [
+    "Heuvelland",
+    "Meinweg",
+    "Kempen",
+    "Peel"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Heuvelland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Noord-Limburgse stad was in 2012 gastheer van de Floriade?",
+   "options": [
+    "Weert",
+    "Venray",
+    "Venlo",
+    "Roermond"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Venlo.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het officiële Limburgse volkslied?",
+   "options": [
+    "Lied van de Maas",
+    "Mestreechs Leed",
+    "Limburg mijn Vaderland",
+    "Ons Limburg"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Limburg mijn Vaderland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de beroemde wieleruitdaging in Valkenburg met een korte, steile klim?",
+   "options": [
+    "De Cauberg",
+    "De Eyserbosweg",
+    "De Keutenberg",
+    "De Vaalserberg"
+   ],
+   "correct": 0,
+   "explanation": "De Keutenberg is steiler, maar de Cauberg is het bekendst.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Limburgse stad heeft een kathedraal gewijd aan Sint Christoffel?",
+   "options": [
+    "Weert",
+    "Venlo",
+    "Maastricht",
+    "Roermond"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Roermond.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk mijnverleden had Zuid-Limburg tot in de jaren 70?",
+   "options": [
+    "Zoutmijnen",
+    "Goudmijnen",
+    "IJzermijnen",
+    "Steenkoolmijnen"
+   ],
+   "correct": 3,
+   "explanation": "De laatste Limburgse steenkolenmijn sloot in 1974.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de natuurparel met heidevelden en vennen tussen Roermond en de Duitse grens?",
+   "options": [
+    "De Brunssummerheide",
+    "De Meinweg",
+    "De Groote Peel",
+    "Het Leudal"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: De Meinweg.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk kasteel in Heerlen geldt als een van de grootste waterburchten van Nederland?",
+   "options": [
+    "Kasteel Neubourg",
+    "Kasteel Hoensbroek",
+    "Kasteel Valkenburg",
+    "Kasteel Erenstein"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Kasteel Hoensbroek.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk Limburgs stadje wordt 'het witte stadje' genoemd?",
+   "options": [
+    "Sittard",
+    "Susteren",
+    "Valkenburg",
+    "Thorn"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Thorn.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het ondergrondse gangenstelsel in Valkenburg en Maastricht dat ontstond door mergelwinning?",
+   "options": [
+    "De Grotten van Han",
+    "Het Sint-Pietersgat",
+    "De mergelgrotten",
+    "De Kazematten"
+   ],
+   "correct": 2,
+   "explanation": "De Grotten van Han liggen in België.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het streekgerecht van zuur gestoofd vlees met een saus van stroop en peperkoek?",
+   "options": [
+    "Hachee",
+    "Sudderlap",
+    "Stoofpeertjes",
+    "Zoervleisj"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Zoervleisj.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Limburgse stad ligt het meest westelijk, tegen de Belgische grens bij de Kempen?",
+   "options": [
+    "Sittard",
+    "Echt",
+    "Weert",
+    "Venlo"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Weert.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Op welke dag begint officieel het carnavalsseizoen (de 'elfde van de elfde')?",
+   "options": [
+    "11 februari",
+    "11 oktober",
+    "11 januari",
+    "11 november"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 11 november.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Bij welke gemeente hoort het dorp Herten?",
+   "options": [
+    "Roermond",
+    "Venlo",
+    "Sittard-Geleen",
+    "Weert"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Roermond.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de kleurrijke kubuspuzzel die in de jaren 80 enorm populair was?",
+   "options": [
+    "Gameboy",
+    "Tetris",
+    "Rubiks kubus",
+    "Tamagotchi"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Rubiks kubus.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk virtueel huisdier was eind jaren 90 een rage?",
+   "options": [
+    "Pokémon",
+    "Furby",
+    "Diddl",
+    "Tamagotchi"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Tamagotchi.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar werd de euro als munt en biljet ingevoerd in Nederland?",
+   "options": [
+    "1999",
+    "2004",
+    "2002",
+    "2000"
+   ],
+   "correct": 2,
+   "explanation": "Als girale munt bestond de euro al vanaf 1999.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk spelcomputer-spel met vallende blokjes werd beroemd op de Game Boy?",
+   "options": [
+    "Tetris",
+    "Pac-Man",
+    "Space Invaders",
+    "Pong"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Tetris.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke boyband zong 'I Want It That Way' (1999)?",
+   "options": [
+    "Boyzone",
+    "Backstreet Boys",
+    "NSYNC",
+    "Take That"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Backstreet Boys.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke zangeres zong in 1998 '...Baby One More Time'?",
+   "options": [
+    "Mandy Moore",
+    "Christina Aguilera",
+    "Jessica Simpson",
+    "Britney Spears"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Britney Spears.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke film uit 1997 over een gezonken passagiersschip werd een recordhit?",
+   "options": [
+    "The Abyss",
+    "Poseidon",
+    "Titanic",
+    "Waterworld"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Titanic.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk mobiel telefoonmerk uit Finland had rond 2000 het grootste marktaandeel?",
+   "options": [
+    "Ericsson",
+    "Siemens",
+    "Nokia",
+    "Motorola"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Nokia.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette het chatprogramma van Microsoft dat rond 2005 bij Nederlandse jongeren enorm populair was?",
+   "options": [
+    "Hyves",
+    "ICQ",
+    "MSN Messenger",
+    "Skype"
+   ],
+   "correct": 2,
+   "explanation": "Hyves was een sociaal netwerk, geen chatprogramma.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk Nederlands sociaal netwerk was populair tussen 2005 en 2010?",
+   "options": [
+    "Friendster",
+    "MySpace",
+    "Hyves",
+    "Orkut"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Hyves.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welke Ierse boyband zong Ronan Keating?",
+   "options": [
+    "Backstreet Boys",
+    "Boyzone",
+    "Take That",
+    "Westlife"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Boyzone.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk muziekformaat verving in de jaren 80 de langspeelplaat als populairste drager?",
+   "options": [
+    "De cd",
+    "De dvd",
+    "De minidisc",
+    "De mp3"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: De cd.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke tekenfilmfamilie verscheen in 1989 voor het eerst als eigen serie op tv?",
+   "options": [
+    "Family Guy",
+    "The Simpsons",
+    "The Jetsons",
+    "The Flintstones"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: The Simpsons.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het Songfestival van 1987 met Johnny Logan en 'Hold Me Now'?",
+   "options": [
+    "Groot-Brittannië",
+    "Nederland",
+    "Ierland",
+    "Zweden"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ierland.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse zanger had in 1998 de hit 'Afscheid nemen bestaat niet'?",
+   "options": [
+    "Marco Borsato",
+    "René Froger",
+    "Frans Bauer",
+    "Gordon"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Marco Borsato.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk spel speelde je op de Nokia 3310?",
+   "options": [
+    "Snake",
+    "Pac-Man",
+    "Angry Birds",
+    "Tetris"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Snake.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk tv-programma met Robert ten Brink bracht in de jaren 90 geliefden bij elkaar?",
+   "options": [
+    "Te land, ter zee en in de lucht",
+    "Love Letters",
+    "Lingo",
+    "All You Need Is Love"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: All You Need Is Love.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar kwam de eerste iPhone op de markt?",
+   "options": [
+    "2005",
+    "2009",
+    "2003",
+    "2007"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 2007.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk spel met de woorden 'Gotta catch 'em all' werd eind jaren 90 een wereldwijde rage?",
+   "options": [
+    "Beyblade",
+    "Yu-Gi-Oh!",
+    "Digimon",
+    "Pokémon"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Pokémon.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette de spelcomputer van Nintendo uit 2006 met bewegingsbesturing?",
+   "options": [
+    "Wii",
+    "GameCube",
+    "DS",
+    "Switch"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Wii.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke film uit 1985 gaat over een tijdreis met een DeLorean?",
+   "options": [
+    "Back to the Future",
+    "Ghostbusters",
+    "The Terminator",
+    "E.T."
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Back to the Future.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk dier kan zijn kleur aanpassen aan de omgeving en is beroemd om zijn tong?",
+   "options": [
+    "Leguaan",
+    "Gekko",
+    "Salamander",
+    "Kameleon"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Kameleon.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel harten heeft een octopus?",
+   "options": [
+    "Drie",
+    "Eén",
+    "Twee",
+    "Acht"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Drie.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk fruit is botanisch gezien een bes: de banaan of de aardbei?",
+   "options": [
+    "Allebei",
+    "De banaan",
+    "De aardbei",
+    "Geen van beide"
+   ],
+   "correct": 1,
+   "explanation": "Botanisch is een banaan een bes en een aardbei niet.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat kunnen flamingo's niet zonder om roze te blijven?",
+   "options": [
+    "Hun voedsel met kleurstoffen (zoals garnaaltjes en algen)",
+    "Koude",
+    "Zout water",
+    "Zonlicht"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Hun voedsel met kleurstoffen (zoals garnaaltjes en algen).",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk dier slaapt soms staand en soms liggend en kan alleen in REM-slaap als hij ligt?",
+   "options": [
+    "Giraf",
+    "Olifant",
+    "Paard",
+    "Koe"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Paard.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe lang duurde de kortste oorlog uit de geschiedenis (Engeland tegen Zanzibar, 1896)?",
+   "options": [
+    "Drie uur",
+    "Eén dag",
+    "Ongeveer 40 minuten",
+    "Een week"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ongeveer 40 minuten.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke snack is in Nederland bekend als 'patatje oorlog'?",
+   "options": [
+    "Patat met chilisaus",
+    "Patat met mayonaise, pindasaus en uien",
+    "Patat met spek en ei",
+    "Patat met curry en kaas"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Patat met mayonaise, pindasaus en uien.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel ogen heeft een gewone bij?",
+   "options": [
+    "Acht",
+    "Vier",
+    "Vijf",
+    "Twee"
+   ],
+   "correct": 2,
+   "explanation": "Twee facetogen en drie kleine puntogen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk dier kan het langst zonder te drinken?",
+   "options": [
+    "Olifant",
+    "Kameel",
+    "Kangoeroerat",
+    "Hagedis"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Kangoeroerat.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke kleur hebben de meeste ijsberen onder hun witte vacht?",
+   "options": [
+    "Wit",
+    "Roze",
+    "Grijs",
+    "Zwart"
+   ],
+   "correct": 3,
+   "explanation": "De huid van een ijsbeer is zwart; de haren zijn doorzichtig.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel tanden heeft een volwassen mens normaal (inclusief verstandskiezen)?",
+   "options": [
+    "30",
+    "36",
+    "32",
+    "28"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 32.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het enige zoogdier dat echt kan vliegen?",
+   "options": [
+    "Vleermuis",
+    "Suikereekhoorn",
+    "Colugo",
+    "Vliegende eekhoorn"
+   ],
+   "correct": 0,
+   "explanation": "Vliegende eekhoorns zweven alleen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de angst om geen telefoon bij je te hebben?",
+   "options": [
+    "Technofobie",
+    "Cyberfobie",
+    "Selfiefobie",
+    "Nomofobie"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Nomofobie.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk Nederlands woord bevat de meeste opeenvolgende medeklinkers van deze vier?",
+   "options": [
+    "Angstschreeuw",
+    "Herfststorm",
+    "Kunstschaats",
+    "Slechtst"
+   ],
+   "correct": 0,
+   "explanation": "Angstschreeuw heeft acht medeklinkers op rij: ngstschr.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse zanger zong 'Dromen zijn bedrog'?",
+   "options": [
+    "André Hazes",
+    "Frans Bauer",
+    "Marco Borsato",
+    "Guus Meeuwis"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Marco Borsato.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke zanger zong 'Zij gelooft in mij'?",
+   "options": [
+    "André Hazes",
+    "BZN",
+    "Jan Smit",
+    "Marco Borsato"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: André Hazes.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het jaarlijkse liedjesfestijn waaraan landen uit heel Europa meedoen?",
+   "options": [
+    "Pinkpop",
+    "Edison",
+    "Grammy Awards",
+    "Eurovisiesongfestival"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Eurovisiesongfestival.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke band bracht het album 'The Dark Side of the Moon' uit?",
+   "options": [
+    "Led Zeppelin",
+    "Pink Floyd",
+    "The Doors",
+    "Genesis"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Pink Floyd.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het lied dat de Brabander Guus Meeuwis bekend maakte?",
+   "options": [
+    "Het is een nacht",
+    "Per spoor",
+    "Geef mij je angst",
+    "Brabant"
+   ],
+   "correct": 0,
+   "explanation": "'Brabant' kwam later; doorbraak in 1995 was 'Het is een nacht'.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Britse zangeres zong 'Rolling in the Deep'?",
+   "options": [
+    "Adele",
+    "Ellie Goulding",
+    "Amy Winehouse",
+    "Dua Lipa"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Adele.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk instrument heeft pedalen, toetsen en vaak grote pijpen in een kerk?",
+   "options": [
+    "Harp",
+    "Orgel",
+    "Cello",
+    "Xylofoon"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Orgel.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel musici spelen er in een kwartet?",
+   "options": [
+    "Zes",
+    "Vijf",
+    "Drie",
+    "Vier"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Vier.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke zanger was de frontman van Queen?",
+   "options": [
+    "Mick Jagger",
+    "Elton John",
+    "David Bowie",
+    "Freddie Mercury"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Freddie Mercury.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Uit welk land komt de tango oorspronkelijk?",
+   "options": [
+    "Spanje",
+    "Cuba",
+    "Argentinië",
+    "Brazilië"
+   ],
+   "correct": 2,
+   "explanation": "De tango ontstond rond Buenos Aires en Montevideo.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Oostenrijkse componist schreef 'Die Zauberflöte'?",
+   "options": [
+    "Wolfgang Amadeus Mozart",
+    "Johann Strauss",
+    "Franz Schubert",
+    "Joseph Haydn"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Wolfgang Amadeus Mozart.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke rapper bracht het album 'The Marshall Mathers LP' uit?",
+   "options": [
+    "Dr. Dre",
+    "50 Cent",
+    "Eminem",
+    "Jay-Z"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Eminem.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk Nederlands muziekgezelschap uit Amsterdam behoort tot de beste symfonieorkesten ter wereld?",
+   "options": [
+    "Residentie Orkest",
+    "Metropole Orkest",
+    "Rotterdams Philharmonisch",
+    "Concertgebouworkest"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Concertgebouworkest.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie zong 'Purple Rain'?",
+   "options": [
+    "Michael Jackson",
+    "Lionel Richie",
+    "Stevie Wonder",
+    "Prince"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Prince.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk dier legt de grootste eieren?",
+   "options": [
+    "Kip",
+    "Pinguïn",
+    "Struisvogel",
+    "Krokodil"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Struisvogel.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk dier slaapt vaak ondersteboven hangend?",
+   "options": [
+    "Papegaai",
+    "Luiaard",
+    "Vleermuis",
+    "Uil"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Vleermuis.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel procent van het menselijk lichaam bestaat ongeveer uit water?",
+   "options": [
+    "Ongeveer 10 procent",
+    "Ongeveer 90 procent",
+    "Ongeveer 60 procent",
+    "Ongeveer 30 procent"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ongeveer 60 procent.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk dier heeft vingerafdrukken die bijna niet van die van mensen te onderscheiden zijn?",
+   "options": [
+    "Koala",
+    "Wasbeer",
+    "Orang-oetan",
+    "Chimpansee"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Koala.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat doen otters soms tijdens het slapen om niet weg te drijven?",
+   "options": [
+    "Op de bodem slapen",
+    "Zich aan een steen vastbijten",
+    "Elkaars poot vasthouden",
+    "Om de beurt wakker blijven"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Elkaars poot vasthouden.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de kleinste vogel ter wereld?",
+   "options": [
+    "Winterkoning",
+    "Pimpelmees",
+    "Bijkolibrie",
+    "Goudhaan"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Bijkolibrie.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke kleur hebben de meeste stoplichten bovenaan?",
+   "options": [
+    "Groen",
+    "Rood",
+    "Oranje",
+    "Wit"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Rood.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel kilometer per uur kan een jachtluipaard ongeveer halen in een korte sprint?",
+   "options": [
+    "Ruim 200",
+    "Ongeveer 70",
+    "Ruim 100",
+    "Ongeveer 50"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ruim 100.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe vaak per dag knippert een mens ongeveer met zijn ogen?",
+   "options": [
+    "Ongeveer 500 keer",
+    "Ongeveer 100.000 keer",
+    "Ongeveer 1.000 keer",
+    "Ongeveer 15.000 keer"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Ongeveer 15.000 keer.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Waar zitten de smaakpapillen van een vlinder?",
+   "options": [
+    "In zijn ogen",
+    "Op zijn antennes alleen",
+    "Aan zijn poten",
+    "Op zijn vleugels"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Aan zijn poten.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoeveel liter bloed heeft een volwassen mens ongeveer?",
+   "options": [
+    "5 liter",
+    "10 liter",
+    "8 liter",
+    "2 liter"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: 5 liter.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk deel van een slak bevat zijn ogen meestal?",
+   "options": [
+    "De onderste voelsprieten",
+    "Zijn huisje",
+    "De bovenste voelsprieten",
+    "Zijn voet"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: De bovenste voelsprieten.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk dier heeft blauw bloed?",
+   "options": [
+    "Kikker",
+    "Inktvis",
+    "Haai",
+    "Zeehond"
+   ],
+   "correct": 1,
+   "explanation": "Door hemocyanine met koper is het bloed blauw.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet een groep leeuwen?",
+   "options": [
+    "Een troep",
+    "Een school",
+    "Een zwerm",
+    "Een kudde"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Een troep.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk insect bestuift veel cacaobloemen, waardoor er chocolade bestaat?",
+   "options": [
+    "De honingbij",
+    "Een klein mugje (knut)",
+    "De vlinder",
+    "De hommel"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Een klein mugje (knut).",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke rivier legt de langste afstand af door Nederland?",
+   "options": [
+    "De Maas",
+    "De Rijn",
+    "De Waal",
+    "De IJssel"
+   ],
+   "correct": 0,
+   "explanation": "De Maas stroomt ruim 250 km door Nederland.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk speelgoedmerk met bouwsteentjes komt uit Denemarken?",
+   "options": [
+    "K'NEX",
+    "Meccano",
+    "LEGO",
+    "Playmobil"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: LEGO.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke arcadegame uit 1980 draait om een geel rondje dat spookjes ontwijkt?",
+   "options": [
+    "Pac-Man",
+    "Donkey Kong",
+    "Asteroids",
+    "Space Invaders"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Pac-Man.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke tv-serie over zes vrienden in New York liep van 1994 tot 2004?",
+   "options": [
+    "Friends",
+    "Seinfeld",
+    "How I Met Your Mother",
+    "Frasier"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Friends.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de Britse meidengroep met Scary, Sporty, Baby, Ginger en Posh?",
+   "options": [
+    "Spice Girls",
+    "Sugababes",
+    "All Saints",
+    "Girls Aloud"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Spice Girls.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke internetzoekmachine werd in 1998 opgericht?",
+   "options": [
+    "Ilse",
+    "Yahoo",
+    "Google",
+    "AltaVista"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Google.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk Nederlands tv-programma met Linda de Mol liet mensen hun geliefde verrassen?",
+   "options": [
+    "Domino Day",
+    "Big Brother",
+    "Love Letters",
+    "Ik hou van Holland"
+   ],
+   "correct": 2,
+   "explanation": "Linda de Mol presenteerde Love Letters.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het draagbare muziekapparaat van Sony voor cassettebandjes uit 1979?",
+   "options": [
+    "Walkman",
+    "Discman",
+    "Minidisc",
+    "iPod"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Walkman.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke film uit 1993 gaat over een park met gekloonde dinosaurussen?",
+   "options": [
+    "Godzilla",
+    "King Kong",
+    "The Lost World",
+    "Jurassic Park"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Jurassic Park.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar verscheen het eerste Harry Potter-boek in het Engels?",
+   "options": [
+    "1997",
+    "2001",
+    "1993",
+    "1999"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: 1997.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie had eind jaren 90 de hit 'Torn'?",
+   "options": [
+    "Sheryl Crow",
+    "Alanis Morissette",
+    "Natalie Imbruglia",
+    "Anouk"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Natalie Imbruglia.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette de munteenheid van Nederland vóór de euro?",
+   "options": [
+    "Frank",
+    "Daalder",
+    "Gulden",
+    "Kroon"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Gulden.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse tv-show met omvallende dominostenen haalde meerdere wereldrecords?",
+   "options": [
+    "Wie van de Drie",
+    "Domino Day",
+    "Lingo",
+    "Te land, ter zee en in de lucht"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Domino Day.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk computerbesturingssysteem van Microsoft verscheen in 1995?",
+   "options": [
+    "Windows 95",
+    "Windows Vista",
+    "Windows XP",
+    "Windows 3.1"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Windows 95.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdingrediënt van friet?",
+   "options": [
+    "Zoete aardappel",
+    "Rijst",
+    "Aardappel",
+    "Maïs"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Aardappel.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk zoet goedje maken bijen?",
+   "options": [
+    "Honing",
+    "Jam",
+    "Suiker",
+    "Stroop"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Honing.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Uit welk land komt de pannenkoek 'crêpe'?",
+   "options": [
+    "Frankrijk",
+    "België",
+    "Zwitserland",
+    "Duitsland"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Frankrijk.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdingrediënt van een Spaanse tortilla de patatas?",
+   "options": [
+    "Bonen",
+    "Ei en aardappel",
+    "Maïsmeel",
+    "Rijst"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Ei en aardappel.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke kaas heeft grote gaten en komt uit Zwitserland?",
+   "options": [
+    "Brie",
+    "Parmezaan",
+    "Emmentaler",
+    "Gouda"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Emmentaler.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Uit welke vrucht wordt cider gemaakt?",
+   "options": [
+    "Druif",
+    "Peer",
+    "Appel",
+    "Kers"
+   ],
+   "correct": 2,
+   "explanation": "Perencider bestaat ook, maar heet 'perry'.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk Indonesisch gerecht is gebakken rijst?",
+   "options": [
+    "Bami goreng",
+    "Nasi goreng",
+    "Gado-gado",
+    "Saté"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Nasi goreng.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het Nederlandse koekje met stroop tussen twee dunne wafels?",
+   "options": [
+    "Stroopwafel",
+    "Speculaas",
+    "Bitterkoekje",
+    "Kano"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Stroopwafel.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk land is de grootste koffieproducent ter wereld?",
+   "options": [
+    "Colombia",
+    "Vietnam",
+    "Brazilië",
+    "Ethiopië"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Brazilië.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is 'umami'?",
+   "options": [
+    "De vijfde basissmaak (hartig)",
+    "Een soort zeewier",
+    "Een Japans dessert",
+    "Een rijstwijn"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: De vijfde basissmaak (hartig).",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk wereldwonder van het oude Egypte staat nog steeds overeind?",
+   "options": [
+    "Het beeld van Zeus",
+    "De hangende tuinen van Babylon",
+    "De piramide van Gizeh",
+    "De vuurtoren van Alexandrië"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: De piramide van Gizeh.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar bereikte Columbus Amerika?",
+   "options": [
+    "1066",
+    "1610",
+    "1588",
+    "1492"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: 1492.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe heette de Nederlandse admiraal die in 1667 de Tocht naar Chatham leidde?",
+   "options": [
+    "Witte de With",
+    "Piet Hein",
+    "Maarten Tromp",
+    "Michiel de Ruyter"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Michiel de Ruyter.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse zeevaarder veroverde in 1628 de Spaanse zilvervloot?",
+   "options": [
+    "Piet Hein",
+    "Jan Pieterszoon Coen",
+    "Michiel de Ruyter",
+    "Abel Tasman"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Piet Hein.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke stad was de hoofdstad van het Romeinse Rijk?",
+   "options": [
+    "Athene",
+    "Constantinopel",
+    "Rome",
+    "Carthago"
+   ],
+   "correct": 2,
+   "explanation": "Later werd ook Constantinopel hoofdstad van het Oost-Romeinse Rijk.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie leidde de Nederlandse opstand tegen Spanje en wordt 'Vader des Vaderlands' genoemd?",
+   "options": [
+    "Johan van Oldenbarnevelt",
+    "Willem van Oranje",
+    "Karel V",
+    "Maurits van Nassau"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Willem van Oranje.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welk jaar werd Willem van Oranje vermoord?",
+   "options": [
+    "1568",
+    "1648",
+    "1584",
+    "1609"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: 1584.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke Nederlandse stad werd in 1940 zwaar gebombardeerd, waarna Nederland capituleerde?",
+   "options": [
+    "Rotterdam",
+    "Den Haag",
+    "Arnhem",
+    "Amsterdam"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Rotterdam.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk verdrag beëindigde in 1919 de Eerste Wereldoorlog formeel met Duitsland?",
+   "options": [
+    "Vrede van Münster",
+    "Verdrag van Versailles",
+    "Congres van Wenen",
+    "Verdrag van Utrecht"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Verdrag van Versailles.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welke slag in 1944 rond Arnhem werd later verfilmd als 'A Bridge Too Far'?",
+   "options": [
+    "Slag om de Ardennen",
+    "D-Day",
+    "Slag om de Schelde",
+    "Operatie Market Garden"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Operatie Market Garden.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welke eeuw leefde Karel de Grote?",
+   "options": [
+    "11e eeuw",
+    "8e en 9e eeuw",
+    "5e eeuw",
+    "13e eeuw"
+   ],
+   "correct": 1,
+   "explanation": "Hij leefde van ca. 747 tot 814.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Hoe noemen Limburgers het feest in februari met optochten en verkleedpartijen?",
+   "options": [
+    "Koningsdag",
+    "Kermis",
+    "Vastelaovend",
+    "Sinterklaas"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Vastelaovend.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke rivier vormt bij Maastricht deels de grens met België?",
+   "options": [
+    "Jeker",
+    "Maas",
+    "Geul",
+    "Roer"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Maas.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Limburgse plaats staat het Continium, een museum over industrie en ontdekken?",
+   "options": [
+    "Venlo",
+    "Kerkrade",
+    "Sittard",
+    "Heerlen"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Kerkrade.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het Limburgse dialectwoord voor 'jongen'?",
+   "options": [
+    "Pap",
+    "Jong",
+    "Maedje",
+    "Kirmes"
+   ],
+   "correct": 1,
+   "explanation": "Maedje betekent meisje.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk Limburgse riviertje stroomt door Valkenburg?",
+   "options": [
+    "Geul",
+    "Jeker",
+    "Niers",
+    "Swalm"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Geul.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welk Limburgs dorp ligt aan de voet van het Drielandenpunt?",
+   "options": [
+    "Mechelen",
+    "Gulpen",
+    "Epen",
+    "Vaals"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Vaals.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is er te zien in het Thermenmuseum in Heerlen?",
+   "options": [
+    "Een Romeins badhuis",
+    "Een Romeinse kazerne",
+    "Een Romeins theater",
+    "Een Romeinse tempel"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Een Romeins badhuis.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de naam van de Limburgse regionale omroep?",
+   "options": [
+    "RTV Maas",
+    "L1",
+    "Radio Roer",
+    "Omroep Limburg Zuid"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: L1.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Welke Limburgse stad heeft de oudste binnenstad met de Sint-Servaasbrug als oudste brug van Nederland?",
+   "options": [
+    "Venlo",
+    "Thorn",
+    "Maastricht",
+    "Roermond"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Maastricht.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de vis die in een Pixar-film kwijtraakt en gezocht wordt door zijn vader?",
+   "options": [
+    "Dory",
+    "Marlin",
+    "Bruce",
+    "Nemo"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Nemo.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welk speelgoed is Woody in Toy Story?",
+   "options": [
+    "Een cowboy",
+    "Een varken",
+    "Een dinosaurus",
+    "Een astronaut"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Een cowboy.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welke filmreeks speelt een schip genaamd de Black Pearl een rol?",
+   "options": [
+    "Hook",
+    "Pirates of the Caribbean",
+    "Master and Commander",
+    "Treasure Planet"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Pirates of the Caribbean.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet de jonge tovenaar met het litteken in de vorm van een bliksemschicht?",
+   "options": [
+    "Harry Potter",
+    "Gandalf",
+    "Ron Wemel",
+    "Merlijn"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Harry Potter.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Hoe heet het Nederlandse tv-programma waarin kandidaten op een onbewoond eiland overleven?",
+   "options": [
+    "Survivor NL",
+    "Expeditie Robinson",
+    "Wie is de Mol?",
+    "De Bus"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Expeditie Robinson.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke serie draait om de strijd om de IJzeren Troon?",
+   "options": [
+    "The Witcher",
+    "Vikings",
+    "The Crown",
+    "Game of Thrones"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Game of Thrones.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Welke film van Stanley Kubrick speelt zich af in de ruimte met de computer HAL 9000?",
+   "options": [
+    "Alien",
+    "2001: A Space Odyssey",
+    "Solaris",
+    "Interstellar"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: 2001: A Space Odyssey.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "In welke stad speelt de Nederlandse soap 'Goede tijden, slechte tijden' zich af?",
+   "options": [
+    "Zandvoort",
+    "Amsterdam",
+    "Meerdijk",
+    "Utrecht"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Meerdijk.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Kenia?",
+   "options": [
+    "Tbilisi",
+    "Bandar Seri Begawan",
+    "Nairobi",
+    "Bamako"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Nairobi.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Ethiopië?",
+   "options": [
+    "Addis Abeba",
+    "Sofia",
+    "Bandar Seri Begawan",
+    "Sarajevo"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Addis Abeba.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Frankrijk?",
+   "options": [
+    "Nuku'alofa",
+    "Funafuti",
+    "Wellington",
+    "Parijs"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Parijs.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Brazilië?",
+   "options": [
+    "Luxemburg",
+    "Lomé",
+    "Khartoem",
+    "Brasilia"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Brasilia.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Canada?",
+   "options": [
+    "Apia",
+    "Astana",
+    "Ottawa",
+    "Amman"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ottawa.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Japan?",
+   "options": [
+    "Rabat",
+    "Yamoussoukro",
+    "Montevideo",
+    "Tokio"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Tokio.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Duitsland?",
+   "options": [
+    "Jerevan",
+    "Andorra la Vella",
+    "Berlijn",
+    "Brazzaville"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Berlijn.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van IJsland?",
+   "options": [
+    "Valletta",
+    "Asjchabad",
+    "Reykjavik",
+    "Mexico-Stad"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Reykjavik.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Estland?",
+   "options": [
+    "Porto-Novo",
+    "Tallinn",
+    "Boedapest",
+    "Islamabad"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Tallinn.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Noorwegen?",
+   "options": [
+    "Ndjamena",
+    "Oslo",
+    "Jeruzalem",
+    "Bamako"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Oslo.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Letland?",
+   "options": [
+    "Sucre",
+    "Bogota",
+    "Riga",
+    "Gitega"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Riga.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Oekraïne?",
+   "options": [
+    "Teheran",
+    "Kiev",
+    "Antananarivo",
+    "San Salvador"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Kiev.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Tsjechië?",
+   "options": [
+    "Moskou",
+    "Moroni",
+    "Ljubljana",
+    "Praag"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Praag.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Slowakije?",
+   "options": [
+    "Bissau",
+    "Hanoi",
+    "Tallinn",
+    "Bratislava"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Bratislava.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Slovenië?",
+   "options": [
+    "Caracas",
+    "Ljubljana",
+    "Riyad",
+    "Skopje"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Ljubljana.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Roemenië?",
+   "options": [
+    "Wellington",
+    "Boekarest",
+    "Parijs",
+    "Managua"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Boekarest.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Bulgarije?",
+   "options": [
+    "Monaco",
+    "Amman",
+    "Paramaribo",
+    "Sofia"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Sofia.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Albanië?",
+   "options": [
+    "Lobamba",
+    "Sofia",
+    "Honiara",
+    "Tirana"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Tirana.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Kroatië?",
+   "options": [
+    "Porto-Novo",
+    "Moroni",
+    "Zagreb",
+    "Dili"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Zagreb.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Cyprus?",
+   "options": [
+    "Basseterre",
+    "Nicosia",
+    "Lomé",
+    "Caïro"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Nicosia.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Georgië?",
+   "options": [
+    "Port of Spain",
+    "Rome",
+    "Tbilisi",
+    "Quito"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Tbilisi.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Malta?",
+   "options": [
+    "Valletta",
+    "Aden",
+    "Tbilisi",
+    "Stockholm"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Valletta.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Cuba?",
+   "options": [
+    "Antananarivo",
+    "Havana",
+    "Panama-Stad",
+    "Caracas"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Havana.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Indonesië?",
+   "options": [
+    "Ngerulmud",
+    "Banjul",
+    "Jakarta",
+    "Antananarivo"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Jakarta.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Ierland?",
+   "options": [
+    "Asjchabad",
+    "Roseau",
+    "Dublin",
+    "Basseterre"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Dublin.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Hongarije?",
+   "options": [
+    "Singapore",
+    "New Delhi",
+    "Luxemburg",
+    "Boedapest"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Boedapest.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Spanje?",
+   "options": [
+    "Roseau",
+    "Ankara",
+    "Madrid",
+    "Parijs"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Madrid.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Finland?",
+   "options": [
+    "Helsinki",
+    "Brasilia",
+    "Wellington",
+    "Tbilisi"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Helsinki.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Zweden?",
+   "options": [
+    "Monaco",
+    "Bloemfontein",
+    "Stockholm",
+    "Port Louis"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Stockholm.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Polen?",
+   "options": [
+    "La Paz",
+    "Roseau",
+    "Warschau",
+    "Victoria"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Warschau.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Litouwen?",
+   "options": [
+    "Ngerulmud",
+    "Amsterdam",
+    "Vilnius",
+    "Zagreb"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Vilnius.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Italië?",
+   "options": [
+    "Rome",
+    "Vientiane",
+    "Ndjamena",
+    "Addis Abeba"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Rome.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Zwitserland?",
+   "options": [
+    "Tasjkent",
+    "Praia",
+    "Zagreb",
+    "Bern"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Bern.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Oostenrijk?",
+   "options": [
+    "Bratislava",
+    "Kaboel",
+    "Port-au-Prince",
+    "Wenen"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Wenen.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is de hoofdstad van Griekenland?",
+   "options": [
+    "Athene",
+    "Podgorica",
+    "Ouagadougou",
+    "Belgrado"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Athene.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film The Conversation?",
+   "options": [
+    "Jeff Fowler",
+    "Francis Ford Coppola",
+    "Kenneth Branagh",
+    "Kathryn Bigelow"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Francis Ford Coppola.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Harry Potter en de Geheime Kamer?",
+   "options": [
+    "Chris Columbus",
+    "Christopher Nolan",
+    "Steven Soderbergh",
+    "Joe Johnston"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Chris Columbus.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Harry Potter en de Steen der Wijzen?",
+   "options": [
+    "Ivan Reitman",
+    "Tony Scott",
+    "Curry Barker",
+    "Chris Columbus"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Chris Columbus.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film 2001: A Space Odyssey?",
+   "options": [
+    "Vittorio De Sica",
+    "Stanley Kubrick",
+    "Russell Mulcahy",
+    "Paul Thomas Anderson"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Stanley Kubrick.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Alien?",
+   "options": [
+    "Ridley Scott",
+    "Rob Marshall",
+    "Espen Sandberg",
+    "David Soren"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Ridley Scott.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Pulp Fiction?",
+   "options": [
+    "Matt Shakman",
+    "Quentin Tarantino",
+    "Seth Rogen",
+    "Phil Lord"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Quentin Tarantino.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Unforgiven?",
+   "options": [
+    "Clint Eastwood",
+    "Jeff Fowler",
+    "Todd Phillips",
+    "Mike Newell"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Clint Eastwood.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Aliens?",
+   "options": [
+    "Todd Phillips",
+    "James Cameron",
+    "Wolfgang Becker",
+    "Rob Reiner"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: James Cameron.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Independence Day?",
+   "options": [
+    "Roland Emmerich",
+    "Sean S. Baker",
+    "Kyle Balda",
+    "Tony Scott"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Roland Emmerich.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Die Hard?",
+   "options": [
+    "Eric Darnell",
+    "John McTiernan",
+    "Ivan Reitman",
+    "Matt Reeves"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: John McTiernan.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb?",
+   "options": [
+    "Harve Foster",
+    "Neill Blomkamp",
+    "Stanley Kubrick",
+    "Paul W. S. Anderson"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Stanley Kubrick.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Stargate?",
+   "options": [
+    "Roland Emmerich",
+    "Ryan Coogler",
+    "Peter Jackson",
+    "Eric Darnell"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Roland Emmerich.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Apollo 13?",
+   "options": [
+    "Kyle Balda",
+    "Tim Burton",
+    "Ron Howard",
+    "Robert Wiene"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ron Howard.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film The Fifth Element?",
+   "options": [
+    "Luc Besson",
+    "Kyle Balda",
+    "Clint Eastwood",
+    "Terence Young"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Luc Besson.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Die Hard with a Vengeance?",
+   "options": [
+    "Mike Newell",
+    "John McTiernan",
+    "Duncan Jones",
+    "Stephen Daldry"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: John McTiernan.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Bram Stoker's Dracula?",
+   "options": [
+    "Francis Ford Coppola",
+    "Matthew Vaughn",
+    "Sergio Leone",
+    "Julius Onah"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Francis Ford Coppola.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Speed?",
+   "options": [
+    "Wolfgang Becker",
+    "Tony Scott",
+    "Jan de Bont",
+    "Espen Sandberg"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Jan de Bont.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Alien³?",
+   "options": [
+    "Jane Campion",
+    "Raja Gosnell",
+    "Mary Harron",
+    "David Fincher"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: David Fincher.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Oppenheimer?",
+   "options": [
+    "Christopher Nolan",
+    "Alan Taylor",
+    "Brad Silberling",
+    "Paul W. S. Anderson"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Christopher Nolan.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film The Great Dictator?",
+   "options": [
+    "Charlie Chaplin",
+    "Stephen Daldry",
+    "Antoine Fuqua",
+    "Zack Snyder"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Charlie Chaplin.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Trainspotting?",
+   "options": [
+    "Andrew Davis",
+    "Phil Lord",
+    "Danny Boyle",
+    "Ram Madhvani"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Danny Boyle.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Dune: Part Two?",
+   "options": [
+    "Mike Newell",
+    "Josh Boone",
+    "Denis Villeneuve",
+    "David Ayer"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Denis Villeneuve.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Back to the Future Part II?",
+   "options": [
+    "John McTiernan",
+    "Robert Wiene",
+    "Nancy Meyers",
+    "Robert Zemeckis"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Robert Zemeckis.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie regisseerde de film Rope?",
+   "options": [
+    "Marc Webb",
+    "Matt Shakman",
+    "Alfred Hitchcock",
+    "Andrej Tarkovski"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Alfred Hitchcock.",
+   "category": "Film & muziek",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Caféterras bij nacht?",
+   "options": [
+    "Diego Velázquez",
+    "Carl Bloch",
+    "Vincent van Gogh",
+    "Paolo Veronese"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Vincent van Gogh.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Dimanche d'été à la Grande Jatte?",
+   "options": [
+    "Ivan Aivazovski",
+    "Jean Auguste Dominique Ingres",
+    "Georges Seurat",
+    "Rafaël Santi"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Georges Seurat.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde La trahison des images?",
+   "options": [
+    "Jackson Pollock",
+    "Vincent van Gogh",
+    "Paul Gauguin",
+    "René Magritte"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: René Magritte.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Dame met waaier?",
+   "options": [
+    "Gustav Klimt",
+    "Egon Schiele",
+    "Leonardo da Vinci",
+    "Carl Bloch"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Gustav Klimt.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Christus en de overspelige vrouw?",
+   "options": [
+    "Pieter Bruegel de Oude",
+    "Kazimir Malevitsj",
+    "Rembrandt van Rijn",
+    "Jheronimus Bosch"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Pieter Bruegel de Oude.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde La Grenouillère door Renoir en Monet?",
+   "options": [
+    "Pierre-Auguste Renoir",
+    "Alexandre Cabanel",
+    "Hippolyte Delaroche",
+    "Diego Velázquez"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Pierre-Auguste Renoir.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde El tres de mayo de 1808 en Madrid?",
+   "options": [
+    "Sarah Goodridge",
+    "Henri Rousseau",
+    "Jheronimus Bosch",
+    "Francisco Goya"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Francisco Goya.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Rembrandt en Saskia in de parabel van de verloren zoon?",
+   "options": [
+    "Hugo van der Goes",
+    "Rembrandt van Rijn",
+    "Pierre-Auguste Renoir",
+    "Thomas Cole"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Rembrandt van Rijn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Van Gogh's Chair?",
+   "options": [
+    "Vincent van Gogh",
+    "Georges Seurat",
+    "Diego Velázquez",
+    "John Everett Millais"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Vincent van Gogh.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De ekster op de galg?",
+   "options": [
+    "Paolo Veronese",
+    "Pieter Bruegel de Oude",
+    "Edvard Munch",
+    "Salvador Dalí"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Pieter Bruegel de Oude.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Prisoners Exercising?",
+   "options": [
+    "Vincent van Gogh",
+    "Antonio da Correggio",
+    "Jean-Léon Gérôme",
+    "Leonardeschi"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Vincent van Gogh.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De overgave van Breda?",
+   "options": [
+    "Paul Gauguin",
+    "Diego Velázquez",
+    "Pieter Bruegel de Oude",
+    "Thomas Gainsborough"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Diego Velázquez.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Madonna Benois?",
+   "options": [
+    "Paul Gauguin",
+    "Hans Holbein de Jonge",
+    "Francesco Hayez",
+    "Leonardo da Vinci"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Leonardo da Vinci.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Léal Souvenir?",
+   "options": [
+    "Sandro Botticelli",
+    "Jan van Eyck",
+    "Giuseppe Arcimboldo",
+    "Carel Fabritius"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Jan van Eyck.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Het feestmaal van Belsazar?",
+   "options": [
+    "Paolo Veronese",
+    "Rembrandt van Rijn",
+    "Leonardeschi",
+    "Gustave Courbet"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Rembrandt van Rijn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Het concert?",
+   "options": [
+    "Rafaël Santi",
+    "Eugène Delacroix",
+    "Johannes Vermeer",
+    "Gustave Caillebotte"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Johannes Vermeer.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Dame en twee heren?",
+   "options": [
+    "Johannes Vermeer",
+    "Hans Holbein de Jonge",
+    "Ivan Kramskoj",
+    "Jean-Léon Gérôme"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Johannes Vermeer.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De Staalmeesters?",
+   "options": [
+    "El Greco",
+    "Rembrandt van Rijn",
+    "Diego Velázquez",
+    "Piero della Francesca"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Rembrandt van Rijn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De absintdrinker?",
+   "options": [
+    "Jean Auguste Dominique Ingres",
+    "John Everett Millais",
+    "Édouard Manet",
+    "Ilja Repin"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Édouard Manet.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde graflegging van Christus?",
+   "options": [
+    "Jean Auguste Dominique Ingres",
+    "Caravaggio",
+    "Antonio da Correggio",
+    "Gustave Courbet"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Caravaggio.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De Graflegging?",
+   "options": [
+    "Giotto di Bondone",
+    "Rogier van der Weyden",
+    "Michelangelo Buonarroti",
+    "Alexandre Desgoffe"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Michelangelo Buonarroti.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde Levensfasen?",
+   "options": [
+    "Caspar David Friedrich",
+    "Hans Holbein de Jonge",
+    "Paolo Veronese",
+    "Edgar Degas"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Caspar David Friedrich.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De kantwerkster?",
+   "options": [
+    "Diego Velázquez",
+    "Johannes Vermeer",
+    "Alexandre Cabanel",
+    "Jean-François Millet"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Johannes Vermeer.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De Laster van Apelles?",
+   "options": [
+    "Caravaggio",
+    "Egon Schiele",
+    "William Holman Hunt",
+    "Sandro Botticelli"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Sandro Botticelli.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schilderde De Annunciatie?",
+   "options": [
+    "Arnold Böcklin",
+    "Thomas Cole",
+    "Leonardo da Vinci",
+    "Pieter Bruegel de Oude"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Leonardo da Vinci.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Mesch?",
+   "options": [
+    "Gelderland",
+    "Drenthe",
+    "Limburg",
+    "Friesland"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Limburg.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Rijckholt?",
+   "options": [
+    "Utrecht",
+    "Limburg",
+    "Noord-Holland",
+    "Gelderland"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Limburg.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Sexbierum?",
+   "options": [
+    "Friesland",
+    "Zeeland",
+    "Overijssel",
+    "Noord-Holland"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Friesland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Leiderdorp?",
+   "options": [
+    "Zeeland",
+    "Noord-Brabant",
+    "Zuid-Holland",
+    "Limburg"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Zuid-Holland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Vlist?",
+   "options": [
+    "Zuid-Holland",
+    "Noord-Holland",
+    "Friesland",
+    "Utrecht"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Zuid-Holland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Budel?",
+   "options": [
+    "Drenthe",
+    "Groningen",
+    "Limburg",
+    "Noord-Brabant"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Noord-Brabant.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Buiksloot?",
+   "options": [
+    "Zeeland",
+    "Flevoland",
+    "Noord-Holland",
+    "Zuid-Holland"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Noord-Holland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt IJsselmuiden?",
+   "options": [
+    "Groningen",
+    "Utrecht",
+    "Overijssel",
+    "Noord-Brabant"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Overijssel.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Delden?",
+   "options": [
+    "Gelderland",
+    "Utrecht",
+    "Noord-Holland",
+    "Overijssel"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Overijssel.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Den Dungen?",
+   "options": [
+    "Noord-Brabant",
+    "Noord-Holland",
+    "Drenthe",
+    "Limburg"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Noord-Brabant.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Scheemda?",
+   "options": [
+    "Groningen",
+    "Zeeland",
+    "Zuid-Holland",
+    "Limburg"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Groningen.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Overasselt?",
+   "options": [
+    "Overijssel",
+    "Drenthe",
+    "Friesland",
+    "Gelderland"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Gelderland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Bergum?",
+   "options": [
+    "Drenthe",
+    "Noord-Brabant",
+    "Overijssel",
+    "Friesland"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Friesland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Apeldoorn?",
+   "options": [
+    "Gelderland",
+    "Zeeland",
+    "Overijssel",
+    "Drenthe"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Gelderland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Loenen?",
+   "options": [
+    "Noord-Holland",
+    "Utrecht",
+    "Groningen",
+    "Zeeland"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Utrecht.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Winsum?",
+   "options": [
+    "Noord-Holland",
+    "Groningen",
+    "Drenthe",
+    "Limburg"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Groningen.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Dijk en Waard?",
+   "options": [
+    "Noord-Holland",
+    "Groningen",
+    "Overijssel",
+    "Gelderland"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Noord-Holland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Gapinge?",
+   "options": [
+    "Noord-Brabant",
+    "Limburg",
+    "Zeeland",
+    "Zuid-Holland"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Zeeland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Oost-Souburg?",
+   "options": [
+    "Friesland",
+    "Groningen",
+    "Zeeland",
+    "Overijssel"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Zeeland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Havelte?",
+   "options": [
+    "Gelderland",
+    "Noord-Holland",
+    "Friesland",
+    "Drenthe"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Drenthe.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Amerongen?",
+   "options": [
+    "Noord-Brabant",
+    "Gelderland",
+    "Noord-Holland",
+    "Utrecht"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Utrecht.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Lelystad?",
+   "options": [
+    "Utrecht",
+    "Flevoland",
+    "Zuid-Holland",
+    "Drenthe"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Flevoland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Zeewolde?",
+   "options": [
+    "Utrecht",
+    "Friesland",
+    "Noord-Holland",
+    "Flevoland"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Flevoland.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "In welke Nederlandse provincie ligt Dalen?",
+   "options": [
+    "Noord-Brabant",
+    "Drenthe",
+    "Noord-Holland",
+    "Gelderland"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Drenthe.",
+   "category": "De wereld",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van waterstof?",
+   "options": [
+    "Re",
+    "Cl",
+    "H",
+    "Ni"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: H.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van helium?",
+   "options": [
+    "He",
+    "S",
+    "Mg",
+    "Gd"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: He.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van koolstof?",
+   "options": [
+    "Rf",
+    "Sg",
+    "Eu",
+    "C"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: C.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van stikstof?",
+   "options": [
+    "Ta",
+    "N",
+    "Ba",
+    "O"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: N.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van zuurstof?",
+   "options": [
+    "Co",
+    "K",
+    "O",
+    "V"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: O.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van neon?",
+   "options": [
+    "Tb",
+    "Ne",
+    "Lr",
+    "Pd"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Ne.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van natrium?",
+   "options": [
+    "Cm",
+    "Ne",
+    "Nh",
+    "Na"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Na.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van magnesium?",
+   "options": [
+    "Md",
+    "Er",
+    "Cd",
+    "Mg"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Mg.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van aluminium?",
+   "options": [
+    "Ba",
+    "Bh",
+    "Zr",
+    "Al"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Al.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van silicium?",
+   "options": [
+    "Ts",
+    "Cd",
+    "Si",
+    "Rh"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Si.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van fosfor?",
+   "options": [
+    "Re",
+    "Cf",
+    "P",
+    "Lu"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: P.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van zwavel?",
+   "options": [
+    "Sb",
+    "La",
+    "S",
+    "Kr"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: S.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van chloor?",
+   "options": [
+    "Cl",
+    "Mc",
+    "Cm",
+    "Mn"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Cl.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van kalium?",
+   "options": [
+    "V",
+    "Rh",
+    "Ge",
+    "K"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: K.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van calcium?",
+   "options": [
+    "Ca",
+    "Ce",
+    "Cl",
+    "Ds"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Ca.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van ijzer?",
+   "options": [
+    "Ts",
+    "Fe",
+    "Rf",
+    "Db"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Fe.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van koper?",
+   "options": [
+    "Rf",
+    "Ts",
+    "Cr",
+    "Cu"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Cu.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van zink?",
+   "options": [
+    "Zn",
+    "Sn",
+    "Ho",
+    "Fm"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Zn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van zilver?",
+   "options": [
+    "Cf",
+    "W",
+    "Ag",
+    "Ce"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Ag.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van tin?",
+   "options": [
+    "Nb",
+    "Sn",
+    "C",
+    "Lv"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Sn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van jodium?",
+   "options": [
+    "Xe",
+    "Np",
+    "I",
+    "Te"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: I.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van platina?",
+   "options": [
+    "Gd",
+    "Be",
+    "Nh",
+    "Pt"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Pt.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van goud?",
+   "options": [
+    "Tl",
+    "P",
+    "Be",
+    "Au"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Au.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wat is het chemische symbool van kwik?",
+   "options": [
+    "Hg",
+    "Fl",
+    "No",
+    "F"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Hg.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Na regen komt …”.",
+   "options": [
+    "koning",
+    "vinden",
+    "wint",
+    "zonneschijn"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: zonneschijn.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “De appel valt niet ver van de …”.",
+   "options": [
+    "gedaan",
+    "wind",
+    "boom",
+    "langst"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: boom.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Hoge bomen vangen veel …”.",
+   "options": [
+    "wind",
+    "zoeken",
+    "ding",
+    "wal"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: wind.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Wie het laatst lacht lacht het …”.",
+   "options": [
+    "vallen",
+    "best",
+    "niet",
+    "spannen"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: best.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Oost west thuis …”.",
+   "options": [
+    "steken",
+    "best",
+    "leggen",
+    "halen"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: best.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Beter laat dan …”.",
+   "options": [
+    "nooit",
+    "geven",
+    "lucht",
+    "hinken"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: nooit.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Zoals het klokje thuis tikt tikt het …”.",
+   "options": [
+    "hakken",
+    "man",
+    "nergens",
+    "wint"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: nergens.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “De beste stuurlui staan aan …”.",
+   "options": [
+    "vinden",
+    "wal",
+    "gezond",
+    "ontvangen"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: wal.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Een gegeven paard niet in de bek …”.",
+   "options": [
+    "slaan",
+    "komen",
+    "kijken",
+    "opgediend"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: kijken.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Als de kat van huis is dansen de muizen op …”.",
+   "options": [
+    "hinken",
+    "tafel",
+    "komen",
+    "best"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: tafel.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Wie zijn billen brandt moet op de blaren …”.",
+   "options": [
+    "zeggen",
+    "sprongen",
+    "nooit",
+    "zitten"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: zitten.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “De morgenstond heeft goud in de …”.",
+   "options": [
+    "houden",
+    "hakken",
+    "maken",
+    "mond"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: mond.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Al draagt een aap een gouden ring het is en blijft een lelijk …”.",
+   "options": [
+    "kijken",
+    "nemen",
+    "vallen",
+    "ding"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: ding.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Wie een kuil graaft voor een ander valt er zelf …”.",
+   "options": [
+    "boom",
+    "komen",
+    "in",
+    "spannen"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: in.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Een goed begin is het halve …”.",
+   "options": [
+    "kijken",
+    "werk",
+    "nemen",
+    "lucht"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: werk.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Wie niet waagt die niet …”.",
+   "options": [
+    "steen",
+    "hoekje",
+    "opgediend",
+    "wint"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: wint.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “De aanhouder …”.",
+   "options": [
+    "zien",
+    "wint",
+    "werk",
+    "steken"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: wint.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Geduld is een schone …”.",
+   "options": [
+    "nooit",
+    "zaak",
+    "komen",
+    "zoeken"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: zaak.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Haastige spoed is zelden …”.",
+   "options": [
+    "goed",
+    "is",
+    "vreugde",
+    "vatten"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: goed.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Eerlijk duurt het …”.",
+   "options": [
+    "zonneschijn",
+    "sprongen",
+    "man",
+    "langst"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: langst.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Beter één vogel in de hand dan tien in de …”.",
+   "options": [
+    "wind",
+    "werk",
+    "lucht",
+    "houden"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: lucht.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Blaffende honden bijten …”.",
+   "options": [
+    "geven",
+    "in",
+    "langst",
+    "niet"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: niet.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Als er één schaap over de dam is volgen er …”.",
+   "options": [
+    "meer",
+    "opgediend",
+    "zoeken",
+    "werk"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: meer.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Een ongeluk zit in een klein …”.",
+   "options": [
+    "ding",
+    "hoekje",
+    "wint",
+    "wind"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: hoekje.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Een ezel stoot zich niet tweemaal aan dezelfde …”.",
+   "options": [
+    "tafel",
+    "steen",
+    "ontvangen",
+    "kerk"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: steen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Een kat in het nauw maakt rare …”.",
+   "options": [
+    "komen",
+    "sprongen",
+    "vriend",
+    "vreugde"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: sprongen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Wie de schoen past trekt hem …”.",
+   "options": [
+    "gooien",
+    "komen",
+    "aan",
+    "mond"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: aan.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “Met de deur in huis …”.",
+   "options": [
+    "kerk",
+    "meer",
+    "zoon",
+    "vallen"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: vallen.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “De kogel is door de …”.",
+   "options": [
+    "boom",
+    "vreugde",
+    "hakken",
+    "kerk"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: kerk.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Maak de uitdrukking af: “De koe bij de horens …”.",
+   "options": [
+    "zwaarst",
+    "in",
+    "vatten",
+    "mond"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: vatten.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De Hobbit?",
+   "options": [
+    "Kluun",
+    "Mary Shelley",
+    "Hotze de Roos",
+    "J.R.R. Tolkien"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: J.R.R. Tolkien.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef In de ban van de ring?",
+   "options": [
+    "J.R.R. Tolkien",
+    "Mary Shelley",
+    "Herman Koch",
+    "Emily Brontë"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: J.R.R. Tolkien.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Harry Potter en de Steen der Wijzen?",
+   "options": [
+    "Dan Brown",
+    "J.K. Rowling",
+    "Anne Frank",
+    "Arthur Conan Doyle"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: J.K. Rowling.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef 1984?",
+   "options": [
+    "Umberto Eco",
+    "Arthur Conan Doyle",
+    "George Orwell",
+    "Roald Dahl"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: George Orwell.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Animal Farm?",
+   "options": [
+    "J.R.R. Tolkien",
+    "Paulo Coelho",
+    "Thea Beckman",
+    "George Orwell"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: George Orwell.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De kleine prins?",
+   "options": [
+    "Antoine de Saint-Exupéry",
+    "Jan Terlouw",
+    "W.F. Hermans",
+    "Astrid Lindgren"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Antoine de Saint-Exupéry.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De alchemist?",
+   "options": [
+    "F. Scott Fitzgerald",
+    "Kluun",
+    "Harry Mulisch",
+    "Paulo Coelho"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Paulo Coelho.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De ontdekking van de hemel?",
+   "options": [
+    "Tessa de Loo",
+    "Harry Mulisch",
+    "Charles Dickens",
+    "Tommy Wieringa"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Harry Mulisch.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De aanslag?",
+   "options": [
+    "Paul van Loon",
+    "J.K. Rowling",
+    "Harry Mulisch",
+    "Ernest Hemingway"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Harry Mulisch.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Het stenen bruidsbed?",
+   "options": [
+    "Harry Mulisch",
+    "Agatha Christie",
+    "Ernest Hemingway",
+    "J.D. Salinger"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Harry Mulisch.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Max Havelaar?",
+   "options": [
+    "Mary Shelley",
+    "Multatuli",
+    "Tim Krabbé",
+    "Dan Brown"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Multatuli.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De avonden?",
+   "options": [
+    "Gerard Reve",
+    "Jan Terlouw",
+    "Anne Frank",
+    "Oscar Wilde"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Gerard Reve.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Nooit meer slapen?",
+   "options": [
+    "W.F. Hermans",
+    "J.D. Salinger",
+    "Theo Thijssen",
+    "Charlotte Brontë"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: W.F. Hermans.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De donkere kamer van Damokles?",
+   "options": [
+    "W.F. Hermans",
+    "Charles Dickens",
+    "Jan Wolkers",
+    "Kluun"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: W.F. Hermans.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Het gouden ei?",
+   "options": [
+    "Tim Krabbé",
+    "Herman Koch",
+    "Kluun",
+    "Tommy Wieringa"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Tim Krabbé.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De renner?",
+   "options": [
+    "Tommy Wieringa",
+    "Tim Krabbé",
+    "W.F. Hermans",
+    "Bram Stoker"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Tim Krabbé.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Joe Speedboot?",
+   "options": [
+    "Tommy Wieringa",
+    "C. Joh. Kieviet",
+    "Mary Shelley",
+    "J.K. Rowling"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Tommy Wieringa.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Dit zijn de namen?",
+   "options": [
+    "Jane Austen",
+    "Tommy Wieringa",
+    "Tim Krabbé",
+    "J.D. Salinger"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Tommy Wieringa.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Oorlogswinter?",
+   "options": [
+    "Antoine de Saint-Exupéry",
+    "Jan Terlouw",
+    "Ernest Hemingway",
+    "Arthur Conan Doyle"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Jan Terlouw.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Koning van Katoren?",
+   "options": [
+    "Tonke Dragt",
+    "Oscar Wilde",
+    "Jan Terlouw",
+    "Emily Brontë"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Jan Terlouw.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Kruistocht in spijkerbroek?",
+   "options": [
+    "F. Bordewijk",
+    "Umberto Eco",
+    "Thea Beckman",
+    "Hotze de Roos"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Thea Beckman.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Hasse Simonsdochter?",
+   "options": [
+    "Antoine de Saint-Exupéry",
+    "Thea Beckman",
+    "Harry Mulisch",
+    "W.F. Hermans"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Thea Beckman.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Dolfje Weerwolfje?",
+   "options": [
+    "J.D. Salinger",
+    "Multatuli",
+    "Paul van Loon",
+    "Jan Terlouw"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Paul van Loon.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef De Griezelbus?",
+   "options": [
+    "Paul van Loon",
+    "C. Joh. Kieviet",
+    "Tonke Dragt",
+    "Tessa de Loo"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Paul van Loon.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Wie schreef Pluk van de Petteflet?",
+   "options": [
+    "Theo Thijssen",
+    "Herman Koch",
+    "Paul van Loon",
+    "Annie M.G. Schmidt"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Annie M.G. Schmidt.",
+   "category": "Algemene kennis",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1970?",
+   "options": [
+    "Italië",
+    "Brazilië",
+    "Engeland",
+    "Duitsland"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Brazilië.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1974?",
+   "options": [
+    "Duitsland",
+    "Spanje",
+    "Italië",
+    "West-Duitsland"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: West-Duitsland.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1978?",
+   "options": [
+    "Brazilië",
+    "Uruguay",
+    "Italië",
+    "Argentinië"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Argentinië.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1982?",
+   "options": [
+    "Engeland",
+    "Italië",
+    "Duitsland",
+    "Spanje"
+   ],
+   "correct": 1,
+   "explanation": "Antwoord: Italië.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1986?",
+   "options": [
+    "Uruguay",
+    "Italië",
+    "Engeland",
+    "Argentinië"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Argentinië.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1990?",
+   "options": [
+    "West-Duitsland",
+    "Brazilië",
+    "Spanje",
+    "Frankrijk"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: West-Duitsland.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1994?",
+   "options": [
+    "Italië",
+    "Duitsland",
+    "Brazilië",
+    "Argentinië"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Brazilië.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 1998?",
+   "options": [
+    "Spanje",
+    "Argentinië",
+    "Italië",
+    "Frankrijk"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Frankrijk.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 2002?",
+   "options": [
+    "Uruguay",
+    "Spanje",
+    "Argentinië",
+    "Brazilië"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Brazilië.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 2006?",
+   "options": [
+    "Brazilië",
+    "Duitsland",
+    "Italië",
+    "Engeland"
+   ],
+   "correct": 2,
+   "explanation": "Antwoord: Italië.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 2010?",
+   "options": [
+    "Duitsland",
+    "Uruguay",
+    "Frankrijk",
+    "Spanje"
+   ],
+   "correct": 3,
+   "explanation": "Antwoord: Spanje.",
+   "category": "Sport & spel",
+   "pool": true
+  },
+  {
+   "q": "Welk land won het WK voetbal voor mannen in 2014?",
+   "options": [
+    "Duitsland",
+    "Uruguay",
+    "Engeland",
+    "Argentinië"
+   ],
+   "correct": 0,
+   "explanation": "Antwoord: Duitsland.",
+   "category": "Sport & spel",
+   "pool": true
+  }
+ ],
+ "en": [
+  {
+   "q": "How many sides does a hexagon have?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "correct": 2,
+   "category": "General knowledge",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Which planet is closest to the Sun?",
+   "options": [
+    "Venus",
+    "Mercury",
+    "Mars",
+    "Earth"
+   ],
+   "correct": 1,
+   "category": "General knowledge",
+   "difficulty": "easy"
+  },
+  {
+   "q": "How many minutes are there in two hours?",
+   "options": [
+    "60",
+    "90",
+    "100",
+    "120"
+   ],
+   "correct": 3,
+   "category": "General knowledge",
+   "difficulty": "easy"
+  },
+  {
+   "q": "What is the capital of Italy?",
+   "options": [
+    "Rome",
+    "Milan",
+    "Venice",
+    "Naples"
+   ],
+   "correct": 0,
+   "category": "The world",
+   "difficulty": "easy"
+  },
+  {
+   "q": "On which continent is Brazil?",
+   "options": [
+    "Europe",
+    "Asia",
+    "South America",
+    "Africa"
+   ],
+   "correct": 2,
+   "category": "The world",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Which ocean lies between Europe and North America?",
+   "options": [
+    "Pacific",
+    "Atlantic",
+    "Indian",
+    "Arctic"
+   ],
+   "correct": 1,
+   "category": "The world",
+   "difficulty": "easy"
+  },
+  {
+   "q": "How many players does a football team have on the pitch at the start?",
+   "options": [
+    "7",
+    "9",
+    "11",
+    "13"
+   ],
+   "correct": 2,
+   "category": "Sport & games",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Which piece moves in an L shape in chess?",
+   "options": [
+    "Knight",
+    "Bishop",
+    "Rook",
+    "King"
+   ],
+   "correct": 0,
+   "category": "Sport & games",
+   "difficulty": "easy"
+  },
+  {
+   "q": "How many rings are on the Olympic symbol?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": 3,
+   "category": "Sport & games",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Who wrote the Harry Potter books?",
+   "options": [
+    "Agatha Christie",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ],
+   "correct": 1,
+   "category": "Books, film & music",
+   "difficulty": "easy"
+  },
+  {
+   "q": "How many strings does a standard guitar have?",
+   "options": [
+    "6",
+    "4",
+    "8",
+    "12"
+   ],
+   "correct": 0,
+   "category": "Books, film & music",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Which film features the song Let It Go?",
+   "options": [
+    "Shrek",
+    "Moana",
+    "Frozen",
+    "Coco"
+   ],
+   "correct": 2,
+   "category": "Books, film & music",
+   "difficulty": "easy"
+  }
+ ],
+ "de": [
+  {
+   "q": "Wie viele Seiten hat ein Sechseck?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "correct": 2,
+   "category": "Allgemeinwissen",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Welcher Planet ist der Sonne am nächsten?",
+   "options": [
+    "Venus",
+    "Merkur",
+    "Mars",
+    "Erde"
+   ],
+   "correct": 1,
+   "category": "Allgemeinwissen",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Wie viele Minuten haben zwei Stunden?",
+   "options": [
+    "60",
+    "90",
+    "100",
+    "120"
+   ],
+   "correct": 3,
+   "category": "Allgemeinwissen",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Wie heißt die Hauptstadt Italiens?",
+   "options": [
+    "Rom",
+    "Mailand",
+    "Venedig",
+    "Neapel"
+   ],
+   "correct": 0,
+   "category": "Die Welt",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Auf welchem Kontinent liegt Brasilien?",
+   "options": [
+    "Europa",
+    "Asien",
+    "Südamerika",
+    "Afrika"
+   ],
+   "correct": 2,
+   "category": "Die Welt",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Welcher Ozean liegt zwischen Europa und Nordamerika?",
+   "options": [
+    "Pazifik",
+    "Atlantik",
+    "Indischer Ozean",
+    "Arktischer Ozean"
+   ],
+   "correct": 1,
+   "category": "Die Welt",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Wie viele Spieler hat ein Fußballteam zu Spielbeginn auf dem Feld?",
+   "options": [
+    "7",
+    "9",
+    "11",
+    "13"
+   ],
+   "correct": 2,
+   "category": "Sport & Spiel",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Welche Schachfigur zieht in L-Form?",
+   "options": [
+    "Springer",
+    "Läufer",
+    "Turm",
+    "König"
+   ],
+   "correct": 0,
+   "category": "Sport & Spiel",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Wie viele Ringe hat das olympische Symbol?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": 3,
+   "category": "Sport & Spiel",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Wer schrieb die Harry-Potter-Bücher?",
+   "options": [
+    "Agatha Christie",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ],
+   "correct": 1,
+   "category": "Bücher, Film & Musik",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Wie viele Saiten hat eine normale Gitarre?",
+   "options": [
+    "6",
+    "4",
+    "8",
+    "12"
+   ],
+   "correct": 0,
+   "category": "Bücher, Film & Musik",
+   "difficulty": "easy"
+  },
+  {
+   "q": "In welchem Film kommt das Lied Let It Go vor?",
+   "options": [
+    "Shrek",
+    "Vaiana",
+    "Die Eiskönigin",
+    "Coco"
+   ],
+   "correct": 2,
+   "category": "Bücher, Film & Musik",
+   "difficulty": "easy"
+  }
+ ],
+ "fr": [
+  {
+   "q": "Combien de côtés a un hexagone ?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "correct": 2,
+   "category": "Culture générale",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quelle planète est la plus proche du Soleil ?",
+   "options": [
+    "Vénus",
+    "Mercure",
+    "Mars",
+    "Terre"
+   ],
+   "correct": 1,
+   "category": "Culture générale",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Combien de minutes y a-t-il dans deux heures ?",
+   "options": [
+    "60",
+    "90",
+    "100",
+    "120"
+   ],
+   "correct": 3,
+   "category": "Culture générale",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quelle est la capitale de l’Italie ?",
+   "options": [
+    "Rome",
+    "Milan",
+    "Venise",
+    "Naples"
+   ],
+   "correct": 0,
+   "category": "Le monde",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Sur quel continent se trouve le Brésil ?",
+   "options": [
+    "Europe",
+    "Asie",
+    "Amérique du Sud",
+    "Afrique"
+   ],
+   "correct": 2,
+   "category": "Le monde",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quel océan sépare l’Europe de l’Amérique du Nord ?",
+   "options": [
+    "Pacifique",
+    "Atlantique",
+    "Indien",
+    "Arctique"
+   ],
+   "correct": 1,
+   "category": "Le monde",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Combien de joueurs compte une équipe de football sur le terrain au début ?",
+   "options": [
+    "7",
+    "9",
+    "11",
+    "13"
+   ],
+   "correct": 2,
+   "category": "Sport et jeux",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quelle pièce se déplace en L aux échecs ?",
+   "options": [
+    "Cavalier",
+    "Fou",
+    "Tour",
+    "Roi"
+   ],
+   "correct": 0,
+   "category": "Sport et jeux",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Combien d’anneaux comporte le symbole olympique ?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": 3,
+   "category": "Sport et jeux",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Qui a écrit les livres Harry Potter ?",
+   "options": [
+    "Agatha Christie",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ],
+   "correct": 1,
+   "category": "Livres, cinéma et musique",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Combien de cordes a une guitare standard ?",
+   "options": [
+    "6",
+    "4",
+    "8",
+    "12"
+   ],
+   "correct": 0,
+   "category": "Livres, cinéma et musique",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Dans quel film entend-on la chanson Let It Go ?",
+   "options": [
+    "Shrek",
+    "Vaiana",
+    "La Reine des neiges",
+    "Coco"
+   ],
+   "correct": 2,
+   "category": "Livres, cinéma et musique",
+   "difficulty": "easy"
+  }
+ ],
+ "es": [
+  {
+   "q": "¿Cuántos lados tiene un hexágono?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "correct": 2,
+   "category": "Cultura general",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Qué planeta está más cerca del Sol?",
+   "options": [
+    "Venus",
+    "Mercurio",
+    "Marte",
+    "Tierra"
+   ],
+   "correct": 1,
+   "category": "Cultura general",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Cuántos minutos hay en dos horas?",
+   "options": [
+    "60",
+    "90",
+    "100",
+    "120"
+   ],
+   "correct": 3,
+   "category": "Cultura general",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Cuál es la capital de Italia?",
+   "options": [
+    "Roma",
+    "Milán",
+    "Venecia",
+    "Nápoles"
+   ],
+   "correct": 0,
+   "category": "El mundo",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿En qué continente está Brasil?",
+   "options": [
+    "Europa",
+    "Asia",
+    "América del Sur",
+    "África"
+   ],
+   "correct": 2,
+   "category": "El mundo",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Qué océano separa Europa de América del Norte?",
+   "options": [
+    "Pacífico",
+    "Atlántico",
+    "Índico",
+    "Ártico"
+   ],
+   "correct": 1,
+   "category": "El mundo",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Cuántos jugadores tiene un equipo de fútbol en el campo al empezar?",
+   "options": [
+    "7",
+    "9",
+    "11",
+    "13"
+   ],
+   "correct": 2,
+   "category": "Deporte y juegos",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Qué pieza se mueve en L en ajedrez?",
+   "options": [
+    "Caballo",
+    "Alfil",
+    "Torre",
+    "Rey"
+   ],
+   "correct": 0,
+   "category": "Deporte y juegos",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Cuántos anillos tiene el símbolo olímpico?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": 3,
+   "category": "Deporte y juegos",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Quién escribió los libros de Harry Potter?",
+   "options": [
+    "Agatha Christie",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ],
+   "correct": 1,
+   "category": "Libros, cine y música",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿Cuántas cuerdas tiene una guitarra estándar?",
+   "options": [
+    "6",
+    "4",
+    "8",
+    "12"
+   ],
+   "correct": 0,
+   "category": "Libros, cine y música",
+   "difficulty": "easy"
+  },
+  {
+   "q": "¿En qué película aparece la canción Let It Go?",
+   "options": [
+    "Shrek",
+    "Vaiana",
+    "Frozen",
+    "Coco"
+   ],
+   "correct": 2,
+   "category": "Libros, cine y música",
+   "difficulty": "easy"
+  }
+ ],
+ "it": [
+  {
+   "q": "Quanti lati ha un esagono?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "correct": 2,
+   "category": "Cultura generale",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quale pianeta è più vicino al Sole?",
+   "options": [
+    "Venere",
+    "Mercurio",
+    "Marte",
+    "Terra"
+   ],
+   "correct": 1,
+   "category": "Cultura generale",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quanti minuti ci sono in due ore?",
+   "options": [
+    "60",
+    "90",
+    "100",
+    "120"
+   ],
+   "correct": 3,
+   "category": "Cultura generale",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Qual è la capitale d’Italia?",
+   "options": [
+    "Roma",
+    "Milano",
+    "Venezia",
+    "Napoli"
+   ],
+   "correct": 0,
+   "category": "Il mondo",
+   "difficulty": "easy"
+  },
+  {
+   "q": "In quale continente si trova il Brasile?",
+   "options": [
+    "Europa",
+    "Asia",
+    "America del Sud",
+    "Africa"
+   ],
+   "correct": 2,
+   "category": "Il mondo",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quale oceano separa l’Europa dall’America del Nord?",
+   "options": [
+    "Pacifico",
+    "Atlantico",
+    "Indiano",
+    "Artico"
+   ],
+   "correct": 1,
+   "category": "Il mondo",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quanti giocatori ha una squadra di calcio in campo all’inizio?",
+   "options": [
+    "7",
+    "9",
+    "11",
+    "13"
+   ],
+   "correct": 2,
+   "category": "Sport e giochi",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quale pezzo si muove a L negli scacchi?",
+   "options": [
+    "Cavallo",
+    "Alfiere",
+    "Torre",
+    "Re"
+   ],
+   "correct": 0,
+   "category": "Sport e giochi",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quanti anelli ha il simbolo olimpico?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": 3,
+   "category": "Sport e giochi",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Chi ha scritto i libri di Harry Potter?",
+   "options": [
+    "Agatha Christie",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ],
+   "correct": 1,
+   "category": "Libri, cinema e musica",
+   "difficulty": "easy"
+  },
+  {
+   "q": "Quante corde ha una chitarra standard?",
+   "options": [
+    "6",
+    "4",
+    "8",
+    "12"
+   ],
+   "correct": 0,
+   "category": "Libri, cinema e musica",
+   "difficulty": "easy"
+  },
+  {
+   "q": "In quale film si trova la canzone Let It Go?",
+   "options": [
+    "Shrek",
+    "Oceania",
+    "Frozen",
+    "Coco"
+   ],
+   "correct": 2,
+   "category": "Libri, cinema e musica",
+   "difficulty": "easy"
+  }
+ ]
+}

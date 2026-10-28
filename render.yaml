@@ -1,0 +1,12 @@
+# Render-blauwdruk (render.com), gratis variant: New → Blueprint → kies deze repository.
+# Gratis: valt na ±15 minuten zonder bezoekers in slaap en heeft geen vaste schijf (kamers verdwijnen bij een herstart).
+# Het openbare adres haalt de server zelf uit RENDER_EXTERNAL_URL.
+services:
+  - type: web
+    name: groepsspel
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/ping
+    envVars:
+      - key: GROEPSSPEL_MAX_ROOMS
+        value: "50"

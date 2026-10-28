@@ -1,0 +1,27 @@
+Groepsspel 0.7.0 - bronnen en media
+
+Vragenbank: 1161 Nederlandse vragen.
+Gestructureerde feiten: Wikidata (CC0), met entiteit-URL per vraag; geraadpleegd 25 oktober 2026.
+Chemische symbolen: PubChem / NIH Periodic Table, 118 huidige elementen.
+Sporthistorie: FIFA World Cup / olympics.com. Rekenen, taalvragen en Nederlandse vraagformuleringen: eigen Groepsspel-inhoud.
+De gegevens zijn op schema, dubbele vragen en antwoordopties gecontroleerd; de bank is geen garantie dat elk bronfeit foutloos is. De quizmaster kan de vermelde bron raadplegen en een score corrigeren.
+
+Wikidata: https://www.wikidata.org/wiki/Wikidata:Licensing
+PubChem: https://pubchem.ncbi.nlm.nih.gov/periodic-table/
+FIFA: https://www.fifa.com/tournaments/mens/worldcup
+Olympische Spelen: https://olympics.com/en/olympic-games
+
+Herkenningsbeelden: Twemoji graphics, jdecked/twemoji (oorspronkelijk Twitter Twemoji), CC BY 4.0, ongewijzigd gebruikt.
+Attributie en licentietekst: assets/recognition/ATTRIBUTION.txt en LICENSE-GRAPHICS.txt.
+https://github.com/jdecked/twemoji
+https://creativecommons.org/licenses/by/4.0/
+
+Quizgeluiden en achtergrondbedding: originele procedurele Groepsspel-composities. Geen gesamplede tv-tunes.
+Hitlijn-startlijst: titel/uitvoerder/jaar met externe zoeklinks. Geen commerciële geluidsopnamen.
+Eigen audio en afbeeldingen worden uitsluitend op het apparaat van de gebruiker opgeslagen.
+
+Spelregels van het origineel (Hitster, ter inspiratie): https://hitstergame.com/nl-nl/pages/spelregels-original
+Tv-spelnamen blijven herkenbaar. Groepsspel is een onafhankelijke groepsapp en geen officiële uitgave van de genoemde programma's of spellen.
+
+
+0.8.1: 182 aanvullende eigen redactievragen in 13 thema’s, niet afkomstig van Wikidata. Het jaartal van toegevoegde muziekmetadata is een redactioneel uitgangspunt en verdient controle op oorspronkelijke single-release en re-releases voor commerciële distributie. Het gaat alleen om titels/artiesten/jaartallen, niet om audio.

@@ -1,0 +1,179 @@
+/* Groepsspel 0.14 — hoofdnavigatie, spelkaarten, spelstart, groep en reservekopie. */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.gs-hero{margin-bottom:10px}
+.gs-hero h1{font-size:clamp(2rem,4.4vw,3.4rem)}
+.gs-resume h2{font-size:1.35rem;margin:6px 0 10px}
+.gs-resume .e11-resume{margin:10px 0}
+.gs-modes .e11-mode{min-height:0}
+.gs-recent{display:flex;flex-wrap:wrap;gap:10px}
+.gs-pill{border:1px solid #ffffff38;background:var(--card,#17223f);color:inherit;border-radius:999px;padding:10px 16px;font:inherit;font-weight:650;cursor:pointer;min-height:44px}
+.gs-pill small{color:var(--muted);font-weight:500;margin-left:6px}
+.gs-pill:hover,.gs-pill:focus-visible{border-color:#ffd36f}
+.gs-group-teaser{margin-top:30px}
+
+/* spelkaarten */
+.gs-card{border:1px solid #ffffff29;background:var(--card,#131e3b);border-radius:17px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.gs-card h3{font-size:1.15rem;line-height:1.25;margin:4px 0 0}
+.gs-card>p{margin:0;line-height:1.48;color:var(--muted);font-size:.94rem;flex:1}
+.gs-card-top{display:flex;gap:6px;flex-wrap:wrap}
+.gs-chip{display:inline-block;border-radius:999px;font-size:.74rem;font-weight:700;padding:4px 10px;background:#ffffff1e}
+.gs-chip.mode{background:#f6cd6326;color:#ffe08f}
+.gs-card.mode-tablet .gs-chip.mode{background:#176c5b33;color:#65e3b2}
+.gs-card.mode-phones .gs-chip.mode{background:#315cb633;color:#a0c4ff}
+.gs-chip.status{background:#ffffff14;color:var(--muted)}
+.gs-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 10px;margin:4px 0 0;font-size:.86rem}
+.gs-meta div{min-width:0}.gs-meta .wide{grid-column:1/-1}
+.gs-meta dt{color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.04em}
+.gs-meta dd{margin:1px 0 0;font-weight:650}
+.gs-need{margin:2px 0 0;font-size:.84rem;color:#9fe3c4}
+.gs-need.server{color:#ffd28a}
+.gs-card-actions{margin-top:6px}
+
+/* filters */
+.gs-filters{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:6px 0 8px;padding:14px;border:1px solid #ffffff22;border-radius:14px;background:#ffffff08}
+.gs-filter{display:flex;flex-direction:column;gap:4px;font-size:.82rem;color:var(--muted);min-width:150px;flex:1}
+.gs-filter select{min-height:44px}
+
+/* startvenster */
+.gs-steps{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 14px;counter-reset:s}
+.gs-steps li{counter-increment:s;font-size:.78rem;padding:4px 10px 4px 6px;border-radius:999px;background:#ffffff12;color:var(--muted)}
+.gs-steps li::before{content:counter(s);display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#ffffff22;margin-right:6px;font-weight:700}
+.gs-steps li.done{color:#9fe3c4}.gs-steps li.done::before{content:'✓';background:#176c5b}
+.gs-steps li.now{color:#fff;background:#f6cd6333}.gs-steps li.now::before{background:#f6cd63;color:#151b30}
+.gs-facts{list-style:none;padding:0;margin:14px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.gs-facts li{background:#ffffff0d;border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.gs-facts li.wide{grid-column:span 2}
+.gs-facts span{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.gs-facts strong{font-size:.92rem}
+.gs-note{background:#f6cd6318;border-left:3px solid #f6cd63;padding:9px 12px;border-radius:8px;font-size:.92rem}
+.gs-warn{background:#e0705a1c;border-left:3px solid #e0705a;padding:9px 12px;border-radius:8px}
+.gs-rules summary{cursor:pointer;font-weight:700;margin:6px 0}
+.gs-teamlist{margin:8px 0 4px;padding-left:20px}.gs-teamlist small{color:var(--muted)}
+
+/* groep */
+.gs-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin:18px 0}
+.gs-two h2 small,.panel h2 small{color:var(--muted);font-size:.8em;font-weight:500}
+.gs-check{display:flex;align-items:center;gap:6px;font-size:.9rem;white-space:nowrap}
+.gs-players{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:6px}
+.gs-players li{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:6px 8px;border-radius:10px;background:#ffffff0a}
+.gs-players li strong{flex:1;min-width:110px}
+.gs-players select.small{min-height:38px;padding:4px 8px;max-width:160px}
+.gs-standings{margin:16px 0}
+.gs-table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:.95rem}
+.gs-table th,.gs-table td{text-align:left;padding:8px 10px;border-bottom:1px solid #ffffff1c}
+.gs-table th{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.gs-history{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.gs-history li{display:flex;flex-wrap:wrap;gap:4px 10px;padding:8px 0;border-bottom:1px solid #ffffff12}
+.gs-history span{color:var(--muted);flex-basis:100%;font-size:.9rem}
+.gs-settings .panel p{line-height:1.5}
+
+@media(max-width:900px){.gs-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.gs-two{grid-template-columns:1fr}}
+@media(max-width:650px){.gs-meta{grid-template-columns:repeat(3,minmax(0,1fr))}.gs-filter{min-width:calc(50% - 6px)}.gs-facts li.wide{grid-column:1/-1}.gs-table th:nth-child(4),.gs-table td:nth-child(4){display:none}}
+@media(min-width:700px) and (pointer:coarse){.gs-pill{min-height:52px}}
+
+/* Vakkenstrijd-console: het beeld blijft klein op de quizmasterconsole (groot op het publieksscherm),
+   lange teksten lopen niet meer buiten het vak. */
+main .floor-host-picture .tv-visual{font-size:clamp(22px,2.6vw,36px)!important;max-height:150px!important;overflow:hidden;overflow-wrap:anywhere;hyphens:auto;text-align:center;padding:6px!important}
+main .floor-host-picture .tv-visual img{max-height:140px!important}
+main .floor-host-picture{min-height:0!important;max-height:170px!important}
+
+/* De Achtervolging: het bod met startpositie van jager en kandidaat */
+.offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
+.offer{border:1px solid #ffffff2e;border-radius:14px;padding:14px;background:#ffffff0a;display:flex;flex-direction:column;gap:6px}
+.offer b{font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.offer-pts{font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.1}
+.offer span{font-size:.9rem;color:var(--muted)}
+.mini-track{display:grid;grid-template-columns:repeat(9,1fr);gap:3px;margin-top:4px}
+.mini-track i{font-style:normal;height:28px;border-radius:6px;background:#ffffff14;display:grid;place-items:center;font-size:15px}
+.mini-track i.h{background:#e0705a55}.mini-track i.c{background:#4dabf755}.mini-track i.home{background:#51cf6640}
+@media(max-width:700px){.offer-grid{grid-template-columns:1fr}}
+
+/* quizmasterconsoles */
+.gs-anstoggle{display:flex;align-items:center;gap:8px;justify-content:center;font-size:.85rem;color:var(--muted);margin:-4px 0 8px;flex-wrap:wrap}
+.gs-anstoggle small{opacity:.8}
+.gs-smart-help{margin:8px 0 4px;padding:8px 12px;border-radius:10px;background:#f6cd6314;border-left:3px solid #f6cd63;font-size:.92rem}
+.gs-smart-help p{margin:0}
+.gs-smart-help summary{cursor:pointer;margin-top:6px;font-weight:650;font-size:.85rem}
+.gs-banklog{border-collapse:collapse;margin-top:6px;font-size:.85rem}
+.gs-banklog th,.gs-banklog td{padding:3px 10px;border-bottom:1px solid #ffffff18;text-align:left}
+/* compacter op laptops (1366×768/850): geen scrollen tijdens tijdkritische rondes */
+@media(min-width:1000px) and (max-height:900px){
+ main .tv-stage-host h1,main .tv-host h1{font-size:clamp(1.5rem,2.6vw,2.3rem)}
+ main details.show-sound,main .show-sound-bar{margin:4px 0}
+ main .tv-banks .bank,main .tv-bank{padding:8px 10px}
+}
+@media(min-width:900px) and (max-height:950px){
+ .game-stage.extended{margin-top:0}
+ .game-stage.extended .play-card{padding-top:14px;padding-bottom:14px}
+ .game-stage.extended .show-top{margin:0 0 4px}
+ .game-stage.extended .sound-desk{display:none}
+ .game-stage.extended .bank-grid{margin:6px 0}
+ .game-stage.extended .bank-grid>*{padding-top:6px;padding-bottom:6px}
+ .game-stage.extended .tv-rounds{margin:6px 0}
+ .game-stage.extended .play-card>h2{margin:6px 0 2px}
+ .game-stage.extended .play-card>h1{margin:6px 0;font-size:clamp(1.4rem,2.4vw,2.1rem)}
+ .game-stage.extended details.answer-envelope{margin:4px 0;padding:6px 12px}
+ .game-stage.extended details.answer-envelope>p{margin:2px 0}
+ .game-stage.extended .play-card>p.micro:last-child{display:none}
+ .game-stage.extended .gs-smart-help{padding:5px 10px;font-size:.85rem}
+}
+.gs-dj-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:6px 0 12px}
+.gs-search{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:.88rem;color:var(--muted)}
+.gs-search a{color:#ffd36f}
+
+.gs-checklist{text-align:left;margin:10px 0;padding:10px 14px;border-radius:12px;background:#ffffff0c;border:1px solid #ffffff22}
+.gs-checklist summary{cursor:pointer;font-weight:700}
+.gs-checklist ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px}
+.gs-checklist label{display:flex;gap:8px;align-items:flex-start;font-size:.92rem;line-height:1.4}
+
+/* tabletbordspellen: bordmodus en zoom */
+body.gs-boardmode .connection-status{display:none}
+body.gs-boardmode .header-inner{min-height:0;padding-top:6px;padding-bottom:6px}
+body.gs-boardmode .header .brand img{width:34px;height:34px}
+body.gs-boardmode .language-select,body.gs-boardmode .pwa-install,body.gs-boardmode .header-theme{display:none!important}
+body.gs-boardmode .mono-layout{grid-template-columns:minmax(0,min(100%,calc(100vh - 150px),900px)) minmax(280px,1fr)}
+.gs-zoombar{display:flex;align-items:center;gap:8px;margin:0 0 6px;flex-wrap:wrap}
+.gs-zoombar span{min-width:46px;text-align:center;font-weight:700}
+.gs-zoombar small{color:var(--muted);font-size:.78rem}
+.gs-zoom{overflow:auto;-webkit-overflow-scrolling:touch;max-width:100%;border-radius:12px;touch-action:pan-x pan-y}
+.gs-zoom>.mono-board,.gs-zoom>.rail-map{width:calc(100% * var(--z,1))!important;max-width:none}
+.mono-name{font-size:clamp(8px,0.95vw,12px)}
+.gs-raillog ol{margin:6px 0 0;padding-left:22px;display:grid;gap:4px;font-size:.92rem}
+@media(max-width:820px){body.gs-boardmode .mono-layout{grid-template-columns:1fr}}
+.gs-zoom{max-height:calc(100dvh - 150px)}
+@media(max-width:650px){.gs-players li strong{min-width:70px}.gs-players select.small{max-width:130px}}
+
+/* 0.14.1 — duidelijke, altijd zichtbare spelhandleiding voordat een spel start. */
+.gs-guide{display:grid;gap:11px;margin:17px 0 14px;line-height:1.5}
+.gs-guide section{padding:15px 16px;border:1px solid #ffffff25;border-radius:12px;background:#ffffff09}
+.gs-guide .gs-guide-intro{background:#f6cd6314;border-left:4px solid #f6cd63}
+.gs-guide h3{font-size:1rem;margin:0 0 8px;letter-spacing:0;color:inherit}
+.gs-guide p{margin:0!important;color:inherit!important;font-size:.94rem!important;line-height:1.6}
+.gs-guide ul{list-style:initial;padding-left:23px;margin:8px 0 0}
+.gs-guide li{margin:0 0 9px;font-size:.91rem;line-height:1.57;overflow-wrap:anywhere}
+.gs-guide li:last-child{margin-bottom:0}
+.gs-guide-tips{border:1px solid #ffffff28;border-radius:12px;padding:10px 14px}
+.gs-guide-tips summary{cursor:pointer;font-weight:700;padding:4px 0}
+.gs-guide-ack{display:flex;gap:11px;align-items:start;margin:15px 0 12px;padding:14px 15px;border-radius:11px;background:#f6cd631a;border:1px solid #f6cd6360;font-size:.94rem;line-height:1.4;cursor:pointer}
+.gs-guide-ack input{height:20px;width:20px;flex:none;accent-color:#f6cd63;cursor:pointer;margin:0}
+.gs-guide-ack span{font-weight:650}
+#modal button[data-gs-locked]:disabled{opacity:.35;cursor:not-allowed;transform:none;filter:grayscale(.5)}
+@media(max-width:650px){.gs-guide section{padding:12px 13px}.gs-guide li{font-size:.9rem}.gs-guide-ack{padding:12px}}
+
+/* 0.14.2 optionele WhatsApp-communicatie */
+.gs-evidence-settings{border:1px solid #ffffff33;background:#ffffff08;padding:15px;border-radius:13px;margin:13px 0;display:grid;gap:8px}
+.gs-evidence-settings h3{font-size:1rem;margin:0}.gs-evidence-settings p{margin:3px 0!important;font-size:.9rem!important;line-height:1.5}
+.gs-evidence-settings label{font-size:.9rem;font-weight:700}.gs-evidence-settings input{max-width:100%;box-sizing:border-box}
+.gs-evidence-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:4px}.gs-evidence-actions a[hidden]{display:none}
+.gs-guide-more summary,.gs-evidence-wrap summary{cursor:pointer;font-weight:700;margin:8px 0}
+.gs-guide-more h4{margin:10px 0 4px;font-size:.95rem}
+.gs-evidence-wrap{margin:8px 0;padding:6px 12px;border:1px solid #ffffff22;border-radius:10px}
+.gs-wa-qr{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:10px 0;padding:10px 14px;border-radius:12px;background:#25d3661a;border:1px solid #25d36655;text-align:left}
+.gs-wa-qr img{background:#fff;padding:6px;border-radius:8px}
+@media(max-width:650px){
+ .gs-steps{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-bottom:8px}.gs-steps li{white-space:nowrap}
+ .gs-facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:8px 0}.gs-facts li{padding:5px 7px}.gs-facts li.wide{grid-column:1/-1}
+ .gs-facts strong{font-size:.85rem}.gs-note{font-size:.86rem;padding:7px 10px}
+ .gs-guide h3{font-size:1rem;margin:10px 0 4px}.gs-guide ul{margin:4px 0;padding-left:18px}
+}
+.gs-warn{color:#ff9b8a;font-weight:600}.gs-srvpanel p{margin:.3em 0}

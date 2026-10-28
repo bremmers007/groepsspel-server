@@ -1,0 +1,797 @@
+{
+ "kennis": [
+  {
+   "q": "Wat is de hoofdstad van de provincie Limburg?",
+   "a": "Maastricht"
+  },
+  {
+   "q": "Welke berg is het hoogste punt van Europees Nederland?",
+   "a": "Vaalserberg"
+  },
+  {
+   "q": "In welke stad staat de Domtoren?",
+   "a": "Utrecht"
+  },
+  {
+   "q": "Welke rivier stroomt door Maastricht en Roermond?",
+   "a": "Maas",
+   "alt": [
+    "De Maas"
+   ]
+  },
+  {
+   "q": "Hoe heet de dijk tussen Noord-Holland en Friesland die het IJsselmeer afsluit?",
+   "a": "Afsluitdijk"
+  },
+  {
+   "q": "Welke kleur heeft de bovenste baan van de Nederlandse vlag?",
+   "a": "Rood"
+  },
+  {
+   "q": "Welke koning werd in 2013 ingehuldigd?",
+   "a": "Willem-Alexander",
+   "alt": [
+    "Willem Alexander",
+    "Koning Willem-Alexander"
+   ]
+  },
+  {
+   "q": "Hoe heet de schaatstocht langs elf Friese steden?",
+   "a": "Elfstedentocht"
+  },
+  {
+   "q": "In welke stad staat het Rijksmuseum?",
+   "a": "Amsterdam"
+  },
+  {
+   "q": "Welk schilderij van Rembrandt hangt in het Rijksmuseum en toont een schutterij?",
+   "a": "De Nachtwacht",
+   "alt": [
+    "Nachtwacht"
+   ]
+  },
+  {
+   "q": "Welke schilder maakte Het meisje met de parel?",
+   "a": "Vermeer",
+   "alt": [
+    "Johannes Vermeer"
+   ]
+  },
+  {
+   "q": "In welke stad staat het Van Gogh Museum?",
+   "a": "Amsterdam"
+  },
+  {
+   "q": "Welke stad heet in het dialect 'Mestreech'?",
+   "a": "Maastricht"
+  },
+  {
+   "q": "Hoe heet het pretpark in Kaatsheuvel met een Sprookjesbos?",
+   "a": "Efteling",
+   "alt": [
+    "De Efteling"
+   ]
+  },
+  {
+   "q": "Welk Waddeneiland ligt het meest westelijk?",
+   "a": "Texel"
+  },
+  {
+   "q": "Hoe heet de grote waterkering bij Hoek van Holland die zelf kan sluiten?",
+   "a": "Maeslantkering"
+  },
+  {
+   "q": "Op welke datum vieren we Koningsdag?",
+   "a": "27 april"
+  },
+  {
+   "q": "Welk feest vieren we in het zuiden in februari met optochten en prinsen?",
+   "a": "Carnaval",
+   "alt": [
+    "Vastelaovend",
+    "Vasteloavend"
+   ]
+  },
+  {
+   "q": "Hoe heet het Limburgse gebak met vruchten op een gistdeeg?",
+   "a": "Vlaai",
+   "alt": [
+    "Limburgse vlaai"
+   ]
+  },
+  {
+   "q": "In welke provincie ligt de stad Venlo?",
+   "a": "Limburg"
+  },
+  {
+   "q": "Hoeveel provincies heeft Nederland?",
+   "a": "12",
+   "alt": [
+    "twaalf"
+   ]
+  },
+  {
+   "q": "Welke voetballer speelde met rugnummer 14 en werd in Barcelona 'El Salvador' genoemd?",
+   "a": "Johan Cruijff",
+   "alt": [
+    "Cruijff",
+    "Johan Cruyff",
+    "Cruyff"
+   ]
+  },
+  {
+   "q": "Tegen welk land won Nederland in 1988 de finale van het EK voetbal?",
+   "a": "Sovjet-Unie",
+   "alt": [
+    "Sovjetunie",
+    "USSR",
+    "Rusland"
+   ]
+  },
+  {
+   "q": "In welke stad zetelt de Tweede Kamer?",
+   "a": "Den Haag",
+   "alt": [
+    "'s-Gravenhage",
+    "s-Gravenhage"
+   ]
+  },
+  {
+   "q": "Welke Nederlandse groep won in 1975 het Songfestival met 'Ding-a-dong'?",
+   "a": "Teach-In",
+   "alt": [
+    "Teach In"
+   ]
+  },
+  {
+   "q": "Met welk liedje won Duncan Laurence in 2019 het Songfestival?",
+   "a": "Arcade"
+  },
+  {
+   "q": "Hoe heet het Nederlandse snoepje dat zout of zoet kan zijn en zwart is?",
+   "a": "Drop"
+  },
+  {
+   "q": "Welke kaas komt uit een Noord-Hollandse stad met een beroemde kaasmarkt op vrijdag?",
+   "a": "Alkmaar",
+   "alt": [
+    "Alkmaarse kaas"
+   ]
+  },
+  {
+   "q": "In welk jaar vond de Watersnoodramp plaats?",
+   "a": "1953"
+  },
+  {
+   "q": "Welke vogel staat bekend als de 'brenger van baby's' en broedt op palen in dorpen?",
+   "a": "Ooievaar"
+  },
+  {
+   "q": "Welke Nederlandse wielrenner won de Tour de France in 1980?",
+   "a": "Joop Zoetemelk",
+   "alt": [
+    "Zoetemelk"
+   ]
+  },
+  {
+   "q": "Welke Limburgse plaats aan de Geul heeft een kerstmarkt in de grotten?",
+   "a": "Valkenburg",
+   "alt": [
+    "Valkenburg aan de Geul"
+   ]
+  },
+  {
+   "q": "Hoe heet het riviertje dat door Valkenburg stroomt?",
+   "a": "Geul",
+   "alt": [
+    "De Geul"
+   ]
+  },
+  {
+   "q": "Hoe heet de Nederlandse nationale feestdag op 5 mei?",
+   "a": "Bevrijdingsdag"
+  },
+  {
+   "q": "Hoe heet het eiland in de Waddenzee waar geen auto's van toeristen mogen komen en dat begint met een S?",
+   "a": "Schiermonnikoog"
+  },
+  {
+   "q": "In welke provincie liggen de molens van Kinderdijk?",
+   "a": "Zuid-Holland"
+  },
+  {
+   "q": "Welk instrument verbeterde Antoni van Leeuwenhoek zo dat hij als eerste bacteriën kon zien?",
+   "a": "Microscoop"
+  },
+  {
+   "q": "Welk Nederlands bier heeft een rode ster op het etiket?",
+   "a": "Heineken"
+  },
+  {
+   "q": "Hoe noem je de spelers en supporters van Ajax?",
+   "a": "Ajacieden"
+  },
+  {
+   "q": "Hoe heet het lekkere hapje uit de muur dat je vaak eet met mosterd en dat rond is?",
+   "a": "Bitterbal",
+   "alt": [
+    "Bitterballen"
+   ]
+  },
+  {
+   "q": "Welke Nederlandse kunstenaar maakte schilderijen met rode, gele en blauwe vlakken en zwarte lijnen?",
+   "a": "Mondriaan",
+   "alt": [
+    "Piet Mondriaan"
+   ]
+  },
+  {
+   "q": "Welke Nederlander werd in 2021 wereldkampioen Formule 1?",
+   "a": "Max Verstappen",
+   "alt": [
+    "Verstappen"
+   ]
+  },
+  {
+   "q": "In welke provincie ligt de Veluwe?",
+   "a": "Gelderland"
+  },
+  {
+   "q": "Welke Limburgse stad heeft de Sint-Servaasbrug?",
+   "a": "Maastricht"
+  },
+  {
+   "q": "Welk klein muziekbandje bracht Philips in 1963 op de markt?",
+   "a": "Cassettebandje",
+   "alt": [
+    "Cassette",
+    "Compact cassette",
+    "Muziekcassette"
+   ]
+  },
+  {
+   "q": "Hoe noemen we in Nederland de gezamenlijke verjaardagskring met koffie en taart?",
+   "a": "Kringverjaardag",
+   "alt": [
+    "De kring"
+   ]
+  },
+  {
+   "q": "Welke Nederlandse schaatser won op de Spelen van 2014 en 2018 goud op de 5000 meter?",
+   "a": "Sven Kramer",
+   "alt": [
+    "Kramer"
+   ]
+  },
+  {
+   "q": "Wat is de naam van het Nederlandse volkslied?",
+   "a": "Het Wilhelmus",
+   "alt": [
+    "Wilhelmus"
+   ]
+  }
+ ],
+ "taal": [
+  {
+   "word": "Erpel",
+   "region": "Limburgs",
+   "options": [
+    "Aardappel",
+    "Eekhoorn",
+    "Paraplu"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Kalle",
+   "region": "Limburgs",
+   "options": [
+    "Huilen",
+    "Praten",
+    "Fietsen"
+   ],
+   "correct": 1
+  },
+  {
+   "word": "Sjoen",
+   "region": "Limburgs",
+   "options": [
+    "Schoen",
+    "Mooi",
+    "Moe"
+   ],
+   "correct": 1
+  },
+  {
+   "word": "Vlaai",
+   "region": "Limburgs",
+   "options": [
+    "Taart",
+    "Vliegtuig",
+    "Vlag"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Houdoe",
+   "region": "Brabants",
+   "options": [
+    "Houd vast",
+    "Tot ziens",
+    "Hoe gaat het"
+   ],
+   "correct": 1
+  },
+  {
+   "word": "Moi",
+   "region": "Gronings",
+   "options": [
+    "Mooi",
+    "Hallo",
+    "Moe"
+   ],
+   "correct": 1
+  },
+  {
+   "word": "Tige tank",
+   "region": "Fries",
+   "options": [
+    "Hartelijk dank",
+    "Grote tank",
+    "Tijd voor thee"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Noaber",
+   "region": "Twents",
+   "options": [
+    "Nobel",
+    "Buurman",
+    "Nevel"
+   ],
+   "correct": 1
+  },
+  {
+   "word": "Gozer",
+   "region": "Amsterdams",
+   "options": [
+    "Kerel",
+    "Gans",
+    "Gekke hoed"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Schoon",
+   "region": "Brabants",
+   "options": [
+    "Schoon",
+    "Mooi",
+    "Schuin"
+   ],
+   "correct": 1
+  },
+  {
+   "word": "Bakvis",
+   "region": "Ouderwets Nederlands",
+   "options": [
+    "Tienermeisje",
+    "Gebakken vis",
+    "Visboer"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Kwakzalver",
+   "region": "Ouderwets Nederlands",
+   "options": [
+    "Eendenkweker",
+    "Nepdokter",
+    "Zalfmaker"
+   ],
+   "correct": 1
+  },
+  {
+   "word": "Snoodaard",
+   "region": "Ouderwets Nederlands",
+   "options": [
+    "Schurk",
+    "Snoeper",
+    "Slaapkop"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Lorrenboer",
+   "region": "Ouderwets Nederlands",
+   "options": [
+    "Voddenman",
+    "Melkboer",
+    "Lorrie-chauffeur"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Sjouwerman",
+   "region": "Ouderwets Nederlands",
+   "options": [
+    "Havenarbeider",
+    "Sjoelkampioen",
+    "Zanger"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Vasteloavend",
+   "region": "Limburgs",
+   "options": [
+    "Vastenavond: carnaval",
+    "Vaste avond",
+    "Afsluitavond"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Alaaf",
+   "region": "Limburgs",
+   "options": [
+    "Carnavalsgroet",
+    "Alles af",
+    "Een kaartspel"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Krentenkakker",
+   "region": "Spreektaal",
+   "options": [
+    "Gierigaard",
+    "Bakker",
+    "Kleine hond"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Kniesoor",
+   "region": "Spreektaal",
+   "options": [
+    "Zeurpiet",
+    "Knieblessure",
+    "Oorbel"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Pietlut",
+   "region": "Spreektaal",
+   "options": [
+    "Muggenzifter",
+    "Kleine Piet",
+    "Lui iemand"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Knakker",
+   "region": "Spreektaal",
+   "options": [
+    "Worstje of kerel",
+    "Kraker",
+    "Notenkraker"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Kattenkwaad",
+   "region": "Spreektaal",
+   "options": [
+    "Kleine streken",
+    "Kattenvoer",
+    "Ziekte"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Doerak",
+   "region": "Spreektaal",
+   "options": [
+    "Deugniet",
+    "Deurmat",
+    "Sterk dier"
+   ],
+   "correct": 0
+  },
+  {
+   "word": "Hufter",
+   "region": "Spreektaal",
+   "options": [
+    "Lomperik",
+    "Hoefsmid",
+    "Hoedje"
+   ],
+   "correct": 0
+  }
+ ],
+ "gezegden": [
+  {
+   "q": "Wie a zegt, moet ook ...",
+   "a": "b zeggen",
+   "alt": [
+    "b"
+   ]
+  },
+  {
+   "q": "Beter een goede buur dan een verre ...",
+   "a": "vriend"
+  },
+  {
+   "q": "Oost west, thuis ...",
+   "a": "best"
+  },
+  {
+   "q": "Wie het laatst lacht, lacht het ...",
+   "a": "best"
+  },
+  {
+   "q": "Als de kat van huis is, dansen de muizen op ...",
+   "a": "tafel"
+  },
+  {
+   "q": "Hoge bomen vangen veel ...",
+   "a": "wind"
+  },
+  {
+   "q": "Een gegeven paard moet je niet in de bek ...",
+   "a": "kijken"
+  },
+  {
+   "q": "Wie niet waagt, wie niet ...",
+   "a": "wint"
+  },
+  {
+   "q": "Zo vader, zo ...",
+   "a": "zoon"
+  },
+  {
+   "q": "De appel valt niet ver van de ...",
+   "a": "boom"
+  },
+  {
+   "q": "Na regen komt ...",
+   "a": "zonneschijn"
+  },
+  {
+   "q": "Oude liefde roest ...",
+   "a": "niet"
+  },
+  {
+   "q": "Beter laat dan ...",
+   "a": "nooit"
+  },
+  {
+   "q": "Met de deur in huis ...",
+   "a": "vallen"
+  },
+  {
+   "q": "Iemand het hemd van het lijf ...",
+   "a": "vragen"
+  },
+  {
+   "q": "Twee vliegen in één klap ...",
+   "a": "slaan"
+  },
+  {
+   "q": "Spreken is zilver, zwijgen is ...",
+   "a": "goud"
+  },
+  {
+   "q": "Je moet geen slapende honden ...",
+   "a": "wakker maken"
+  },
+  {
+   "q": "Al is de leugen nog zo snel, de waarheid achterhaalt hem ...",
+   "a": "wel"
+  },
+  {
+   "q": "Wie zijn billen brandt, moet op de blaren ...",
+   "a": "zitten"
+  },
+  {
+   "q": "Eerst zien, dan ...",
+   "a": "geloven"
+  },
+  {
+   "q": "Wat de boer niet kent, dat vreet hij ...",
+   "a": "niet"
+  },
+  {
+   "q": "Geen ei zo vol, of daar kan nog wel een ...",
+   "a": "dooier bij"
+  },
+  {
+   "q": "Als het kalf verdronken is, dempt men de ...",
+   "a": "put"
+  },
+  {
+   "q": "De kogel is door de ...",
+   "a": "kerk"
+  },
+  {
+   "q": "Wie de schoen past, trekke hem ...",
+   "a": "aan"
+  },
+  {
+   "q": "Kleine potjes hebben grote ...",
+   "a": "oren"
+  },
+  {
+   "q": "Wie goed doet, goed ...",
+   "a": "ontmoet"
+  }
+ ],
+ "uitbeelden": [
+  "Fietsen in de regen",
+  "Klompen",
+  "Molen",
+  "Tulpen plukken",
+  "Kaasmarkt",
+  "Schaatsen op natuurijs",
+  "Haring happen",
+  "Oliebollen bakken",
+  "Sinterklaas",
+  "Carnavalsoptocht",
+  "Koningsdag vrijmarkt",
+  "Verjaardagskring",
+  "Dropjes",
+  "Hagelslag",
+  "Stroopwafel",
+  "Fietsbel",
+  "Dijkwacht",
+  "Polder",
+  "Boer met tractor",
+  "Duinen",
+  "Strandtent",
+  "Zeilen op het IJsselmeer",
+  "Elfstedentocht",
+  "Bitterbal",
+  "Patatje oorlog",
+  "Vlaai",
+  "Mergelgrotten",
+  "Kerstmarkt Valkenburg",
+  "Klootschieten",
+  "Grachtenrondvaart",
+  "Fietsenstalling",
+  "Regenpak",
+  "Paraplu die omklapt",
+  "Spitsuur op de A2",
+  "Trein met vertraging",
+  "Kaartje knippen",
+  "Boodschappen bij de bakker",
+  "Krentenbol",
+  "Gezellig",
+  "Doe normaal",
+  "Op de koffie",
+  "Kermis",
+  "Botsautootjes",
+  "Suikerspin",
+  "Voetballen op straat",
+  "Oranjekoorts",
+  "Juichen bij een doelpunt",
+  "Tour de France",
+  "Ijsje op het strand",
+  "Zandkasteel",
+  "Windmolenpark",
+  "Klompendans",
+  "Kaas schaven",
+  "Pannenkoekenhuis",
+  "Carbid schieten",
+  "Vuurwerk",
+  "Snert",
+  "Erwtensoep",
+  "Zwemdiploma",
+  "Fietsen met wind tegen"
+ ],
+ "schatten": [
+  {
+   "q": "Hoe hoog is de Vaalserberg, in meters boven NAP?",
+   "a": 322,
+   "unit": "meter"
+  },
+  {
+   "q": "Hoe lang is de Afsluitdijk, in kilometers?",
+   "a": 32,
+   "unit": "km"
+  },
+  {
+   "q": "Hoe hoog is de Domtoren in Utrecht, in meters?",
+   "a": 112,
+   "unit": "meter"
+  },
+  {
+   "q": "Hoeveel molens staan er bij Kinderdijk?",
+   "a": 19,
+   "unit": "molens"
+  },
+  {
+   "q": "In welk jaar opende de Efteling?",
+   "a": 1952,
+   "unit": "jaartal"
+  },
+  {
+   "q": "In welk jaar werd de Afsluitdijk gesloten?",
+   "a": 1932,
+   "unit": "jaartal"
+  },
+  {
+   "q": "Hoeveel keer heeft Nederland het Songfestival gewonnen (tot en met 2025)?",
+   "a": 5,
+   "unit": "keer"
+  },
+  {
+   "q": "In welk jaar werd de laatste Elfstedentocht verreden?",
+   "a": 1997,
+   "unit": "jaartal"
+  },
+  {
+   "q": "Hoe lang is de Maas in totaal, in kilometers?",
+   "a": 925,
+   "unit": "km"
+  },
+  {
+   "q": "Hoeveel minuten zitten er in één week?",
+   "a": 10080,
+   "unit": "minuten"
+  },
+  {
+   "q": "Hoeveel centimeter is een marathon lang?",
+   "a": 4219500,
+   "unit": "cm"
+  },
+  {
+   "q": "In welk jaar werd het Verdrag van Maastricht ondertekend?",
+   "a": 1992,
+   "unit": "jaartal"
+  },
+  {
+   "q": "In welk jaar kwamen de euromunten en -biljetten in omloop?",
+   "a": 2002,
+   "unit": "jaartal"
+  },
+  {
+   "q": "Hoeveel bewoonde Waddeneilanden heeft Nederland?",
+   "a": 5,
+   "unit": "eilanden"
+  },
+  {
+   "q": "Hoe oud werd Rembrandt?",
+   "a": 63,
+   "unit": "jaar"
+  },
+  {
+   "q": "Hoeveel sterren staan er in de Europese vlag?",
+   "a": 12,
+   "unit": "sterren"
+  },
+  {
+   "q": "Hoeveel treden heeft de Domtoren ongeveer tot de top?",
+   "a": 465,
+   "unit": "treden"
+  },
+  {
+   "q": "Hoeveel jaar duurde de Tachtigjarige Oorlog?",
+   "a": 80,
+   "unit": "jaar"
+  },
+  {
+   "q": "In welk jaar won Nederland het EK voetbal voor mannen?",
+   "a": 1988,
+   "unit": "jaartal"
+  },
+  {
+   "q": "Hoe hoog is de Euromast in Rotterdam, in meters (met de Euroscoop)?",
+   "a": 185,
+   "unit": "meter"
+  }
+ ]
+}

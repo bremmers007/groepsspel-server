@@ -1,0 +1,106 @@
+/* Gedeelde stijl voor de telefoonspellen. Elk spel kleurt via body[data-game]. */
+:root{--bg:#0b0d14;--bg2:#141826;--panel:#171c2c;--ink:#f4f1ea;--muted:#aab0c2;--accent:#ffd46b;--accent2:#67eaff;--good:#4ee39a;--bad:#ff6b81;--line:#ffffff1f;--display:Georgia,'Times New Roman',serif}
+body[data-game=moord]{--bg:#0c0809;--bg2:#1f0d12;--panel:#1b1114;--accent:#e9c46a;--accent2:#c2203d;--line:#e9c46a2e}
+body[data-game=stratego]{--bg:#0b120d;--bg2:#13241a;--panel:#142019;--accent:#f2c14e;--accent2:#7fd18b;--line:#7fd18b2e;--display:'Arial Black',Impact,system-ui,sans-serif}
+body[data-game=holland]{--bg:#0d1630;--bg2:#13306a;--panel:#14244d;--accent:#ff8a1f;--accent2:#ffffff;--line:#ff8a1f40;--display:'Arial Black',Impact,system-ui,sans-serif}
+body[data-game=crazy88]{--bg:#120a1c;--bg2:#2b0e3d;--panel:#1d1229;--accent:#ff4fd8;--accent2:#ffe14f;--line:#ff4fd833;--display:'Arial Black',Impact,system-ui,sans-serif}
+body[data-game=smokkel]{--bg:#081018;--bg2:#10283a;--panel:#112131;--accent:#ffb347;--accent2:#7cc8ff;--line:#ffb34733}
+body{background:radial-gradient(1200px 600px at 50% -10%,var(--bg2) 0%,var(--bg) 62%) fixed;color:var(--ink);min-height:100vh}
+header{border-bottom:1px solid var(--line);gap:14px}header a{color:var(--accent)}
+.brandline{font-family:var(--display);letter-spacing:3px;text-transform:uppercase;font-size:13px;color:var(--accent);flex:1}
+h1,h2,.display{font-family:var(--display);letter-spacing:-.3px}h1{color:var(--ink)}p{color:var(--muted)}
+.panel{background:var(--panel);border:1px solid var(--line)}
+button,.btn{background:var(--accent);border-color:transparent;color:#1d1410}
+button.secondary,.btn.secondary{background:#ffffff10;color:var(--ink);border-color:var(--line)}
+button.danger{background:var(--bad);color:#fff}button.good{background:var(--good);color:#06210f}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--ink);padding:7px 12px;font-size:13px}
+button.small,.btn.small{padding:7px 11px;font-size:12px}
+input,select,textarea{background:#0006;border-color:var(--line);color:var(--ink)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800;color:var(--accent)}
+.lead{font-size:18px;color:var(--ink);line-height:1.6}
+.small{font-size:12px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:22px;align-items:start}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:13px;background:#ffffff08}
+.chip.on{background:var(--accent);color:#1d1410;border-color:transparent}
+.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.person{border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:#ffffff08}.person b{display:block;overflow-wrap:anywhere}.person small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.person.out{opacity:.55}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:6px}.dot.off{background:#666}
+.score-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+.score-card{flex:1;min-width:140px;border:1px solid var(--line);border-radius:14px;padding:14px 18px;background:#ffffff08}
+.score-card b{display:block;font-family:var(--display);font-size:36px;color:var(--accent)}.score-card.lead-team{outline:2px solid var(--accent)}
+.timer{font-family:var(--display);font-variant-numeric:tabular-nums;color:var(--accent);font-size:28px}
+.list{list-style:none;padding:0;margin:0}.list li{padding:10px 0;border-bottom:1px solid var(--line)}
+.log li{font-size:13px;color:var(--muted)}
+.hint{border-left:3px solid var(--accent);padding:12px 16px;background:#ffffff0a;color:var(--ink);line-height:1.6;border-radius:0 10px 10px 0}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px;background:#ffffff08;margin:10px 0}
+.card h3{margin:0 0 6px;font-family:var(--display)}
+.secret{border:1px dashed var(--accent);background:repeating-linear-gradient(45deg,#ffffff06,#ffffff06 10px,#ffffff0c 10px,#ffffff0c 20px)}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{border:1px solid var(--line);border-radius:12px;padding:16px;background:#ffffff08;font-size:18px;text-align:left;color:var(--ink)}
+.option.right{background:#1f4a32;border-color:var(--good)}.option.chosen{outline:3px solid var(--accent)}
+.pick{display:grid;gap:10px;margin:12px 0}.pick button{text-align:left;padding:15px;font-size:17px;background:#ffffff0d;color:var(--ink);border:1px solid var(--line)}.pick button.chosen{background:var(--accent);color:#1d1410}
+.big{font-size:20px;padding:18px;width:100%}
+.huge{font-family:var(--display);font-size:clamp(44px,10vw,120px);line-height:1;color:var(--accent);text-align:center;margin:14px 0}
+.done{font-size:18px;color:var(--accent);text-align:center;padding:18px}
+.center{text-align:center}
+.qr{background:#fff;padding:12px;display:inline-block;border-radius:10px}.code{font-size:36px;letter-spacing:8px;color:var(--accent);font-weight:800}
+.queue{background:#ffb34722;border:1px solid #ffb34766;color:#ffe2b8;border-radius:10px;padding:8px 12px;font-size:13px;margin:8px 0}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.wall figure{margin:0;background:#0005;border-radius:12px;overflow:hidden;border:1px solid var(--line)}.wall img{width:100%;height:180px;object-fit:cover;display:block}.wall figcaption{padding:8px 10px;font-size:12px;color:var(--muted)}
+.subs .card img,.subs .card video{max-width:100%;max-height:300px;border-radius:10px;display:block;margin:8px 0}
+.tasklist button{display:flex;gap:10px;width:100%;text-align:left;background:#ffffff08;color:var(--ink);border:1px solid var(--line);padding:12px;margin:6px 0;align-items:flex-start}
+.tasklist button b{color:var(--accent);min-width:28px}.tasklist button.ok{border-color:var(--good)}.tasklist button.wait{border-color:#ffb347}.tasklist button.no{border-color:var(--bad)}
+.tag{font-size:11px;border-radius:99px;padding:2px 8px;background:#ffffff14;margin-left:auto;white-space:nowrap}
+.rank{font-family:var(--display);font-size:72px;color:var(--accent);line-height:1;text-align:center}
+.cover{cursor:pointer;user-select:none;-webkit-user-select:none}
+.verdict{text-align:center;padding:30px 10px}.verdict .name{font-family:var(--display);font-size:clamp(36px,7vw,90px);line-height:1.05}
+.cargo span{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin:4px;background:#ffffff0a}
+#notice{display:none;position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#1d2030;color:var(--ink);border:1px solid var(--accent);border-radius:12px;padding:13px 20px;z-index:30;max-width:92vw;box-shadow:0 10px 40px #000a}
+#sheet{position:fixed;inset:0;background:#000b;z-index:25;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:4vh 16px}
+#sheet[hidden]{display:none}
+#sheet .sheet{background:var(--panel);border:1px solid var(--line);border-radius:16px;max-width:860px;width:100%;padding:26px 28px;position:relative}
+#sheet .sheet h2{margin-top:22px}#sheet .sheet ol li,#sheet .sheet ul li{margin:6px 0;line-height:1.55;color:var(--ink)}
+#sheet .close{position:absolute;top:14px;right:14px}
+.steps{counter-reset:s;list-style:none;padding:0}.steps li{counter-increment:s;padding-left:38px;position:relative}.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#1d1410;font-weight:800;text-align:center;line-height:26px;font-size:13px}
+.phases td,.phases th{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}.phases{border-collapse:collapse;width:100%}
+/* telefoon */
+.phone main{max-width:560px}.phone .topline{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);margin-bottom:10px}
+/* beamer */
+.screen header{display:none}.screen main{max-width:1600px;margin:0 auto;padding:3vh 4vw}
+.screen .stage{min-height:92vh;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.screen .stage h1{font-size:clamp(40px,7vh,100px);margin:0 0 2vh}.screen .stage .lead{font-size:clamp(20px,3vh,34px);max-width:1200px;margin:0 auto 3vh}
+.screen .score-card b{font-size:clamp(40px,8vh,90px)}.screen .timer{font-size:clamp(36px,7vh,80px)}
+.screen .options .option{font-size:clamp(20px,3.2vh,34px)}.screen .list li{font-size:clamp(16px,2.4vh,24px)}
+@media(max-width:900px){.cols,.grid2{grid-template-columns:1fr}.options{grid-template-columns:1fr}}
+@media print{header,#notice,.noprint{display:none!important}body{background:#fff;color:#000}.printcard{page-break-after:always;text-align:center;padding-top:20vh}.printcard .huge{color:#000;font-size:160px}}
+
+.phone header{padding:12px 16px}.phone .brandline{font-size:11px;letter-spacing:2px}.phone #connection{white-space:nowrap}
+button.small:not(.secondary):not(.danger):not(.good){color:#1d1410}
+
+/* 0.13: muziekbingo, missies, opgejaagd */
+.bingo-card{display:grid;gap:6px;margin:12px 0}
+.bingo-card button{min-height:74px;padding:8px 6px;border-radius:10px;border:1px solid var(--line);background:#ffffff0a;color:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:3px;text-align:center;font-size:12px;line-height:1.2;overflow-wrap:anywhere}
+.bingo-card button b{font-size:13px}.bingo-card button span{font-size:11px;color:var(--muted)}
+.bingo-card button.on{background:var(--accent);color:#1d1410;border-color:transparent}.bingo-card button.on span{color:#3a2a10}
+.pick button{white-space:normal}
+
+/* 0.14 speelgebied en verbinding */
+.area{background:#ffffff0d;border:1px solid #ffffff22;border-radius:10px;padding:8px 12px;margin:8px 0}
+.area summary{cursor:pointer;font-weight:700}
+.warn{background:#e0705a26;border:1px solid #e0705a88;color:#ffd9cf;border-radius:10px;padding:10px 12px;margin:8px 0;font-weight:650}
+.offline-note{background:#e0705a1f;border-color:#e0705a66}
+details.filters{margin:8px 0}details.filters summary{cursor:pointer;font-weight:650}
+
+/* Het volledige spelverloop is zichtbaar voordat de spelleider start. */
+.preflight{border-color:#f2c56688;background:#f1bf3020}
+.preflight h3{font-size:1.1rem;margin:19px 0 6px}
+.preflight li{margin-bottom:9px;line-height:1.55}
+.preflight-check{display:flex;align-items:start;gap:11px;cursor:pointer;border:1px solid #f2c566;padding:14px;border-radius:12px;margin-top:22px;font-weight:700;line-height:1.5}
+.preflight-check input{width:20px;height:20px;flex:none;margin:2px 0 0}
+
+/* 0.14.2 · externe bewijskanalen */
+.evidence-panel{border:1px solid #6289b688;margin:16px 0}.evidence-panel .qr{max-width:230px}.evidence-panel a.btn{display:inline-block;max-width:100%;overflow-wrap:anywhere}.evidence-panel h2,.evidence-panel h3{margin-bottom:9px}
+
+.wa-code{font-size:1.15em;letter-spacing:.04em;background:#25d36622;padding:2px 8px;border-radius:6px}
+.wa-badge{background:#25d3661c;border:1px solid #25d36655;border-radius:8px;padding:6px 10px;margin:6px 0}
+.roster-pick{margin:0 0 12px}.roster-pick .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.roster-pick button small{opacity:.7;margin-left:4px}

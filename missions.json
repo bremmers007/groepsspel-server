@@ -1,0 +1,434 @@
+[
+ {
+  "id": "m01",
+  "level": 1,
+  "text": "Laat iemand uit zichzelf een liedje zingen of neuriën. Je mag om een liedje vragen, maar verraad je missie niet.",
+  "where": "overal"
+ },
+ {
+  "id": "m02",
+  "level": 1,
+  "text": "Zorg dat drie mensen tegelijk een duim omhoog doen voor een foto. Vraag altijd of ze op de foto willen.",
+  "where": "overal"
+ },
+ {
+  "id": "m03",
+  "level": 2,
+  "text": "Laat iemand het woord ‘avontuur’ zeggen zonder dat je het zelf uitspreekt.",
+  "where": "overal"
+ },
+ {
+  "id": "m04",
+  "level": 1,
+  "text": "Krijg iemand zover dat hij of zij jou een nieuw woord leert.",
+  "where": "overal"
+ },
+ {
+  "id": "m05",
+  "level": 1,
+  "text": "Zorg dat iemand een grappig verhaal van een eerdere vakantie vertelt.",
+  "where": "overal"
+ },
+ {
+  "id": "m06",
+  "level": 2,
+  "text": "Laat iemand jou een high five geven zonder dat je erom vraagt.",
+  "where": "overal"
+ },
+ {
+  "id": "m07",
+  "level": 1,
+  "text": "Laat iemand de groep een raadsel stellen.",
+  "where": "overal"
+ },
+ {
+  "id": "m08",
+  "level": 2,
+  "text": "Krijg iemand zover dat hij of zij een voorwerp in de kamer een bijnaam geeft.",
+  "where": "binnen"
+ },
+ {
+  "id": "m09",
+  "level": 3,
+  "text": "Zorg dat twee anderen samen een dier uitbeelden.",
+  "where": "overal"
+ },
+ {
+  "id": "m10",
+  "level": 1,
+  "text": "Laat iemand jou vragen hoe laat het is.",
+  "where": "overal"
+ },
+ {
+  "id": "m11",
+  "level": 1,
+  "text": "Krijg iemand zover dat hij of zij een ander groepslid een compliment geeft.",
+  "where": "overal"
+ },
+ {
+  "id": "m12",
+  "level": 1,
+  "text": "Laat iemand vertellen wat zijn of haar favoriete vakantiegerecht is.",
+  "where": "overal"
+ },
+ {
+  "id": "m13",
+  "level": 2,
+  "text": "Zorg dat iemand een groepsfoto voorstelt, zonder dat jij het woord ‘foto’ gebruikt.",
+  "where": "overal"
+ },
+ {
+  "id": "m14",
+  "level": 2,
+  "text": "Laat iemand een nieuwe teamnaam voor de groep bedenken.",
+  "where": "overal"
+ },
+ {
+  "id": "m15",
+  "level": 3,
+  "text": "Krijg iemand zover dat hij of zij twintig seconden lang een bekend persoon nadoet.",
+  "where": "overal"
+ },
+ {
+  "id": "m16",
+  "level": 2,
+  "text": "Laat iemand een denkbeeldige uitvinding uitleggen.",
+  "where": "overal"
+ },
+ {
+  "id": "m17",
+  "level": 1,
+  "text": "Laat iemand vertellen welke superkracht hij of zij zou willen hebben.",
+  "where": "overal"
+ },
+ {
+  "id": "m18",
+  "level": 2,
+  "text": "Zorg dat iemand een dierengeluid maakt zonder dat je het geluid zelf voordoet.",
+  "where": "overal"
+ },
+ {
+  "id": "m19",
+  "level": 1,
+  "text": "Laat iemand jou een glas water of iets te drinken aanbieden zonder dat je erom vraagt.",
+  "where": "binnen"
+ },
+ {
+  "id": "m20",
+  "level": 2,
+  "text": "Laat iemand ‘Dat had ik nooit verwacht!’ zeggen. Een beetje anders geformuleerd telt ook.",
+  "where": "overal"
+ },
+ {
+  "id": "m21",
+  "level": 1,
+  "text": "Krijg iemand zover dat hij of zij jou een weetje vertelt dat je nog niet kende.",
+  "where": "overal"
+ },
+ {
+  "id": "m22",
+  "level": 2,
+  "text": "Laat twee mensen tegelijk hetzelfde woord zeggen.",
+  "where": "overal"
+ },
+ {
+  "id": "m23",
+  "level": 3,
+  "text": "Zorg dat de hele groep (minstens vijf mensen) tegelijk klapt of applaudisseert.",
+  "where": "overal"
+ },
+ {
+  "id": "m24",
+  "level": 2,
+  "text": "Laat iemand zijn of haar handtekening op een papiertje voor je zetten, bijvoorbeeld voor een ‘petitie’ die je verzint.",
+  "where": "overal"
+ },
+ {
+  "id": "m25",
+  "level": 1,
+  "text": "Krijg iemand zover dat hij of zij vertelt wat zijn of haar eerste baantje was.",
+  "where": "overal"
+ },
+ {
+  "id": "m26",
+  "level": 2,
+  "text": "Laat iemand een toast uitbrengen of het glas heffen.",
+  "where": "overal"
+ },
+ {
+  "id": "m27",
+  "level": 3,
+  "text": "Zorg dat iemand een kort gedichtje of rijmpje maakt over de groep.",
+  "where": "overal"
+ },
+ {
+  "id": "m28",
+  "level": 2,
+  "text": "Laat iemand jou de weg vragen of naar een plek in het huis vragen.",
+  "where": "binnen"
+ },
+ {
+  "id": "m29",
+  "level": 1,
+  "text": "Krijg iemand zover dat hij of zij een spel of activiteit voor straks voorstelt.",
+  "where": "overal"
+ },
+ {
+  "id": "m30",
+  "level": 2,
+  "text": "Laat iemand een zin beginnen met ‘Vroeger…’ en daar een herinnering aan vastknopen.",
+  "where": "overal"
+ },
+ {
+  "id": "m31",
+  "level": 3,
+  "text": "Zorg dat iemand anders dan jij spontaan een dansje doet.",
+  "where": "overal"
+ },
+ {
+  "id": "m32",
+  "level": 2,
+  "text": "Laat iemand het woord ‘ananas’ zeggen.",
+  "where": "overal"
+ },
+ {
+  "id": "m33",
+  "level": 1,
+  "text": "Krijg iemand zover dat hij of zij zijn of haar favoriete film noemt.",
+  "where": "overal"
+ },
+ {
+  "id": "m34",
+  "level": 2,
+  "text": "Laat iemand jou een bijnaam geven die de rest van de dag blijft hangen.",
+  "where": "overal"
+ },
+ {
+  "id": "m35",
+  "level": 3,
+  "text": "Zorg dat drie mensen samen een zelfbedacht ritueel of handgebaar doen.",
+  "where": "overal"
+ },
+ {
+  "id": "m36",
+  "level": 1,
+  "text": "Laat iemand een voorspelling doen over het weer van morgen.",
+  "where": "overal"
+ },
+ {
+  "id": "m37",
+  "level": 2,
+  "text": "Krijg iemand zover dat hij of zij een plaatje of foto op de telefoon aan jou laat zien.",
+  "where": "overal"
+ },
+ {
+  "id": "m38",
+  "level": 2,
+  "text": "Laat iemand met een accent of dialect praten, al is het maar één zin.",
+  "where": "overal"
+ },
+ {
+  "id": "m39",
+  "level": 3,
+  "text": "Zorg dat iemand vrijwillig een taak van jou overneemt, zoals afruimen of iets halen. Wel netjes bedanken.",
+  "where": "binnen"
+ },
+ {
+  "id": "m40",
+  "level": 1,
+  "text": "Laat iemand vertellen waar hij of zij het liefst naartoe zou reizen.",
+  "where": "overal"
+ },
+ {
+  "id": "m41",
+  "level": 2,
+  "text": "Krijg iemand zover dat hij of zij jou ‘baas’ of ‘chef’ noemt.",
+  "where": "overal"
+ },
+ {
+  "id": "m42",
+  "level": 2,
+  "text": "Laat iemand een getal tussen 1 en 100 raden, zonder dat het een spelletje lijkt.",
+  "where": "overal"
+ },
+ {
+  "id": "m43",
+  "level": 3,
+  "text": "Zorg dat iemand een stoel ruilt met een ander zonder dat jij het voorstelt.",
+  "where": "binnen"
+ },
+ {
+  "id": "m44",
+  "level": 1,
+  "text": "Laat iemand zeggen wat hij of zij vandaag als ontbijt had.",
+  "where": "overal"
+ },
+ {
+  "id": "m45",
+  "level": 2,
+  "text": "Krijg iemand zover dat hij of zij een woord spelt, letter voor letter.",
+  "where": "overal"
+ },
+ {
+  "id": "m46",
+  "level": 3,
+  "text": "Laat iemand een kort verhaal vertellen dat begint met ‘Er was eens…’.",
+  "where": "overal"
+ },
+ {
+  "id": "m47",
+  "level": 2,
+  "text": "Zorg dat iemand ‘gezondheid!’ zegt.",
+  "where": "overal"
+ },
+ {
+  "id": "m48",
+  "level": 1,
+  "text": "Laat iemand vertellen wat het mooiste cadeau was dat hij of zij ooit kreeg.",
+  "where": "overal"
+ },
+ {
+  "id": "m49",
+  "level": 1,
+  "where": "overal",
+  "text": "Laat iemand vertellen wat zijn of haar lievelingsdier is, en waarom."
+ },
+ {
+  "id": "m50",
+  "level": 1,
+  "where": "overal",
+  "text": "Krijg iemand zover dat hij of zij een liedje uit de jaren 80 of 90 noemt."
+ },
+ {
+  "id": "m51",
+  "level": 1,
+  "where": "buiten",
+  "text": "Laat iemand jou wijzen op een mooie wolk, vogel of boom."
+ },
+ {
+  "id": "m52",
+  "level": 2,
+  "where": "buiten",
+  "text": "Zorg dat iemand een steentje, blad of takje voor je opraapt."
+ },
+ {
+  "id": "m53",
+  "level": 2,
+  "where": "buiten",
+  "text": "Laat iemand voorstellen om een andere route te nemen of even te stoppen."
+ },
+ {
+  "id": "m54",
+  "level": 2,
+  "where": "overal",
+  "text": "Krijg iemand zover dat hij of zij jou een geheimtip voor een restaurant of café geeft."
+ },
+ {
+  "id": "m55",
+  "level": 2,
+  "where": "overal",
+  "text": "Laat iemand een zin uit een film citeren."
+ },
+ {
+  "id": "m56",
+  "level": 2,
+  "where": "overal",
+  "text": "Zorg dat iemand zijn of haar schoenen of jas laat zien en er iets over vertelt."
+ },
+ {
+  "id": "m57",
+  "level": 2,
+  "where": "binnen",
+  "text": "Laat iemand een kaartspel of bordspel uitleggen."
+ },
+ {
+  "id": "m58",
+  "level": 2,
+  "where": "overal",
+  "text": "Krijg iemand zover dat hij of zij een rijmpje afmaakt dat jij begint."
+ },
+ {
+  "id": "m59",
+  "level": 2,
+  "where": "overal",
+  "text": "Laat iemand jou een advies geven over iets waar je \"toevallig\" mee zit."
+ },
+ {
+  "id": "m60",
+  "level": 3,
+  "where": "overal",
+  "text": "Zorg dat twee mensen een weddenschap met elkaar afsluiten (zonder geld)."
+ },
+ {
+  "id": "m61",
+  "level": 3,
+  "where": "overal",
+  "text": "Krijg iemand zover dat hij of zij een kort stukje uit een bekend lied zingt, met jou als duet."
+ },
+ {
+  "id": "m62",
+  "level": 3,
+  "where": "overal",
+  "text": "Laat iemand een kleine wedstrijd voorstellen, zoals wie het langst op één been staat."
+ },
+ {
+  "id": "m63",
+  "level": 3,
+  "where": "binnen",
+  "text": "Zorg dat iemand een tekening voor je maakt van een dier naar keuze."
+ },
+ {
+  "id": "m64",
+  "level": 3,
+  "where": "overal",
+  "text": "Krijg drie mensen zover dat ze samen een groepsfoto met een gekke pose maken. Vraag altijd of ze op de foto willen."
+ },
+ {
+  "id": "m65",
+  "level": 3,
+  "where": "buiten",
+  "text": "Laat iemand een wedstrijdje voorstellen naar een punt verderop (wandelen telt ook)."
+ },
+ {
+  "id": "m66",
+  "level": 3,
+  "where": "overal",
+  "text": "Zorg dat iemand jou een nieuwe naam geeft voor een ander groepslid, en dat die naam even blijft hangen."
+ },
+ {
+  "id": "m67",
+  "level": 3,
+  "where": "overal",
+  "text": "Krijg iemand zover dat hij of zij een minuut lang alleen met vragen antwoordt."
+ },
+ {
+  "id": "m68",
+  "level": 1,
+  "where": "overal",
+  "text": "Laat iemand vertellen wat hij of zij als kind later wilde worden."
+ },
+ {
+  "id": "m69",
+  "level": 1,
+  "where": "overal",
+  "text": "Krijg iemand zover dat hij of zij een favoriete sport of club noemt."
+ },
+ {
+  "id": "m70",
+  "level": 2,
+  "where": "overal",
+  "text": "Laat iemand een kort voorspellinkje doen over wie vandaag het meest zal lachen."
+ },
+ {
+  "id": "m71",
+  "level": 3,
+  "where": "overal",
+  "text": "Zorg dat iemand een toespraakje van minstens vijf zinnen houdt over een onderwerp dat jij aandraagt."
+ },
+ {
+  "id": "m72",
+  "level": 2,
+  "where": "binnen",
+  "text": "Laat iemand iets lekkers voor de groep pakken of uitdelen, zonder dat jij erom vraagt."
+ }
+]

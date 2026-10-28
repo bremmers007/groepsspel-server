@@ -1,0 +1,28 @@
+/* Floor quizmaster controls: image stays compact; public beamer remains full-size. */
+.floor-host-root .play-card{padding:16px 20px!important}
+.floor-host-root .stage-top{margin-bottom:8px!important}
+.floor-host-root .question-label{font-size:14px!important;margin:0 0 8px!important}
+.floor-host-console{display:flex;flex-direction:column;gap:12px}
+.floor-host-heading{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.floor-host-heading h2{font-size:clamp(18px,2vw,24px);margin:2px 0!important}
+.floor-host-topic{font-size:13px;font-weight:750;opacity:.78}
+.floor-host-banks{margin:0!important;display:grid!important;grid-template-columns:repeat(2,minmax(110px,1fr));gap:8px;flex:0 1 415px}
+.floor-host-banks>div{display:flex;align-items:center;flex-direction:column;padding:7px 12px!important;min-width:0!important}
+.floor-host-banks span{font-size:13px}
+.floor-host-banks strong{font-size:clamp(22px,2.9vw,36px);line-height:1.1}
+.floor-host-content{display:grid;grid-template-columns:minmax(180px,.85fr) minmax(340px,1.15fr);gap:18px;align-items:stretch}
+.floor-host-picture{display:flex;align-items:center;justify-content:center;min-height:210px;max-height:255px;padding:12px;border-radius:12px;background:rgba(48,62,106,.14);border:1px solid var(--page-line,var(--line,#ccc));overflow:hidden}
+.floor-host-picture .tv-visual{font-size:clamp(45px,7vw,95px)!important;line-height:1.05;margin:0!important;padding:0!important;min-height:0!important;max-height:230px!important;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.floor-host-picture .tv-visual img{max-width:100%;max-height:210px;object-fit:contain}
+.floor-host-picture .tv-visual .recognition-text{font-size:clamp(19px,2.3vw,30px)!important;line-height:1.16}
+.floor-host-controls{display:flex;flex-direction:column;justify-content:center;gap:7px;min-width:0}
+.floor-host-answer-label{font-size:11px;font-weight:800;letter-spacing:.08em;opacity:.75}
+.floor-host-answer{font-weight:850;font-size:clamp(21px,2.5vw,31px);line-height:1.18;overflow-wrap:anywhere}
+.floor-host-lock{min-height:18px;margin:0!important;font-weight:750;font-size:13px}
+.floor-host-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.floor-host-actions .btn{white-space:normal;min-height:43px;margin:0!important;padding:9px 12px!important;font-size:14px}
+.floor-host-help{font-size:11px;line-height:1.35;opacity:.73}
+.floor-host-root .stage-bottom{margin:10px 0!important}
+.floor-host-root .stage-scores{margin:8px 0!important}
+@media(max-width:750px){.floor-host-heading{align-items:flex-start;flex-direction:column}.floor-host-banks{flex:0 0 auto;width:100%}.floor-host-content{grid-template-columns:1fr}.floor-host-picture{min-height:120px;max-height:170px}.floor-host-picture .tv-visual{max-height:150px!important}.floor-host-picture .tv-visual img{max-height:140px}.floor-host-actions .btn{min-height:48px}}
+@media(max-height:880px) and (min-width:751px){.floor-host-picture{min-height:170px;max-height:210px}.floor-host-picture .tv-visual{max-height:190px!important}.floor-host-picture .tv-visual img{max-height:180px}.floor-host-console{gap:8px}}

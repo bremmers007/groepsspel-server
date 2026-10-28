@@ -1,0 +1,103 @@
+/* Het Verraad: donker, kaarslicht, bordeaux en goud. */
+:root{--night:#0b0709;--wine:#5c1424;--blood:#c2203d;--gold:#e9c46a;--parch:#f3e6c8;--ash:#b9adb0;--faith:#7fb4ff;--line:#e9c46a33;--panel:#1a1114}
+body.traitors{background:radial-gradient(1200px 600px at 50% -10%,#3a0d17 0%,var(--night) 60%) fixed;color:var(--parch);min-height:100vh}
+.traitors header{border-bottom:1px solid var(--line)}
+.traitors header a{color:var(--gold)}
+.brandline{font-family:Georgia,'Times New Roman',serif;letter-spacing:4px;text-transform:uppercase;font-size:13px;color:var(--gold);flex:1}
+.traitors h1,.traitors h2,.display{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.5px}
+.traitors h1{color:var(--parch)}
+.traitors p{color:var(--ash)}
+.traitors .panel{background:linear-gradient(180deg,#1f1418,#150e11);border:1px solid var(--line)}
+.traitors button,.traitors .btn{background:var(--gold);border-color:#c9a24c;color:#2a1610}
+.traitors button.secondary,.traitors .btn.secondary{background:#24181c;color:var(--parch);border-color:#e9c46a55}
+.traitors button.danger{background:var(--blood);color:#fff;border-color:#ff6a83}
+.traitors input,.traitors select{background:#120b0d;border-color:#e9c46a44}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800;color:var(--gold)}
+.lead{font-size:18px;color:var(--parch)}
+.cols{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:22px;align-items:start}
+.pot{font-family:Georgia,serif;font-size:42px;color:var(--gold);font-weight:700}
+.pot small{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ash)}
+.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.person{border:1px solid #e9c46a40;border-radius:12px;padding:12px 14px;background:#1d1317;position:relative}
+.person b{display:block;font-size:16px;color:var(--parch);overflow-wrap:anywhere}
+.person small{display:block;margin-top:4px;color:var(--ash);font-size:12px}
+.person.out{opacity:.55;background:#120c0e}
+.person.out b{text-decoration:line-through;text-decoration-color:#ffffff55}
+.badge{display:inline-block;border-radius:99px;padding:3px 9px;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-top:6px}
+.badge.traitor{background:var(--blood);color:#fff}.badge.faithful{background:#1e3557;color:var(--faith)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#46d39a;margin-right:6px}.dot.off{background:#6b5b60}
+.log{list-style:none;padding:0;margin:0;font-size:13px;color:var(--ash)}
+.log li{padding:8px 0;border-bottom:1px solid #ffffff10}
+.log b{color:var(--gold);font-weight:700;margin-right:6px}
+.missions{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.mission{border:1px solid #e9c46a40;border-radius:12px;padding:15px;background:#1d1317;display:flex;flex-direction:column;gap:6px}
+.mission h3{margin:0;font-family:Georgia,serif;font-size:18px;color:var(--parch)}
+.mission p{margin:0;font-size:13px;line-height:1.5}
+.mission .meta{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+.mission.done{opacity:.6}
+.mission button{margin-top:auto;padding:10px}
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:10px 0}
+.checks label{display:flex;gap:8px;align-items:center;font-size:14px;background:#1d1317;border:1px solid #e9c46a30;border-radius:9px;padding:10px}
+.checks input{width:auto;min-height:0}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.option{border:1px solid #e9c46a40;border-radius:12px;padding:16px;background:#1d1317;font-size:18px}
+.option.right{background:#1f4a32;border-color:#5be39c;color:#eafff2}
+.votes{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.votes li{display:flex;align-items:center;gap:12px;background:#1d1317;border:1px solid #e9c46a30;border-radius:10px;padding:12px 16px;animation:rise .45s ease-out}
+.votes li b{color:var(--parch)}.votes li span{color:var(--ash)}.votes li strong{margin-left:auto;color:var(--gold);font-family:Georgia,serif;font-size:20px}
+.tally{display:grid;gap:8px}
+.tally div{display:flex;align-items:center;gap:10px}.tally i{display:block;height:12px;background:var(--blood);border-radius:6px}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.verdict{text-align:center;padding:40px 10px}
+.verdict .name{font-family:Georgia,serif;font-size:clamp(40px,8vw,96px);color:var(--parch);line-height:1}
+.verdict .was{font-size:clamp(18px,2.5vw,28px);color:var(--ash);margin:18px 0 8px}
+.verdict .role{font-family:Georgia,serif;font-size:clamp(40px,8vw,110px);font-weight:700;letter-spacing:3px;text-transform:uppercase;animation:rise 1s ease-out}
+.verdict .role.traitor{color:var(--blood);text-shadow:0 0 40px #c2203d88}
+.verdict .role.faithful{color:var(--faith);text-shadow:0 0 40px #7fb4ff55}
+.progress{height:10px;background:#2a1c20;border-radius:6px;overflow:hidden;margin:14px 0}.progress i{display:block;height:100%;background:var(--gold);transition:width .4s}
+.hint{border-left:3px solid var(--gold);padding:12px 16px;background:#22161a;color:var(--parch);line-height:1.6;border-radius:0 10px 10px 0}
+.qr{background:#fff;padding:12px;display:inline-block;border-radius:10px}
+.code{font-size:38px;letter-spacing:8px;color:var(--gold);font-weight:800}
+.small{font-size:12px;color:var(--ash)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+#notice{display:none;position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#2b1a1f;color:var(--parch);border:1px solid var(--gold);border-radius:12px;padding:13px 20px;z-index:20;max-width:92vw;box-shadow:0 10px 40px #000a}
+/* ---- telefoon ---- */
+.phone main{max-width:560px}
+.phone .topline{display:flex;justify-content:space-between;font-size:13px;color:var(--ash);margin-bottom:10px}
+.rolecard{border:1px solid var(--gold);border-radius:18px;padding:22px;text-align:center;background:repeating-linear-gradient(45deg,#1d1317,#1d1317 10px,#22171b 10px,#22171b 20px);user-select:none;-webkit-user-select:none;cursor:pointer;min-height:120px;display:flex;flex-direction:column;justify-content:center}
+.rolecard .display{font-size:32px;margin:6px 0}
+.rolecard.open.traitor{background:radial-gradient(circle at 50% 0,#6d1325,#1a0a0e);border-color:var(--blood)}
+.rolecard.open.faithful{background:radial-gradient(circle at 50% 0,#1f3a63,#0e1320);border-color:var(--faith)}
+.rolecard .display.traitor{color:#ff8ca0}.rolecard .display.faithful{color:var(--faith)}
+.pick{display:grid;gap:10px;margin:14px 0}
+.pick button{text-align:left;padding:16px;font-size:17px;background:#24181c;color:var(--parch);border-color:#e9c46a44}
+.pick button.chosen{background:var(--gold);color:#2a1610}
+.big{font-size:19px;padding:18px;width:100%}
+.done{font-size:18px;color:var(--gold);text-align:center;padding:20px}
+.nightbox{text-align:center;padding:30px 10px}
+.moon{font-size:64px}
+/* ---- beamer ---- */
+.screen header{display:none}
+.screen main{max-width:1500px;margin:0 auto;padding:3vh 4vw}
+.screen .stage{min-height:92vh;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.screen .stage h1{font-size:clamp(44px,8vh,110px);margin:0 0 2vh}
+.screen .stage .lead{font-size:clamp(20px,3vh,34px);max-width:1100px;margin:0 auto 3vh;color:var(--parch)}
+.screen .roster{grid-template-columns:repeat(auto-fill,minmax(190px,1fr));text-align:left}
+.screen .person b{font-size:20px}
+.screen .pot{font-size:clamp(40px,7vh,84px)}
+.screen .votes li{font-size:24px}
+.screen .options .option{font-size:clamp(20px,3vh,32px)}
+.screen.night-mode{background:#040203}
+.screen .lobbybox{display:flex;gap:5vw;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.options{grid-template-columns:1fr}}
+
+#sheet{position:fixed;inset:0;background:#000b;z-index:25;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:4vh 16px}#sheet[hidden]{display:none}
+#sheet .sheet{background:#1a1114;border:1px solid var(--line);border-radius:16px;max-width:860px;width:100%;padding:26px 28px}#sheet li{margin:6px 0;line-height:1.55;color:var(--parch)}
+
+/* 0.14 fasebalk */
+.phase-strip{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin:0 0 14px;font-size:.82rem}
+.phase-strip b{margin-right:4px}
+.phase-strip span{padding:4px 10px;border-radius:999px;background:#ffffff14;color:#b9c0d4}
+.phase-strip span.done{color:#8fd9b6}
+.phase-strip span.on{background:#f6cd63;color:#151b30;font-weight:700}
+.roster-pick{margin:0 0 12px}.roster-pick .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}

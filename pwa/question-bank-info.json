@@ -1,0 +1,37 @@
+{
+  "count": 1349,
+  "topics": {
+    "Hoofdsteden": 194,
+    "Filmregisseurs": 206,
+    "Kunst": 148,
+    "Nederlandse provincies": 200,
+    "Chemische symbolen": 118,
+    "Rekenen": 100,
+    "Taal & uitdrukkingen": 14,
+    "Schrijvers": 60,
+    "Sportgeschiedenis": 50,
+    "Muziek": 14,
+    "Televisie & series": 14,
+    "Eten & drinken": 14,
+    "Nederland vroeger": 14,
+    "Natuur & dieren": 14,
+    "Techniek & internet": 14,
+    "Sport & spel": 14,
+    "Geschiedenis": 14,
+    "Filmklassiekers": 14,
+    "Feest & tradities": 14,
+    "Wereld & reizen": 14,
+    "Wetenschap & ruimte": 14,
+    "Actualiteit 2024–2025": 11
+  },
+  "license": "Wikidata structured facts: CC0. Original Dutch question wording and arithmetic: Groepsspel.",
+  "retrieved": "2026-10-25",
+  "sources": [
+    "https://www.wikidata.org/",
+    "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+    "https://www.fifa.com/",
+    "https://olympics.com/"
+  ],
+  "review": "Oorspronkelijke bank plus eigen redactievraagstukken. Automatische duplicaat-/optiecontrole uitgevoerd. Nieuwe en bestaande feitvragen blijven redactioneel na te lopen. Het onderwerp Actualiteit is een gedateerde selectie 2024–2025 en werkt niet automatisch bij.",
+  "added_count": 193
+}
