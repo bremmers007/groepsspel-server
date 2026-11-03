@@ -20,7 +20,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.15.0'
+VERSION='0.15.1'
 _SHARED={}
 def shared_json(name):
     """Grote inhoudsbestanden één keer inlezen; de spellen kopiëren wat ze trekken."""
@@ -65,6 +65,18 @@ def word_deck():
     random.shuffle(words)
     return [{'q':'Omschrijf vijf woorden zonder het woord zelf te noemen.','category':'Halve Minuut · eigen woorden','words':words[i:i+5]} for i in range(0,len(words),5)]
 
+def pick_tasks(tasks, count):
+    """0.15.1: een gemengde selectie uit de opdrachtenbank (puzzels, foto- en tekstopdrachten om en om)."""
+    if not count or count>=len(tasks): return tasks
+    groups=[[t for t in tasks if t.get('solution')],[t for t in tasks if not t.get('solution') and t['kind']=='photo'],[t for t in tasks if not t.get('solution') and t['kind']!='photo']]
+    for g in groups: random.shuffle(g)
+    chosen=[]
+    while len(chosen)<count:
+        for g in groups:
+            if g and len(chosen)<count: chosen.append(g.pop())
+    order={t['id']:i for i,t in enumerate(tasks)}
+    return sorted(chosen,key=lambda t:order[t['id']])
+
 def validate_tasks(items):
     if not isinstance(items,list) or not 1<=len(items)<=50: raise GameError('Gebruik 1 tot 50 opdrachten.')
     out=[]
@@ -76,7 +88,11 @@ def validate_tasks(items):
         if not title or not prompt: raise GameError('Vul titel en opdracht in.')
         task_id=clean_text(t.get('id',str(i+1)),50)
         if not task_id or any(x['id']==task_id for x in out): raise GameError('Opdrachten hebben unieke nummers nodig.')
-        out.append({'id':task_id,'title':title,'prompt':prompt,'location':clean_text(t.get('location','Zelf kiezen'),150),'points':points,'kind':'photo' if t.get('kind')=='photo' else 'text'})
+        task={'id':task_id,'title':title,'prompt':prompt,'location':clean_text(t.get('location','Zelf kiezen'),150),'points':points,'kind':'photo' if t.get('kind')=='photo' else 'text'}
+        solution=clean_text(t.get('solution',''),500)  # 0.15.1: antwoordsleutel, alleen zichtbaar voor de spelleider
+        if solution: task['solution']=solution
+        if t.get('dutch_only') is True: task['dutch_only']=True  # 0.15.1: Nederlandse woordpuzzel, niet in andere talen
+        out.append(task)
     return out
 
 class Game:
@@ -204,13 +220,13 @@ class Game:
                 result['me']={**self._public_team(me),'access_code':me['access_code'],'answer':s['answers'].get(me['id']),'attempted':me['id'] in s['attempted']}
             if s['mode']=='city':
                 result['evidence']=evidence_view(s.get('evidence'),role)
-                result['tasks']=copy.deepcopy(s['tasks'])
+                result['tasks']=copy.deepcopy(s['tasks']) if role=='host' else [{k:v for k,v in t.items() if k!='solution'} for t in s['tasks']]
                 if role=='host': result['submissions']=list(copy.deepcopy(s['submissions']).values()); result['claims']=copy.deepcopy(s['claims'])
                 elif me:
                     result['submissions']=[copy.deepcopy(x) for x in s['submissions'].values() if x['team_id']==me['id']]
                     result['claims']={k.split(':',1)[1]:v for k,v in s['claims'].items() if k.startswith(me['id']+':')}
             if role=='host':
-                result['tasks']=copy.deepcopy(s['tasks']); result['answers']=copy.deepcopy(s['answers']); result['packs']={k:len(v) for k,v in self.packs.items()}; result['audit']=s['audit'][-20:]; result['topics']=sorted(set(q.get('topic',q.get('category','Quiz')) for q in self.packs.get('nl',[])))
+                result['tasks']=copy.deepcopy(s['tasks']); result['task_bank']=copy.deepcopy(s.get('task_bank') or self.default_tasks); result['answers']=copy.deepcopy(s['answers']); result['packs']={k:len(v) for k,v in self.packs.items()}; result['audit']=s['audit'][-20:]; result['topics']=sorted(set(q.get('topic',q.get('category','Quiz')) for q in self.packs.get('nl',[])))
             return result
     def join(self, data):
         with self.lock:
@@ -255,6 +271,11 @@ class Game:
                     deck=word_deck()
                 if mode!='city' and not deck: raise GameError('Geen vragen beschikbaar.')
                 tasks=validate_tasks(data.get('tasks',self.default_tasks))
+                task_count=data.get('task_count',0)
+                if type(task_count) is not int or not 0<=task_count<=50: raise GameError('Kies een geldig aantal opdrachten.')
+                s['task_bank']=tasks
+                if mode=='city' and i18n.valid(s.get('lang','nl'))!='nl': tasks=[t for t in tasks if not t.get('dutch_only')] or tasks
+                tasks=pick_tasks(tasks,task_count)
                 seconds=data.get('seconds',30)
                 if type(seconds) is not int or not 5<=seconds<=180: raise GameError('Kies 5 tot 180 seconden.')
                 s['game_no']=s.get('game_no',0)+1

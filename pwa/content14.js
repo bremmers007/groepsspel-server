@@ -56,4 +56,13 @@ Q('Welke Nederlandse schaatser won in 2014 olympisch goud op de 5000 meter?',['S
 Q('Wie vierde in 2014 de allereerste Koningsdag als koning?',['Willem-Alexander','Beatrix','Claus','Juliana'],0,'Koningsdag werd op 26 april 2014 gevierd omdat 27 april op zondag viel.'),
 Q('Welke actie met een emmer ijswater ging in 2014 wereldwijd viraal voor de ziekte ALS?',['Ice Bucket Challenge','Harlem Shake','Planking','Mannequin Challenge'],0,'Miljoenen mensen goten ijswater over zich heen.')]
 });
+/* 0.15.1: extra vragen bij bestaande jaren */
+YEARS['1974'].push(
+Q('Wat werd er in 1974 in Ethiopië gevonden en kreeg de bijnaam Lucy?',['Een dinosaurusei','Het skelet van een vroege mensachtige','Een oude schatkist','Een bevroren mammoet'],1,'Lucy is ruim drie miljoen jaar oud.'));
+YEARS['1980'].push(
+Q('Welk arcadespel met een gele hapgrage figuur verscheen in 1980?',['Donkey Kong','Tetris','Pac-Man','Space Invaders'],2,'Pac-Man verscheen in 1980 in Japan.'));
+YEARS['2014'].push(
+Q('Met welke uitslag versloeg Nederland Spanje op het WK van 2014?',['5-1','1-0','2-2','3-2'],0,'Van Persie scoorde met zijn beroemde zweefkopbal.'),
+Q('Uit welke film kwam het lied Let It Go dat in 2014 overal te horen was?',['Vaiana','Frozen','Rapunzel','Brave'],1,'Frozen draaide eind 2013 in de bioscoop.'));
+/* einde extra vragen 0.15.1 */
 })();

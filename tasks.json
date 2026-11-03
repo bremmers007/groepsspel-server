@@ -1,10 +1,384 @@
 [
-{"id":"foto","title":"Het levende ansichtkaartje","prompt":"Kies een herkenbare plek in het afgesproken gebied. Maak met je eigen subgroepje een originele ansichtkaartfoto. Schrijf erbij waarom deze plek bij jullie weekend past. Fotografeer geen onbekenden herkenbaar zonder toestemming.","location":"Een herkenningspunt in jullie speelgebied","points":10,"kind":"photo"},
-{"id":"straat","title":"Wie zit er achter de straatnaam?","prompt":"Zoek een straat die naar een persoon is vernoemd. Noteer de straatnaam, de persoon en wat je ter plaatse over die persoon kunt vinden. Geen informatiebord? Vermeld dat en beschrijf je aanwijzingen.","location":"Een straatnaambord in het gebied","points":5,"kind":"text"},
-{"id":"details","title":"Oog voor detail","prompt":"Zoek op een gebouw een jaartal. Fotografeer het detail en noteer waar jullie het vonden. Beschrijf in één zin wat je denkt dat het jaartal betekent.","location":"Een publiek bereikbaar gebouw","points":5,"kind":"photo"},
-{"id":"route","title":"De routepuzzel","prompt":"Vertrek vanaf het kwishonk. Maak een wandeling met drie duidelijke herkenningspunten. Schrijf een routebeschrijving van maximaal zes aanwijzingen waarmee een ander groepje de route kan volgen. Spreek afstand en gebied vooraf af.","location":"Vanaf jullie kwishonk","points":10,"kind":"text"},
-{"id":"woord","title":"Het verborgen weekendwoord","prompt":"De beginletters van deze woorden vormen het gezochte woord: Wijzer, Ezel, Echo, Kaart, Eiland, Noot, Dobbelsteen. Noteer het woord en bedenk er een originele teamslogan bij.","location":"Kwishonk of onderweg","points":5,"kind":"text"},
-{"id":"kleur","title":"Vijf kleuren, één plek","prompt":"Vind vijf verschillende kleuren op één openbare plek. Maak één foto waarop alle vijf te zien zijn en benoem de kleuren. Laat spullen van anderen staan.","location":"Een plein, park of straat","points":5,"kind":"photo"},
-{"id":"verhaal","title":"Het verhaal van jullie plek","prompt":"Zoek een openbaar informatiebord, kunstwerk of monument. Noteer drie feiten die jullie daar kunnen lezen. Bedenk daarna één quizvraag met vier antwoordmogelijkheden en geef het juiste antwoord aan.","location":"Een informatiebord of kunstwerk","points":10,"kind":"text"},
-{"id":"finale","title":"De creatieve finale","prompt":"Beeld met jullie groepje het thema van het weekend uit in één foto. Gebruik alleen eigen of toegestane spullen en leg kort uit wat jullie uitbeelden.","location":"Een veilige plek in het speelgebied","points":10,"kind":"photo"}
+ {
+  "id": "standbeeld",
+  "title": "Het standbeeld doet mee",
+  "prompt": "Zoek een standbeeld of beeldhouwwerk. Maak een foto waarop het lijkt alsof het beeld meedoet met jullie team: het houdt iets vast, krijgt een high five, draagt jullie pet of doet mee met een groepsfoto. Raak kwetsbare kunst niet aan.",
+  "location": "Een standbeeld of kunstwerk",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "albumhoes",
+  "title": "Beroemde foto nagespeeld",
+  "prompt": "Speel een wereldberoemde foto, albumhoes of filmscène na op een plek in de stad (denk aan Abbey Road op een zebrapad, Titanic op een brugleuning of het Laatste Avondmaal op een terras). Schrijf erbij welke foto het is. Let op het verkeer.",
+  "location": "Zelf kiezen",
+  "points": 20,
+  "kind": "photo"
+ },
+ {
+  "id": "perspectief",
+  "title": "Reus en dwerg",
+  "prompt": "Maak met perspectief een gezichtsbedrog-foto: een teamlid houdt een kerktoren vast, stapt op een auto of zit in de palm van een ander. Hoe overtuigender, hoe meer punten.",
+  "location": "Een open plek met uitzicht",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "letters",
+  "title": "Teamnaam van de straat",
+  "prompt": "Fotografeer de letters van jullie teamnaam (of het woord GROEPSSPEL) één voor één op borden, gevels, deksels en reclames in de stad. Lever een collage of de eerste foto in en zet de rest in de WhatsApp-groep. Geen zelfgeschreven letters.",
+  "location": "Overal in het centrum",
+  "points": 20,
+  "kind": "photo"
+ },
+ {
+  "id": "menselijk",
+  "title": "Menselijk monument",
+  "prompt": "Bouw met jullie lichamen na wat je vlak achter je ziet: de kerk, een brug, een windmolen of een fontein. Maak de foto zó dat het origineel ook in beeld is.",
+  "location": "Bij een opvallend gebouw of bouwwerk",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "oudste",
+  "title": "Het oudste jaartal",
+  "prompt": "Zoek het oudste jaartal dat jullie op een gevel, gevelsteen, put of poort kunnen vinden. Fotografeer het en noteer het adres. Het team met het oudste jaartal krijgt bij de afsluiting 10 bonuspunten.",
+  "location": "Historische straten",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "vreemde-naam",
+  "title": "De gekste winkelnaam",
+  "prompt": "Vind de grappigste, vreemdste of slechtste woordgrap in een winkel- of bedrijfsnaam. Fotografeer het bord en leg uit waarom deze moet winnen. De spelleider kiest aan het eind een winnaar (+10).",
+  "location": "Winkelstraat",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "local",
+  "title": "Vraag het een local",
+  "prompt": "Vraag een inwoner naar zijn of haar favoriete verborgen plekje, beste frietkraam of mooiste verhaal over deze plaats. Schrijf het antwoord op. Vraag of jullie samen op de foto mogen; zo niet, dan alleen het antwoord.",
+  "location": "Onderweg",
+  "points": 15,
+  "kind": "text"
+ },
+ {
+  "id": "dialect",
+  "title": "Plat proberen",
+  "prompt": "Laat een inwoner een korte zin in het plaatselijk dialect zeggen en schrijf hem zo goed mogelijk op, met de vertaling. Extra punten van de spelleider als jullie de zin bij de afsluiting foutloos kunnen nazeggen.",
+  "location": "Onderweg",
+  "points": 15,
+  "kind": "text"
+ },
+ {
+  "id": "vertraagd",
+  "title": "Slow motion overwinning",
+  "prompt": "Maak een fotoserie van een epische slow-motion overwinningsparade langs iets heel gewoons: een vuilnisbak, een parkeermeter of een bushokje. Lever de beste foto in en zet het filmpje eventueel in de WhatsApp-groep.",
+  "location": "Zelf kiezen",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "reflectie",
+  "title": "In de spiegel",
+  "prompt": "Maak een foto van het hele team in een weerspiegeling: een etalage, plas, verkeersspiegel of zonnebril. De fotograaf moet er ook op staan.",
+  "location": "Zelf kiezen",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "kleurenwaaier",
+  "title": "Regenboog in de stad",
+  "prompt": "Verzamel in één foto zeven dingen in de kleuren van de regenboog, in de goede volgorde (rood, oranje, geel, groen, blauw, indigo, violet). Alles mag, zolang het van jullie zelf is of jullie het terugleggen.",
+  "location": "Zelf kiezen",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "goede-daad",
+  "title": "Goede daad",
+  "prompt": "Doe als team iets aardigs voor een vreemde of voor de buurt: zwerfafval opruimen, iemand helpen met boodschappen, een compliment geven aan een winkelier. Fotografeer het bewijs (zonder herkenbare vreemden als ze geen toestemming geven) en beschrijf wat jullie deden.",
+  "location": "Onderweg",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "brief",
+  "title": "Ansichtkaart aan de spelleider",
+  "prompt": "Koop of maak een ansichtkaart, schrijf er een gedicht van vier regels op over jullie tocht en post hem naar de spelleider (of geef hem bij de afsluiting af). Lever een foto van de kaart in.",
+  "location": "Winkel of postbus",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "eten",
+  "title": "Lokale lekkernij",
+  "prompt": "Proef iets wat typisch is voor deze streek (vlaai, zoervleisj, frietjes van de bekendste frituur, een streekbier of iets uit de bakkerij). Fotografeer het team met de lekkernij en geef een cijfer met één zin recensie.",
+  "location": "Bakker, café of frituur",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "menukaart",
+  "title": "Uitspreken mislukt",
+  "prompt": "Vind op een menukaart of verpakking een gerecht dat niemand in het team goed kan uitspreken. Fotografeer het en schrijf op hoe jullie denken dat het klinkt.",
+  "location": "Restaurant, snackbar of supermarkt",
+  "points": 5,
+  "kind": "photo"
+ },
+ {
+  "id": "raadsel-klok",
+  "title": "Raadsel: de klok",
+  "prompt": "Ik heb wijzers maar geen handen, een gezicht maar geen ogen, en ik hang vaak hoog aan een toren. Zoek mij in deze plaats, fotografeer me en noteer hoe laat ik aangaf (klopt het?).",
+  "location": "Raadsel oplossen",
+  "points": 10,
+  "kind": "photo",
+  "solution": "Een (toren)klok. Controleer of de tijd op de foto past bij het moment van inzenden."
+ },
+ {
+  "id": "rebus",
+  "title": "De straatrebus",
+  "prompt": "Verzin een rebus van drie foto's die samen een straatnaam uit deze plaats vormen. Lever de oplossing hier in en laat bij de afsluiting de andere teams raden. Wordt hij geraden, dan krijgt ook het radende team 5 punten.",
+  "location": "Zelf kiezen",
+  "points": 15,
+  "kind": "text"
+ },
+ {
+  "id": "tellen",
+  "title": "Schatting met bewijs",
+  "prompt": "Kies één grote plek (een plein, kerkgevel of parkeerplaats) en tel iets wat lastig is: ramen, fietsen, treden of lantaarnpalen. Geef jullie aantal en foto. De spelleider controleert er één; het team dat er het dichtst bij zit krijgt +5.",
+  "location": "Plein of grote gevel",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "verloren-voorwerp",
+  "title": "Verhaal van een voorwerp",
+  "prompt": "Vind een achtergelaten voorwerp in de openbare ruimte (een handschoen op een hek, een sleutel op een paal). Laat het liggen, maak een foto en schrijf in drie zinnen het dramatische verhaal van hoe het daar terechtkwam.",
+  "location": "Onderweg",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "piramide",
+  "title": "Teampiramide",
+  "prompt": "Bouw een menselijke piramide of een andere acrobatische groepsfiguur op een herkenbare plek. Veiligheid eerst: niemand hoger dan schouderhoogte.",
+  "location": "Gras of een zachte ondergrond",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "jingle",
+  "title": "Reclamespot voor deze plek",
+  "prompt": "Schrijf een korte reclametekst of jingle (maximaal vier regels) die toeristen naar deze plaats moet lokken. Voer hem bij de afsluiting op voor alle teams. Publieksapplaus bepaalt de bonus.",
+  "location": "Onderweg",
+  "points": 15,
+  "kind": "text"
+ },
+ {
+  "id": "selfie-dier",
+  "title": "Selfie met een dier",
+  "prompt": "Maak een teamselfie met een dier erop: een hond (vraag het baasje), een eend, een duif of een paard. Een dier van steen of brons telt voor de helft.",
+  "location": "Park, vijver of wei",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "finale-foto",
+  "title": "Albumfoto van de dag",
+  "prompt": "Maak de foto die op de voorkant van het fotoboek van deze dag moet komen. Het hele team erop, de plaats herkenbaar, en het liefst een verhaal in één beeld. De spelleider kiest de mooiste (+20).",
+  "location": "Zelf kiezen",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "geheimschrift",
+  "title": "Puzzel: het geheimschrift",
+  "prompt": "Ontcijfer deze boodschap. Tip: elke letter is drie plaatsen in het alfabet opgeschoven. CRHN HHQ EDQNMH. Voer daarna uit wat er staat, met het hele team tegelijk, en lever de oplossing plus foto in.",
+  "location": "Puzzel, daarna zelf kiezen",
+  "points": 15,
+  "kind": "photo",
+  "solution": "ZOEK EEN BANKJE (Caesar −3). Foto: het hele team samen op één bankje.",
+  "dutch_only": true
+ },
+ {
+  "id": "cijfercode",
+  "title": "Puzzel: de cijfercode",
+  "prompt": "Elk getal is een letter (A=1, B=2 …). 11-5-18-11-20-15-18-5-14. Ga erheen en maak een teamfoto waarop hij helemaal te zien is.",
+  "location": "Puzzel, daarna de plek uit de oplossing",
+  "points": 15,
+  "kind": "photo",
+  "solution": "KERKTOREN. Foto van het team met de hele toren in beeld.",
+  "dutch_only": true
+ },
+ {
+  "id": "morse",
+  "title": "Puzzel: morse",
+  "prompt": "Ontcijfer: -... / .-. / ..- / --. — en maak er een foto waarop het team erop of ervoor staat. Geen morsetabel? Die mogen jullie aan iemand vragen, maar niet opzoeken op internet.",
+  "location": "Puzzel, daarna de plek uit de oplossing",
+  "points": 15,
+  "kind": "photo",
+  "solution": "BRUG. Foto van het team op of bij een brug (een loopbrug of viaduct is ook goed).",
+  "dutch_only": true
+ },
+ {
+  "id": "anagram",
+  "title": "Puzzel: drie anagrammen",
+  "prompt": "Husel de letters om tot iets wat je op straat vindt: JOKE BUSH · BUS BEVRIEN · STIEF KEREN. Schrijf de drie oplossingen op. Bonus: één foto met een teamlid bij alle drie (collage mag).",
+  "location": "Puzzel, daarna onderweg",
+  "points": 15,
+  "kind": "text",
+  "solution": "BUSHOKJE · BRIEVENBUS · FIETSENREK. 10 punten voor de drie woorden, 5 extra voor de foto('s).",
+  "dutch_only": true
+ },
+ {
+  "id": "achterstevoren",
+  "title": "Puzzel: achterstevoren",
+  "prompt": "Lees dit woord van achter naar voren: TAARTSTKRAM. Ga naar zo'n plek (of de drukste winkelstraat) en maak een foto waarop jullie als marktkooplui iets luidkeels aanprijzen. Schrijf jullie slogan erbij.",
+  "location": "Puzzel, daarna de plek uit de oplossing",
+  "points": 10,
+  "kind": "photo",
+  "solution": "MARKTSTRAAT. Elke markt of winkelstraat is goed; let op de slogan.",
+  "dutch_only": true
+ },
+ {
+  "id": "klokslagen",
+  "title": "Denkpuzzel: de kerkklok",
+  "prompt": "Een kerkklok slaat om zes uur zes keer. Van de eerste tot de laatste slag duurt dat 5 seconden. Hoe lang duurt het om twaalf uur van de eerste tot de laatste slag? Leg kort uit hoe jullie het berekenden.",
+  "location": "Overal",
+  "points": 10,
+  "kind": "text",
+  "solution": "11 seconden. Zes slagen hebben vijf tussenpozen van 1 seconde; twaalf slagen hebben er elf."
+ },
+ {
+  "id": "gidsen",
+  "title": "Denkpuzzel: wie liegt er?",
+  "prompt": "Drie stadsgidsen. Gids A zegt: 'Gids B liegt.' Gids B zegt: 'Gids C liegt.' Gids C zegt: 'A en B liegen allebei.' Elke gids liegt altijd of spreekt altijd de waarheid. Wie spreekt de waarheid? Leg uit.",
+  "location": "Overal",
+  "points": 15,
+  "kind": "text",
+  "solution": "Alleen gids B. Als C de waarheid sprak, zou A liegen en B dus de waarheid spreken: tegenspraak. Dus C liegt, dan spreekt B de waarheid en liegt A."
+ },
+ {
+  "id": "drie-raadsels",
+  "title": "Drie raadsels",
+  "prompt": "1. Hoe meer je ervan weghaalt, hoe groter het wordt. 2. Ik word natter naarmate ik meer droog. 3. Ik heb steden zonder huizen, bossen zonder bomen en water zonder vis. Schrijf de antwoorden op en lever een foto in van het antwoord op raadsel 3 dat jullie in de stad vonden.",
+  "location": "Overal, foto bij een informatiebord of plattegrond",
+  "points": 15,
+  "kind": "photo",
+  "solution": "1. Een gat · 2. Een handdoek · 3. Een (land)kaart / plattegrond. 5 punten per goed antwoord; de foto van een kaart is verplicht."
+ },
+ {
+  "id": "kerk",
+  "title": "De kerkdetective",
+  "prompt": "Zoek de belangrijkste kerk of kapel. Naar welke heilige is hij vernoemd, en wat is de oudste datum die jullie in of aan het gebouw kunnen vinden? Vertel ook iets over die heilige (vraag het desnoods aan iemand).",
+  "location": "Kerk of kapel",
+  "points": 10,
+  "kind": "text"
+ },
+ {
+  "id": "limerick",
+  "title": "Limerick van de stad",
+  "prompt": "Schrijf een limerick (vijf regels, rijmschema aabba) over deze plaats of iets wat jullie onderweg meemaakten. De eerste regel begint met: 'Er was eens een …'. Voorlezen bij de afsluiting levert applaus en misschien een bonus op.",
+  "location": "Onderweg",
+  "points": 10,
+  "kind": "text"
+ },
+ {
+  "id": "winkelier",
+  "title": "Interview met een winkelier",
+  "prompt": "Vraag een winkelier of horecaondernemer (als het niet druk is) drie dingen: hoe lang bestaat de zaak, wat is het best verkochte product, en wat is het gekste wat een klant ooit vroeg. Schrijf de antwoorden en de naam van de zaak op.",
+  "location": "Een zelfstandige winkel of café",
+  "points": 15,
+  "kind": "text"
+ },
+ {
+  "id": "etalagepoppen",
+  "title": "Etalagepoppen",
+  "prompt": "Ga met het hele team stokstijf als etalagepoppen voor een etalage of gevel staan, minstens een minuut lang, in een pose die bij de winkel past. Fotografeer het resultaat. Vraag even toestemming als jullie de ingang blokkeren.",
+  "location": "Winkelstraat",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "camouflage",
+  "title": "Kameleon",
+  "prompt": "Verstop één teamlid zo goed mogelijk in het straatbeeld: tussen planten, achter een paal, tegen een muur in dezelfde kleur. Maak de foto. Bij de afsluiting moeten de andere teams hem binnen 10 seconden vinden; lukt dat niet, dan krijgen jullie 5 bonuspunten.",
+  "location": "Zelf kiezen",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "zakkenkunst",
+  "title": "Kunst uit je zakken",
+  "prompt": "Maak met alleen spullen uit jullie zakken en tassen (sleutels, munten, bonnetjes, telefoons) op de grond een kunstwerk: een portret, logo of het wapen van deze plaats. Fotografeer het van bovenaf en geef het een titel.",
+  "location": "Een rustige plek",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "kaart-tekenen",
+  "title": "Uit het hoofd getekend",
+  "prompt": "Teken zonder telefoon een plattegrond van de route die jullie tot nu toe liepen, met minstens vijf herkenningspunten. Fotografeer de tekening. De spelleider beoordeelt hoe goed hij klopt.",
+  "location": "Halverwege de tocht",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "schaduw",
+  "title": "Schaduwletters",
+  "prompt": "Vorm met de schaduwen van jullie lichamen een woord of letter (bijvoorbeeld de eerste letter van jullie teamnaam). Geen zon? Gebruik een straatlantaarn of de lamp van een telefoon tegen een muur.",
+  "location": "Zonnige of verlichte plek",
+  "points": 15,
+  "kind": "photo"
+ },
+ {
+  "id": "euro",
+  "title": "De 1-euro-uitdaging",
+  "prompt": "Koop voor maximaal 1 euro iets wat jullie team zo goed mogelijk samenvat. Fotografeer het met het bonnetje of prijskaartje en leg in twee zinnen uit waarom juist dit.",
+  "location": "Winkel of markt",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "geluiden",
+  "title": "Twee minuten luisteren",
+  "prompt": "Ga op een drukke plek staan, wees twee minuten stil en schrijf alle verschillende geluiden op die jullie horen. Minstens tien. Het team met de langste lijst krijgt bij de afsluiting 5 bonuspunten.",
+  "location": "Plein of kruispunt",
+  "points": 10,
+  "kind": "text"
+ },
+ {
+  "id": "oud-nieuw",
+  "title": "Oud en nieuw",
+  "prompt": "Maak één foto waarop iets heel ouds en iets heel nieuws samen in beeld staan: een middeleeuwse muur met een elektrische auto, een oude gevel met een felle reclame. Schrijf erbij hoe oud volgens jullie het oudste deel is.",
+  "location": "Historisch centrum",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "wapen",
+  "title": "Het wapen van de stad",
+  "prompt": "Zoek het gemeentewapen of een oud wapenschild in de openbare ruimte (gevel, putdeksel, vlag, bord). Fotografeer het en beschrijf wat erop staat en wat het volgens jullie betekent.",
+  "location": "Gemeentehuis, gevels of putdeksels",
+  "points": 10,
+  "kind": "photo"
+ },
+ {
+  "id": "woordketting",
+  "title": "Woordketting van borden",
+  "prompt": "Maak een woordketting van vijf woorden die jullie op borden in de stad lezen: elk woord begint met de laatste letter van het vorige (bijvoorbeeld bakkeR → RijwielhandeL → Lunchroom …). Schrijf de ketting op en zeg waar elk woord stond.",
+  "location": "Overal",
+  "points": 15,
+  "kind": "text"
+ },
+ {
+  "id": "toerist",
+  "title": "Toerist in eigen stad",
+  "prompt": "Doe alsof jullie voor het eerst in deze plaats zijn: maak de meest overdreven toeristenfoto die jullie kunnen bedenken, met kaart in de hand, zonnebril op en wijzend naar iets heel gewoons. Schrijf er een vrolijke vakantiegroet bij.",
+  "location": "Zelf kiezen",
+  "points": 10,
+  "kind": "photo"
+ }
 ]
