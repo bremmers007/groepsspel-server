@@ -20,7 +20,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.15.1'
+VERSION='0.15.3'
 _SHARED={}
 def shared_json(name):
     """Grote inhoudsbestanden één keer inlezen; de spellen kopiëren wat ze trekken."""
@@ -629,13 +629,31 @@ class Handler(BaseHTTPRequestHandler):
         except (BrokenPipeError,ConnectionResetError): pass
 
 def local_addresses(port):
-    addresses=set()
+    """Adressen waarop telefoons de pc kunnen bereiken. 0.15.3: het adres van de standaardroute (de echte
+    wifi/kabel) eerst; virtuele adapters (Hyper-V/WSL 172.x, VirtualBox 192.168.56.x) en 169.254.x achteraan of weg.
+    Voorheen stond het alfabetisch eerste adres bovenaan, vaak een virtuele adapter die de telefoon niet kan bereiken."""
+    found=[]
     try:
-        for item in socket.getaddrinfo(socket.gethostname(),None,socket.AF_INET):
-            ip=item[4][0]
-            if not ip.startswith('127.'): addresses.add(ip)
+        probe=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+        try:
+            probe.connect(('10.255.255.255',1)); found.append(probe.getsockname()[0])   # er wordt niets verstuurd
+        finally: probe.close()
     except OSError: pass
-    return ['http://'+ip+':'+str(port) for ip in sorted(addresses)]
+    try:
+        for item in socket.getaddrinfo(socket.gethostname(),None,socket.AF_INET): found.append(item[4][0])
+    except OSError: pass
+    def usable(ip):
+        try: a=ipaddress.ip_address(ip)
+        except ValueError: return False
+        return not (a.is_loopback or a.is_link_local or a.is_unspecified or a.is_multicast)
+    def rank(ip):
+        if ip.startswith('192.168.56.'): return 3                       # VirtualBox host-only
+        if ip.startswith('192.168.') or ip.startswith('10.'): return 1
+        if ipaddress.ip_address(ip).is_private: return 2                # 172.16–31: vaak Hyper-V/WSL/Docker
+        return 4
+    primary=found[0] if found and usable(found[0]) else None
+    rest=sorted({ip for ip in found if usable(ip) and ip!=primary},key=lambda ip:(rank(ip),ip))
+    return ['http://'+ip+':'+str(port) for ip in ([primary] if primary else [])+rest]
 
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument('--port',type=int,default=8765); parser.add_argument('--bind',default='0.0.0.0'); parser.add_argument('--no-browser',action='store_true'); parser.add_argument('--data',default=str(ROOT/'.data')); parser.add_argument('--app',action='store_true'); parser.add_argument('--online',action='store_true',help='Online spelserver met spelkamers (achter https)'); parser.add_argument('--public-url',default=os.environ.get('GROEPSSPEL_PUBLIC_URL','') or os.environ.get('RENDER_EXTERNAL_URL','')); parser.add_argument('--max-rooms',type=int,default=int(os.environ.get('GROEPSSPEL_MAX_ROOMS','200'))); parser.add_argument('--trust-proxy',action='store_true',help='Gebruik X-Forwarded-For van de https-proxy'); args=parser.parse_args()

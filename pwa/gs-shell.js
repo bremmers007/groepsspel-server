@@ -90,7 +90,7 @@ function settings(){const dev=GS.ls.get('groepsspel-development')==='yes',last=G
 
 /* ------------------------------------------------------------------ navigatie en render */
 header=function(){const items=[['home','Home'],['library','Spellen'],['group','Mijn groep'],['settings','Instellingen']];const cur=ALIAS[route]||route;
- return `<header class="header"><div class="wrap header-inner"><a class="brand" href="#home" aria-label="Groepsspel home"><img src="icon.svg" alt="">groepsspel<span style="color:#b8783e">.</span></a><nav class="nav" aria-label="Hoofdnavigatie">${items.map(([id,t])=>`<a href="#${id}" ${cur===id?'class="active" aria-current="page"':''}>${t}</a>`).join('')}</nav></div></header>`;};
+ return `<header class="header"><div class="wrap header-inner"><a class="brand" href="#home" aria-label="Groepsspel home"><img src="icon.svg" alt="">groepsspel<span style="color:#b8783e">.</span></a><nav class="nav" aria-label="Hoofdnavigatie">${items.map(([id,t])=>`<a href="#${id}" ${cur===id?'class="active" aria-current="page"':''}>${t}</a>`).join('')}</nav>${document.fullscreenEnabled?`<button type="button" class="gs-fullscreen" data-gs-fullscreen title="Volledig scherm (F11)" aria-label="${document.fullscreenElement?'Volledig scherm verlaten':'Volledig scherm'}">${document.fullscreenElement?'⤡':'⛶'}</button>`:''}</div></header>`;};
 footer=function(){return `<footer class="footer"><span>groepsspel. &nbsp; Samen spelen op jouw manier.</span><span>Versie ${esc(GS.version)} · <a href="#settings">Instellingen</a> · <a href="#offline">Offline hulp</a></span></footer>`;};
 const TITLES={home:'Home',library:'Spellen',group:'Mijn groep',settings:'Instellingen'};
 const prior=render;
@@ -129,6 +129,9 @@ document.addEventListener('click',e=>{
  else if(d.gsSplit){const err=G.distribute(Number(d.gsSplit));if(err)toast(err);else{toast('Spelers verdeeld.');render();}}
  else if(t.hasAttribute('data-gs-noguests')){G.removeGuests();render();}
 });
+/* 0.15.3: knop voor volledig scherm (de presentatieknop van vóór 0.14 was verdwenen). F11 werkt ook. */
+document.addEventListener('click',async e=>{if(!e.target.closest('[data-gs-fullscreen]'))return;try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{toast('Volledig scherm lukt hier niet. Druk op F11.');}});
+document.addEventListener('fullscreenchange',()=>{const b=document.querySelector('[data-gs-fullscreen]');if(b){const on=!!document.fullscreenElement;b.textContent=on?'⤡':'⛶';b.setAttribute('aria-label',on?'Volledig scherm verlaten':'Volledig scherm');}});
 document.addEventListener('submit',e=>{if(e.target.id!=='gsPlayerForm')return;e.preventDefault();const f=new FormData(e.target),err=G.addPlayer(f.get('name'),!!f.get('guest'));if(err){toast(err);return;}render();document.querySelector('#gsPlayerName')?.focus();});
 
 /* Telefoonspellen die op de spelserver lopen, verschijnen ook bij 'Spel hervatten' (alleen op de server-pc). */

@@ -16,7 +16,7 @@ import traceback
 import urllib.request
 import webbrowser
 
-APP_VERSION = '0.15.1'
+APP_VERSION = '0.15.3'
 APP_DIR = Path(__file__).resolve().parent
 # Embedded Python ignores script directories, PYTHONPATH and the working directory.
 # Trust only the installed app directory; never rely on the shortcut's working folder.
@@ -117,7 +117,71 @@ def serve():
         server.server_close()
 
 
+# ---------------------------------------------------------------- firewall (0.15.3)
+# Telefoons moeten de spelserver op poort 8765 kunnen bereiken. Ontbreekt de firewallregel, dan start de app
+# zelf Telefoons-toestaan.cmd met Windows-toestemming (één UAC-vraag). Zegt iemand nee, dan vraagt de app het
+# deze versie niet opnieuw; het Startmenu-item 'Telefoons toestaan (firewall)' blijft werken.
+FIREWALL_RULE = 'Groepsspel spelserver (wifi)'
+NO_WINDOW = 0x08000000
+
+
+def firewall_rule_present():
+    """Taalonafhankelijk: netsh geeft exitcode 0 als de regel bestaat, anders 1."""
+    try:
+        result = subprocess.run(['netsh', 'advfirewall', 'firewall', 'show', 'rule', 'name=' + FIREWALL_RULE],
+                                stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                                creationflags=NO_WINDOW, timeout=15)
+        return result.returncode == 0
+    except (OSError, subprocess.SubprocessError):
+        return None          # onbekend: niets doen
+
+
+def ensure_firewall():
+    if sys.platform != 'win32':
+        return
+    script = APP_DIR / 'Telefoons-toestaan.cmd'
+    marker = data_dir() / 'firewall.json'
+    if not script.is_file():
+        return
+    present = firewall_rule_present()
+    if present is not False:
+        if present:
+            log('Firewallregel voor telefoons aanwezig')
+        return
+    try:
+        state = json.loads(marker.read_text('utf-8'))
+    except (OSError, ValueError):
+        state = {}
+    if state.get('declined') == APP_VERSION:
+        log('Firewallregel ontbreekt; eerder geweigerd in deze versie, niet opnieuw gevraagd')
+        return
+    log('Firewallregel ontbreekt; Windows om toestemming vragen')
+    # ShellExecuteW met 'runas' toont de UAC-vraag; SW_HIDE (0) houdt het venster verborgen.
+    code = ctypes.windll.shell32.ShellExecuteW(None, 'runas', str(script), '/stil', str(APP_DIR), 0)
+    if code <= 32:
+        log('Firewalltoestemming geweigerd of niet mogelijk (code ' + str(code) + ')')
+        try:
+            marker.parent.mkdir(parents=True, exist_ok=True)
+            marker.write_text(json.dumps({'declined': APP_VERSION}), 'utf-8')
+        except OSError:
+            pass
+        return
+    for _ in range(40):           # het script draait los; even wachten tot de regel er staat
+        time.sleep(.5)
+        if firewall_rule_present():
+            log('Firewallregel voor telefoons toegevoegd')
+            return
+    log('Firewallregel nog niet zichtbaar na 20 seconden')
+
+
+FIREWALL_THREAD = None
+
+
 def launch():
+    global FIREWALL_THREAD
+    # 0.15.3: firewallregel voor telefoons zelf regelen, naast het opstarten (de app opent meteen).
+    FIREWALL_THREAD = threading.Thread(target=ensure_firewall, daemon=True)
+    FIREWALL_THREAD.start()
     if alive():
         log('Bestaande spelserver openen')
         open_app()
@@ -306,6 +370,8 @@ def main():
         print('Groepsspel ' + APP_VERSION + ': appbestanden en server-import in orde. Log: ' + str(data_dir() / 'startup.log'))
     else:
         launch()
+        if FIREWALL_THREAD:
+            FIREWALL_THREAD.join(90)   # het startvenster pas sluiten als de firewallvraag is afgehandeld
 
 
 if __name__ == '__main__':

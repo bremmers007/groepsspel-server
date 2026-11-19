@@ -140,17 +140,18 @@ class PhoneShow:
         if any(not self.connected(t) for t in s['teams']): raise ShowError('Laat alle teamtelefoons eerst aansluiten.')
         style = data.get('style', 'text')
         if style not in ('text', 'choice'): raise ShowError('Kies typen/spreken of antwoordkeuzes.')
+        if mode == 'floor' and style != 'text': raise ShowError('Vakkenstrijd gebruikt beeldherkenning: typ of spreek wat je ziet, geen meerkeuze.')
         if mode == 'hitster' and len(s['songs']) < len(ids)+6: raise ShowError('Koppel eerst minimaal ' + str(len(ids)+6) + ' lokale muzieknummers.')
         for k in ('duel', 'finalists', 'tied', 'final_tie', 'leader', 'winner', 'winners'):
             s.pop(k, None)
         s.update(result=None, memory_left=0, mode=mode, phase='play', paused=False, pause_reason='', style=style, history=[], banks={i: 0 for i in ids}, active=ids[0], feedback={}, last_bad=None, appeal=None)
         if mode == 'floor':
-            seconds = data.get('seconds', 60)
+            seconds = data.get('seconds', 45)
             if seconds not in (45, 60, 90): raise ShowError('Kies 45, 60 of 90 seconden.')
             import random
-            # Zonder eigen keuze: twaalf verschillende categorieën, elk spel anders (gelijk aan de pc-variant).
+            # Zonder eigen keuze: acht beeldcategorieën op een bord met twaalf vakken, elk spel anders (gelijk aan de pc-variant).
             topics = data.get('topics') or random.sample(list(self.content['floor']), min(12, len(self.content['floor'])))
-            if not isinstance(topics, list) or not 1 <= len(topics) <= 17 or any(t not in self.content['floor'] for t in topics): raise ShowError('Kies geldige categorieën.')
+            if not isinstance(topics, list) or not 1 <= len(topics) <= len(self.content['floor']) or any(t not in self.content['floor'] for t in topics): raise ShowError('Kies geldige categorieën.')
             s.update(phase='board', board=[ids[(i+i//4) % len(ids)] for i in range(12)], topics=[topics[i % len(topics)] for i in range(12)], floor_seconds=seconds, duel=None, result=None)
         elif mode == 'smart':
             seconds = data.get('seconds', 90)

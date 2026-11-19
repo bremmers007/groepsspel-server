@@ -65,13 +65,14 @@ const GUIDES={
     "prepare": [
       "2 tot 6 teams en één quizmaster met een laptop; een beamer voor het publieksscherm is handig.",
       "Elk team krijgt vakken met een categorie op het bord van 12 vakken.",
-      "Spreek af wie per team antwoordt; antwoorden zijn mondeling."
+      "Spreek af wie per team antwoordt; antwoorden zijn mondeling.",
+      "Alle herkenningen zijn afbeeldingen; maak een proefduel en controleer of de beelden op de tv en telefoons zichtbaar zijn."
     ],
     "rules": [
       "Het team aan de beurt kiest een buurvak van een ander team en speelt een duel in die categorie.",
       "Beide teams hebben een eigen klok (standaard 45 seconden). Alleen de klok van het team dat moet antwoorden loopt.",
       "Goed: de beurt gaat naar de tegenstander. Pas: nieuw beeld, maar je klok loopt door. Fout: de beurt blijft bij hetzelfde team.",
-      "Wie op nul seconden staat, verliest het duel; de winnaar neemt de vakken over. Het team met de meeste vakken wint."
+      "Wie op nul seconden staat, verliest het duel. Alleen het betwiste buurvak wisselt van eigenaar; wie uiteindelijk de hele vloer bezit wint."
     ]
   },
   "smart": {

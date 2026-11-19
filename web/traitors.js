@@ -309,7 +309,7 @@ document.addEventListener('submit', async e => {
 
 async function boot() {
   if (role === 'host') {
-    try { const b = await api('/api/bootstrap'); hostKey = b.host_key; urls = b.urls || []; drafts.lan = urls[0]; }
+    try { const b = await api('/api/bootstrap'); hostKey = b.host_key; urls = b.urls || []; let sv = ''; try { sv = localStorage.getItem('groepsspel-lan-address') || ''; } catch {} drafts.lan = urls.includes(sv) ? sv : urls[0]; }
     catch (e) { $('#root').innerHTML = `<h1>Open de console op de spel-pc</h1><p class="lead">De spelleidersconsole werkt alleen op de pc waarop Groepsspel draait (via localhost). Spelers gebruiken de QR-code of <b>/verraders/speler</b>.</p>`; return; }
   }
   await refresh();
@@ -330,3 +330,6 @@ document.addEventListener('click', async e => {
 
 /* Online spelserver: QR-codes bevatten de spelkamer, zodat telefoons in dezelfde kamer terechtkomen. */
 function roomBase() { const m = document.cookie.match(/(?:^|; )gs_kamer=([A-Z0-9]{6})/); return location.origin + (m ? '/k/' + m[1] : ''); }
+
+/* 0.15.3: gekozen wifi-adres onthouden voor de volgende keer */
+document.addEventListener('change', e => { if (e.target.dataset && e.target.dataset.draft === 'lan') { try { localStorage.setItem('groepsspel-lan-address', e.target.value); } catch {} } });

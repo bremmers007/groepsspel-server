@@ -29,13 +29,14 @@ Voorwerpen:'🪁=Vlieger|🎒=Rugzak|🧳=Koffer|☂️=Paraplu|🎩=Hoge hoed|�
 Sport:'🏑=Hockey|🤼=Worstelen|🧗=Klimmen|🥍=Lacrosse|🥏=Frisbee|🎿=Ski’s|🛷=Slee|🤹=Jongleren|🪃=Boemerang|🤻=Pentatlon-symbool',
 'Eten & drinken':'🥔=Aardappel|🥒=Komkommer|🍅=Tomaat|🫑=Paprika|🥬=Bladgroente|🫛=Erwten|🫘=Bonen|🍇=Druiven|🍊=Mandarijn|🧁=Cupcake',
 Vervoer:'🛻=Pick-uptruck|🛸=Vliegende schotel|🛩️=Klein vliegtuig|🛫=Opstijgend vliegtuig|🛬=Landend vliegtuig|🚔=Politieauto van voren|🚖=Taxi van voren|🚍=Bus van voren|🚘=Auto van voren|🚏=Bushalte',
-'Plaatsen & gebouwen':'🏘️=Woonwijk|🏯=Japans kasteel|🏣=Japans postkantoor|🏦 💰=Bankgebouw|🏙️=Stadssilhouet|🏞️=Nationaal park|🌅=Zonsopkomst|🌇=Zonsondergang in de stad|🏡=Huis met tuin|🏩=Lovehotel',
+'Plaatsen & gebouwen':'🏘️=Woonwijk|🏯=Japans kasteel|🏣=Japans postkantoor|🏙️=Stadssilhouet|🏞️=Nationaal park|🌅=Zonsopkomst|🌇=Zonsondergang in de stad|🏡=Huis met tuin|🏩=Lovehotel',
 'Natuur & weer':'🌺=Hibiscus|🌼=Bloem|💐=Boeket|🪴=Potplant|🌿=Kruid|🍃=Blad in de wind|🌱=Zaailing|🌙=Maansikkel|🌓=Eerste kwartier|🌧️=Regenwolk'
 };
 // Replace unfamiliar/non-pictographic entries with clear original recognition descriptions.
-FLOOR_ADDITIONS.Sport=FLOOR_ADDITIONS.Sport.replace('🤻=Pentatlon-symbool','Sport met een keu, drie ballen en een tafel zonder gaten=Carambolebiljart');
+FLOOR_ADDITIONS.Sport=FLOOR_ADDITIONS.Sport.replace('|🤻=Pentatlon-symbool','');
 for(const [topic,pairs]of Object.entries(FLOOR_ADDITIONS))FLOOR_BANK[topic].push(...showRecognition(pairs));
-if(typeof QUESTION_BANK!=='undefined')for(const topic of [...new Set(QUESTION_BANK.map(q=>q.topic))]){const pool=QUESTION_BANK.filter(q=>q.topic===topic);if(pool.length>=50)FLOOR_BANK[topic]=pool.map(q=>({visual:q.q,answer:q.a,answers:q.answers,questionId:q.id,source:q.source}));}
+// The Floor is visual recognition ONLY. Knowledge questions belong in the quiz bank.
+FLOOR_BANK.Sport=FLOOR_BANK.Sport.filter(c=>c.visual!=='🏸 🏓 🎾');
 // Longer replayable packs: distinct image series and word groups, not duplicated quiz records.
 TV.opens=[...new Map(TV.opens.map(q=>[q.q,q])).values()];
 const pictogramTopics=Object.keys(FLOOR_ADDITIONS);
