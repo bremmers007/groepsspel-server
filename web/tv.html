@@ -1,0 +1,12 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080d23"><title>Groepsspel · TV-scherm</title><link rel="icon" href="/icon.svg"><style>
+html,body{margin:0;height:100%;background:#080d23;color:#f5f2ff;font-family:system-ui,sans-serif;overflow:hidden}
+#screen{position:fixed;inset:0;width:100%;height:100%;border:0;display:none;background:#080d23}
+#idle{position:fixed;inset:0;display:grid;place-items:center;text-align:center;padding:5vh}
+#idle h1{font-size:clamp(40px,8vh,96px);color:#ffd46b;margin:.2em 0}#idle p{font-size:clamp(18px,3vh,32px);color:#bcbfd6;max-width:900px;margin:.4em auto}
+#hint{position:fixed;right:16px;bottom:16px;background:rgba(10,14,40,.85);border:1px solid #ffffff33;border-radius:12px;padding:10px 14px;font-size:15px;transition:opacity 1s;z-index:5}
+#hint.gone{opacity:0;pointer-events:none}
+</style><script defer src="/app/gs-i18n.js"></script><script defer src="/tv.js"></script></head><body>
+<div id="idle"><div><div style="font-size:clamp(60px,12vh,140px)">📺</div><h1>Groepsspel</h1><p>Dit is het TV-scherm. Start een spel op de spelleider-pc; het verschijnt hier vanzelf.</p><p id="idleState" style="font-size:16px"></p></div></div>
+<iframe id="screen" title="Spelscherm" allow="autoplay; fullscreen"></iframe>
+<div id="hint">Druk op F11 voor volledig scherm · sleep dit venster eventueel naar de tv</div>
+</body></html>

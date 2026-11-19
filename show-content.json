@@ -1603,6 +1603,542 @@
         "visual": "🌧️",
         "answer": "Regenwolk"
       }
+    ],
+    "Vlaggen van de wereld": [
+      {
+        "visual": "🇪🇪",
+        "answer": "Estland"
+      },
+      {
+        "visual": "🇱🇻",
+        "answer": "Letland"
+      },
+      {
+        "visual": "🇱🇹",
+        "answer": "Litouwen"
+      },
+      {
+        "visual": "🇸🇰",
+        "answer": "Slowakije"
+      },
+      {
+        "visual": "🇸🇮",
+        "answer": "Slovenië"
+      },
+      {
+        "visual": "🇷🇸",
+        "answer": "Servië"
+      },
+      {
+        "visual": "🇧🇬",
+        "answer": "Bulgarije"
+      },
+      {
+        "visual": "🇱🇺",
+        "answer": "Luxemburg"
+      },
+      {
+        "visual": "🇲🇹",
+        "answer": "Malta"
+      },
+      {
+        "visual": "🇨🇾",
+        "answer": "Cyprus"
+      },
+      {
+        "visual": "🇲🇨",
+        "answer": "Monaco"
+      },
+      {
+        "visual": "🇬🇪",
+        "answer": "Georgië"
+      },
+      {
+        "visual": "🇺🇾",
+        "answer": "Uruguay"
+      },
+      {
+        "visual": "🇵🇾",
+        "answer": "Paraguay"
+      },
+      {
+        "visual": "🇧🇴",
+        "answer": "Bolivia"
+      },
+      {
+        "visual": "🇪🇨",
+        "answer": "Ecuador"
+      },
+      {
+        "visual": "🇻🇪",
+        "answer": "Venezuela"
+      },
+      {
+        "visual": "🇦🇱",
+        "answer": "Albanië"
+      },
+      {
+        "visual": "🇮🇶",
+        "answer": "Irak"
+      },
+      {
+        "visual": "🇸🇷",
+        "answer": "Suriname"
+      },
+      {
+        "visual": "🇳🇬",
+        "answer": "Nigeria"
+      },
+      {
+        "visual": "🇬🇭",
+        "answer": "Ghana"
+      },
+      {
+        "visual": "🇪🇹",
+        "answer": "Ethiopië"
+      },
+      {
+        "visual": "🇹🇳",
+        "answer": "Tunesië"
+      },
+      {
+        "visual": "🇩🇿",
+        "answer": "Algerije"
+      },
+      {
+        "visual": "🇸🇳",
+        "answer": "Senegal"
+      },
+      {
+        "visual": "🇨🇲",
+        "answer": "Kameroen"
+      },
+      {
+        "visual": "🇸🇦",
+        "answer": "Saudi-Arabië"
+      },
+      {
+        "visual": "🇦🇪",
+        "answer": "Verenigde Arabische Emiraten"
+      },
+      {
+        "visual": "🇮🇱",
+        "answer": "Israël"
+      },
+      {
+        "visual": "🇯🇴",
+        "answer": "Jordanië"
+      },
+      {
+        "visual": "🇱🇧",
+        "answer": "Libanon"
+      },
+      {
+        "visual": "🇮🇷",
+        "answer": "Iran"
+      },
+      {
+        "visual": "🇦🇲",
+        "answer": "Armenië"
+      },
+      {
+        "visual": "🇧🇩",
+        "answer": "Bangladesh"
+      },
+      {
+        "visual": "🇰🇭",
+        "answer": "Cambodja"
+      },
+      {
+        "visual": "🇲🇾",
+        "answer": "Maleisië"
+      },
+      {
+        "visual": "🇸🇬",
+        "answer": "Singapore"
+      },
+      {
+        "visual": "🇰🇿",
+        "answer": "Kazachstan"
+      },
+      {
+        "visual": "🇲🇳",
+        "answer": "Mongolië"
+      }
+    ],
+    "Kleding & accessoires": [
+      {
+        "visual": "👕",
+        "answer": "T-shirt"
+      },
+      {
+        "visual": "👖",
+        "answer": "Spijkerbroek"
+      },
+      {
+        "visual": "👗",
+        "answer": "Jurk"
+      },
+      {
+        "visual": "👔",
+        "answer": "Overhemd met stropdas"
+      },
+      {
+        "visual": "🧥",
+        "answer": "Jas"
+      },
+      {
+        "visual": "🧣",
+        "answer": "Sjaal"
+      },
+      {
+        "visual": "🎀",
+        "answer": "Strik"
+      },
+      {
+        "visual": "🥾",
+        "answer": "Wandelschoen"
+      },
+      {
+        "visual": "👟",
+        "answer": "Sportschoen"
+      },
+      {
+        "visual": "👠",
+        "answer": "Hoge hak"
+      },
+      {
+        "visual": "👢",
+        "answer": "Laars"
+      },
+      {
+        "visual": "🩴",
+        "answer": "Teenslipper"
+      },
+      {
+        "visual": "🧢",
+        "answer": "Pet"
+      },
+      {
+        "visual": "👒",
+        "answer": "Zonnehoed"
+      },
+      {
+        "visual": "🎓",
+        "answer": "Afstudeerhoed"
+      },
+      {
+        "visual": "👜",
+        "answer": "Handtas"
+      },
+      {
+        "visual": "👛",
+        "answer": "Portemonnee"
+      },
+      {
+        "visual": "💼",
+        "answer": "Aktetas"
+      },
+      {
+        "visual": "🕶️",
+        "answer": "Zonnebril"
+      },
+      {
+        "visual": "💄",
+        "answer": "Lippenstift"
+      },
+      {
+        "visual": "🩱",
+        "answer": "Badpak"
+      },
+      {
+        "visual": "👙",
+        "answer": "Bikini"
+      },
+      {
+        "visual": "🩳",
+        "answer": "Korte broek"
+      },
+      {
+        "visual": "🥽",
+        "answer": "Duikbril"
+      },
+      {
+        "visual": "👘",
+        "answer": "Kimono"
+      },
+      {
+        "visual": "⌚",
+        "answer": "Horloge"
+      },
+      {
+        "visual": "🩲",
+        "answer": "Zwembroek"
+      },
+      {
+        "visual": "🪭",
+        "answer": "Waaier"
+      }
+    ],
+    "Beroepen & figuren": [
+      {
+        "visual": "👮",
+        "answer": "Politieagent"
+      },
+      {
+        "visual": "👩‍🚒",
+        "answer": "Brandweer"
+      },
+      {
+        "visual": "👨‍🍳",
+        "answer": "Kok"
+      },
+      {
+        "visual": "🧑‍⚕️",
+        "answer": "Dokter"
+      },
+      {
+        "visual": "👩‍🏫",
+        "answer": "Leraar"
+      },
+      {
+        "visual": "👨‍🌾",
+        "answer": "Boer"
+      },
+      {
+        "visual": "👩‍🔧",
+        "answer": "Monteur"
+      },
+      {
+        "visual": "👨‍💻",
+        "answer": "Programmeur"
+      },
+      {
+        "visual": "🧑‍🚀",
+        "answer": "Astronaut"
+      },
+      {
+        "visual": "👩‍✈️",
+        "answer": "Piloot"
+      },
+      {
+        "visual": "👷",
+        "answer": "Bouwvakker"
+      },
+      {
+        "visual": "💂",
+        "answer": "Wachter"
+      },
+      {
+        "visual": "🕵️",
+        "answer": "Detective"
+      },
+      {
+        "visual": "👨‍🎨",
+        "answer": "Kunstenaar"
+      },
+      {
+        "visual": "👩‍⚖️",
+        "answer": "Rechter"
+      },
+      {
+        "visual": "🧑‍🔬",
+        "answer": "Wetenschapper"
+      },
+      {
+        "visual": "🎅",
+        "answer": "Kerstman"
+      },
+      {
+        "visual": "🧜",
+        "answer": "Zeemeermin"
+      },
+      {
+        "visual": "🧛",
+        "answer": "Vampier"
+      },
+      {
+        "visual": "🧟",
+        "answer": "Zombie"
+      },
+      {
+        "visual": "🧚",
+        "answer": "Fee"
+      },
+      {
+        "visual": "🦸",
+        "answer": "Superheld"
+      },
+      {
+        "visual": "🤡",
+        "answer": "Clown"
+      },
+      {
+        "visual": "🥷",
+        "answer": "Ninja"
+      },
+      {
+        "visual": "🧞",
+        "answer": "Geest uit de lamp"
+      },
+      {
+        "visual": "👻",
+        "answer": "Spook"
+      },
+      {
+        "visual": "👽",
+        "answer": "Buitenaards wezen"
+      },
+      {
+        "visual": "🤖",
+        "answer": "Robot"
+      },
+      {
+        "visual": "🦄",
+        "answer": "Eenhoorn"
+      },
+      {
+        "visual": "🐉",
+        "answer": "Draak"
+      },
+      {
+        "visual": "🧙",
+        "answer": "Tovenaar"
+      },
+      {
+        "visual": "👸",
+        "answer": "Prinses"
+      }
+    ],
+    "In huis": [
+      {
+        "visual": "🛋️",
+        "answer": "Zitbank"
+      },
+      {
+        "visual": "🚪",
+        "answer": "Deur"
+      },
+      {
+        "visual": "🪟",
+        "answer": "Raam"
+      },
+      {
+        "visual": "🚽",
+        "answer": "Wc"
+      },
+      {
+        "visual": "🚿",
+        "answer": "Douche"
+      },
+      {
+        "visual": "🧺",
+        "answer": "Wasmand"
+      },
+      {
+        "visual": "🧼",
+        "answer": "Zeep"
+      },
+      {
+        "visual": "🪠",
+        "answer": "Ontstopper"
+      },
+      {
+        "visual": "🍳",
+        "answer": "Koekenpan"
+      },
+      {
+        "visual": "🥄",
+        "answer": "Lepel"
+      },
+      {
+        "visual": "🔪",
+        "answer": "Mes"
+      },
+      {
+        "visual": "🥢",
+        "answer": "Eetstokjes"
+      },
+      {
+        "visual": "🫖",
+        "answer": "Theepot"
+      },
+      {
+        "visual": "🍽️",
+        "answer": "Bord met bestek"
+      },
+      {
+        "visual": "🧂",
+        "answer": "Zout"
+      },
+      {
+        "visual": "🔌",
+        "answer": "Stekker"
+      },
+      {
+        "visual": "🪤",
+        "answer": "Muizenval"
+      },
+      {
+        "visual": "🧸",
+        "answer": "Teddybeer"
+      },
+      {
+        "visual": "🖼️",
+        "answer": "Schilderij"
+      },
+      {
+        "visual": "🛒",
+        "answer": "Winkelwagen"
+      },
+      {
+        "visual": "🖥️",
+        "answer": "Computer"
+      },
+      {
+        "visual": "⌨️",
+        "answer": "Toetsenbord"
+      },
+      {
+        "visual": "🖱️",
+        "answer": "Computermuis"
+      },
+      {
+        "visual": "📱",
+        "answer": "Mobiele telefoon"
+      },
+      {
+        "visual": "🎸",
+        "answer": "Gitaar"
+      },
+      {
+        "visual": "🎹",
+        "answer": "Piano"
+      },
+      {
+        "visual": "🥁",
+        "answer": "Trommel"
+      },
+      {
+        "visual": "🎺",
+        "answer": "Trompet"
+      },
+      {
+        "visual": "🎻",
+        "answer": "Viool"
+      },
+      {
+        "visual": "🎤",
+        "answer": "Microfoon"
+      },
+      {
+        "visual": "🎧",
+        "answer": "Koptelefoon"
+      },
+      {
+        "visual": "📻",
+        "answer": "Radio"
+      }
     ]
   },
   "smart": {
@@ -1758,6 +2294,114 @@
           "Schilderij",
           "Louvre",
           "Glimlach"
+        ]
+      },
+      {
+        "q": "Wat weet je van Napoleon?",
+        "answers": [
+          "Frankrijk",
+          "Keizer",
+          "Waterloo",
+          "Corsica"
+        ]
+      },
+      {
+        "q": "Wat weet je van de Eiffeltoren?",
+        "answers": [
+          "Parijs",
+          "IJzer",
+          "Gustave Eiffel",
+          "1889"
+        ]
+      },
+      {
+        "q": "Wat weet je van pinguïns?",
+        "answers": [
+          "Vogel",
+          "Kunnen niet vliegen",
+          "Zuidpool",
+          "Zwemmen"
+        ]
+      },
+      {
+        "q": "Wat weet je van Mozart?",
+        "answers": [
+          "Componist",
+          "Oostenrijk",
+          "Die Zauberflöte",
+          "Wonderkind"
+        ]
+      },
+      {
+        "q": "Wat weet je van de Chinese Muur?",
+        "answers": [
+          "China",
+          "Duizenden kilometers",
+          "Verdediging",
+          "Stenen"
+        ]
+      },
+      {
+        "q": "Wat weet je van dinosaurussen?",
+        "answers": [
+          "Uitgestorven",
+          "T. rex",
+          "Fossielen",
+          "Meteoriet"
+        ]
+      },
+      {
+        "q": "Wat weet je van Australië?",
+        "answers": [
+          "Kangoeroe",
+          "Canberra",
+          "Sydney",
+          "Koala"
+        ]
+      },
+      {
+        "q": "Wat weet je van The Beatles?",
+        "answers": [
+          "Liverpool",
+          "Vier leden",
+          "John Lennon",
+          "Yellow Submarine"
+        ]
+      },
+      {
+        "q": "Wat weet je van Sinterklaas?",
+        "answers": [
+          "5 december",
+          "Pieten",
+          "Spanje",
+          "Schimmel"
+        ]
+      },
+      {
+        "q": "Wat weet je van De Nachtwacht?",
+        "answers": [
+          "Rembrandt",
+          "Rijksmuseum",
+          "Schutterij",
+          "1642"
+        ]
+      },
+      {
+        "q": "Wat weet je van Albert Einstein?",
+        "answers": [
+          "Relativiteitstheorie",
+          "E=mc²",
+          "Nobelprijs",
+          "Natuurkundige"
+        ]
+      },
+      {
+        "q": "Wat weet je van de regenboog?",
+        "answers": [
+          "Zeven kleuren",
+          "Zon en regen",
+          "Lichtbreking",
+          "Rood"
         ]
       }
     ],
@@ -4828,6 +5472,106 @@
           "Blazers",
           "Slagwerk",
           "Partituur"
+        ]
+      },
+      {
+        "q": "Wat weet je van Spanje?",
+        "answers": [
+          "Madrid",
+          "Flamenco",
+          "Paella",
+          "Pyreneeën",
+          "Barcelona"
+        ]
+      },
+      {
+        "q": "Wat weet je van de ruimtevaart?",
+        "answers": [
+          "Raket",
+          "Astronaut",
+          "Maan",
+          "NASA",
+          "ISS"
+        ]
+      },
+      {
+        "q": "Wat weet je van paarden?",
+        "answers": [
+          "Hoeven",
+          "Manen",
+          "Draf",
+          "Veulen",
+          "Hinniken"
+        ]
+      },
+      {
+        "q": "Wat weet je van het menselijk lichaam?",
+        "answers": [
+          "Hart",
+          "Longen",
+          "Skelet",
+          "Bloed",
+          "Hersenen"
+        ]
+      },
+      {
+        "q": "Wat weet je van Afrika?",
+        "answers": [
+          "Sahara",
+          "Nijl",
+          "Kilimanjaro",
+          "Leeuw",
+          "Werelddeel"
+        ]
+      },
+      {
+        "q": "Wat weet je van chocolade?",
+        "answers": [
+          "Cacao",
+          "Melk",
+          "Puur",
+          "Bonbon",
+          "België"
+        ]
+      },
+      {
+        "q": "Wat weet je van de zomer?",
+        "answers": [
+          "Zon",
+          "Vakantie",
+          "Strand",
+          "IJsje",
+          "Juni"
+        ]
+      },
+      {
+        "q": "Wat weet je van treinen?",
+        "answers": [
+          "Spoor",
+          "Station",
+          "Conducteur",
+          "Locomotief",
+          "NS"
+        ]
+      },
+      {
+        "q": "Wat weet je van Japan?",
+        "answers": [
+          "Tokio",
+          "Sushi",
+          "Fuji",
+          "Kimono",
+          "Yen"
+        ]
+      },
+      {
+        "q": "Wat weet je van het weer?",
+        "answers": [
+          "Regen",
+          "Wind",
+          "Zon",
+          "Temperatuur",
+          "Weerbericht"
         ]
       }
     ]

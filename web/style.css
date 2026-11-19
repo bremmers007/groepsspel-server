@@ -4,3 +4,38 @@
 
 /* 0.14.2 · optioneel bewijs via WhatsApp */
 .evidence-panel{border:1px solid #6289b688;margin:16px 0}.evidence-panel a.btn{display:inline-block;max-width:100%;overflow-wrap:anywhere}.evidence-panel .qr{max-width:230px}
+/* 0.15.4: automatische spelshow met personages */
+.av{width:56px;height:56px;display:block}.av.big{width:min(22vh,180px);height:auto;margin:0 auto}
+.avatar-pick{border:0;padding:0;margin:15px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}.avatar-pick legend{font-size:13px;color:#cbcbdd;margin-bottom:8px}
+.avatar-pick label{position:relative;display:block;border:2px solid #6d73b055;border-radius:12px;padding:6px;cursor:pointer;background:#0f1530}.avatar-pick label:has(input:checked){border-color:#ffd46b;background:#2a2547}.avatar-pick input{position:absolute;opacity:0;pointer-events:none}.avatar-pick .av{margin:auto}
+.avatar-pick button{background:#0f1530;border:2px solid #6d73b055;border-radius:12px;padding:6px}.avatar-pick button.chosen{border-color:#ffd46b;background:#2a2547}
+.avatar-pick.targets{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}.avatar-pick.targets button{color:#fff;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:16px}.avatar-pick.targets .av{width:72px;height:72px}
+.auto-stage{padding:25px 20px}.auto-card{text-align:center}.round-card .round-icon{font-size:clamp(60px,12vh,130px);animation:auto-pop .7s cubic-bezier(.2,1.6,.4,1)}.round-card h1{font-size:clamp(40px,7vh,90px);margin:.2em 0;color:#ffd46b}.round-rules{font-size:clamp(18px,3vh,32px);max-width:1000px;margin:0 auto;color:#e9e6ff}
+.auto-q .question{margin:15px auto}.auto-options,.auto-answers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.auto-opt{border-radius:14px;padding:18px 20px;text-align:left;color:#fff;font-size:clamp(18px,2.6vh,30px);font-weight:700;display:flex;gap:14px;align-items:center;border:3px solid transparent;transition:opacity .3s,transform .3s}
+.auto-opt b{display:inline-grid;place-items:center;min-width:1.9em;height:1.9em;border-radius:50%;background:rgba(0,0,0,.25)}
+.opt-0{background:#1f6fe5}.opt-1{background:#ef7d16}.opt-2{background:#21a35b}.opt-3{background:#d7a800;color:#1b1400}
+.auto-opt.correct{border-color:#fff;transform:scale(1.04);box-shadow:0 0 25px #fff8}.auto-opt.dim{opacity:.3}
+.auto-answers .auto-opt{min-height:96px;width:100%;font-size:20px}.auto-answers .auto-opt:disabled{opacity:.45}
+.auto-bar{height:12px;background:#ffffff1c;border-radius:9px;overflow:hidden;margin:10px auto;max-width:900px}.auto-bar span{display:block;height:100%;background:linear-gradient(90deg,#ff5d73,#ffd46b,#62e7b3);transition:width .1s linear}
+.auto-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:25px 0 5px}
+.auto-team{position:relative;background:#1d2543;border:2px solid #7471ad55;border-radius:16px;padding:10px 14px;min-width:120px;display:flex;flex-direction:column;align-items:center;gap:4px;transition:border-color .3s,background .3s}
+.auto-team .av{width:min(10vh,84px);height:min(10vh,84px)}.auto-av{position:relative}.auto-score{font-size:28px;font-weight:900;color:#ffd46b}
+.auto-team.answered{border-color:#62dfff}.auto-team.ok{border-color:#6be2c7;background:#174b40}.auto-team.ok .av{animation:auto-jump .5s ease-in-out 3}.auto-team.bad{border-color:#ff6f8a;background:#4b1a2a}.auto-team.bad .av{animation:auto-shake .4s ease-in-out 2}.auto-team.gone{opacity:.45}
+.tick-mark{position:absolute;right:-6px;top:-6px;background:#62dfff;color:#062033;border-radius:50%;width:26px;height:26px;display:grid;place-items:center;font-weight:900}
+.delta{position:absolute;top:-14px;right:-10px;font-weight:900;font-size:22px;padding:2px 8px;border-radius:9px;animation:auto-pop .6s}.delta.up{background:#6be2c7;color:#062b22}.delta.down{background:#ff6f8a;color:#3a0713}
+.splat{position:absolute;inset:-10px;display:grid;place-items:center;font-size:min(9vh,76px);animation:auto-splat .5s cubic-bezier(.2,1.6,.4,1)}.hit-pie .av{filter:saturate(.4)}
+.bomb-icon{position:absolute;left:-14px;bottom:-8px;font-size:34px;animation:auto-tick 1s ease-in-out infinite}.auto-team.bomb{border-color:#ff9f43}.auto-team.hurry .bomb-icon{animation-duration:.35s}
+.bomb-line,.buzz-line{font-size:clamp(20px,3vh,34px);font-weight:800;color:#ffd46b}.bomb-line.hurry{animation:auto-tick .35s infinite}
+.auto-rank{list-style:none;padding:0;max-width:640px;margin:20px auto;text-align:left}.auto-rank li{display:flex;align-items:center;gap:14px;background:#1d2543;border-radius:12px;padding:8px 16px;margin:8px 0;font-size:clamp(18px,2.6vh,30px);font-weight:700;animation:auto-in .5s backwards}.auto-rank li:nth-child(2){animation-delay:.15s}.auto-rank li:nth-child(3){animation-delay:.3s}.auto-rank li span{flex:1}.auto-rank b{color:#ffd46b}.auto-rank li:first-child{background:#3b3214;border:2px solid #ffd46b}
+.winner{animation:auto-pop .8s cubic-bezier(.2,1.6,.4,1)}.auto-me{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:20px;margin:10px 0}.auto-me b{color:#ffd46b}
+.auto-result{font-size:40px;font-weight:900;padding:30px;border-radius:16px;margin:20px 0}.auto-result.ok{background:#174b40;color:#b6ffe5}.auto-result.bad{background:#4b1a2a;color:#ffc0cd}
+.display .auto-stage .question{font-size:clamp(34px,5.5vh,70px)}
+@keyframes auto-pop{0%{transform:scale(.3);opacity:0}100%{transform:scale(1);opacity:1}}@keyframes auto-jump{50%{transform:translateY(-14px)}}@keyframes auto-shake{25%{transform:rotate(-10deg)}75%{transform:rotate(10deg)}}
+@keyframes auto-splat{0%{transform:scale(3) rotate(-30deg);opacity:0}100%{transform:scale(1);opacity:1}}@keyframes auto-tick{50%{transform:scale(1.2) rotate(8deg)}}@keyframes auto-in{from{transform:translateX(-30px);opacity:0}}
+@media (max-width:640px){.auto-options,.auto-answers{grid-template-columns:1fr}.auto-team{min-width:90px}}
+@media (prefers-reduced-motion:reduce){.auto-team .av,.splat,.bomb-icon,.bomb-line,.round-card .round-icon,.winner,.auto-rank li{animation:none!important}}
+
+/* 0.15.4: in het TV-scherm geen kopregel, volle breedte */
+body.tv-mode header{display:none}body.tv-mode main{max-width:none;margin-top:12px}
+.display-join{display:flex;gap:30px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left}.display-join .qr img{width:min(32vh,300px);height:auto}

@@ -1,0 +1,16 @@
+# Houdt de gratis Render-spelserver wakker: elke 10 minuten een korte ping.
+# Render laat een gratis dienst na ±15 minuten zonder verkeer slapen; de eerste speler wacht dan ±50 seconden.
+# GitHub voert geplande taken soms een paar minuten later uit, en schakelt ze uit na 60 dagen zonder activiteit
+# in de repository (opnieuw aanzetten: tabblad Actions → Keep awake → Enable workflow).
+name: Keep awake
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping groepsspel.onrender.com
+        run: curl -fsS --max-time 90 --retry 2 https://groepsspel.onrender.com/api/ping || true

@@ -101,3 +101,6 @@ body.traitors{background:radial-gradient(1200px 600px at 50% -10%,#3a0d17 0%,var
 .phase-strip span.done{color:#8fd9b6}
 .phase-strip span.on{background:#f6cd63;color:#151b30;font-weight:700}
 .roster-pick{margin:0 0 12px}.roster-pick .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+
+/* 0.15.4: in het TV-scherm geen kopregel, volle breedte */
+body.tv-mode header{display:none}body.tv-mode main{max-width:none;margin-top:12px}

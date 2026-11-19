@@ -12,8 +12,8 @@ floorScreen=function(s){
 /* A fresh board uses varied picture banks and trivia without repeating the same first 12. */
 const createExtended081=createExtended;
 createExtended=function(g,data){createExtended081(g,data);const s=state.active;if(!s?.tvVersion||s.mode!=='floor'||s.phase!=='board')return;
- const imageTopics=['Landen','Dieren','Sport','Voorwerpen','Eten & drinken','Vervoer','Plaatsen & gebouwen','Natuur & weer'].filter(t=>FLOOR_BANK[t]?.length>=12);
+ const imageTopics=['Landen','Dieren','Sport','Voorwerpen','Eten & drinken','Vervoer','Plaatsen & gebouwen','Natuur & weer','Vlaggen van de wereld','Kleding & accessoires','Beroepen & figuren','In huis'].filter(t=>FLOOR_BANK[t]?.length>=12);
  const textTopics=Object.keys(FLOOR_BANK).filter(t=>!imageTopics.includes(t)&&FLOOR_BANK[t]?.length>=12);
- const order=[...shuffle(imageTopics).slice(0,8),...shuffle(textTopics).slice(0,4)];
+ const order=[...shuffle(imageTopics).slice(0,12),...shuffle(textTopics).slice(0,Math.max(0,12-imageTopics.length))];
  if(order.length>=12){s.topics=shuffle(order);save();render();}
 };

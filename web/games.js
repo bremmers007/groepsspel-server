@@ -129,7 +129,12 @@ async function resizeImage(file) {
 }
 
 /* ------------------------------------------------------------- weergave */
-function afterView() { if (view?.server_time) offset = view.server_time - Date.now() / 1000; $('#brand').textContent = view?.title || ''; document.title = (view?.title || 'Groepsspel') + ' · Groepsspel'; }
+/* 0.15.4: sfeermuziek op pc-console en beamer (knop rechtsonder, per scherm onthouden). Muziekbingo speelt eigen muziek. */
+const SOUND_MOOD = {moord: 'mystery', opgejaagd: 'mystery', smokkel: 'mystery', missies: 'mystery', stratego: 'mystery', holland: 'quiz', crazy88: 'lobby'};
+const soundOn = role !== 'player' && gid !== 'bingo' && typeof GSound !== 'undefined';
+if (soundOn) GSound.mount();
+function soundView() { if (!soundOn || !view) return; const ph = view.phase; GSound.bed(ph === 'lobby' ? 'lobby' : ph === 'end' ? 'finale' : SOUND_MOOD[gid] || 'lobby'); }
+function afterView() { if (view?.server_time) offset = view.server_time - Date.now() / 1000; soundView(); $('#brand').textContent = view?.title || ''; document.title = (view?.title || 'Groepsspel') + ' · Groepsspel'; }
 function render(force) {
   const root = $('#root');
   if (role === 'player' && !view) { if (!$('#join')) root.innerHTML = joinForm(); return; }
@@ -188,7 +193,7 @@ function lobbyHost(R) {
     : `<div class="roster">${v.players.map(p => `<div class="person"><b>${esc(p.name)}</b><small><span class="dot ${p.connected ? '' : 'off'}"></span>${p.connected ? 'Verbonden' : 'Telefoon slaapt'}</small>${btn('Verwijderen', 'remove', `data-id="${p.id}"`, 'secondary small')}</div>`).join('')}</div>`;
   return `<div class="eyebrow">Lobby</div><h1>${esc(v.title)}</h1><p class="lead">${esc(R.lobbyText)}</p><p><button class="secondary" data-ui="uitleg">Volledig draaiboek en tips</button></p>${lobbyGuide()}
   <div class="cols"><section class="panel"><h2>Laat iedereen scannen</h2><p class="code">${v.code}</p>${urls.length > 1 ? `<label class="field"><span>Wifi-adres</span>${sel('lan', urls.map(u => [u, u]), drafts.lan)}</label>` : ''}${qr(joinURL())}<p class="linkline small">${esc(joinURL())}</p>
-  <div class="actions"><a class="btn secondary" href="/spel/${gid}/scherm" target="_blank" rel="noopener">Open beamer ↗</a><a class="btn secondary" href="/spel/${gid}/speler?code=${v.code}&nieuw=1" target="_blank" rel="noopener">Zelf meespelen ↗</a></div></section>
+  <div class="actions"><a class="btn secondary" href="/spel/${gid}/scherm" target="_blank" rel="noopener">Open beamer ↗</a><button type="button" class="btn secondary" data-open-tv>📺 TV-scherm</button><a class="btn secondary" href="/spel/${gid}/speler?code=${v.code}&nieuw=1" target="_blank" rel="noopener">Zelf meespelen ↗</a></div></section>
   <section class="panel"><h2>Instellingen</h2>${R.settings()}</section></div>${gid === 'crazy88' ? evidenceSettings() : ''}${areaHost()}
   <section class="panel"><h2>${v.players.length} ${v.players.length === 1 ? 'speler' : 'spelers'}</h2>${teams}<div class="actions">${guideAcknowledged ? R.startButtons() : R.startButtons().replace(/(<button(?=[^>]*data-a="start")[^>]*)(>)/g,'$1 disabled$2')}</div><p class="small">${guideAcknowledged ? 'De uitleg is bevestigd. Controleer of alle spullen klaarstaan.' : 'Lees de uitleg hierboven en bevestig deze om het spel te starten.'}</p></section>`;
 }
@@ -311,7 +316,7 @@ GAMES.moord = {
     if (ph === 'accuse') main += `<p class="lead">Iedereen kiest op de telefoon: wie, welk middel en welk motief.</p><p>${v.accused} van ${v.cast.length} beschuldigingen binnen.</p>`;
     if (ph === 'reveal' || ph === 'end') main += murderReveal(false);
     const actions = ph === 'reveal' ? btn(v.reveal.culprit ? 'Afronden' : 'Volgende stap →', 'reveal_next') : ph !== 'end' ? btn(MURDER_NEXT[ph], 'next') + (v.ends_at ? btn('Ronde +5 min', 'extend', '', 'secondary') : '') : btn('Nieuw spel met dezelfde spelers', 'reset', 'data-confirm="Alles wissen en opnieuw beginnen?"', 'secondary');
-    return `<div class="cols"><div>${main}<div class="actions">${actions}</div><h2>Bewijs</h2>${murderEvidence()}</div><aside><section class="panel"><h2>Personages</h2>${murderCast(false)}</section><section class="panel"><h2>Verloop</h2>${logList()}</section><p class="actions"><a class="btn secondary" href="/spel/${gid}/scherm" target="_blank" rel="noopener">Open beamer ↗</a></p></aside></div>`;
+    return `<div class="cols"><div>${main}<div class="actions">${actions}</div><h2>Bewijs</h2>${murderEvidence()}</div><aside><section class="panel"><h2>Personages</h2>${murderCast(false)}</section><section class="panel"><h2>Verloop</h2>${logList()}</section><p class="actions"><a class="btn secondary" href="/spel/${gid}/scherm" target="_blank" rel="noopener">Open beamer ↗</a><button type="button" class="btn secondary" data-open-tv>📺 TV-scherm</button></p></aside></div>`;
   },
   screen() {
     const v = view, ph = v.phase, sc = v.scenario;
@@ -517,7 +522,7 @@ GAMES.holland = {
     else if (r.kind === 'buzz') act = v.buzz ? btn('Goed ✓', 'judge', 'data-correct="1"', 'good') + btn('Fout ✗', 'judge', 'data-correct="0"', 'danger') : btn('Niemand weet het · onthul', 'reveal', '', 'secondary');
     else if (r.kind === 'act') act = st === 'acting' ? btn('Beurt stoppen', 'stop_turn', '', 'secondary') : btn('Start de beurt (60 sec) →', 'start_turn');
     else act = btn('Onthul het antwoord', 'reveal');
-    return `<div class="cols"><div>${this.qBlock(true)}<div class="actions">${act}</div></div><aside>${this.scores()}<section class="panel"><h2>Verloop</h2>${logList()}</section><p class="actions"><a class="btn secondary" href="/spel/${gid}/scherm" target="_blank" rel="noopener">Open beamer ↗</a>${btn('Show beëindigen', 'finish', 'data-confirm="De show nu beëindigen?"', 'secondary')}</p></aside></div>`;
+    return `<div class="cols"><div>${this.qBlock(true)}<div class="actions">${act}</div></div><aside>${this.scores()}<section class="panel"><h2>Verloop</h2>${logList()}</section><p class="actions"><a class="btn secondary" href="/spel/${gid}/scherm" target="_blank" rel="noopener">Open beamer ↗</a><button type="button" class="btn secondary" data-open-tv>📺 TV-scherm</button>${btn('Show beëindigen', 'finish', 'data-confirm="De show nu beëindigen?"', 'secondary')}</p></aside></div>`;
   },
   screen() {
     const v = view;

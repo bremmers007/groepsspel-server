@@ -54,7 +54,7 @@ function hostScreen() {
     const s = v.settings;
     main = `<div class="eyebrow">Stap 1 · spelers verzamelen</div><h1>Het Verraad</h1><p class="lead">Iedereen speelt op een eigen telefoon. Deze pc toont nooit wie de verraders zijn, dus de spelleider mag gewoon meespelen.</p>
     ${lobbyInstructions()}<div class="cols"><section class="panel"><h2>Laat iedereen scannen</h2><p class="code">${v.code}</p>${urls.length > 1 ? `<label class="field"><span>Wifi-adres</span><select data-draft="lan">${urls.map(u => `<option ${u === drafts.lan ? 'selected' : ''}>${esc(u)}</option>`).join('')}</select></label>` : ''}${qr(joinURL())}<p class="linkline small">${esc(joinURL())}</p>
-    <div class="actions"><a class="btn secondary" href="/verraders/scherm" target="_blank" rel="noopener">Open beamer ↗</a><a class="btn secondary" href="/verraders/speler?code=${v.code}&nieuw=1" target="_blank" rel="noopener">Zelf meespelen ↗</a></div></section>
+    <div class="actions"><a class="btn secondary" href="/verraders/scherm" target="_blank" rel="noopener">Open beamer ↗</a><button type="button" class="btn secondary" data-open-tv>📺 TV-scherm</button><a class="btn secondary" href="/verraders/speler?code=${v.code}&nieuw=1" target="_blank" rel="noopener">Zelf meespelen ↗</a></div></section>
     <section class="panel"><h2>Instellingen</h2><label class="field"><span>Aantal verraders</span><select data-setting="traitors"><option value="0">Automatisch (${v.suggested} bij ${v.players.length} spelers)</option>${[1, 2, 3, 4].map(n => `<option value="${n}" ${s.traitors === n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
     <label class="field"><span>Eindspel vanaf</span><select data-setting="endgame_at">${[3, 4, 5, 6].map(n => `<option value="${n}" ${s.endgame_at === n ? 'selected' : ''}>${n} spelers over</option>`).join('')}</select></label>
     <label class="field" style="display:flex;gap:10px;align-items:center"><input type="checkbox" data-setting="ultimatum" ${s.ultimatum ? 'checked' : ''} style="width:auto"> <span style="margin:0">Ultimatum: wie een rekruteringsaanbod weigert, wordt vermoord</span></label>
@@ -113,7 +113,7 @@ function hostScreen() {
   }
   const side = ph === 'lobby' ? '' : `<aside><section class="panel"><div class="pot"><small>Prijzenpot (fictief)</small>${money(view.pot)}</div><p class="small">${view.alive} spelers doen nog mee · ${view.traitors_start} ${view.traitors_start === 1 ? 'verrader' : 'verraders'} bij de start</p></section>
     <section class="panel"><h2>Spelers</h2>${roster()}${['day', 'table'].includes(ph) ? `<details style="margin-top:14px"><summary class="small">Speler vertrekt of is zijn code kwijt</summary><div class="actions">${alive().map(p => `<button class="secondary" style="padding:6px 10px;font-size:12px" data-action="show_code" data-id="${p.id}">Code ${esc(p.name)}</button>`).join('')}</div><div class="actions">${alive().map(p => `<button class="secondary" style="padding:6px 10px;font-size:12px" data-action="leave" data-id="${p.id}" data-confirm="${esc(p.name)} verlaat het spel en de rol wordt onthuld. Doorgaan?">${esc(p.name)} vertrekt</button>`).join('')}</div></details>` : ''}</section>
-    <section class="panel"><h2>Verloop</h2>${logList()}</section><p class="actions"><a class="btn secondary" href="/verraders/scherm" target="_blank" rel="noopener">Open beamer ↗</a></p></aside>`;
+    <section class="panel"><h2>Verloop</h2>${logList()}</section><p class="actions"><a class="btn secondary" href="/verraders/scherm" target="_blank" rel="noopener">Open beamer ↗</a><button type="button" class="btn secondary" data-open-tv>📺 TV-scherm</button></p></aside>`;
   return ph === 'lobby' ? main : `<div class="cols"><div>${main}</div>${side}</div>`;
 }
 function outcomeText(o) {
@@ -227,6 +227,13 @@ function render() {
   signature = html; root.innerHTML = html;
   if (focus) { const el = root.querySelector(`[data-draft="${focus}"]`); if (el) { el.focus(); const n = el.value.length; try { el.setSelectionRange(n, n); } catch {} } }
 }
+/* 0.15.4: sfeermuziek op pc-console en beamer (knop rechtsonder, per scherm onthouden). */
+const soundOn = role !== 'player' && typeof GSound !== 'undefined';
+if (soundOn) GSound.mount();
+let soundPhase = null;
+function soundView() { if (!soundOn || !view) return; const ph = view.phase; GSound.bed(ph === 'lobby' ? 'lobby' : ph === 'end' ? 'finale' : ph === 'mission' ? 'quiz' : 'mystery');
+  if (soundPhase && ph !== soundPhase) { if (ph === 'reveal' || ph === 'banish') GSound.play('intro'); if (ph === 'end') GSound.play('end'); }
+  soundPhase = ph; }
 async function refresh() {
   try {
     if (role === 'host') view = await api('/api/traitors/view?role=host', null, hostKey);
@@ -235,6 +242,7 @@ async function refresh() {
     $('#connection').textContent = '● Verbonden met spelserver';
     if (view?.phase !== 'vote') chosen = null;
     if (view?.phase !== 'night') nightMode = null;
+    soundView();
     render();
     if(role==='host'&&view?.phase==='lobby'&&!uitlegData&&!uitlegLoading){
       uitlegLoading=true;

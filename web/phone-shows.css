@@ -2,3 +2,6 @@
 
 /* The Floor shows actual local SVG images, not text questions. */
 .recognition img {display:block;max-width:min(100%,440px);width:auto;height:auto;max-height:46vh;margin:auto;object-fit:contain;}
+
+/* 0.15.4: in het TV-scherm geen kopregel, volle breedte */
+body.tv-mode header{display:none}body.tv-mode main{max-width:none;margin-top:12px}

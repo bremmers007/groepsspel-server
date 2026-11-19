@@ -104,3 +104,6 @@ details.filters{margin:8px 0}details.filters summary{cursor:pointer;font-weight:
 .wa-code{font-size:1.15em;letter-spacing:.04em;background:#25d36622;padding:2px 8px;border-radius:6px}
 .wa-badge{background:#25d3661c;border:1px solid #25d36655;border-radius:8px;padding:6px 10px;margin:6px 0}
 .roster-pick{margin:0 0 12px}.roster-pick .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.roster-pick button small{opacity:.7;margin-left:4px}
+
+/* 0.15.4: in het TV-scherm geen kopregel, volle breedte */
+body.tv-mode header{display:none}body.tv-mode main{max-width:none;margin-top:12px}

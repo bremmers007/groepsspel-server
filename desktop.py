@@ -16,7 +16,7 @@ import traceback
 import urllib.request
 import webbrowser
 
-APP_VERSION = '0.15.3'
+APP_VERSION = '0.15.4'
 APP_DIR = Path(__file__).resolve().parent
 # Embedded Python ignores script directories, PYTHONPATH and the working directory.
 # Trust only the installed app directory; never rely on the shortcut's working folder.
@@ -86,6 +86,73 @@ def open_app(url=None):
                         continue
     if not webbrowser.open(url):
         raise RuntimeError('Geen browser geopend. Open Edge of Chrome en ga naar ' + url)
+
+
+# ---------------------------------------------------------------- TV-scherm (0.15.4)
+# Een eigen venster zonder browserbalken, volledig scherm op de tweede monitor (tv via HDMI). Het venster
+# toont /tv: dat volgt vanzelf het spel dat op de spelleider-pc gestart wordt. Eigen browserprofiel, zodat
+# Edge/Chrome de vensterpositie en het volledige scherm echt toepassen; automatisch afspelen staat aan
+# zodat muziek en de presentator zonder klik klinken.
+def monitors():
+    """[(links, boven, breedte, hoogte, hoofdscherm)] van alle beeldschermen (alleen Windows)."""
+    if sys.platform != 'win32':
+        return []
+    from ctypes import wintypes
+    class MONITORINFO(ctypes.Structure):
+        _fields_ = [('cbSize', wintypes.DWORD), ('rcMonitor', wintypes.RECT), ('rcWork', wintypes.RECT), ('dwFlags', wintypes.DWORD)]
+    found = []
+    PROC = ctypes.WINFUNCTYPE(ctypes.c_int, wintypes.HMONITOR, wintypes.HDC, ctypes.POINTER(wintypes.RECT), wintypes.LPARAM)
+    def callback(handle, _dc, _rect, _data):
+        info = MONITORINFO(); info.cbSize = ctypes.sizeof(MONITORINFO)
+        if ctypes.windll.user32.GetMonitorInfoW(handle, ctypes.byref(info)):
+            r = info.rcMonitor
+            found.append((r.left, r.top, r.right - r.left, r.bottom - r.top, bool(info.dwFlags & 1)))
+        return 1
+    try:
+        ctypes.windll.user32.SetProcessDPIAware()
+        ctypes.windll.user32.EnumDisplayMonitors(None, None, PROC(callback), 0)
+    except Exception as error:
+        log('Beeldschermen opvragen mislukt: ' + str(error))
+    return found
+
+
+def tv_target(screens):
+    """Kies de tv: het eerste scherm dat niet het hoofdscherm is, anders het hoofdscherm."""
+    if not screens:
+        return None
+    others = [m for m in screens if not m[4]]
+    return (others or screens)[0]
+
+
+def tv_command(browser, url, screen, profile):
+    args = [str(browser), '--app=' + url, '--user-data-dir=' + str(profile), '--no-first-run', '--no-default-browser-check',
+            '--autoplay-policy=no-user-gesture-required', '--disable-features=Translate', '--start-fullscreen']
+    if screen:
+        left, top, width, height, _ = screen
+        args += [f'--window-position={left},{top}', f'--window-size={width},{height}']
+    return args
+
+
+def open_tv():
+    start_server()
+    url = URL + '/tv'
+    screen = tv_target(monitors())
+    log('TV-scherm openen op ' + (f'{screen[2]}x{screen[3]} op {screen[0]},{screen[1]}' if screen else 'het standaardscherm'))
+    if sys.platform == 'win32':
+        roots = [os.environ.get(name) for name in ('PROGRAMFILES(X86)', 'PROGRAMFILES', 'LOCALAPPDATA')]
+        for suffix in ('Microsoft/Edge/Application/msedge.exe', 'Google/Chrome/Application/chrome.exe'):
+            for root in filter(None, roots):
+                browser = Path(root) / suffix
+                if browser.is_file():
+                    try:
+                        profile = data_dir() / 'tv-scherm'
+                        profile.mkdir(parents=True, exist_ok=True)
+                        subprocess.Popen(tv_command(browser, url, screen, profile), creationflags=NO_WINDOW)
+                        return
+                    except OSError:
+                        continue
+    if not webbrowser.open(url):
+        raise RuntimeError('Geen browser gevonden. Open ' + url + ' in Edge of Chrome en druk op F11.')
 
 
 def load_host():
@@ -186,6 +253,15 @@ def launch():
         log('Bestaande spelserver openen')
         open_app()
         return
+    start_server()
+    log('Server bereikbaar; appvenster openen')
+    open_app()
+
+
+def start_server():
+    """Start de spelserver op de achtergrond en wacht tot hij antwoordt."""
+    if alive():
+        return
     validate_app()
     executable = Path(sys.executable)
     if sys.platform == 'win32':
@@ -196,13 +272,10 @@ def launch():
     deadline = time.monotonic() + 12
     while time.monotonic() < deadline:
         if alive():
-            log('Server bereikbaar; appvenster openen')
-            open_app()
             return
         if child.poll() is not None:
             # Another simultaneous launcher may already own the server port.
             if alive():
-                open_app()
                 return
             raise RuntimeError('De spelserver stopte tijdens het starten. Zie startup.log voor de oorzaak.')
         time.sleep(.15)
@@ -353,6 +426,7 @@ def main():
     mode.add_argument('--diagnose', action='store_true')
     mode.add_argument('--mobiel', action='store_true', help='Spelen via mobiel internet (tunnel + spelkamers)')
     mode.add_argument('--serve-online', metavar='URL')
+    mode.add_argument('--tv', action='store_true', help='TV-scherm openen op de tweede monitor')
     parser.add_argument('--port', type=int, default=8765)
     args = parser.parse_args()
     PORT = args.port
@@ -365,6 +439,8 @@ def main():
         mobile()
     elif args.serve_online:
         serve_online(args.serve_online)
+    elif args.tv:
+        open_tv()
     elif args.diagnose:
         validate_app()
         print('Groepsspel ' + APP_VERSION + ': appbestanden en server-import in orde. Log: ' + str(data_dir() / 'startup.log'))

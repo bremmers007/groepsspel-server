@@ -3,7 +3,7 @@
 (function(){
 'use strict';
 const phone='Eigen telefoons · spelserver (pc of online)';
-Object.assign(GAME_REVIEW.missions,{status:'beta',mode:phone,done:'Geheime missie op de eigen telefoon, bevestiging door het slachtoffer of de spelleider, ontmaskeren met drie opties, wisselen, ranglijst en onthulling op de beamer. 48 missies in drie moeilijkheden. Zonder server: één apparaat doorgeven.',todo:'Praktijktest tijdens een weekend.'});
+Object.assign(GAME_REVIEW.missions,{status:'beta',mode:phone,done:'Geheime missie op de eigen telefoon, bevestiging door het slachtoffer of de spelleider, ontmaskeren met drie opties, wisselen, ranglijst en onthulling op de beamer. 72 missies in drie moeilijkheden. Zonder server: één apparaat doorgeven.',todo:'Praktijktest tijdens een weekend.'});
 Object.assign(GAME_REVIEW.hunted,{status:'beta',mode:phone+' · offline',done:'Jagers en vluchtteams op eigen telefoons, postcodes en vangcodes (ook zonder wifi), pings met laatste post of vrijwillig gedeelde locatie, meldingen van de spelleider, extractie en uitslag.',todo:'Veldtest. Locatie delen werkt alleen via https (online spelserver of mobiel internet).'});
 Object.assign(GAME_REVIEW.musicbingo,{status:'beta',mode:phone,done:'Eigen bingokaart per team op de telefoon (3×3 tot 5×5), DJ-console met zoeklinks, titel op de beamer, servercontrole van rij en volle kaart, valse bingo met strafpunten.',todo:'Muziek speelt via jullie eigen app; praktijktest met speakers.'});
 const insp=title=>GAMES.find(g=>g.inspired&&(title===g.name||String(title).startsWith(g.name+' ')));

@@ -1,5 +1,5 @@
 """Groepsspel local host. Python standard library only; no internet needed for play."""
-import argparse, base64, copy, ipaddress, json, mimetypes, os, secrets, socket, threading, time, uuid, webbrowser, unicodedata, random
+import argparse, base64, copy, ipaddress, json, mimetypes, os, secrets, socket, threading, time, uuid, webbrowser, unicodedata, random, sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
@@ -20,7 +20,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.15.3'
+VERSION='0.15.4'
 _SHARED={}
 def shared_json(name):
     """Grote inhoudsbestanden één keer inlezen; de spellen kopiëren wat ze trekken."""
@@ -95,6 +95,9 @@ def validate_tasks(items):
         out.append(task)
     return out
 
+# 0.15.4: personages voor de teams (eigen keuze bij het aansluiten); plaatjes staan in pwa/assets/avatars.
+AVATARS=['lion','fox','panda','frog','monkey','unicorn','octopus','robot','alien','dino','penguin','owl','koala','pig','tiger','cow']
+
 class Game:
     def __init__(self, directory, packs=None, tasks=None, clock=None):
         self.directory=Path(directory); self.directory.mkdir(parents=True,exist_ok=True)
@@ -111,6 +114,7 @@ class Game:
         self.phone = PhoneShow(self, shared_json('show-content.json'))
         self.traitors = Traitors(self, shared_json('traitors-missions.json'))
         self.games = {cls.gid: cls(self) for cls in GAME_CLASSES}
+        self.tv = {'path': '', 'at': 0, 'stage': None, 'stage_sig': '', 'stage_at': 0}   # 0.15.4: wat het TV-scherm toont
     # ------------------------------------------------------------- 0.15: koppeling met 'Mijn groep' in de app
     def set_roster(self, data):
         """De spelleider deelt de groep uit de app: namen en teams. Spelers kiezen hun naam op de telefoon."""
@@ -168,6 +172,20 @@ class Game:
                 out.append({'gid':'verraders','name':'Het Verraad','phase':PHASE_NL.get(t.get('phase'),str(t.get('phase'))),'players':len(t['players']),'path':'/verraders'})
         return out
 
+    def tv_focus(self, path):
+        """Het TV-scherm volgt het spel waarin de spelleider het laatst iets deed."""
+        with self.lock: self.tv.update(path=path, at=self.clock())
+    def tv_stage(self, packet):
+        if not isinstance(packet, dict): raise GameError('Ongeldige invoer.')
+        raw = json.dumps(packet, ensure_ascii=False)
+        if len(raw) > 200000: raise GameError('Te groot.', 413)
+        sig = json.dumps({k: packet.get(k) for k in ('game', 'phase', 'title', 'prompt', 'active', 'running', 'board')}, ensure_ascii=False, sort_keys=True)
+        with self.lock:
+            self.tv['stage'] = packet; self.tv['stage_at'] = self.clock()
+            if sig != self.tv['stage_sig']: self.tv.update(stage_sig=sig, path='/app/?tv=1#stage', at=self.clock())
+        return {'ok': True}
+    def tv_view(self):
+        with self.lock: return {'path': self.tv['path'], 'at': self.tv['at'], 'server_time': self.clock()}
     def _save(self):
         temp=self.file.with_suffix('.tmp'); temp.write_text(json.dumps(self.s,ensure_ascii=False),'utf-8'); os.replace(temp,self.file)
     def host(self, key):
@@ -185,9 +203,201 @@ class Game:
             self.s['phase']='paused'; self.s['message']='Verbinding met een team weggevallen. Ronde gepauzeerd.'; self._save()
         if self.s['phase']=='countdown' and now>=self.s['opens_at']: self.s['phase']='open'
         if self.s['phase']=='open' and self.s['mode'] in ('quiz','wordrace') and now>=self.s['ends_at']: self._reveal()
+        if self.s.get('auto') and self.s['mode']=='buzzer': self._auto_tick(now)
+    # ------------------------------------------------------------- 0.15.4: automatische spelshow (Buzzerquiz)
+    AUTO_TYPES = {
+        'jacht': {'name': 'Puntenjacht', 'seconds': 20, 'mode': 'all'},
+        'snel': {'name': 'Snelste vinger', 'seconds': 15, 'mode': 'all'},
+        'buzz': {'name': 'Buzzerrace', 'seconds': 20, 'mode': 'buzz'},
+        'taart': {'name': 'Taartgooien', 'seconds': 20, 'mode': 'all', 'pick': 'pie'},
+        'roof': {'name': 'Puntenroof', 'seconds': 20, 'mode': 'all', 'pick': 'steal'},
+        'bom': {'name': 'De bom', 'seconds': 15, 'mode': 'bomb'},
+        'finale': {'name': 'Finale', 'seconds': 15, 'mode': 'all'},
+    }
+    AUTO_SHOWS = {'kort': ['jacht', 'taart', 'finale'], 'normaal': ['jacht', 'snel', 'taart', 'roof', 'finale'],
+                  'lang': ['jacht', 'snel', 'buzz', 'taart', 'roof', 'bom', 'finale']}
+    AUTO_STEP = {'round': 7, 'reveal': 6, 'standings': 8, 'pick': 12, 'bomb': 3}
+    def _auto_plan(self, count, show):
+        kinds = self.AUTO_SHOWS[show]; n = len(kinds); out, start = [], 0
+        for i, kind in enumerate(kinds):
+            size = count // n + (i < count % n); info = self.AUTO_TYPES[kind]
+            out.append({'type': kind, 'name': info['name'], 'mode': info['mode'], 'seconds': info['seconds'], 'from': start, 'to': start + size}); start += size
+        return out
+    def _auto_round(self):
+        a = self.s['auto']; i = a.get('round', 0)
+        return a['rounds'][min(i, len(a['rounds']) - 1)]
+    def _active(self): return [t for t in self.s['teams'] if not t.get('spectator')]
+    def _team(self, tid): return next((t for t in self.s['teams'] if t['id'] == tid), None)
+    def _auto_question(self, now):
+        s = self.s; a = s['auto']; r = self._auto_round()
+        s['index'] += 1
+        s.setdefault('seen_questions', []).append(s['deck'][s['index']]['q']); s['seen_questions'] = s['seen_questions'][-10000:]
+        s.update(question=copy.deepcopy(s['deck'][s['index']]), question_id=str(uuid.uuid4()), phase='countdown', answers={}, buzzes=[], attempted=[],
+                 opens_at=now + 3, ends_at=now + 3 + r['seconds'], seconds=r['seconds'], remaining=r['seconds'],
+                 message=f"Vraag {s['index'] - r['from'] + 1} van {r['to'] - r['from']} · {r['name']}")
+        a.update(until=0, answer_until=0, answer_ms={}, results=[], effect=None, pick=None, tick_at=now)
+    def _auto_start_round(self, now):
+        s = self.s; a = s['auto']; r = self._auto_round()
+        s.update(phase='round', question=None, message=f"Ronde {a['round'] + 1}: {r['name']}")
+        a.update(until=now + self.AUTO_STEP['round'], results=[], effect=None, pick=None, bomb=None)
+        if r['mode'] == 'bomb':
+            act = sorted(self._active(), key=lambda t: (t['score'], t['name']))
+            a['bomb'] = {'holder': act[0]['id'] if act else None, 'fuse': random.uniform(35, 60), 'boom': False}
+    def _auto_advance(self, now):
+        s = self.s; a = s['auto']; r = self._auto_round()
+        if r['mode'] == 'bomb' and a.get('bomb') and not a['bomb']['boom'] and s['index'] + 1 >= r['to']:
+            self._auto_explode(now); return
+        if s['index'] + 1 < r['to'] and not (r['mode'] == 'bomb' and (a.get('bomb') or {}).get('boom')): self._auto_question(now); return
+        if a['round'] + 1 >= len(a['rounds']):
+            s.update(phase='finished', question=None, message='Einde van de show! Bekijk de eindstand.'); a['until'] = 0; return
+        s.update(phase='standings', question=None, message='Tussenstand'); a['until'] = now + self.AUTO_STEP['standings']
+    def _auto_explode(self, now):
+        s = self.s; a = s['auto']; b = a['bomb']; t = self._team(b['holder'])
+        b['boom'] = True
+        if t: t['score'] = max(0, t['score'] - 3)
+        a['effect'] = {'kind': 'boom', 'to': b['holder'], 'points': 3}
+        s.update(phase='reveal', message=(f"BOEM! {t['name']} verliest 3 punten." if t else 'BOEM!')); a['until'] = now + self.AUTO_STEP['reveal']
+    def _auto_tick(self, now):
+        s = self.s; a = s['auto']; ph = s['phase']; changed = False
+        if a.get('hold') or ph in ('lobby', 'finished'): return
+        r = self._auto_round(); last = a.get('tick_at') or now; a['tick_at'] = now
+        if ph == 'paused':
+            if all(self._connected(t) for t in self._active()):
+                if s['buzzes']: s['phase'] = 'buzzed'; a['answer_until'] = now + 10; s['message'] = s['buzzes'][0]['name'] + ' kiest een antwoord.'
+                else: s.update(phase='countdown', opens_at=now + 3, ends_at=now + 3 + max(3, s['remaining']), message='Iedereen is er weer. We gaan verder!')
+                changed = True
+        elif ph == 'ready':
+            s.update(phase='countdown', opens_at=now + 3, ends_at=now + 3 + s['seconds']); changed = True
+        elif ph == 'open':
+            if r['mode'] == 'bomb' and a.get('bomb'):
+                a['bomb']['fuse'] -= max(0, now - last)
+                if a['bomb']['fuse'] <= 0: self._auto_explode(now); changed = True
+                elif now >= s['ends_at']: self._auto_bomb_answer(None, now); changed = True
+            elif now >= s['ends_at']:
+                if r['mode'] == 'all': self._auto_score_all(now)
+                else: self._reveal(); s['message'] = 'De tijd is om!'
+                changed = True
+        elif ph == 'buzzed' and a.get('answer_until') and now >= a['answer_until']:
+            self._auto_judge(s['buzzes'][0]['team_id'], None, now); changed = True
+        elif ph == 'pick' and a.get('pick') and now >= a['pick']['until']:
+            others = sorted([t for t in self._active() if t['id'] != a['pick']['team_id']], key=lambda t: -t['score'])
+            self._auto_pick(others[0]['id'] if others else None, now); changed = True
+        elif ph == 'reveal':
+            if not a.get('until'): a['until'] = now + self.AUTO_STEP['reveal']; changed = True
+            elif now >= a['until']: self._auto_advance(now); changed = True
+        elif ph == 'round' and now >= a.get('until', 0):
+            self._auto_question(now); changed = True
+        elif ph == 'standings' and now >= a.get('until', 0):
+            a['round'] += 1; self._auto_start_round(now); changed = True
+        if changed: s['revision'] += 1; self._save()
+    def _auto_score_all(self, now):
+        """Iedereen heeft geantwoord of de tijd is om: punten volgens het soort ronde."""
+        s = self.s; a = s['auto']; r = self._auto_round(); q = s['question'] or {}; kind = r['type']
+        ms = a.get('answer_ms', {}); results = []
+        correct = sorted([tid for tid, c in s['answers'].items() if c == q.get('correct')], key=lambda tid: ms.get(tid, 10**9))
+        for t in self._active():
+            c = s['answers'].get(t['id']); ok = t['id'] in correct; rank = correct.index(t['id']) + 1 if ok else 0; pts = 0
+            if kind == 'jacht': pts = 2 if ok else 0
+            elif kind == 'snel': pts = max(1, 6 - rank) if ok else 0
+            elif kind in ('taart', 'roof'): pts = 1 if ok else 0
+            elif kind == 'finale': pts = (3 if rank == 1 else 2) if ok else (-2 if c is not None else -1)
+            before = t['score']; t['score'] = max(0, t['score'] + pts)
+            results.append({'team_id': t['id'], 'choice': c, 'correct': ok, 'rank': rank, 'points': t['score'] - before, 'ms': ms.get(t['id'])})
+        a['results'] = results
+        winner = correct[0] if correct else None
+        if self.AUTO_TYPES[kind].get('pick') and winner and len(self._active()) >= 2:
+            w = self._team(winner)
+            a['pick'] = {'team_id': winner, 'until': now + self.AUTO_STEP['pick'], 'kind': self.AUTO_TYPES[kind]['pick']}
+            s.update(phase='pick', message=(f"{w['name']} mag een taart gooien!" if kind == 'taart' else f"{w['name']} mag punten stelen!"))
+            return
+        s['phase'] = 'reveal'; a['until'] = now + self.AUTO_STEP['reveal']
+        s['message'] = (f"Goed: {', '.join(self._team(t)['name'] for t in correct)}" if correct else 'Niemand had het goed.')
+    def _auto_pick(self, target, now):
+        s = self.s; a = s['auto']; p = a['pick']; w = self._team(p['team_id']); t = self._team(target)
+        if t and w and t['id'] != w['id']:
+            if p['kind'] == 'pie':
+                lost = min(2, t['score']); t['score'] -= lost
+                a['effect'] = {'kind': 'pie', 'from': w['id'], 'to': t['id'], 'points': lost}
+                s['message'] = f"Pats! {w['name']} gooit een taart naar {t['name']}."
+            else:
+                stolen = min(2, t['score']); t['score'] -= stolen; w['score'] += stolen
+                a['effect'] = {'kind': 'steal', 'from': w['id'], 'to': t['id'], 'points': stolen}
+                s['message'] = f"{w['name']} steelt punten van {t['name']}!"
+        a['pick'] = None; s['phase'] = 'reveal'; a['until'] = now + self.AUTO_STEP['reveal']
+    def _auto_bomb_answer(self, choice, now):
+        s = self.s; a = s['auto']; b = a['bomb']; q = s['question'] or {}; t = self._team(b['holder'])
+        ok = choice is not None and choice == q.get('correct')
+        if choice is not None: s['answers'][b['holder']] = choice
+        a['results'] = [{'team_id': b['holder'], 'choice': choice, 'correct': ok, 'rank': 1 if ok else 0, 'points': 1 if ok else 0}]
+        if ok and t:
+            t['score'] += 1; act = self._active(); ids = [x['id'] for x in act]
+            nxt = ids[(ids.index(b['holder']) + 1) % len(ids)] if b['holder'] in ids else ids[0]
+            b['holder'] = nxt; s['message'] = f"Goed! De bom gaat naar {self._team(nxt)['name']}."
+        else:
+            s['message'] = ('Te laat! ' if choice is None else 'Fout! ') + (f"{t['name']} houdt de bom." if t else '')
+        s['phase'] = 'reveal'; a['until'] = now + self.AUTO_STEP['bomb']
+    def _auto_judge(self, team_id, choice, now):
+        """Buzzerrace: het eerste team dat drukte, kiest een antwoord."""
+        s = self.s; a = s['auto']; q = s['question'] or {}
+        t = self._team(team_id)
+        if t is None: return
+        if choice is not None: s['answers'][team_id] = choice
+        correct = choice is not None and choice == q.get('correct')
+        if correct:
+            t['score'] += 2; s['phase'] = 'reveal'; a['until'] = now + self.AUTO_STEP['reveal']
+            a['results'] = [{'team_id': team_id, 'choice': choice, 'correct': True, 'rank': 1, 'points': 2}]
+            s['message'] = f"Goed! {t['name']} krijgt 2 punten."
+            return
+        before = t['score']; t['score'] = max(0, t['score'] - 1)
+        a['results'] = (a.get('results') or []) + [{'team_id': team_id, 'choice': choice, 'correct': False, 'rank': 0, 'points': t['score'] - before}]
+        s['attempted'].append(team_id); s['buzzes'] = []; a['answer_until'] = 0
+        others = [x for x in self._active() if x['id'] not in s['attempted']]
+        if not others:
+            self._reveal(); a['until'] = now + self.AUTO_STEP['reveal']; s['message'] = ('Te laat! ' if choice is None else 'Fout! ') + 'Niemand heeft het goed.'
+        else:
+            s.update(phase='open', ends_at=now + max(3, s['remaining']), message=('Te laat! ' if choice is None else 'Fout! ') + 'De andere teams mogen nog buzzen.')
+    def auto_answer(self, t, data):
+        """Antwoord van een telefoon in de automatische show (keuze of taart-/roofdoelwit)."""
+        s = self.s; a = s['auto']; r = self._auto_round(); now = self.clock()
+        if s['phase'] == 'pick':
+            if not a.get('pick') or a['pick']['team_id'] != t['id']: raise GameError('Een ander team mag kiezen.', 403)
+            target = data.get('target')
+            if not any(x['id'] == target for x in self._active()) or target == t['id']: raise GameError('Kies een ander team.')
+            self._auto_pick(target, now); return
+        choice = data.get('choice')
+        if type(choice) is not int or not 0 <= choice <= 3: raise GameError('Kies A, B, C of D.')
+        if r['mode'] == 'buzz':
+            if s['phase'] != 'buzzed' or not s['buzzes'] or s['buzzes'][0]['team_id'] != t['id']: raise GameError('Een ander team is aan de beurt.', 403)
+            self._auto_judge(t['id'], choice, now); return
+        if s['phase'] != 'open': raise GameError('Antwoorden zijn nu gesloten.', 409)
+        if r['mode'] == 'bomb':
+            if not a.get('bomb') or a['bomb']['holder'] != t['id']: raise GameError('Alleen het team met de bom antwoordt.', 403)
+            self._auto_bomb_answer(choice, now); return
+        if t['id'] in s['answers']: raise GameError('Jullie antwoord is al opgeslagen.', 409)
+        s['answers'][t['id']] = choice; a.setdefault('answer_ms', {})[t['id']] = round((now - s['opens_at']) * 1000)
+        if all(x['id'] in s['answers'] for x in self._active()): self._auto_score_all(now)
+    def auto_view(self, me=None):
+        s = self.s; a = s['auto']; r = self._auto_round()
+        out = {'round': a['round'] + 1, 'rounds': len(a['rounds']), 'type': r['type'], 'mode': r['mode'], 'name': r['name'],
+               'until': a.get('until', 0), 'answer_until': a.get('answer_until', 0), 'hold': bool(a.get('hold')),
+               'question_no': max(0, s['index'] - r['from'] + 1), 'questions': r['to'] - r['from'],
+               'names': [x['name'] for x in a['rounds']], 'types': [x['type'] for x in a['rounds']],
+               'answered': [tid for tid in s['answers']] if r['mode'] == 'all' else [],
+               'effect': copy.deepcopy(a.get('effect')), 'pick': copy.deepcopy(a.get('pick'))}
+        if s['phase'] in ('reveal', 'pick') or (r['mode'] == 'buzz' and a.get('results')): out['results'] = copy.deepcopy(a.get('results') or [])
+        b = a.get('bomb')
+        if b: out['bomb'] = {'holder': b['holder'], 'boom': b['boom'], 'hurry': (not b['boom']) and b['fuse'] < 12}
+        if me:
+            mine = {}
+            if s['phase'] == 'open' and r['mode'] == 'all' and me['id'] not in s['answers'] and not me.get('spectator'): mine['can_answer'] = True
+            if s['phase'] == 'open' and r['mode'] == 'bomb' and b and b['holder'] == me['id']: mine['can_answer'] = True
+            if s['phase'] == 'buzzed' and s['buzzes'] and s['buzzes'][0]['team_id'] == me['id']: mine['can_answer'] = True
+            if s['phase'] == 'pick' and a.get('pick') and a['pick']['team_id'] == me['id']: mine['must_pick'] = a['pick']['kind']
+            out['me'] = mine
+        return out
     def _public_team(self,t):
         city=sum(x.get('points',0) for x in self.s['submissions'].values() if x['team_id']==t['id'] and x['status']=='approved')
-        return {'id':t['id'],'name':t['name'],'score':t['score']+city,'connected':self._connected(t),'spectator':bool(t.get('spectator'))}
+        return {'id':t['id'],'name':t['name'],'score':t['score']+city,'connected':self._connected(t),'spectator':bool(t.get('spectator')),'avatar':t.get('avatar') or AVATARS[0]}
     def _reveal(self):
         if self.s['phase']=='reveal': return
         if self.s['mode']=='quiz' and self.s['question']:
@@ -216,6 +426,7 @@ class Game:
             if s['mode']=='wordrace':
                 result['active_team']=s.get('active_team'); result['word_marks']=copy.deepcopy(s.get('word_marks',{}))
                 if me and me['id']==s.get('active_team') and s['phase']=='open': result['private_words']=copy.deepcopy(s['question']['words'])
+            if s.get('auto') and s['mode']=='buzzer': result['auto']=self.auto_view(me)
             if me:
                 result['me']={**self._public_team(me),'access_code':me['access_code'],'answer':s['answers'].get(me['id']),'attempted':me['id'] in s['attempted']}
             if s['mode']=='city':
@@ -242,7 +453,8 @@ class Game:
             if self.s['mode']=='wordrace' and len(self.s['teams'])>=10: raise GameError('Halve Minuut speelt met maximaal tien teams.')
             if len(self.s['teams'])>=24: raise GameError('Maximaal 24 teams.')
             if any(t['name'].casefold()==name.casefold() for t in self.s['teams']): raise GameError('Die teamnaam bestaat al. Gebruik jullie teamcode om terug te komen.')
-            t={'id':str(uuid.uuid4()),'name':name,'token':secrets.token_urlsafe(24),'access_code':secrets.token_hex(3).upper(),'score':0,'last_seen':self.clock(),'spectator':False}
+            avatar=data.get('avatar') if data.get('avatar') in AVATARS else next((x for x in AVATARS if all(t.get('avatar')!=x for t in self.s['teams'])),AVATARS[0])
+            t={'id':str(uuid.uuid4()),'name':name,'token':secrets.token_urlsafe(24),'access_code':secrets.token_hex(3).upper(),'score':0,'last_seen':self.clock(),'spectator':False,'avatar':avatar}
             self.s['teams'].append(t); self._save(); return {'token':t['token'],'team_id':t['id']}
     def action(self,key,data):
         with self.lock:
@@ -281,12 +493,27 @@ class Game:
                 s['game_no']=s.get('game_no',0)+1
                 s.update(name=clean_text(data.get('name','Ons spel'),80) or 'Ons spel',mode=mode,evidence={'mode':'app','link':''},deck=deck,index=-1,question=None,question_id='',phase='lobby',answers={},buzzes=[],attempted=[],tasks=tasks,submissions={},claims={},seconds=seconds,message='Spel klaar. Laat teams aansluiten.')
                 s['active_team']=None; s['word_marks']={}
+                s['auto']=None
+                if mode=='buzzer' and data.get('auto'):
+                    show=data.get('show','normaal')
+                    if show not in self.AUTO_SHOWS: raise GameError('Kies een korte, normale of lange show.')
+                    choice_deck=[q for q in deck if q.get('options') and len(q['options'])==4 and isinstance(q.get('correct'),int)]
+                    if len(choice_deck)<len(self.AUTO_SHOWS[show])*2: raise GameError('De automatische show heeft meerkeuzevragen nodig (minimaal twee per ronde).')
+                    s['deck']=choice_deck
+                    s['auto']={'show':show,'rounds':self._auto_plan(len(choice_deck),show),'round':0,'until':0,'answer_until':0,'hold':False,'results':[],'effect':None,'pick':None,'bomb':None,'answer_ms':{}}
+                    s['message']='Automatische show klaar. Laat teams aansluiten en een personage kiezen.'
                 if mode=='wordrace': s['seconds']=30
                 for t in s['teams']: t['score']=0
             elif act=='evidence':
                 if s['mode']!='city': raise GameError('Bewijskanaal is alleen bij Stadskwis beschikbaar.')
                 try: s['evidence']=validate_evidence(data.get('mode','app'),data.get('link',''))
                 except PlayError as ex: raise GameError(ex.message)
+            elif act=='next' and s.get('auto') and s['mode']=='buzzer' and s['phase']=='lobby':
+                if len([t for t in s['teams'] if not t.get('spectator')])<2: raise GameError('Minimaal twee deelnemende teams nodig.')
+                if any(not self._connected(t) for t in s['teams'] if not t.get('spectator')): raise GameError('Wacht tot alle deelnemende teams verbonden zijn, of zet een afwezig team op toeschouwer.')
+                s['auto'].update(round=0,hold=False); s['index']=-1; self._auto_start_round(now)
+            elif act=='next' and s.get('auto') and s['mode']=='buzzer' and s['phase']=='reveal':
+                self._auto_advance(now)
             elif act=='next':
                 if s['phase'] not in ('lobby','reveal','finished'): raise GameError('Rond eerst de huidige vraag af.')
                 if s['mode']=='city': s.update(phase='city',message='De stadskwis is gestart.'); self._save(); return self.view(key,'host')
@@ -297,14 +524,22 @@ class Game:
                         active=[t for t in s['teams'] if not t.get('spectator')]; s['active_team']=active[(s['index']+1)%len(active)]['id']; s['word_marks']={}
                     s.setdefault('seen_questions',[]).append(s['deck'][s['index']+1]['q']); s['seen_questions']=s['seen_questions'][-10000:]
                     s['index']+=1; s.update(question=copy.deepcopy(s['deck'][s['index']]),question_id=str(uuid.uuid4()),phase='ready',answers={},buzzes=[],attempted=[],message='Vraag klaar. Controleer verbindingen en open de ronde.')
+            elif act=='resume' and s.get('auto') and s['auto'].get('hold') and s['phase']!='paused':
+                s['auto']['hold']=False; s['message']='We gaan verder!'
+                if s['auto'].get('until'): s['auto']['until']=now+3
             elif act in ('arm','resume'):
                 if s['phase'] not in ('ready','paused'): raise GameError('Deze ronde kan nu niet geopend worden.')
                 if any(not self._connected(t) for t in s['teams'] if not t.get('spectator')): raise GameError('Wacht tot alle deelnemende teams verbonden zijn, of zet een afwezig team op toeschouwer.')
-                if act=='resume' and s['buzzes']: s['phase']='buzzed'; s['message']='Buzzerstand hersteld. Beoordeel het antwoord.'
+                if s.get('auto'): s['auto']['hold']=False
+                if act=='resume' and s['buzzes']:
+                    s['phase']='buzzed'; s['message']='Buzzerstand hersteld. Beoordeel het antwoord.'
+                    if s.get('auto'): s['auto']['answer_until']=now+10; s['message']=s['buzzes'][0]['name']+' kiest een antwoord.'
                 else:
                     seconds=s['remaining'] if act=='resume' else s['seconds']; s.update(phase='countdown',opens_at=now+5,ends_at=now+5+seconds,message='Klaar voor de start…')
             elif act=='pause':
+                if s.get('auto'): s['auto']['hold']=True
                 if s['phase'] in ('countdown','open','buzzed'): s['remaining']=max(0,s['ends_at']-max(now,s['opens_at'])); s['phase']='paused'; s['message']='Gepauzeerd door de spelleider.'
+                elif s.get('auto'): s['message']='Gepauzeerd door de spelleider.'
             elif act=='reveal':
                 if s['phase'] not in ('open','buzzed','paused','ready'): raise GameError('Geen actieve vraag om te onthullen.')
                 self._reveal()
@@ -354,11 +589,20 @@ class Game:
             t=self.team(key); t['last_seen']=self.clock(); self._check(); s=self.s
             if data.get('question_id')!=s['question_id']: raise GameError('Deze vraag is niet meer actief.',409)
             if t.get('spectator'): raise GameError('Dit team kijkt mee en speelt niet mee.',403)
+            if 'avatar' in data and s['phase'] in ('lobby','finished'):
+                if data['avatar'] not in AVATARS: raise GameError('Onbekend personage.')
+                t['avatar']=data['avatar']; s['revision']+=1; self._save(); return self.view(key,'team')
+            if s.get('auto') and s['mode']=='buzzer' and ('choice' in data or 'target' in data):
+                self.auto_answer(t,data); s['revision']+=1; self._save(); return self.view(key,'team')
+            if s.get('auto') and s['mode']=='buzzer' and self._auto_round()['mode']!='buzz': raise GameError('Kies een antwoord op je telefoon.',409)
             if s['phase']!='open': raise GameError('Antwoorden zijn nu gesloten.',409)
             if s['mode']=='buzzer':
                 if t['id'] in s['attempted']: raise GameError('Dit team heeft al geantwoord.',409)
                 s['buzzes'].append({'team_id':t['id'],'name':t['name'],'ms':round(self.clock()*1000)})
                 s['phase']='buzzed'; s['message']=t['name']+' drukte als eerste.'
+                if s.get('auto'):
+                    now=self.clock(); s['remaining']=max(0,s['ends_at']-now); s['auto']['answer_until']=now+10
+                    s['message']=t['name']+' drukte als eerste en kiest nu een antwoord.'
             elif s['mode']=='quiz':
                 q=s['question']; choice=data.get('choice')
                 if 'options' in q:
@@ -451,7 +695,7 @@ class Handler(BaseHTTPRequestHandler):
         if not g: raise GameError('Onbekend spel.',404)
         return g
     def send_web(self,name):
-        file=ROOT/'web'/name; data=file.read_bytes(); self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'"); self.end_headers(); self.wfile.write(data)
+        file=ROOT/'web'/name; data=file.read_bytes(); self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self'; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
     def send_file(self,file,mime):
         if not file.is_file(): raise GameError('Bestand ontbreekt.',404)
         size=file.stat().st_size; start=0; end=size-1; partial=False
@@ -538,6 +782,11 @@ class Handler(BaseHTTPRequestHandler):
             if path=='/api/team': return self.json_response(self.game.view(self.token(),'team'))
             if path=='/api/host': return self.json_response(self.game.view(self.token(),'host'))
             if path=='/api/ping': return self.json_response({'time':self.game.clock(),'product':'groepsspel','version':VERSION})
+            if path in ('/tv','/tv/'): return self.send_web('tv.html')
+            if path=='/tv.js': return self.send_web('tv.js')
+            if path=='/api/tv': return self.json_response(self.game.tv_view())
+            if path=='/api/lan': return self.json_response({'urls':getattr(self.server,'lan_urls',[])})
+            if path=='/api/stage': return self.json_response({'stage':self.game.tv['stage'],'at':self.game.tv['stage_at']})
             if path=='/api/export':
                 self.game.host(self.token()); result=self.game.view(self.token(),'host'); result['exported_at']=time.time(); return self.json_response(result)
             if path.startswith('/media/'):
@@ -557,7 +806,7 @@ class Handler(BaseHTTPRequestHandler):
                 data=file.read_bytes(); self.send_response(200); self.send_header('Content-Type','application/manifest+json' if file.suffix=='.webmanifest' else mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-cache'); self.send_header('X-Content-Type-Options','nosniff'); self.end_headers(); self.wfile.write(data); return
             files={'/verraders':'traitors.html','/verraders/':'traitors.html','/verraders/speler':'traitors.html','/verraders/scherm':'traitors.html','/traitors.js':'traitors.js','/traitors.css':'traitors.css','/shows':'phone-shows.html','/controller':'phone-shows.html','/screen':'phone-shows.html','/phone-shows.js':'phone-shows.js','/show-style.css':'style.css','/phone-shows.css':'phone-shows.css','/':'index.html','/host':'index.html','/team':'index.html','/display':'index.html','/app.js':'app.js','/style.css':'style.css','/qr.js':'qr.js','/icon.svg':'icon.svg'}
             if path not in files: raise GameError('Pagina niet gevonden.',404)
-            file=ROOT/'web'/files[path]; data=file.read_bytes(); self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'"); self.end_headers(); self.wfile.write(data)
+            file=ROOT/'web'/files[path]; data=file.read_bytes(); self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
         except (GameError,ShowError,TraitorsError,PlayError) as e: self.json_response({'error':e.message},e.status)
         except (BrokenPipeError,ConnectionResetError): pass
     def do_POST(self):
@@ -603,6 +852,7 @@ class Handler(BaseHTTPRequestHandler):
             if m:
                 g=self.spel(m[1]); kind=m[2]
                 result=g.join(data) if kind=='join' else g.host_request(self.token(),data) if kind=='host' else g.player_request(self.token(),data) if kind=='player' else g.sync(self.token(),data)
+                if kind=='host': self.game.tv_focus(f'/spel/{m[1]}/scherm')
             elif path=='/api/groep':
                 self.game.host(self.token()); result=self.game.set_roster(data)
             elif path=='/api/taal':
@@ -610,15 +860,21 @@ class Handler(BaseHTTPRequestHandler):
                 result={'ok':False,'lang':i18n.valid(self.game.s.get('lang','nl'))}
                 if self.may_manage(): result={'ok':True,'lang':self.game.set_lang(data.get('lang'))}
             elif path=='/api/traitors/join': result=self.game.traitors.join(data)
-            elif path=='/api/traitors/host': result=self.game.traitors.host_request(self.token(),data)
+            elif path=='/api/traitors/host': result=self.game.traitors.host_request(self.token(),data); self.game.tv_focus('/verraders/scherm')
             elif path=='/api/traitors/player': result=self.game.traitors.player_action(self.token(),data)
             elif path=='/api/show/join': result=self.game.phone.join(data)
-            elif path=='/api/show/action': result=self.game.phone.action(self.token(),data)
+            elif path=='/api/show/action': result=self.game.phone.action(self.token(),data); self.game.tv_focus('/screen')
             elif path=='/api/desktop-stop':
                 if self.client_address[0] not in ('127.0.0.1','::1'): raise GameError('Afsluiten kan alleen op de server-pc.',403)
                 self.game.host(self.token()); result={'stopped':True}; threading.Timer(.2,self.server.shutdown).start()
+            elif path=='/api/stage':
+                if self.client_address[0] not in ('127.0.0.1','::1'): raise GameError('Alleen vanaf de spelleider-pc.',403)
+                result=self.game.tv_stage(data.get('stage'))
+            elif path=='/api/open-tv':
+                if self.client_address[0] not in ('127.0.0.1','::1'): raise GameError('Alleen vanaf de spelleider-pc.',403)
+                result=open_tv_window()
             elif path=='/api/join': result=self.game.join(data)
-            elif path=='/api/action': result=self.game.action(self.token(),data)
+            elif path=='/api/action': result=self.game.action(self.token(),data); self.game.tv_focus('/display')
             elif path=='/api/answer': result=self.game.late_buzz(self.token(),data)
             elif path=='/api/claim': result=self.game.claim(self.token(),data)
             elif path=='/api/submit': result=self.game.submit(self.token(),data)
@@ -627,6 +883,15 @@ class Handler(BaseHTTPRequestHandler):
         except (GameError,ShowError,TraitorsError,PlayError) as e: self.json_response({'error':e.message},e.status)
         except (ValueError,TypeError,KeyError): self.json_response({'error':'Ongeldige invoer.'},400)
         except (BrokenPipeError,ConnectionResetError): pass
+
+def open_tv_window():
+    """0.15.4: het TV-scherm openen als apart venster op de tweede monitor (Windows-app)."""
+    desktop=ROOT/'desktop.py'
+    if sys.platform!='win32' or not desktop.is_file(): return {'ok':False,'url':'/tv'}
+    exe=Path(sys.executable); exe=exe.with_name('pythonw.exe') if exe.with_name('pythonw.exe').is_file() else exe
+    import subprocess
+    subprocess.Popen([str(exe),'-I','-S','-X','utf8',str(desktop),'--tv'],cwd=str(ROOT),creationflags=0x08000000,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+    return {'ok':True,'url':'/tv'}
 
 def local_addresses(port):
     """Adressen waarop telefoons de pc kunnen bereiken. 0.15.3: het adres van de standaardroute (de echte
