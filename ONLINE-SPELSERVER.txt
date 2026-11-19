@@ -1,4 +1,4 @@
-GROEPSSPEL 0.15.4 · ONLINE SPELSERVER (TELEFOONSPELLEN ZONDER PC)
+GROEPSSPEL 0.15.5 · ONLINE SPELSERVER (TELEFOONSPELLEN ZONDER PC)
 
 WAT IS HET?
 Dezelfde spelserver als in de Windows-app, maar dan op internet. Iedere groep maakt een eigen

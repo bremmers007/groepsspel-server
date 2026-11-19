@@ -31,3 +31,8 @@ cloudflared (Windows amd64), Cloudflare, Inc. — alleen voor 'Groepsspel via mo
 https://github.com/cloudflare/cloudflared · Apache License 2.0 · door Cloudflare, Inc. digitaal ondertekend.
 De tunnel gebruikt Cloudflare Quick Tunnels (trycloudflare.com): gratis, zonder account en zonder
 garantie op beschikbaarheid. Het verkeer van de spelers loopt via Cloudflare.
+
+Three.js (r170) — MIT License, Copyright © 2010-2024 three.js authors. Gebundeld in pwa/gs-studio3d.js.
+Presentatormodel pwa/assets/models/presenter.glb — "RobotExpressive" door Tomás Laulhé (Quaternius), CC0 1.0;
+  gezichtsuitdrukkingen en glTF-conversie door Don McCurdy.
+Personages pwa/assets/avatars — Twemoji (jdecked/twemoji), CC BY 4.0.

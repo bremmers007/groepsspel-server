@@ -20,7 +20,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.15.4'
+VERSION='0.15.5'
 _SHARED={}
 def shared_json(name):
     """Grote inhoudsbestanden één keer inlezen; de spellen kopiëren wat ze trekken."""
@@ -214,7 +214,7 @@ class Game:
         'bom': {'name': 'De bom', 'seconds': 15, 'mode': 'bomb'},
         'finale': {'name': 'Finale', 'seconds': 15, 'mode': 'all'},
     }
-    AUTO_SHOWS = {'kort': ['jacht', 'taart', 'finale'], 'normaal': ['jacht', 'snel', 'taart', 'roof', 'finale'],
+    AUTO_SHOWS = {'kort': ['jacht', 'buzz', 'taart', 'finale'], 'normaal': ['jacht', 'snel', 'buzz', 'taart', 'roof', 'finale'],
                   'lang': ['jacht', 'snel', 'buzz', 'taart', 'roof', 'bom', 'finale']}
     AUTO_STEP = {'round': 7, 'reveal': 6, 'standings': 8, 'pick': 12, 'bomb': 3}
     def _auto_plan(self, count, show):

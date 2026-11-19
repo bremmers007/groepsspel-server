@@ -39,3 +39,38 @@
 /* 0.15.4: in het TV-scherm geen kopregel, volle breedte */
 body.tv-mode header{display:none}body.tv-mode main{max-width:none;margin-top:12px}
 .display-join{display:flex;gap:30px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left}.display-join .qr img{width:min(32vh,300px);height:auto}
+/* 0.15.5: 3D-spelshowstudio op het beamer-/TV-scherm; de bediening ligt als filmische laag over de studio */
+.gs-studio-canvas{position:fixed;inset:0;width:100vw!important;height:100vh!important;z-index:0;display:block}
+body.studio3d{overflow:hidden;background:#05060f}
+body.studio3d header{position:relative;z-index:3;background:linear-gradient(#05060fcc,transparent);border:0}
+body.studio3d main{position:relative;z-index:2;max-width:none;margin:0;padding:0 2vw;pointer-events:none}
+body.studio3d main *{pointer-events:auto}
+body.studio3d .auto-stage,body.studio3d .stage{background:transparent;border:0;box-shadow:none;padding:1vh 0}
+body.studio3d .auto-strip,body.studio3d .scores,body.studio3d .auto-stage>.banner{display:none}
+body.studio3d .auto-q{position:fixed;left:2vw;right:2vw;bottom:2vh;max-width:1500px;margin:0 auto;background:linear-gradient(180deg,rgba(6,8,26,.6),rgba(6,8,26,.88));border:1px solid #ffffff1f;border-radius:20px;padding:1.2vh 2vw 1.6vh;backdrop-filter:blur(8px);box-shadow:0 20px 60px rgba(0,0,0,.45)}
+body.studio3d .auto-q .counter{margin:0}
+body.studio3d .auto-q .question{font-size:clamp(22px,4vh,52px);margin:.3vh auto 1vh;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+body.studio3d .auto-options{grid-template-columns:repeat(4,1fr);margin:.6vh 0 0;gap:.8vw}
+body.studio3d .auto-opt{padding:1.1vh 1vw;font-size:clamp(15px,2.3vh,30px);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+body.studio3d .auto-bar{margin:1vh auto 0}
+body.studio3d .buzz-line,body.studio3d .bomb-line{margin:.6vh 0 0}
+body.studio3d .auto-card{max-width:900px;margin:0 auto;background:rgba(6,8,26,.72);border:1px solid #ffffff22;border-radius:22px;padding:2vh 2vw;backdrop-filter:blur(8px)}
+body.studio3d .round-card{position:fixed;left:50%;transform:translateX(-50%);top:11vh;width:min(900px,90vw);padding:1.2vh 2vw}
+body.studio3d .round-card .round-icon,body.studio3d .round-card .tiny{display:none}
+body.studio3d .round-card h1{font-size:clamp(28px,4.6vh,64px);margin:.1em 0}
+body.studio3d .round-card .round-rules{font-size:clamp(15px,2.2vh,28px)}
+body.studio3d .auto-card:not(.round-card){position:fixed;right:3vw;top:11vh;width:min(560px,44vw);text-align:left}
+body.studio3d .auto-card:not(.round-card) .winner .av.big{width:min(14vh,120px)}
+body.studio3d .timer{position:fixed;right:3vw;top:12vh;z-index:3;font-size:clamp(40px,8vh,110px);text-shadow:0 0 30px #3fd0ff}
+body.studio3d .stage>p:first-child{display:none}
+body.studio3d .display-join{margin:8vh 0 0 auto;max-width:640px;background:rgba(6,8,26,.75);border:1px solid #ffffff22;border-radius:22px;padding:2vh 2vw;backdrop-filter:blur(8px)}
+body.studio3d .stage>h1{text-align:right;margin:8vh 2vw 0 auto;max-width:900px;text-shadow:0 4px 20px #000}
+body.studio3d.cinema::before,body.studio3d.cinema::after{content:"";position:fixed;left:0;right:0;height:9vh;background:#000;z-index:4;animation:cine-in .6s ease-out}
+body.studio3d.cinema::before{top:0}body.studio3d.cinema::after{bottom:0}
+body.studio3d.tv-mode main{padding-top:2vh}
+@keyframes cine-in{from{height:0}}
+/* rode buzzer op de telefoon */
+.buzzer{background:radial-gradient(circle at 38% 30%,#ff8a8a,#e3141e 58%,#7a0006);border-color:#ffb3b3;box-shadow:0 0 0 9px #3a0a0f,0 14px 0 #14060a,0 0 40px #ff2a2a55}
+.buzzer.live{border-color:#fff1c2;animation:buzz-live 1s ease-in-out infinite}
+.buzzer:active{transform:translateY(6px);box-shadow:0 0 0 9px #3a0a0f,0 6px 0 #14060a,0 0 60px #ff2a2a99}
+@keyframes buzz-live{50%{box-shadow:0 0 0 9px #3a0a0f,0 14px 0 #14060a,0 0 70px #ff2a2aaa}}
