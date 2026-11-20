@@ -1,3 +1,9 @@
 presenter.glb = "RobotExpressive" by Tomás Laulhé (Quaternius), CC0 1.0 (public domain).
 Modifications (facial expression morph targets, glTF conversion) by Don McCurdy.
 Source: https://github.com/mrdoob/three.js/tree/r170/examples/models/gltf/RobotExpressive
+
+host.glb, players/p1..p8.glb en anims.glb = personages en animaties van Adobe Mixamo (www.mixamo.com), gedownload
+door de eigenaar van Groepsspel met zijn eigen Adobe-account op 20 november 2026 en omgezet naar glTF (FBX2glTF,
+gltf-transform: kleinere WebP-texturen). Mixamo-personages en -animaties mogen royaltyvrij in eigen projecten en
+spellen worden gebruikt, ook commercieel; ze mogen niet los als modellenbestanden worden doorverkocht of verspreid.
+player.glb = "Xbot" uit de three.js-voorbeelden (oorsprong Mixamo), reserve als de bestanden hierboven ontbreken.

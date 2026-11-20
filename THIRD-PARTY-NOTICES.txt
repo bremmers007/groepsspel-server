@@ -35,4 +35,6 @@ garantie op beschikbaarheid. Het verkeer van de spelers loopt via Cloudflare.
 Three.js (r170) — MIT License, Copyright © 2010-2024 three.js authors. Gebundeld in pwa/gs-studio3d.js.
 Presentatormodel pwa/assets/models/presenter.glb — "RobotExpressive" door Tomás Laulhé (Quaternius), CC0 1.0;
   gezichtsuitdrukkingen en glTF-conversie door Don McCurdy.
+3D-personages en animaties pwa/assets/models/host.glb, players/, anims.glb — Adobe Mixamo, gebruikt volgens de
+  Mixamo-voorwaarden (royaltyvrij in eigen projecten; niet los verspreiden). player.glb — "Xbot" (three.js-voorbeelden).
 Personages pwa/assets/avatars — Twemoji (jdecked/twemoji), CC BY 4.0.

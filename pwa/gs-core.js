@@ -11,7 +11,7 @@
 'use strict';
 const modules={},pages={},listeners={};
 const GS={
-  version:'0.15.5',
+  version:'0.15.6',
   /** Registreer een onderdeel. Dubbele namen zijn een programmeerfout. */
   define(name,mod){if(modules[name])throw Error('GS-onderdeel bestaat al: '+name);modules[name]=mod;GS[name]=mod;return mod;},
   has:name=>!!modules[name],

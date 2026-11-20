@@ -16,7 +16,7 @@ import traceback
 import urllib.request
 import webbrowser
 
-APP_VERSION = '0.15.5'
+APP_VERSION = '0.15.6'
 APP_DIR = Path(__file__).resolve().parent
 # Embedded Python ignores script directories, PYTHONPATH and the working directory.
 # Trust only the installed app directory; never rely on the shortcut's working folder.

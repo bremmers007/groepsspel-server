@@ -126,7 +126,7 @@ function autoShowEvents(prev,next){const a=next.auto,n=next.phase,p=prev?.phase,
 /* 0.15.5: de automatische show als 3D-spelshowstudio op het beamer-/TV-scherm (pwa/gs-studio3d.js, Three.js). */
 let gsStudioTried=false;
 function studioFor(next){if(window.gsStudio)return window.gsStudio;if(gsStudioTried||!next.auto||new URLSearchParams(location.search).get('studio')==='0')return null;if(typeof GStudio==='undefined'){if(!document.getElementById('gsStudioJs')){const sc=document.createElement('script');sc.id='gsStudioJs';sc.src='/app/gs-studio3d.js';document.head.appendChild(sc);}return null;}gsStudioTried=true;
-  const st=GStudio.create(document.body,{base:'/app/',onSlow:()=>{st.dispose();window.gsStudio=null;document.body.classList.remove('studio3d','cinema');document.querySelector('.gp-wrap')?.classList.remove('gp-studio');signature='';}});if(!st)return null;window.gsStudio=st;document.body.classList.add('studio3d');document.querySelector('.gp-wrap')?.classList.add('gp-studio');return st;}
+  const force=new URLSearchParams(location.search).get('studio')==='1';const st=GStudio.create(document.body,{base:'/app/',onSlow:force?null:()=>{st.dispose();window.gsStudio=null;document.body.classList.remove('studio3d','cinema');document.querySelector('.gp-wrap')?.classList.remove('gp-studio');signature='';}});if(!st)return null;window.gsStudio=st;document.body.classList.add('studio3d');document.querySelector('.gp-wrap')?.classList.add('gp-studio');return st;}
 function studioSync(S,prev,next){const a=next.auto,n=next.phase,p=prev?.phase,pa=prev?.auto,teamName=id=>(next.teams||[]).find(t=>t.id===id)?.name||'';
   S.setTeams(next.teams||[]);
   document.body.classList.toggle('cinema',['round','standings','finished'].includes(n));
