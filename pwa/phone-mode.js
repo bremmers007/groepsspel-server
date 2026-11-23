@@ -11,10 +11,49 @@ async function localServerAvailable(){
   finally{clearTimeout(timer);}
  }catch{return false;}
 }
+const JOIN_SERVER_KEY='groepsspel-player-server';
+function joinServerPage(){
+  let previous='';
+  try{previous=localStorage.getItem(JOIN_SERVER_KEY)||'';}catch{}
+  return `<div class="page-heading"><h1>Meedoen met spelcode</h1><p>Zoek het spel dat klaarstaat op jullie spelserver.</p></div>
+  <form id="joinServerForm" class="panel"><label class="field"><span>Serveradres</span>
+  <input name="server" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" value="${GS.esc(previous)}" placeholder="192.168.1.20:8765">
+  <small>Gebruik het hele adres. Bij een online spelkamer hoort ook /k/… bij het adres.</small></label>
+  <label class="field"><span>Spelcode</span><input name="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"></label>
+  <p id="joinServerError" role="alert"></p><button class="btn" type="submit" name="mode" value="find">Spelserver zoeken</button> <button class="btn secondary" type="submit" name="mode" value="code">Meedoen met spelcode</button></form>`;
+}
+
+function playerJoinAddress(value, code=null){
+  if(code!==null&&!/^[0-9]{6}$/.test(code))throw Error('Vul de zes cijfers van de spelcode in.');
+  const suggested=/^(?:localhost|(?:[0-9]{1,3}\.){3}[0-9]{1,3})(?::[0-9]+)?(?:\/|$)/i.test(value)?'http://':'https://';
+  let target;
+  try{target=new URL(/^[a-z][a-z\d+.-]*:\/\//i.test(value)?value:suggested+value);}catch{throw Error('Vul een geldig serveradres in.');}
+  if(!['http:','https:'].includes(target.protocol)||target.username||target.password||target.search||target.hash)
+    throw Error('Vul het serveradres in zoals het op het scherm staat.');
+  const room=target.pathname.match(/^\/k\/([a-z0-9]{6})\/?$/i);
+  if(!room&&!['/','/app','/app/'].includes(target.pathname))throw Error('Gebruik het serveradres, eventueel met /k/ en de kamercode.');
+  return {base:target.origin+(room?'/k/'+room[1]:''), code};
+}
+
+document.addEventListener('submit',async event=>{
+  if(event.target.id!=='joinServerForm')return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  const data=new FormData(event.target), error=document.querySelector('#joinServerError');
+  try{
+    const value=String(data.get('server')||'').trim();
+    const code=event.submitter?.value==='code'?String(data.get('code')||'').trim():null;
+    if(!value&&!await localServerAvailable())throw Error('Vul het serveradres van de spelleider in.');
+    const {base}=playerJoinAddress(value||location.origin,code);
+    try{localStorage.setItem(JOIN_SERVER_KEY,base);}catch{}
+    location.assign(base+(code===null?'/zoek-spel':'/meedoen?code='+code));
+  }catch(err){error.textContent=err.message;}
+},true);
+
 async function openPhoneShows(id='floor'){
  const path=PHONE_GAME_PATHS[id]||'/shows?game='+encodeURIComponent(id);
  if(await localServerAvailable()){location.href=path;return;}
- dialog('Voor dit telefoonspel is een spelserver nodig',`<p>De spelers doen mee op hun eigen telefoon. Daarvoor is een centrale spelserver nodig; voor een bordspel op één tablet is die <strong>niet nodig</strong>. Kies een van de manieren:</p><ol><li><strong>Op een pc (wifi):</strong> installeer en start de Windows-app Groepsspel. Open daarna op die pc het spel; spelers scannen de QR-code op hetzelfde wifinetwerk.</li><li><strong>Op een pc, via mobiel internet:</strong> kies in het Startmenu <em>Groepsspel via mobiel internet</em>. Spelers doen mee via hun eigen 4G/5G, ook buiten de wifi.</li><li><strong>Online, zonder pc:</strong> open Groepsspel via jullie online spelserver (het https-adres van de beheerder), tik op <em>Nieuwe spelkamer</em> en kies het spel. Spelers scannen de QR-code en spelen via mobiel internet of wifi.</li></ol><p class="micro">Een online spelserver zet je eenmalig op; zie ONLINE-SPELSERVER.txt in het pakket.</p>`,`${['murder','traitors','strategy','crazy','smuggle','holland','missions','hunted','musicbingo'].includes(id)&&GAMES.some(g=>g.id===id)?`<button class="btn" data-phone-fallback="${id}">Eenvoudige versie op dit apparaat</button>`:''}<a class="btn secondary" href="#phones" data-action="close">Terug naar telefoonspellen</a>`);
+ dialog('Voor dit telefoonspel is een spelserver nodig',`<p>De spelers doen mee op hun eigen telefoon. Daarvoor is een centrale spelserver nodig; voor een bordspel op één tablet is die <strong>niet nodig</strong>. Kies een van de manieren:</p><ol><li><strong>Op een pc (wifi):</strong> installeer en start de Windows-app Groepsspel. Open daarna op die pc het spel; spelers kiezen Meedoen met spelcode in Groepsspel op hetzelfde wifinetwerk.</li><li><strong>Op een pc, via mobiel internet:</strong> kies in het Startmenu <em>Groepsspel via mobiel internet</em>. Spelers doen mee via hun eigen 4G/5G, ook buiten de wifi.</li><li><strong>Online, zonder pc:</strong> open Groepsspel via jullie online spelserver (het https-adres van de beheerder), tik op <em>Nieuwe spelkamer</em> en kies het spel. Spelers vullen het kameradres en de spelcode in bij Meedoen met spelcode.</li></ol><p class="micro">Een online spelserver zet je eenmalig op; zie ONLINE-SPELSERVER.txt in het pakket.</p>`,`${['murder','traitors','strategy','crazy','smuggle','holland','missions','hunted','musicbingo'].includes(id)&&GAMES.some(g=>g.id===id)?`<button class="btn" data-phone-fallback="${id}">Eenvoudige versie op dit apparaat</button>`:''}<a class="btn secondary" href="#phones" data-action="close">Terug naar telefoonspellen</a>`);
 }
 
 document.addEventListener('submit',e=>{if(e.target.id!=='showSetupForm'||e.target.elements.playMode?.value!=='phones')return;e.preventDefault();e.stopImmediatePropagation();openPhoneShows(e.target.elements.gameId.value);},true);

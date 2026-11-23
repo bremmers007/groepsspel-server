@@ -34,7 +34,7 @@ IDLE_SECONDS = 48 * 3600
 ROOM_STORAGE = 400 * 1024 * 1024
 CREATE_PER_HOUR = 6
 BAD_CODES_PER_10MIN = 20
-PAGES = ('/spel/', '/verraders', '/shows', '/controller', '/screen', '/host', '/team', '/display')
+PAGES = ('/zoek-spel', '/meedoen', '/spel/', '/verraders', '/shows', '/controller', '/screen', '/host', '/team', '/display')
 
 
 class Rooms:
@@ -54,6 +54,7 @@ class Rooms:
             g = self.rooms.get(code)
             if g is None:
                 g = self.rooms[code] = Game(self.folder / code, self.packs, self.tasks)
+                g.online = True
             self.used[code] = time.time()
             return g
 
@@ -66,6 +67,7 @@ class Rooms:
             code = None
             while not code or code in self.used: code = ''.join(secrets.choice(ALPHABET) for _ in range(6))
             g = self.rooms[code] = Game(self.folder / code, self.packs, self.tasks)
+            g.online = True
             g.s['name'] = 'Spelkamer ' + code; g._save()
             self.used[code] = now; self.created[ip] = hist + [now]
             return code, g
@@ -120,7 +122,7 @@ class OnlineHandler(Handler):
     @property
     def game(self):
         g = self.server.rooms.get(self.room_code())
-        if not g: raise GameError('Geen spelkamer gekozen. Scan de QR-code of open de link van de spelleider.', 404)
+        if not g: raise GameError('Geen spelkamer gekozen. Vul het kameradres van de spelleider in.', 404)
         return g
 
     def client_ip(self):
@@ -204,6 +206,8 @@ class OnlineHandler(Handler):
                 if not rest.startswith('/') or rest.startswith('//') or rest.startswith('/k/'): rest = '/kamer'
                 q = '&'.join(f'{k}={quote(v[0])}' for k, v in query.items() if k != 'beheer')
                 return self.redirect(rest + ('?' + q if q else ''), cookies)
+            if path == '/api/lan':
+                return self.json_response({'urls': [self.join_base(self.room_code())] if self.server.rooms.get(self.room_code()) else []})
             if path == '/api/bootstrap':
                 g = self.game
                 if not self.is_host(g): raise GameError('Alleen de spelleider van deze kamer kan het spel beheren. Open de beheerlink op dit apparaat.', 403)

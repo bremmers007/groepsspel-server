@@ -20,23 +20,22 @@ async function api(path, body) {
   const r = await fetch(path, {method: body ? 'POST' : 'GET', cache: 'no-store', headers: body ? {'Content-Type': 'application/json'} : {}, body: body ? JSON.stringify(body) : undefined});
   const d = await r.json().catch(() => ({})); if (!r.ok) throw new Error(d.error || 'Er ging iets mis.'); return d;
 }
-function qr(url) { try { const c = qrcode(0, 'M'); c.addData(url); c.make(); return `<div class="qr">${c.createImgTag(6, 8, 'QR-code om mee te doen')}</div>`; } catch { return ''; } }
 function start() {
   return `<h1>Samen spelen, zonder pc.</h1><p class="lead">Maak een spelkamer voor jullie groep. Iedereen doet mee met de eigen telefoon via mobiel internet of wifi. Een spelkamer blijft 48 uur na het laatste gebruik bewaard.</p>
   ${q.get('fout') === 'kamer' ? '<p class="warn">Die spelkamer bestaat niet (meer). Controleer de code.</p>' : ''}${q.get('terug') ? '<p class="warn">Maak eerst een spelkamer of doe mee met een code.</p>' : ''}
   <div class="box"><h2>Ik ben de spelleider</h2><p>Maak een nieuwe spelkamer. Je krijgt een code om te delen en een beheerlink.</p><button class="btn" id="nieuw">Nieuwe spelkamer →</button></div>
-  <div class="box"><h2>Ik doe mee</h2><div class="row"><input id="code" maxlength="6" autocomplete="off" placeholder="CODE"><button class="btn ghost" id="mee">Meedoen →</button></div><p class="small">Of scan de QR-code van de spelleider.</p></div>
+  <div class="box"><h2>Ik doe mee</h2><div class="row"><input id="code" maxlength="6" autocomplete="off" placeholder="CODE"><button class="btn ghost" id="mee">Meedoen →</button></div><p class="small">Of gebruik Meedoen met spelcode in Groepsspel.</p></div>
   <div class="box"><h2>Alleen op één tablet?</h2><p>Bordspellen en quizavonden op één apparaat werken ook zonder spelkamer.</p><a class="btn ghost" href="/app/">Open de app →</a></div>`;
 }
 function room(d) {
   const host = d.host, active = Object.values(d.games || {}).some(g => g.players);
   let html = `<p class="small">Spelkamer</p><div class="code">${esc(d.room)}</div>`;
   if (host) {
-    html += `<div class="box"><h2>Jij bent de spelleider</h2><p>Open hieronder een spel. In het spel staat een QR-code voor de spelers; die brengt hen automatisch in deze kamer.</p><div class="grid">${GAMES.map(([h, , t, s]) => `<a href="${h}"><b>${esc(t)}</b><small>${esc(s)}</small></a>`).join('')}</div><p class="row" style="margin-top:14px"><a class="btn ghost" href="/app/">Groepsspel-app (tablet en spelshows) →</a></p></div>
-    <div class="box"><h2>Spelers uitnodigen</h2><div class="row">${qr(d.join)}<div><p>Link voor spelers:</p><p class="mono">${esc(d.join)}</p><button class="btn ghost" id="deel">Link delen</button></div></div></div>
+    html += `<div class="box"><h2>Jij bent de spelleider</h2><p>Open hieronder een spel. Deel het kameradres en de spelcode. Spelers vullen beide in bij Meedoen in Groepsspel.</p><div class="grid">${GAMES.map(([h, , t, s]) => `<a href="${h}"><b>${esc(t)}</b><small>${esc(s)}</small></a>`).join('')}</div><p class="row" style="margin-top:14px"><a class="btn ghost" href="/app/">Groepsspel-app (tablet en spelshows) →</a></p></div>
+    <div class="box"><h2>Spelers uitnodigen</h2><div class="row"><div><p>Link voor spelers:</p><p class="mono">${esc(d.join)}</p><button class="btn ghost" id="deel">Link delen</button></div></div></div>
     <div class="box"><h2>Beheer op een ander apparaat</h2><p class="small">Wil je de kamer ook vanaf een ander apparaat leiden, bijvoorbeeld een laptop aan de beamer? Open daar de beheerlink. <b>Deel deze link niet met spelers.</b></p><button class="btn ghost" id="beheer">Beheerlink tonen</button><p class="mono" id="beheerlink"></p></div>`;
   } else {
-    html += `<div class="box"><h2>Kies je spel</h2><p>Meestal scan je de QR-code op het scherm van de spelleider. Weet je welk spel jullie spelen? Kies het hier.</p><div class="grid">${GAMES.map(([, p, t, s]) => `<a href="${p}"><b>${esc(t)}</b><small>${esc(s)}</small></a>`).join('')}</div></div>`;
+    html += `<div class="box"><h2>Kies je spel</h2><p>Gebruik het kameradres en de spelcode bij Meedoen in Groepsspel. Weet je welk spel jullie spelen? Kies het hier.</p><div class="grid">${GAMES.map(([, p, t, s]) => `<a href="${p}"><b>${esc(t)}</b><small>${esc(s)}</small></a>`).join('')}</div></div>`;
   }
   html += `<p><button class="btn ghost" id="verlaat">Kamer verlaten</button></p>`;
   return html;

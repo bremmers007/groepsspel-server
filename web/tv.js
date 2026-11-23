@@ -5,9 +5,12 @@ const frame = document.getElementById('screen'), idle = document.getElementById(
 let current = '', failures = 0;
 function withTv(path) {
   if (!path) return '';
-  if (path.includes('tv=1')) return path;
-  const [base, hash] = path.split('#');
-  return base + (base.includes('?') ? '&' : '?') + 'tv=1' + (hash ? '#' + hash : '');
+  const target=new URL(path,location.origin);
+  if(target.origin!==location.origin)return '';
+  target.searchParams.set('tv','1');
+  const preference=new URLSearchParams(location.search).get('studio');
+  if(preference==='0'||preference==='1')target.searchParams.set('studio',preference);
+  return target.pathname+target.search+target.hash;
 }
 async function follow() {
   try {

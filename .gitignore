@@ -1,8 +1,3 @@
 __pycache__/
 *.pyc
 .data/
-
-# Mixamo-modellen alleen in het Windows-pakket, niet in deze openbare repository
-pwa/assets/models/host.glb
-pwa/assets/models/anims.glb
-pwa/assets/models/players/

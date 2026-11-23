@@ -9,7 +9,7 @@
 (function(){
 'use strict';
 const esc=GS.esc;
-const MAP={moord:'murder',verraders:'traitors',stratego:'strategy',holland:'holland',crazy88:'crazy',smokkel:'smuggle',missies:'missions',opgejaagd:'hunted',bingo:'musicbingo','lan-quiz':'pubquiz','lan-buzzer':'buzz','lan-wordrace':'wordrace','lan-city':'stadskwis'};
+const MAP={moord:'murder',verraders:'traitors',stratego:'strategy',holland:'holland',crazy88:'crazy',smokkel:'smuggle',missies:'missions',opgejaagd:'hunted',bingo:'musicbingo','lan-quiz':'pubquiz','lan-buzzer':'buzz','lan-year':'year','lan-holland':'holland','lan-pubquiz':'pubquiz','lan-friends':'friends','lan-wordrace':'wordrace','lan-city':'stadskwis'};
 let hostKey=null,status={server:null,shared:null,pulled:null,error:''},lastSig='',timer=null;
 const onServer=()=>location.protocol!=='file:'&&!/netlify|github\.io/.test(location.hostname);
 

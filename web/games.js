@@ -8,6 +8,7 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '
 const parts = location.pathname.split('/').filter(Boolean);
 const gid = parts[1], role = parts[2] === 'speler' ? 'player' : parts[2] === 'scherm' ? 'public' : 'host';
 document.body.dataset.game = gid;
+if(role==='public'&&gid==='bingo')document.body.classList.add('display');
 document.body.classList.add(role === 'player' ? 'phone' : role === 'public' ? 'screen' : 'console');
 const STORE = 'groepsspel-spel-' + gid;
 const OFFLINE = ['stratego', 'smokkel', 'crazy88', 'opgejaagd', 'bingo'].includes(gid);
@@ -134,7 +135,8 @@ const SOUND_MOOD = {moord: 'mystery', opgejaagd: 'mystery', smokkel: 'mystery', 
 const soundOn = role !== 'player' && gid !== 'bingo' && typeof GSound !== 'undefined';
 if (soundOn) GSound.mount();
 function soundView() { if (!soundOn || !view) return; const ph = view.phase; GSound.bed(ph === 'lobby' ? 'lobby' : ph === 'end' ? 'finale' : SOUND_MOOD[gid] || 'lobby'); }
-function afterView() { if (view?.server_time) offset = view.server_time - Date.now() / 1000; soundView(); $('#brand').textContent = view?.title || ''; document.title = (view?.title || 'Groepsspel') + ' · Groepsspel'; }
+function afterView() {
+  if(role==='public'&&gid==='bingo')window.GSLiveStudio?.update(gid,view); if (view?.server_time) offset = view.server_time - Date.now() / 1000; soundView(); $('#brand').textContent = view?.title || ''; document.title = (view?.title || 'Groepsspel') + ' · Groepsspel'; }
 function render(force) {
   const root = $('#root');
   if (role === 'player' && !view) { if (!$('#join')) root.innerHTML = joinForm(); return; }
@@ -192,7 +194,7 @@ function lobbyHost(R) {
   const teams = v.teams.length ? `<div class="grid2">${v.teams.map(t => `<div class="card"><h3>${esc(t.name)}</h3>${v.players.filter(p => p.team === t.id).map(p => playerLine(p)).join('') || '<p class="small">Nog niemand.</p>'}</div>`).join('')}${v.players.some(p => !p.team) ? `<div class="card"><h3>Zonder team</h3>${v.players.filter(p => !p.team).map(p => playerLine(p)).join('')}</div>` : ''}</div>`
     : `<div class="roster">${v.players.map(p => `<div class="person"><b>${esc(p.name)}</b><small><span class="dot ${p.connected ? '' : 'off'}"></span>${p.connected ? 'Verbonden' : 'Telefoon slaapt'}</small>${btn('Verwijderen', 'remove', `data-id="${p.id}"`, 'secondary small')}</div>`).join('')}</div>`;
   return `<div class="eyebrow">Lobby</div><h1>${esc(v.title)}</h1><p class="lead">${esc(R.lobbyText)}</p><p><button class="secondary" data-ui="uitleg">Volledig draaiboek en tips</button></p>${lobbyGuide()}
-  <div class="cols"><section class="panel"><h2>Laat iedereen scannen</h2><p class="code">${v.code}</p>${urls.length > 1 ? `<label class="field"><span>Wifi-adres</span>${sel('lan', urls.map(u => [u, u]), drafts.lan)}</label>` : ''}${qr(joinURL())}<p class="linkline small">${esc(joinURL())}</p>
+  <div class="cols"><section class="panel"><h2>Meedoen met spelcode</h2><p class="code">${v.code}</p>${urls.length > 1 ? `<label class="field"><span>Wifi-adres</span>${sel('lan', urls.map(u => [u, u]), drafts.lan)}</label>` : ''}<p>Open Groepsspel → Meedoen met spelcode.</p><p class="linkline small">${esc(drafts.lan||urls[0]||roomBase())}</p>
   <div class="actions"><a class="btn secondary" href="/spel/${gid}/scherm" target="_blank" rel="noopener">Open beamer ↗</a><button type="button" class="btn secondary" data-open-tv>📺 TV-scherm</button><a class="btn secondary" href="/spel/${gid}/speler?code=${v.code}&nieuw=1" target="_blank" rel="noopener">Zelf meespelen ↗</a></div></section>
   <section class="panel"><h2>Instellingen</h2>${R.settings()}</section></div>${gid === 'crazy88' ? evidenceSettings() : ''}${areaHost()}
   <section class="panel"><h2>${v.players.length} ${v.players.length === 1 ? 'speler' : 'spelers'}</h2>${teams}<div class="actions">${guideAcknowledged ? R.startButtons() : R.startButtons().replace(/(<button(?=[^>]*data-a="start")[^>]*)(>)/g,'$1 disabled$2')}</div><p class="small">${guideAcknowledged ? 'De uitleg is bevestigd. Controleer of alle spullen klaarstaan.' : 'Lees de uitleg hierboven en bevestig deze om het spel te starten.'}</p></section>`;
@@ -202,7 +204,7 @@ function playerLine(p) {
   return `<div class="person" style="margin:6px 0"><b>${esc(p.name)}</b><small><span class="dot ${p.connected ? '' : 'off'}"></span>${p.connected ? 'Verbonden' : 'Telefoon slaapt'}</small><div class="chips" style="margin-top:6px">${others.map(t => btn('→ ' + esc(t.name), 'move_team', `data-id="${p.id}" data-team="${t.id}"`, 'secondary small')).join('')}${btn('Verwijderen', 'remove', `data-id="${p.id}"`, 'secondary small')}</div></div>`;
 }
 function lobbyScreen() {
-  return `<div class="stage"><div class="eyebrow">Groepsspel presenteert</div><h1>${esc(view.title)}</h1><div style="display:flex;gap:5vw;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left">${qr(roomBase() + `/spel/${gid}/speler?code=` + view.code, 7)}<div><p class="lead" style="margin:0">Scan en meld je aan.<br>Spelcode</p><p class="code">${view.code}</p><p class="lead">${view.players.length} spelers</p></div></div>
+  return `<div class="stage"><div class="eyebrow">Groepsspel presenteert</div><h1>${esc(view.title)}</h1><div style="display:flex;gap:5vw;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left"><div><p class="lead" style="margin:0">Open Groepsspel → Meedoen met spelcode.<br><span class="linkline">${esc(playerServerAddress||roomBase())}</span></p><p class="code">${view.code}</p><p class="lead">${view.players.length} spelers</p></div></div>
   ${view.teams.length ? `<div class="score-row">${view.teams.map(t => `<div class="score-card">${esc(t.name)}<b>${view.players.filter(p => p.team === t.id).length}</b><small class="small">${view.players.filter(p => p.team === t.id).map(p => esc(p.name)).join(', ')}</small></div>`).join('')}</div>` : `<div class="roster">${view.players.map(p => `<div class="person"><b>${esc(p.name)}</b></div>`).join('')}</div>`}</div>`;
 }
 function joinForm() {
@@ -214,7 +216,7 @@ function joinForm() {
   /* 0.15: de spelleider heeft 'Mijn groep' gedeeld: tik op je naam (team wordt dan ook ingevuld) */
   const taken = new Set((pub?.players || []).map(p => p.name.toLowerCase()));
   const pick = roster?.players?.length ? `<div class="roster-pick"><span class="small">Wie ben jij?${roster.group ? ' · ' + esc(roster.group) : ''}</span><div class="chips">${roster.players.map(r => `<button type="button" class="secondary small" data-ui="pickname" data-name="${esc(r.name)}" data-team="${esc(r.team || '')}" ${taken.has(r.name.toLowerCase()) ? 'disabled' : ''}>${esc(r.name)}${r.team ? ` <small>${esc(r.team)}</small>` : ''}</button>`).join('')}</div></div>` : '';
-  return `<h1>${esc(pub?.title || 'Meespelen')}</h1><p class="lead">Speel mee op je eigen telefoon. Gebruik dezelfde wifi als de pc.</p><form id="join" class="panel">${pick}<label class="field"><span>Spelcode</span><input name="code" inputmode="numeric" autocomplete="off" value="${esc(code)}"></label><label class="field"><span>Je naam</span><input name="name" maxlength="30" autocomplete="nickname"></label>${teamField}<p class="small">Of kom terug met je persoonlijke code:</p><label class="field"><span>Persoonlijke code</span><input name="access_code" maxlength="6" autocapitalize="characters" autocomplete="off"></label><button class="big">Meedoen →</button></form><p><button class="secondary" type="button" data-ui="uitleg">Hoe werkt dit spel?</button></p>`;
+  return `<h1>${esc(pub?.title || 'Meespelen')}</h1><p class="lead">Speel mee op je eigen telefoon.${document.documentElement.dataset.online==='1'?'':' Gebruik dezelfde wifi als de pc.'}</p><form id="join" class="panel">${pick}<label class="field"><span>Spelcode</span><input name="code" inputmode="numeric" autocomplete="off" value="${esc(code)}"></label><label class="field"><span>Je naam</span><input name="name" maxlength="30" autocomplete="nickname"></label>${teamField}<p class="small">Of kom terug met je persoonlijke code:</p><label class="field"><span>Persoonlijke code</span><input name="access_code" maxlength="6" autocapitalize="characters" autocomplete="off"></label><button class="big">Meedoen →</button></form><p><button class="secondary" type="button" data-ui="uitleg">Hoe werkt dit spel?</button></p>`;
 }
 function resetKey() { key = ''; view = null; ls.set('-key', ''); render(true); }
 async function refresh() {
@@ -987,3 +989,10 @@ function roomBase() { const m = document.cookie.match(/(?:^|; )gs_kamer=([A-Z0-9
 
 /* 0.15.3: gekozen wifi-adres onthouden voor de volgende keer */
 document.addEventListener('change', e => { if (e.target.dataset && e.target.dataset.draft === 'lan') { try { localStorage.setItem('groepsspel-lan-address', e.target.value); } catch {} } });
+
+let playerServerAddress = '';
+if (role === 'public') fetch('/api/lan').then(r => r.json()).then(({urls}) => {
+  const saved = localStorage.getItem('groepsspel-lan-address');
+  playerServerAddress = urls?.includes(saved) ? saved : urls?.[0] || '';
+  if (view?.phase === 'lobby') render();
+}).catch(() => {});

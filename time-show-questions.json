@@ -1,0 +1,3352 @@
+{
+  "1960": [
+    {
+      "q": "In welk jaar gebeurde dit? De Euromast in Rotterdam gaat open.",
+      "options": [
+        "1960",
+        "1958",
+        "1962",
+        "1964"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1961": [
+    {
+      "q": "In welk jaar gebeurde dit? Joeri Gagarin is de eerste mens in de ruimte.",
+      "options": [
+        "1957",
+        "1961",
+        "1963",
+        "1965"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Berlijnse Muur wordt gebouwd.",
+      "options": [
+        "1957",
+        "1961",
+        "1963",
+        "1965"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1962": [
+    {
+      "q": "In welk jaar gebeurde dit? The Beatles brengen hun eerste single Love Me Do uit.",
+      "options": [
+        "1958",
+        "1960",
+        "1962",
+        "1966"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1963": [
+    {
+      "q": "In welk jaar gebeurde dit? Reinier Paping wint de barre Elfstedentocht.",
+      "options": [
+        "1959",
+        "1961",
+        "1965",
+        "1963"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Martin Luther King houdt zijn toespraak I have a dream.",
+      "options": [
+        "1959",
+        "1961",
+        "1965",
+        "1963"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? President Kennedy wordt in Dallas vermoord.",
+      "options": [
+        "1959",
+        "1961",
+        "1965",
+        "1963"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1966": [
+    {
+      "q": "In welk jaar gebeurde dit? Prinses Beatrix trouwt met Claus von Amsberg.",
+      "options": [
+        "1962",
+        "1964",
+        "1966",
+        "1970"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1967": [
+    {
+      "q": "In welk jaar gebeurde dit? Prins Willem-Alexander wordt geboren.",
+      "options": [
+        "1963",
+        "1965",
+        "1969",
+        "1967"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste kleurentelevisie-uitzending in Nederland.",
+      "options": [
+        "1963",
+        "1965",
+        "1969",
+        "1967"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1969": [
+    {
+      "q": "In welk jaar gebeurde dit? De eerste mens zet voet op de maan.",
+      "options": [
+        "1965",
+        "1969",
+        "1971",
+        "1973"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Lenny Kuhr wint het Songfestival met De troubadour.",
+      "options": [
+        "1965",
+        "1969",
+        "1971",
+        "1973"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het Woodstock-festival wordt gehouden.",
+      "options": [
+        "1965",
+        "1969",
+        "1971",
+        "1973"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Concorde maakt zijn eerste vlucht.",
+      "options": [
+        "1965",
+        "1969",
+        "1971",
+        "1973"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1970": [
+    {
+      "q": "Welke Nederlandse club won in 1970 als eerste de Europacup I?",
+      "options": [
+        "Ajax",
+        "Feyenoord",
+        "PSV",
+        "AZ"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1970"
+    },
+    {
+      "q": "Welke band maakte in 1970 bekend dat hij uit elkaar ging?",
+      "options": [
+        "The Beatles",
+        "Queen",
+        "ABBA",
+        "The Rolling Stones"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1970"
+    },
+    {
+      "q": "Welk land won in 1970 het WK voetbal in Mexico?",
+      "options": [
+        "West-Duitsland",
+        "Brazilië",
+        "Engeland",
+        "Italië"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1970"
+    },
+    {
+      "q": "Welke Apollo-missie kreeg in 1970 een explosie aan boord maar keerde veilig terug?",
+      "options": [
+        "Apollo 13",
+        "Apollo 8",
+        "Apollo 17",
+        "Apollo 11"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1970"
+    },
+    {
+      "q": "In welke Limburgse plaats werd in 1970 het eerste Pinkpop gehouden?",
+      "options": [
+        "Venlo",
+        "Geleen",
+        "Roermond",
+        "Landgraaf"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1970"
+    },
+    {
+      "q": "Wie had in 1970 een wereldhit met Bridge over Troubled Water?",
+      "options": [
+        "Simon & Garfunkel",
+        "Bob Dylan",
+        "Elton John",
+        "The Carpenters"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1970"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Feyenoord wint als eerste Nederlandse club de Europacup I.",
+      "options": [
+        "1966",
+        "1968",
+        "1970",
+        "1974"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste editie van Pinkpop wordt gehouden in Geleen.",
+      "options": [
+        "1966",
+        "1968",
+        "1970",
+        "1974"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1971": [
+    {
+      "q": "In welk jaar gebeurde dit? Ajax wint voor het eerst de Europacup I.",
+      "options": [
+        "1967",
+        "1969",
+        "1973",
+        "1971"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Johan Cruijff wordt voor het eerst Europees voetballer van het jaar.",
+      "options": [
+        "1967",
+        "1969",
+        "1973",
+        "1971"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het eerste e-mailbericht wordt verstuurd.",
+      "options": [
+        "1967",
+        "1969",
+        "1973",
+        "1971"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1972": [
+    {
+      "q": "In welk jaar gebeurde dit? Ard Schenk wint drie gouden medailles in Sapporo.",
+      "options": [
+        "1972",
+        "1970",
+        "1974",
+        "1976"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het videospel Pong verschijnt.",
+      "options": [
+        "1972",
+        "1970",
+        "1974",
+        "1976"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1973": [
+    {
+      "q": "In welk jaar gebeurde dit? Het eerste gesprek met een draagbare mobiele telefoon.",
+      "options": [
+        "1969",
+        "1973",
+        "1975",
+        "1977"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Door de oliecrisis zijn er autoloze zondagen.",
+      "options": [
+        "1969",
+        "1973",
+        "1975",
+        "1977"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1974": [
+    {
+      "q": "In welk jaar gebeurde dit? ABBA wint het Eurovisiesongfestival met Waterloo.",
+      "options": [
+        "1970",
+        "1972",
+        "1974",
+        "1978"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Nederland verliest de WK-finale van West-Duitsland.",
+      "options": [
+        "1970",
+        "1972",
+        "1974",
+        "1978"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1975": [
+    {
+      "q": "In welk jaar gebeurde dit? Suriname wordt onafhankelijk.",
+      "options": [
+        "1971",
+        "1973",
+        "1977",
+        "1975"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Microsoft wordt opgericht.",
+      "options": [
+        "1971",
+        "1973",
+        "1977",
+        "1975"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Teach-In wint het Songfestival met Ding-a-dong.",
+      "options": [
+        "1971",
+        "1973",
+        "1977",
+        "1975"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1976": [
+    {
+      "q": "In welk jaar gebeurde dit? De Nederlandse Sesamstraat is voor het eerst op tv.",
+      "options": [
+        "1976",
+        "1974",
+        "1978",
+        "1980"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Apple wordt opgericht.",
+      "options": [
+        "1976",
+        "1974",
+        "1978",
+        "1980"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1977": [
+    {
+      "q": "Welke film over een strijd in een sterrenstelsel ver, ver weg kwam in 1977 uit?",
+      "options": [
+        "Star Wars",
+        "Alien",
+        "E.T.",
+        "Superman"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1977"
+    },
+    {
+      "q": "Welke 'King of Rock-'n-roll' overleed in augustus 1977?",
+      "options": [
+        "Chuck Berry",
+        "Elvis Presley",
+        "John Lennon",
+        "Buddy Holly"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1977"
+    },
+    {
+      "q": "Welke spelcomputer met verwisselbare cassettes bracht Atari in 1977 uit?",
+      "options": [
+        "Nintendo NES",
+        "Commodore 64",
+        "Atari 2600",
+        "Sega Master System"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1977"
+    },
+    {
+      "q": "Welke ruimtesondes werden in 1977 gelanceerd en vliegen nu buiten ons zonnestelsel?",
+      "options": [
+        "Hubble en Kepler",
+        "Spoetnik 1 en 2",
+        "Apollo 11 en 12",
+        "Voyager 1 en 2"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1977"
+    },
+    {
+      "q": "Welke discofilm met John Travolta kwam in 1977 uit?",
+      "options": [
+        "Grease",
+        "Footloose",
+        "Saturday Night Fever",
+        "Dirty Dancing"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1977"
+    },
+    {
+      "q": "Welke koningin vierde in 1977 haar zilveren jubileum op de Britse troon?",
+      "options": [
+        "Victoria",
+        "Margrethe II",
+        "Juliana",
+        "Elizabeth II"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1977"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste Star Wars-film draait in de bioscoop.",
+      "options": [
+        "1973",
+        "1977",
+        "1979",
+        "1981"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Elvis Presley overlijdt.",
+      "options": [
+        "1973",
+        "1977",
+        "1979",
+        "1981"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1978": [
+    {
+      "q": "Tegen welk land verloor Nederland in 1978 de WK-finale?",
+      "options": [
+        "Argentinië",
+        "Brazilië",
+        "Italië",
+        "West-Duitsland"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1978"
+    },
+    {
+      "q": "Welke musicalfilm met John Travolta en Olivia Newton-John kwam in 1978 uit?",
+      "options": [
+        "Saturday Night Fever",
+        "Fame",
+        "Grease",
+        "Hair"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1978"
+    },
+    {
+      "q": "Hoe heette de eerste reageerbuisbaby, geboren in 1978?",
+      "options": [
+        "Louise Brown",
+        "Sarah Miller",
+        "Mary Smith",
+        "Emma Jones"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1978"
+    },
+    {
+      "q": "Welk arcadespel met aliens die naar beneden komen verscheen in 1978?",
+      "options": [
+        "Asteroids",
+        "Space Invaders",
+        "Tetris",
+        "Pac-Man"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1978"
+    },
+    {
+      "q": "Hoeveel verschillende pausen had de katholieke kerk in 1978?",
+      "options": [
+        "Een",
+        "Drie",
+        "Twee",
+        "Vier"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1978"
+    },
+    {
+      "q": "Welke dikke oranje stripkat verscheen in 1978 voor het eerst in de krant?",
+      "options": [
+        "Garfield",
+        "Felix",
+        "Tom",
+        "Snoopy"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1978"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Nederland verliest de WK-finale van Argentinië.",
+      "options": [
+        "1974",
+        "1976",
+        "1978",
+        "1982"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste reageerbuisbaby wordt geboren.",
+      "options": [
+        "1974",
+        "1976",
+        "1978",
+        "1982"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1979": [
+    {
+      "q": "In welk jaar gebeurde dit? De Sony Walkman komt op de markt.",
+      "options": [
+        "1975",
+        "1977",
+        "1981",
+        "1979"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1980": [
+    {
+      "q": "In welk jaar gebeurde dit? Beatrix wordt koningin.",
+      "options": [
+        "1980",
+        "1978",
+        "1982",
+        "1984"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Joop Zoetemelk wint de Tour de France.",
+      "options": [
+        "1980",
+        "1978",
+        "1982",
+        "1984"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1981": [
+    {
+      "q": "In welk jaar gebeurde dit? Prins Charles trouwt met Lady Diana.",
+      "options": [
+        "1977",
+        "1981",
+        "1983",
+        "1985"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Muziekzender MTV begint met uitzenden.",
+      "options": [
+        "1977",
+        "1981",
+        "1983",
+        "1985"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De spaceshuttle Columbia maakt zijn eerste vlucht.",
+      "options": [
+        "1977",
+        "1981",
+        "1983",
+        "1985"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1982": [
+    {
+      "q": "Welk album van Michael Jackson uit 1982 werd het bestverkochte album ooit?",
+      "options": [
+        "Off the Wall",
+        "Thriller",
+        "Bad",
+        "Dangerous"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1982"
+    },
+    {
+      "q": "Welke film van Steven Spielberg over een buitenaards wezen kwam in 1982 uit?",
+      "options": [
+        "Jaws",
+        "Gremlins",
+        "Close Encounters",
+        "E.T."
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1982"
+    },
+    {
+      "q": "Om welke eilanden voerden Argentinië en het Verenigd Koninkrijk in 1982 oorlog?",
+      "options": [
+        "De Galápagoseilanden",
+        "De Falklandeilanden",
+        "De Canarische Eilanden",
+        "De Kanaaleilanden"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1982"
+    },
+    {
+      "q": "Welk land won in 1982 het WK voetbal in Spanje?",
+      "options": [
+        "West-Duitsland",
+        "Spanje",
+        "Italië",
+        "Brazilië"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1982"
+    },
+    {
+      "q": "Welke schijf voor muziek kwam in 1982 voor het eerst in de winkel?",
+      "options": [
+        "De dvd",
+        "De minidisc",
+        "De cd",
+        "De cassette"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1982"
+    },
+    {
+      "q": "Welke Britse prins werd in juni 1982 geboren?",
+      "options": [
+        "William",
+        "Andrew",
+        "George",
+        "Harry"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1982"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste cd’s worden in Japan verkocht.",
+      "options": [
+        "1978",
+        "1980",
+        "1982",
+        "1986"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Michael Jackson brengt het album Thriller uit.",
+      "options": [
+        "1978",
+        "1980",
+        "1982",
+        "1986"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1984": [
+    {
+      "q": "Welke computer lanceerde Apple in 1984 met een beroemde reclame?",
+      "options": [
+        "iMac",
+        "Lisa",
+        "Macintosh",
+        "Apple II"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1984"
+    },
+    {
+      "q": "Welke stad organiseerde de Olympische Zomerspelen van 1984?",
+      "options": [
+        "Moskou",
+        "Montreal",
+        "Seoel",
+        "Los Angeles"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1984"
+    },
+    {
+      "q": "Welk spel met vallende blokjes werd in 1984 in de Sovjet-Unie bedacht?",
+      "options": [
+        "Pac-Man",
+        "Pong",
+        "Tetris",
+        "Snake"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1984"
+    },
+    {
+      "q": "Welke film over spokenjagers in New York kwam in 1984 uit?",
+      "options": [
+        "Gremlins",
+        "Ghostbusters",
+        "Poltergeist",
+        "Beetlejuice"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1984"
+    },
+    {
+      "q": "Welke groep artiesten nam in 1984 Do They Know It's Christmas? op?",
+      "options": [
+        "The Traveling Wilburys",
+        "USA for Africa",
+        "Live Aid",
+        "Band Aid"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1984"
+    },
+    {
+      "q": "Welk land won in 1984 het EK voetbal?",
+      "options": [
+        "Nederland",
+        "Frankrijk",
+        "Spanje",
+        "West-Duitsland"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1984"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste Apple Macintosh verschijnt.",
+      "options": [
+        "1984",
+        "1982",
+        "1986",
+        "1988"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het spel Tetris wordt bedacht.",
+      "options": [
+        "1984",
+        "1982",
+        "1986",
+        "1988"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Band Aid neemt Do They Know It's Christmas? op.",
+      "options": [
+        "1984",
+        "1982",
+        "1986",
+        "1988"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1985": [
+    {
+      "q": "Welk benefietconcert werd in juli 1985 tegelijk in Londen en Philadelphia gehouden?",
+      "options": [
+        "Pinkpop",
+        "Live 8",
+        "Live Aid",
+        "Woodstock"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1985"
+    },
+    {
+      "q": "In welke film uit 1985 reist Marty McFly in een DeLorean naar 1955?",
+      "options": [
+        "Back to the Future",
+        "Ghostbusters",
+        "Top Gun",
+        "E.T."
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1985"
+    },
+    {
+      "q": "Welk spel met Mario verscheen in 1985 voor de NES?",
+      "options": [
+        "Pac-Man",
+        "The Legend of Zelda",
+        "Tetris",
+        "Super Mario Bros."
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1985"
+    },
+    {
+      "q": "Welke leider kwam in 1985 aan de macht in de Sovjet-Unie?",
+      "options": [
+        "Boris Jeltsin",
+        "Michail Gorbatsjov",
+        "Vladimir Poetin",
+        "Leonid Brezjnev"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1985"
+    },
+    {
+      "q": "Welke schaatstocht werd in 1985 voor het eerst sinds 1963 weer verreden?",
+      "options": [
+        "De Dam tot Damloop",
+        "De Vierdaagse",
+        "De Amstel Gold Race",
+        "De Elfstedentocht"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1985"
+    },
+    {
+      "q": "Welk beroemd scheepswrak werd in 1985 op de bodem van de Atlantische Oceaan gevonden?",
+      "options": [
+        "Batavia",
+        "Bismarck",
+        "Lusitania",
+        "Titanic"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1985"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Wubbo Ockels is de eerste Nederlander in de ruimte.",
+      "options": [
+        "1981",
+        "1985",
+        "1987",
+        "1989"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1986": [
+    {
+      "q": "Welk land won in 1986 het WK voetbal in Mexico?",
+      "options": [
+        "Argentinië",
+        "Brazilië",
+        "Frankrijk",
+        "West-Duitsland"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1986"
+    },
+    {
+      "q": "Hoe noemde Maradona zijn doelpunt met de hand tegen Engeland in 1986?",
+      "options": [
+        "De hand van God",
+        "De magische vuist",
+        "De hand van Diego",
+        "De gouden hand"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1986"
+    },
+    {
+      "q": "In welke kerncentrale gebeurde in 1986 een grote kernramp?",
+      "options": [
+        "Fukushima",
+        "Sellafield",
+        "Three Mile Island",
+        "Tsjernobyl"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1986"
+    },
+    {
+      "q": "Welke komeet was in 1986 weer vanaf de aarde te zien?",
+      "options": [
+        "NEOWISE",
+        "De komeet Halley",
+        "Hale-Bopp",
+        "Shoemaker-Levy"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1986"
+    },
+    {
+      "q": "Welke stormvloedkering in Zeeland werd in 1986 geopend?",
+      "options": [
+        "De Haringvlietdam",
+        "De Maeslantkering",
+        "De Oosterscheldekering",
+        "De Afsluitdijk"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1986"
+    },
+    {
+      "q": "Welke film met Tom Cruise als straaljagerpiloot kwam in 1986 uit?",
+      "options": [
+        "Rain Man",
+        "Risky Business",
+        "Top Gun",
+        "Days of Thunder"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1986"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De kernramp in Tsjernobyl.",
+      "options": [
+        "1982",
+        "1984",
+        "1986",
+        "1990"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Oosterscheldekering wordt geopend.",
+      "options": [
+        "1982",
+        "1984",
+        "1986",
+        "1990"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De spaceshuttle Challenger verongelukt.",
+      "options": [
+        "1982",
+        "1984",
+        "1986",
+        "1990"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1988": [
+    {
+      "q": "In welk jaar gebeurde dit? Nederland wordt Europees kampioen voetbal.",
+      "options": [
+        "1988",
+        "1986",
+        "1990",
+        "1992"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? PSV wint de Europacup I.",
+      "options": [
+        "1988",
+        "1986",
+        "1990",
+        "1992"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1989": [
+    {
+      "q": "Welke muur ging in november 1989 open?",
+      "options": [
+        "Berlijnse Muur",
+        "Chinese Muur",
+        "Hadrianusmuur",
+        "Klaagmuur"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1989"
+    },
+    {
+      "q": "Welke draagbare Nintendo-spelcomputer verscheen in 1989 in Japan?",
+      "options": [
+        "Switch",
+        "Game Boy",
+        "Nintendo DS",
+        "Wii"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1989"
+    },
+    {
+      "q": "Wie bedacht in 1989 het voorstel dat uitgroeide tot het World Wide Web?",
+      "options": [
+        "Tim Berners-Lee",
+        "Steve Jobs",
+        "Mark Zuckerberg",
+        "Alan Turing"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1989"
+    },
+    {
+      "q": "Welk Zweeds duo scoorde in 1989 een internationale hit met The Look?",
+      "options": [
+        "ABBA",
+        "Roxette",
+        "Ace of Base",
+        "A-ha"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1989"
+    },
+    {
+      "q": "Wat overkomt de kinderen in de film Honey, I Shrunk the Kids uit 1989?",
+      "options": [
+        "Ze worden heel klein",
+        "Ze kunnen vliegen",
+        "Ze worden onzichtbaar",
+        "Ze reizen naar Mars"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1989"
+    },
+    {
+      "q": "Welke Disney-zeemeermin verscheen in de film uit 1989?",
+      "options": [
+        "Ariël",
+        "Elsa",
+        "Belle",
+        "Mulan"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1989"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Berlijnse Muur gaat open.",
+      "options": [
+        "1985",
+        "1989",
+        "1991",
+        "1993"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Simpsons krijgen een eigen tv-serie.",
+      "options": [
+        "1985",
+        "1989",
+        "1991",
+        "1993"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1990": [
+    {
+      "q": "Wie werd in februari 1990 na 27 jaar gevangenschap vrijgelaten?",
+      "options": [
+        "Nelson Mandela",
+        "Desmond Tutu",
+        "Václav Havel",
+        "Lech Wałęsa"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1990"
+    },
+    {
+      "q": "Welk land won in 1990 het WK voetbal in Italië?",
+      "options": [
+        "Italië",
+        "Argentinië",
+        "Engeland",
+        "West-Duitsland"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1990"
+    },
+    {
+      "q": "Welke twee landen werden in oktober 1990 herenigd?",
+      "options": [
+        "Noord- en Zuid-Korea",
+        "Oost- en West-Duitsland",
+        "Tsjechië en Slowakije",
+        "Noord- en Zuid-Vietnam"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1990"
+    },
+    {
+      "q": "Welke ruimtetelescoop werd in 1990 gelanceerd?",
+      "options": [
+        "Kepler",
+        "Spitzer",
+        "Hubble",
+        "James Webb"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1990"
+    },
+    {
+      "q": "Welke film over een jongen die per ongeluk alleen thuis blijft kwam in 1990 uit?",
+      "options": [
+        "Hook",
+        "Jumanji",
+        "Mrs. Doubtfire",
+        "Home Alone"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1990"
+    },
+    {
+      "q": "Welke spelcomputer bracht Nintendo in 1990 in Japan uit?",
+      "options": [
+        "Nintendo 64",
+        "Wii",
+        "Game Boy",
+        "Super Nintendo"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1990"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Nelson Mandela wordt vrijgelaten.",
+      "options": [
+        "1986",
+        "1988",
+        "1990",
+        "1994"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Duitsland wordt herenigd.",
+      "options": [
+        "1986",
+        "1988",
+        "1990",
+        "1994"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1991": [
+    {
+      "q": "In welk jaar gebeurde dit? Het World Wide Web wordt openbaar.",
+      "options": [
+        "1987",
+        "1989",
+        "1993",
+        "1991"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Sovjet-Unie valt uiteen.",
+      "options": [
+        "1987",
+        "1989",
+        "1993",
+        "1991"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1992": [
+    {
+      "q": "In welke Nederlandse stad werd in 1992 het verdrag over de Europese Unie ondertekend?",
+      "options": [
+        "Rotterdam",
+        "Maastricht",
+        "Amsterdam",
+        "Den Haag"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1992"
+    },
+    {
+      "q": "Welk land werd in 1992 verrassend Europees kampioen voetbal?",
+      "options": [
+        "Zweden",
+        "Denemarken",
+        "Duitsland",
+        "Nederland"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1992"
+    },
+    {
+      "q": "Welke stad organiseerde de Olympische Zomerspelen van 1992?",
+      "options": [
+        "Seoel",
+        "Atlanta",
+        "Barcelona",
+        "Sydney"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1992"
+    },
+    {
+      "q": "Welke Disneyfilm uit 1992 speelt zich af in Agrabah?",
+      "options": [
+        "Mulan",
+        "De Leeuwenkoning",
+        "Pocahontas",
+        "Aladdin"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1992"
+    },
+    {
+      "q": "Welk attractiepark opende in april 1992 bij Parijs?",
+      "options": [
+        "Europa-Park",
+        "Euro Disney",
+        "Parc Astérix",
+        "Efteling"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1992"
+    },
+    {
+      "q": "Wat stond er in het eerste sms-bericht ooit, verstuurd in 1992?",
+      "options": [
+        "Testing",
+        "Hello World",
+        "Happy New Year",
+        "Merry Christmas"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1992"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het Verdrag van Maastricht wordt ondertekend.",
+      "options": [
+        "1992",
+        "1990",
+        "1994",
+        "1996"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het eerste sms-bericht wordt verstuurd.",
+      "options": [
+        "1992",
+        "1990",
+        "1994",
+        "1996"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Euro Disney opent bij Parijs.",
+      "options": [
+        "1992",
+        "1990",
+        "1994",
+        "1996"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1993": [
+    {
+      "q": "In welk jaar gebeurde dit? Het eerste Lowlands-festival wordt gehouden.",
+      "options": [
+        "1989",
+        "1993",
+        "1995",
+        "1997"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1994": [
+    {
+      "q": "Wie werd in 1994 de eerste zwarte president van Zuid-Afrika?",
+      "options": [
+        "Thabo Mbeki",
+        "Jacob Zuma",
+        "Desmond Tutu",
+        "Nelson Mandela"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1994"
+    },
+    {
+      "q": "Welke tunnel tussen Engeland en Frankrijk werd in 1994 geopend?",
+      "options": [
+        "De Gotthardtunnel",
+        "De Kanaaltunnel",
+        "De Mont Blanctunnel",
+        "De Westerscheldetunnel"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1994"
+    },
+    {
+      "q": "Welk land won in 1994 het WK voetbal in de Verenigde Staten?",
+      "options": [
+        "Zweden",
+        "Nederland",
+        "Brazilië",
+        "Italië"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1994"
+    },
+    {
+      "q": "Welke Disneyfilm over leeuwenwelp Simba kwam in 1994 uit?",
+      "options": [
+        "Aladdin",
+        "De Leeuwenkoning",
+        "Tarzan",
+        "Bambi"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1994"
+    },
+    {
+      "q": "Welke spelcomputer bracht Sony in december 1994 in Japan uit?",
+      "options": [
+        "Xbox",
+        "GameCube",
+        "PlayStation",
+        "Dreamcast"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1994"
+    },
+    {
+      "q": "In welke film uit 1994 zegt Tom Hanks dat het leven is als een doos bonbons?",
+      "options": [
+        "Big",
+        "Philadelphia",
+        "Cast Away",
+        "Forrest Gump"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1994"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Kanaaltunnel tussen Engeland en Frankrijk gaat open.",
+      "options": [
+        "1990",
+        "1992",
+        "1994",
+        "1998"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Nelson Mandela wordt president van Zuid-Afrika.",
+      "options": [
+        "1990",
+        "1992",
+        "1994",
+        "1998"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1995": [
+    {
+      "q": "Welke Windows-versie verscheen in 1995?",
+      "options": [
+        "Windows 95",
+        "Windows XP",
+        "Windows 7",
+        "Windows Vista"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1995"
+    },
+    {
+      "q": "Welke animatiefilm introduceerde Woody en Buzz Lightyear?",
+      "options": [
+        "Shrek",
+        "Toy Story",
+        "Cars",
+        "Finding Nemo"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1995"
+    },
+    {
+      "q": "Welke Nederlandse club won in 1995 de Champions League?",
+      "options": [
+        "PSV",
+        "Feyenoord",
+        "Ajax",
+        "FC Twente"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1995"
+    },
+    {
+      "q": "Welke film uit 1995 gaat over een bordspel dat een jungle tot leven brengt?",
+      "options": [
+        "Jumanji",
+        "Titanic",
+        "Avatar",
+        "Up"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1995"
+    },
+    {
+      "q": "Welke valuta betaalde je in 1995 nog in Nederlandse winkels?",
+      "options": [
+        "Euro",
+        "Gulden",
+        "Mark",
+        "Frank"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1995"
+    },
+    {
+      "q": "Welke naam past bij de in 1995 geopende veilingsite die later eBay ging heten?",
+      "options": [
+        "AuctionWeb",
+        "FaceMash",
+        "BackRub",
+        "Hotmail"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1995"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Ajax wint de Champions League in Wenen.",
+      "options": [
+        "1991",
+        "1993",
+        "1997",
+        "1995"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Windows 95 verschijnt.",
+      "options": [
+        "1991",
+        "1993",
+        "1997",
+        "1995"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1996": [
+    {
+      "q": "Welk schaap, geboren in 1996, was het eerste gekloonde zoogdier?",
+      "options": [
+        "Dolly",
+        "Molly",
+        "Bella",
+        "Shaun"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1996"
+    },
+    {
+      "q": "Welke stad organiseerde de Olympische Zomerspelen van 1996?",
+      "options": [
+        "Atlanta",
+        "Barcelona",
+        "Sydney",
+        "Athene"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1996"
+    },
+    {
+      "q": "Welke spelcomputer van Nintendo verscheen in 1996?",
+      "options": [
+        "Nintendo 64",
+        "Wii",
+        "GameCube",
+        "Super Nintendo"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1996"
+    },
+    {
+      "q": "Welk land won in 1996 het EK voetbal in Engeland?",
+      "options": [
+        "Engeland",
+        "Tsjechië",
+        "Duitsland",
+        "Nederland"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1996"
+    },
+    {
+      "q": "Wat was in 1996 de eerste single van de Spice Girls?",
+      "options": [
+        "Spice Up Your Life",
+        "Viva Forever",
+        "Stop",
+        "Wannabe"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1996"
+    },
+    {
+      "q": "Welke spellenreeks met beestjes die je in ballen vangt begon in 1996 in Japan?",
+      "options": [
+        "Pokémon",
+        "Digimon",
+        "Yu-Gi-Oh!",
+        "Tamagotchi"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1996"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Schaap Dolly is het eerste gekloonde zoogdier.",
+      "options": [
+        "1996",
+        "1994",
+        "1998",
+        "2000"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1997": [
+    {
+      "q": "Welke Britse prinses kwam in 1997 om bij een auto-ongeluk in Parijs?",
+      "options": [
+        "Diana",
+        "Margaret",
+        "Elizabeth",
+        "Anne"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1997"
+    },
+    {
+      "q": "Welk boek over een jonge tovenaar verscheen in 1997?",
+      "options": [
+        "De Kronieken van Narnia",
+        "Harry Potter en de Steen der Wijzen",
+        "Matilda",
+        "De Hobbit"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1997"
+    },
+    {
+      "q": "Welke Britse kolonie werd in 1997 aan China overgedragen?",
+      "options": [
+        "Singapore",
+        "Taiwan",
+        "Macau",
+        "Hongkong"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1997"
+    },
+    {
+      "q": "Welke schaatstocht werd in 1997 voor het laatst verreden?",
+      "options": [
+        "De Elfstedentocht",
+        "De Ronde van Loosdrecht",
+        "De Alternatieve Elfstedentocht",
+        "De Vierdaagse"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1997"
+    },
+    {
+      "q": "Welke schaakcomputer van IBM versloeg in 1997 wereldkampioen Garri Kasparov?",
+      "options": [
+        "AlphaGo",
+        "Deep Blue",
+        "Watson",
+        "HAL 9000"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1997"
+    },
+    {
+      "q": "Welk elektronisch huisdiertje was in 1997 een rage?",
+      "options": [
+        "Game Boy",
+        "Pokémon",
+        "Tamagotchi",
+        "Furby"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1997"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De laatste Elfstedentocht tot nu toe wordt geschaatst.",
+      "options": [
+        "1993",
+        "1997",
+        "1999",
+        "2001"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het eerste Harry Potter-boek verschijnt.",
+      "options": [
+        "1993",
+        "1997",
+        "1999",
+        "2001"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De film Titanic met Leonardo DiCaprio heeft zijn wereldpremière.",
+      "options": [
+        "1993",
+        "1997",
+        "1999",
+        "2001"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Maeslantkering bij Hoek van Holland wordt geopend.",
+      "options": [
+        "1993",
+        "1997",
+        "1999",
+        "2001"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Prinses Diana komt om bij een auto-ongeluk in Parijs.",
+      "options": [
+        "1993",
+        "1997",
+        "1999",
+        "2001"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1998": [
+    {
+      "q": "Welk land won in 1998 het WK voetbal in eigen land?",
+      "options": [
+        "Brazilië",
+        "Frankrijk",
+        "Kroatië",
+        "Nederland"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 1998"
+    },
+    {
+      "q": "Welk bedrijf werd in 1998 opgericht door Larry Page en Sergey Brin?",
+      "options": [
+        "Amazon",
+        "Yahoo",
+        "Facebook",
+        "Google"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1998"
+    },
+    {
+      "q": "Wie scoorde op het WK van 1998 tegen Argentinië na een lange pass van Frank de Boer?",
+      "options": [
+        "Dennis Bergkamp",
+        "Edgar Davids",
+        "Patrick Kluivert",
+        "Marc Overmars"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 1998"
+    },
+    {
+      "q": "Welke film won in 1998 elf Oscars?",
+      "options": [
+        "Braveheart",
+        "Gladiator",
+        "Titanic",
+        "Forrest Gump"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 1998"
+    },
+    {
+      "q": "Welke Apple-computer met een kleurrijke doorzichtige behuizing verscheen in 1998?",
+      "options": [
+        "iPod",
+        "iPad",
+        "MacBook",
+        "iMac"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1998"
+    },
+    {
+      "q": "Welke zangeres had in 1998 een wereldhit met Believe?",
+      "options": [
+        "Britney Spears",
+        "Madonna",
+        "Celine Dion",
+        "Cher"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 1998"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Google wordt opgericht.",
+      "options": [
+        "1994",
+        "1996",
+        "1998",
+        "2002"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "1999": [
+    {
+      "q": "In welk jaar gebeurde dit? Big Brother is voor het eerst op de Nederlandse tv.",
+      "options": [
+        "1995",
+        "1997",
+        "2001",
+        "1999"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De euro wordt ingevoerd als giraal geld.",
+      "options": [
+        "1995",
+        "1997",
+        "2001",
+        "1999"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2001": [
+    {
+      "q": "Welk land voerde in 2001 als eerste het huwelijk voor paren van hetzelfde geslacht in?",
+      "options": [
+        "Canada",
+        "België",
+        "Nederland",
+        "Spanje"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2001"
+    },
+    {
+      "q": "Welke draagbare muziekspeler bracht Apple in 2001 uit?",
+      "options": [
+        "Zune",
+        "iPod",
+        "Walkman",
+        "iPhone"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2001"
+    },
+    {
+      "q": "Welke online encyclopedie ging in 2001 van start?",
+      "options": [
+        "Britannica Online",
+        "Wikipedia",
+        "Google",
+        "Encarta"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2001"
+    },
+    {
+      "q": "Welke film over een tovenaarsleerling kwam in 2001 in de bioscoop?",
+      "options": [
+        "Percy Jackson",
+        "Eragon",
+        "Harry Potter en de Steen der Wijzen",
+        "De Kronieken van Narnia"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2001"
+    },
+    {
+      "q": "Welke torens in New York werden op 11 september 2001 verwoest?",
+      "options": [
+        "De Twin Towers",
+        "Het Rockefeller Center",
+        "Het Chrysler Building",
+        "Het Empire State Building"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2001"
+    },
+    {
+      "q": "Welke spelcomputer bracht Microsoft in 2001 uit?",
+      "options": [
+        "PlayStation 2",
+        "Xbox",
+        "Wii",
+        "Xbox 360"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2001"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Wikipedia gaat online.",
+      "options": [
+        "1997",
+        "2001",
+        "2003",
+        "2005"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Nederland is het eerste land met het homohuwelijk.",
+      "options": [
+        "1997",
+        "2001",
+        "2003",
+        "2005"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste iPod verschijnt.",
+      "options": [
+        "1997",
+        "2001",
+        "2003",
+        "2005"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste Harry Potter-film draait in de bioscoop.",
+      "options": [
+        "1997",
+        "2001",
+        "2003",
+        "2005"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2002": [
+    {
+      "q": "Wat verscheen op 1 januari 2002 in Nederlandse portemonnees?",
+      "options": [
+        "Eurobiljetten en -munten",
+        "Bitcoin",
+        "De gulden",
+        "De dollar"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2002"
+    },
+    {
+      "q": "Welke twee landen organiseerden samen het WK voetbal van 2002?",
+      "options": [
+        "Duitsland en Frankrijk",
+        "Japan en Zuid-Korea",
+        "Spanje en Portugal",
+        "VS en Canada"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2002"
+    },
+    {
+      "q": "Welk land won het WK voetbal in 2002?",
+      "options": [
+        "Duitsland",
+        "Nederland",
+        "Brazilië",
+        "Frankrijk"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2002"
+    },
+    {
+      "q": "Welke blauwe alien speelde in een Disney-film uit 2002?",
+      "options": [
+        "Stitch",
+        "Dory",
+        "Olaf",
+        "Sully"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2002"
+    },
+    {
+      "q": "Welke filmheld kreeg in 2002 een film met Tobey Maguire?",
+      "options": [
+        "Batman",
+        "Spider-Man",
+        "Superman",
+        "Iron Man"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2002"
+    },
+    {
+      "q": "Welke fantasyfilm uit 2002 is het tweede deel van The Lord of the Rings?",
+      "options": [
+        "The Two Towers",
+        "The Return of the King",
+        "The Hobbit",
+        "The Fellowship of the Ring"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2002"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Eurobiljetten en -munten worden betaalmiddel in Nederland.",
+      "options": [
+        "1998",
+        "2000",
+        "2002",
+        "2006"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Willem-Alexander trouwt met Máxima.",
+      "options": [
+        "1998",
+        "2000",
+        "2002",
+        "2006"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2003": [
+    {
+      "q": "In welk jaar gebeurde dit? Prinses Catharina-Amalia wordt geboren.",
+      "options": [
+        "1999",
+        "2001",
+        "2005",
+        "2003"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2004": [
+    {
+      "q": "Welk sociaal netwerk werd in 2004 opgericht door Mark Zuckerberg?",
+      "options": [
+        "Twitter",
+        "MySpace",
+        "Facebook",
+        "Hyves"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2004"
+    },
+    {
+      "q": "Welke stad organiseerde de Olympische Zomerspelen van 2004?",
+      "options": [
+        "Sydney",
+        "Londen",
+        "Peking",
+        "Athene"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2004"
+    },
+    {
+      "q": "Welk land won in 2004 verrassend het EK voetbal?",
+      "options": [
+        "Griekenland",
+        "Portugal",
+        "Tsjechië",
+        "Nederland"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2004"
+    },
+    {
+      "q": "Welke Nederlandse astronaut ging in 2004 naar het ruimtestation ISS?",
+      "options": [
+        "Wubbo Ockels",
+        "Chris Hadfield",
+        "André Kuipers",
+        "Lodewijk van den Berg"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2004"
+    },
+    {
+      "q": "Welke draagbare spelcomputer met twee schermen bracht Nintendo in 2004 uit?",
+      "options": [
+        "Game Boy",
+        "Nintendo DS",
+        "3DS",
+        "Switch"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2004"
+    },
+    {
+      "q": "Waar trof in december 2004 een enorme tsunami de kusten?",
+      "options": [
+        "Rond de Indische Oceaan",
+        "In de Caribische Zee",
+        "Rond de Middellandse Zee",
+        "Aan de Noordzee"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2004"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Facebook wordt opgericht.",
+      "options": [
+        "2004",
+        "2002",
+        "2006",
+        "2008"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? André Kuipers gaat voor het eerst de ruimte in.",
+      "options": [
+        "2004",
+        "2002",
+        "2006",
+        "2008"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2005": [
+    {
+      "q": "Welke videosite ging in 2005 van start?",
+      "options": [
+        "Instagram",
+        "YouTube",
+        "Netflix",
+        "TikTok"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2005"
+    },
+    {
+      "q": "Hoe stemde Nederland in juni 2005 in het referendum over de Europese Grondwet?",
+      "options": [
+        "Tegen",
+        "Precies gelijk",
+        "Het referendum werd afgelast",
+        "Voor"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2005"
+    },
+    {
+      "q": "Welke orkaan verwoestte in 2005 grote delen van New Orleans?",
+      "options": [
+        "Sandy",
+        "Katrina",
+        "Irma",
+        "Harvey"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2005"
+    },
+    {
+      "q": "Welke paus werd in 2005 gekozen na de dood van Johannes Paulus II?",
+      "options": [
+        "Benedictus XVI",
+        "Franciscus",
+        "Johannes XXIII",
+        "Paulus VI"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2005"
+    },
+    {
+      "q": "Welke coureur werd in 2005 de jongste wereldkampioen Formule 1 tot dan toe?",
+      "options": [
+        "Lewis Hamilton",
+        "Kimi Räikkönen",
+        "Fernando Alonso",
+        "Michael Schumacher"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2005"
+    },
+    {
+      "q": "Welke spelcomputer van Microsoft kwam eind 2005 uit?",
+      "options": [
+        "Xbox One",
+        "PlayStation 3",
+        "Wii",
+        "Xbox 360"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2005"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? YouTube gaat van start.",
+      "options": [
+        "2001",
+        "2005",
+        "2007",
+        "2009"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2006": [
+    {
+      "q": "In welk jaar gebeurde dit? Twitter wordt gelanceerd.",
+      "options": [
+        "2002",
+        "2004",
+        "2006",
+        "2010"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Pluto wordt geen planeet meer genoemd.",
+      "options": [
+        "2002",
+        "2004",
+        "2006",
+        "2010"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Nintendo Wii verschijnt.",
+      "options": [
+        "2002",
+        "2004",
+        "2006",
+        "2010"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2007": [
+    {
+      "q": "Welke telefoon met aanraakscherm presenteerde Apple in 2007?",
+      "options": [
+        "iPad",
+        "iPhone",
+        "Nokia 3310",
+        "BlackBerry"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2007"
+    },
+    {
+      "q": "Welk laatste Harry Potter-boek verscheen in 2007?",
+      "options": [
+        "De Relieken van de Dood",
+        "De Orde van de Feniks",
+        "De Vuurbeker",
+        "De Halfbloed Prins"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2007"
+    },
+    {
+      "q": "Welke animatiefilm uit 2007 gaat over een rat die kok wil worden?",
+      "options": [
+        "Ratatouille",
+        "Up",
+        "Cars",
+        "Shrek"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2007"
+    },
+    {
+      "q": "Welk bedrijf begon in 2007 met het streamen van films via internet?",
+      "options": [
+        "Spotify",
+        "HBO Max",
+        "Netflix",
+        "Disney+"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2007"
+    },
+    {
+      "q": "Wie volgde Tony Blair in 2007 op als Brits premier?",
+      "options": [
+        "Gordon Brown",
+        "David Cameron",
+        "Theresa May",
+        "John Major"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2007"
+    },
+    {
+      "q": "Welke club werd in 2007 op de laatste speeldag op doelsaldo kampioen van Nederland?",
+      "options": [
+        "Feyenoord",
+        "Ajax",
+        "AZ",
+        "PSV"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2007"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste iPhone komt op de markt.",
+      "options": [
+        "2003",
+        "2005",
+        "2009",
+        "2007"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2008": [
+    {
+      "q": "Wie werd in 2008 gekozen als eerste zwarte president van de Verenigde Staten?",
+      "options": [
+        "Joe Biden",
+        "John McCain",
+        "Hillary Clinton",
+        "Barack Obama"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2008"
+    },
+    {
+      "q": "Welke Amerikaanse bank ging in september 2008 failliet?",
+      "options": [
+        "ING",
+        "Goldman Sachs",
+        "Deutsche Bank",
+        "Lehman Brothers"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2008"
+    },
+    {
+      "q": "Welke stad organiseerde de Olympische Zomerspelen van 2008?",
+      "options": [
+        "Londen",
+        "Peking",
+        "Tokio",
+        "Athene"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2008"
+    },
+    {
+      "q": "Welke bank kwam in 2008 in handen van de Nederlandse staat?",
+      "options": [
+        "Rabobank",
+        "ASN Bank",
+        "ABN AMRO (met Fortis Nederland)",
+        "Triodos"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2008"
+    },
+    {
+      "q": "Welke Zweedse muziekstreamingdienst ging in 2008 van start?",
+      "options": [
+        "Deezer",
+        "Napster",
+        "Tidal",
+        "Spotify"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2008"
+    },
+    {
+      "q": "Welke Pixar-film uit 2008 gaat over een eenzaam robotje op een vervuilde aarde?",
+      "options": [
+        "Up",
+        "Robots",
+        "Cars",
+        "WALL-E"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2008"
+    }
+  ],
+  "2009": [
+    {
+      "q": "In welk jaar gebeurde dit? WhatsApp wordt opgericht.",
+      "options": [
+        "2005",
+        "2009",
+        "2011",
+        "2013"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Bitcoin wordt gelanceerd.",
+      "options": [
+        "2005",
+        "2009",
+        "2011",
+        "2013"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Usain Bolt loopt de 100 meter in 9,58 seconden.",
+      "options": [
+        "2005",
+        "2009",
+        "2011",
+        "2013"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2010": [
+    {
+      "q": "Tegen welk land speelde Nederland de WK-finale van 2010?",
+      "options": [
+        "Spanje",
+        "Duitsland",
+        "Brazilië",
+        "Argentinië"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2010"
+    },
+    {
+      "q": "Welk Apple-apparaat werd in 2010 voor het eerst verkocht?",
+      "options": [
+        "iPad",
+        "iPhone",
+        "iPod",
+        "Apple Watch"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2010"
+    },
+    {
+      "q": "Welke fotodienst ging in 2010 van start?",
+      "options": [
+        "Instagram",
+        "Flickr",
+        "Pinterest in 2004",
+        "TikTok"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2010"
+    },
+    {
+      "q": "Welke gele figuurtjes verschenen in Despicable Me uit 2010?",
+      "options": [
+        "Minions",
+        "Smurfen",
+        "Pokémon",
+        "Trolls"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2010"
+    },
+    {
+      "q": "In welk land werd het WK voetbal van 2010 gehouden?",
+      "options": [
+        "Zuid-Afrika",
+        "Brazilië",
+        "Duitsland",
+        "Qatar"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2010"
+    },
+    {
+      "q": "Welke film uit 2010 draait om dromen binnen dromen?",
+      "options": [
+        "Inception",
+        "Interstellar",
+        "Gravity",
+        "The Martian"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2010"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Nederland verliest de WK-finale van Spanje.",
+      "options": [
+        "2006",
+        "2008",
+        "2010",
+        "2014"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Instagram wordt gelanceerd.",
+      "options": [
+        "2006",
+        "2008",
+        "2010",
+        "2014"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2011": [
+    {
+      "q": "In welk jaar gebeurde dit? De kernramp in Fukushima.",
+      "options": [
+        "2007",
+        "2009",
+        "2013",
+        "2011"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Prins William trouwt met Kate Middleton.",
+      "options": [
+        "2007",
+        "2009",
+        "2013",
+        "2011"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De volledige versie van Minecraft verschijnt.",
+      "options": [
+        "2007",
+        "2009",
+        "2013",
+        "2011"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2012": [
+    {
+      "q": "Welke stad organiseerde de Olympische Zomerspelen van 2012?",
+      "options": [
+        "Tokio",
+        "Rio de Janeiro",
+        "Peking",
+        "Londen"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2012"
+    },
+    {
+      "q": "Welke Zuid-Koreaanse hit met een paardendansje ging in 2012 de wereld over?",
+      "options": [
+        "Gangnam Style",
+        "Despacito",
+        "Harlem Shake",
+        "Macarena"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2012"
+    },
+    {
+      "q": "Welke Marsrover landde in augustus 2012 op Mars?",
+      "options": [
+        "Spirit",
+        "Curiosity",
+        "Opportunity",
+        "Perseverance"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2012"
+    },
+    {
+      "q": "Welk land won in 2012 het EK voetbal?",
+      "options": [
+        "Portugal",
+        "Duitsland",
+        "Italië",
+        "Spanje"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2012"
+    },
+    {
+      "q": "Welke Nederlandse wielrenster won in 2012 in Londen olympisch goud op de weg?",
+      "options": [
+        "Marianne Vos",
+        "Anna van der Breggen",
+        "Annemiek van Vleuten",
+        "Leontien van Moorsel"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2012"
+    },
+    {
+      "q": "Welke Britse koningin vierde in 2012 haar diamanten jubileum?",
+      "options": [
+        "Beatrix",
+        "Elizabeth II",
+        "Victoria",
+        "Margrethe II"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2012"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Marsrover Curiosity landt op Mars.",
+      "options": [
+        "2012",
+        "2010",
+        "2014",
+        "2016"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Gangnam Style is de eerste video met een miljard views op YouTube.",
+      "options": [
+        "2012",
+        "2010",
+        "2014",
+        "2016"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2013": [
+    {
+      "q": "In welk jaar gebeurde dit? Willem-Alexander wordt koning.",
+      "options": [
+        "2009",
+        "2013",
+        "2015",
+        "2017"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Franciscus wordt gekozen tot paus.",
+      "options": [
+        "2009",
+        "2013",
+        "2015",
+        "2017"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Netflix komt naar Nederland.",
+      "options": [
+        "2009",
+        "2013",
+        "2015",
+        "2017"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2014": [
+    {
+      "q": "In welk jaar gebeurde dit? De eerste Koningsdag wordt gevierd.",
+      "options": [
+        "2010",
+        "2012",
+        "2014",
+        "2018"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2015": [
+    {
+      "q": "In welk jaar gebeurde dit? Dafne Schippers wordt wereldkampioen op de 200 meter.",
+      "options": [
+        "2011",
+        "2013",
+        "2017",
+        "2015"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2016": [
+    {
+      "q": "Welk spel liet in 2016 mensen buiten op zoek gaan naar virtuele beestjes?",
+      "options": [
+        "Pokémon GO",
+        "Fortnite",
+        "Angry Birds",
+        "Minecraft"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2016"
+    },
+    {
+      "q": "Welk land stemde in juni 2016 om de Europese Unie te verlaten?",
+      "options": [
+        "Ierland",
+        "Het Verenigd Koninkrijk",
+        "Denemarken",
+        "Griekenland"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2016"
+    },
+    {
+      "q": "Welke stad organiseerde de Olympische Zomerspelen van 2016?",
+      "options": [
+        "Parijs",
+        "Londen",
+        "Tokio",
+        "Rio de Janeiro"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2016"
+    },
+    {
+      "q": "Welk land won in 2016 het EK voetbal?",
+      "options": [
+        "Frankrijk",
+        "Portugal",
+        "Duitsland",
+        "Wales"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2016"
+    },
+    {
+      "q": "Welke Nederlander werd in 2016 de jongste winnaar ooit van een Formule 1-race?",
+      "options": [
+        "Jos Verstappen",
+        "Nyck de Vries",
+        "Robert Doornbos",
+        "Max Verstappen"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2016"
+    },
+    {
+      "q": "Welke muzikant, bekend van Space Oddity, overleed in januari 2016?",
+      "options": [
+        "David Bowie",
+        "Prince",
+        "George Michael",
+        "Leonard Cohen"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2016"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Pokémon GO laat de halve wereld buiten rondlopen.",
+      "options": [
+        "2016",
+        "2014",
+        "2018",
+        "2020"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Max Verstappen wint zijn eerste Formule 1-race.",
+      "options": [
+        "2016",
+        "2014",
+        "2018",
+        "2020"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het Verenigd Koninkrijk stemt voor de Brexit.",
+      "options": [
+        "2016",
+        "2014",
+        "2018",
+        "2020"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2017": [
+    {
+      "q": "In welk jaar gebeurde dit? De Nintendo Switch verschijnt.",
+      "options": [
+        "2013",
+        "2017",
+        "2019",
+        "2021"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Nederlandse vrouwen worden Europees kampioen voetbal.",
+      "options": [
+        "2013",
+        "2017",
+        "2019",
+        "2021"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Fortnite Battle Royale verschijnt.",
+      "options": [
+        "2013",
+        "2017",
+        "2019",
+        "2021"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2018": [
+    {
+      "q": "Welk land won in 2018 het WK voetbal in Rusland?",
+      "options": [
+        "Kroatië",
+        "Frankrijk",
+        "België",
+        "Duitsland"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2018"
+    },
+    {
+      "q": "Welke Britse prins trouwde in mei 2018 met Meghan Markle?",
+      "options": [
+        "William",
+        "Andrew",
+        "Charles",
+        "Harry"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2018"
+    },
+    {
+      "q": "Welk 'battle royale'-spel was in 2018 enorm populair?",
+      "options": [
+        "Fortnite",
+        "Tetris",
+        "Pong",
+        "Minecraft"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2018"
+    },
+    {
+      "q": "Welke film over Queen en Freddie Mercury kwam in 2018 uit?",
+      "options": [
+        "The Greatest Showman",
+        "Bohemian Rhapsody",
+        "Rocketman",
+        "A Star Is Born"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2018"
+    },
+    {
+      "q": "Welke privacywet ging in mei 2018 in de hele EU in?",
+      "options": [
+        "De AVG",
+        "Het Schengenakkoord",
+        "De btw",
+        "De euro"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2018"
+    },
+    {
+      "q": "Wie werden in juli 2018 uit een overstroomde grot in Thailand gered?",
+      "options": [
+        "Een jeugdvoetbalteam",
+        "Een zwemclub",
+        "Een schoolkoor",
+        "Een groep toeristen"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2018"
+    }
+  ],
+  "2019": [
+    {
+      "q": "In welk jaar gebeurde dit? Duncan Laurence wint het Eurovisiesongfestival.",
+      "options": [
+        "2015",
+        "2017",
+        "2021",
+        "2019"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De Notre-Dame in Parijs staat in brand.",
+      "options": [
+        "2015",
+        "2017",
+        "2021",
+        "2019"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De eerste foto van een zwart gat wordt gepubliceerd.",
+      "options": [
+        "2015",
+        "2017",
+        "2021",
+        "2019"
+      ],
+      "correct": 3,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2020": [
+    {
+      "q": "Wat gebeurde er met het EK voetbal dat voor 2020 gepland stond?",
+      "options": [
+        "Het werd een jaar uitgesteld",
+        "Nederland won het",
+        "Het werd in januari gespeeld",
+        "Het werd een zaalcompetitie"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2020"
+    },
+    {
+      "q": "Welke Nintendo-game liet in 2020 spelers een eigen eiland inrichten?",
+      "options": [
+        "Animal Crossing: New Horizons",
+        "Mario Kart 64",
+        "Wii Sports",
+        "Tetris"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2020"
+    },
+    {
+      "q": "Welke twee nieuwe consolefamilies verschenen eind 2020?",
+      "options": [
+        "PlayStation 5 en Xbox Series",
+        "PlayStation 2 en Wii",
+        "Nintendo 64 en Dreamcast",
+        "Game Boy en Game Gear"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2020"
+    },
+    {
+      "q": "Wat doen spelers tijdens een vergadering in Among Us?",
+      "options": [
+        "Stemmen op een verdachte",
+        "Een voetbalwedstrijd spelen",
+        "Hun huis bouwen",
+        "Racen tegen de klok"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2020"
+    },
+    {
+      "q": "Welke Pixar-film uit 2020 heeft een jazzmuzikant als hoofdpersoon?",
+      "options": [
+        "Soul",
+        "Cars",
+        "Ratatouille",
+        "Up"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2020"
+    },
+    {
+      "q": "Welke vergadervorm werd in 2020 voor veel mensen dagelijks werk?",
+      "options": [
+        "Videobellen",
+        "Telegrammen sturen",
+        "Faxvergaderen",
+        "Postduivenoverleg"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2020"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Scholen in Nederland gaan dicht door corona.",
+      "options": [
+        "2020",
+        "2018",
+        "2022",
+        "2024"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2021": [
+    {
+      "q": "In welke stad werd in 2021 het Eurovisiesongfestival gehouden?",
+      "options": [
+        "Rotterdam",
+        "Amsterdam",
+        "Liverpool",
+        "Turijn"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2021"
+    },
+    {
+      "q": "Welke Nederlander werd in 2021 voor het eerst wereldkampioen Formule 1?",
+      "options": [
+        "Max Verstappen",
+        "Jos Verstappen",
+        "Giedo van der Garde",
+        "Nyck de Vries"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2021"
+    },
+    {
+      "q": "In welke stad werden de Olympische Zomerspelen gehouden die in 2021 plaatsvonden?",
+      "options": [
+        "Rio de Janeiro",
+        "Tokio",
+        "Peking",
+        "Parijs"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2021"
+    },
+    {
+      "q": "Welk land won in 2021 het EK voetbal?",
+      "options": [
+        "Engeland",
+        "Denemarken",
+        "Spanje",
+        "Italië"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2021"
+    },
+    {
+      "q": "Welke ruimtetelescoop werd op eerste kerstdag 2021 gelanceerd?",
+      "options": [
+        "Hubble",
+        "Kepler",
+        "Gaia",
+        "James Webb"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2021"
+    },
+    {
+      "q": "Welke Zuid-Koreaanse serie over dodelijke kinderspelletjes was in 2021 een Netflix-hit?",
+      "options": [
+        "Squid Game",
+        "La Casa de Papel",
+        "Dark",
+        "Stranger Things"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2021"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Max Verstappen wordt voor het eerst wereldkampioen Formule 1.",
+      "options": [
+        "2017",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Het Eurovisiesongfestival wordt in Rotterdam gehouden.",
+      "options": [
+        "2017",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? De James Webb-ruimtetelescoop wordt gelanceerd.",
+      "options": [
+        "2017",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "correct": 1,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2022": [
+    {
+      "q": "Welk land won in december 2022 het WK voetbal in Qatar?",
+      "options": [
+        "Kroatië",
+        "Frankrijk",
+        "Argentinië",
+        "Marokko"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2022"
+    },
+    {
+      "q": "Welke Britse vorst overleed in september 2022?",
+      "options": [
+        "Koningin Elizabeth II",
+        "Prins Philip",
+        "Prinses Margaret",
+        "Koning Charles III"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2022"
+    },
+    {
+      "q": "Welke AI-chatbot werd in november 2022 gelanceerd?",
+      "options": [
+        "Siri",
+        "ChatGPT",
+        "Alexa",
+        "Cortana"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2022"
+    },
+    {
+      "q": "Welke Nederlandse schaatsster won in 2022 olympisch goud op de 1500 meter?",
+      "options": [
+        "Irene Schouten",
+        "Jutta Leerdam",
+        "Antoinette Rijpma-de Jong",
+        "Ireen Wüst"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2022"
+    },
+    {
+      "q": "In welke stad werden de Olympische Winterspelen van 2022 gehouden?",
+      "options": [
+        "Milaan",
+        "Sotsji",
+        "Pyeongchang",
+        "Peking"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2022"
+    },
+    {
+      "q": "Welk raadspelletje met woorden van vijf letters werd begin 2022 een rage?",
+      "options": [
+        "Wordfeud",
+        "Wordle",
+        "Sudoku",
+        "Scrabble"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2022"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? ChatGPT wordt gelanceerd.",
+      "options": [
+        "2018",
+        "2020",
+        "2022",
+        "2026"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Koningin Elizabeth II overlijdt.",
+      "options": [
+        "2018",
+        "2020",
+        "2022",
+        "2026"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Argentinië wint het WK voetbal in Qatar.",
+      "options": [
+        "2018",
+        "2020",
+        "2022",
+        "2026"
+      ],
+      "correct": 2,
+      "category": "Raad het jaartal"
+    }
+  ],
+  "2024": [
+    {
+      "q": "In welke stad werden de Olympische Zomerspelen van 2024 gehouden?",
+      "options": [
+        "Parijs",
+        "Brisbane",
+        "Los Angeles",
+        "Tokio"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2024"
+    },
+    {
+      "q": "Welk land won in 2024 het EK voetbal in Duitsland?",
+      "options": [
+        "Nederland",
+        "Spanje",
+        "Engeland",
+        "Frankrijk"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2024"
+    },
+    {
+      "q": "Tot welke ronde kwam Oranje op het EK van 2024?",
+      "options": [
+        "De finale",
+        "De kwartfinale",
+        "De groepsfase",
+        "De halve finale"
+      ],
+      "correct": 3,
+      "category": "Nieuws en cultuur · 2024"
+    },
+    {
+      "q": "Welke Nederlandse coureur werd in 2024 voor de vierde keer wereldkampioen Formule 1?",
+      "options": [
+        "Giedo van der Garde",
+        "Max Verstappen",
+        "Robert Doornbos",
+        "Nyck de Vries"
+      ],
+      "correct": 1,
+      "category": "Nieuws en cultuur · 2024"
+    },
+    {
+      "q": "Welke Nederlandse inzending werd in 2024 gediskwalificeerd op het Songfestival?",
+      "options": [
+        "Joost Klein",
+        "S10",
+        "Duncan Laurence",
+        "Mia Nicolai en Dion Cooper"
+      ],
+      "correct": 0,
+      "category": "Nieuws en cultuur · 2024"
+    },
+    {
+      "q": "Welke Amerikaanse zangeres gaf in juli 2024 drie concerten in Amsterdam tijdens haar Eras Tour?",
+      "options": [
+        "Madonna",
+        "Lady Gaga",
+        "Taylor Swift",
+        "Beyoncé"
+      ],
+      "correct": 2,
+      "category": "Nieuws en cultuur · 2024"
+    },
+    {
+      "q": "In welk jaar gebeurde dit? Sifan Hassan wint olympisch goud op de marathon.",
+      "options": [
+        "2024",
+        "2022",
+        "2026",
+        "2028"
+      ],
+      "correct": 0,
+      "category": "Raad het jaartal"
+    }
+  ]
+}

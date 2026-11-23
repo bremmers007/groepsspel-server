@@ -1,1 +1,1 @@
-window.EDITION='0.15.6';
+window.EDITION='0.19.5';

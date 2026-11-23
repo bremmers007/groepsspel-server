@@ -1,0 +1,235 @@
+/* Groepsspel 0.17.0 · Tv-graphics voor de publieksstudio (beamer/TV). Eigen ontwerp. */
+:root{--bc-a:#1f6fe5;--bc-b:#ef7d16;--bc-c:#21a35b;--bc-d:#e2b300;--bc-gold:#ffd447;--bc-ink:#fff}
+
+/* ---------- vraagpaneel: glanzende balk met vier gekleurde antwoordtegels ---------- */
+body.display .auto-q{overflow:visible}
+body.studio3d .auto-q{background:none!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;padding:0 0 .5vh!important;bottom:2.4vh}
+body.studio3d .auto-q .counter{display:inline-block;margin:0 0 -.2vh 3vw!important;padding:.45vh 1.4vw .55vh;border-radius:.7vh .7vh 0 0;
+  background:linear-gradient(#ffe27a,#f2b51d);color:#2a1700!important;font-weight:900;letter-spacing:.14em;font-size:clamp(12px,1.8vh,22px);text-transform:uppercase;
+  box-shadow:0 -2px 0 #fff6 inset;position:relative;z-index:1}
+body.studio3d .auto-q .question{margin:0 auto 1.2vh!important;padding:1.6vh 3vw 1.8vh;border-radius:2.2vh;position:relative;
+  background:linear-gradient(180deg,#3a57c9 0%,#1d2f86 48%,#131f5e 52%,#1a2a78 100%);
+  border:.35vh solid #a9c4ff;box-shadow:0 0 0 .35vh #0b1240,0 1.6vh 4vh #000a,inset 0 .5vh 0 #ffffff40,inset 0 -1vh 2vh #0006;
+  font-weight:800;line-height:1.15;text-wrap:balance;text-shadow:0 .25vh 0 #0009}
+body.studio3d .auto-q .question::after{content:"";position:absolute;left:2%;right:2%;top:.4vh;height:42%;border-radius:1.8vh 1.8vh 50% 50%/1.8vh 1.8vh 1vh 1vh;
+  background:linear-gradient(#ffffff38,#ffffff00);pointer-events:none}
+body.studio3d .auto-options{grid-template-columns:1fr 1fr!important;gap:1vh 1.4vw!important;max-width:1400px;margin:0 auto!important;padding:0 1.2vw}
+body.studio3d .auto-opt{position:relative;min-height:6.4vh;padding:1vh 1.6vw 1vh .9vw!important;border-radius:1.6vh!important;
+  border:.3vh solid #ffffffb0!important;color:#fff!important;font-weight:800;text-shadow:0 .2vh 0 #0008;
+  box-shadow:0 0 0 .3vh #0a0f30,0 1vh 2.4vh #0009,inset 0 .45vh 0 #ffffff55,inset 0 -.9vh 1.4vh #0005!important;overflow:hidden}
+body.studio3d .auto-opt::after{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(#ffffff40,#ffffff00);pointer-events:none}
+body.studio3d .auto-opt.opt-0{background:linear-gradient(180deg,#4d93ff,#1f6fe5 55%,#174fb0)!important}
+body.studio3d .auto-opt.opt-1{background:linear-gradient(180deg,#ffa54a,#ef7d16 55%,#b85a07)!important}
+body.studio3d .auto-opt.opt-2{background:linear-gradient(180deg,#4bd585,#21a35b 55%,#16773f)!important}
+body.studio3d .auto-opt.opt-3{background:linear-gradient(180deg,#ffe066,#e2b300 55%,#a98400)!important;color:#241a00!important;text-shadow:0 .15vh 0 #fff6}
+body.studio3d .auto-opt b{min-width:2.1em!important;height:2.1em!important;background:#0b1240!important;color:#fff;border:.25vh solid #fff;box-shadow:0 .3vh .8vh #0008;font-size:.95em;text-shadow:none}
+body.studio3d .auto-opt.correct{transform:scale(1.03);transform-origin:center;border-color:#fff!important;z-index:1;
+  box-shadow:0 0 0 .35vh #fff,0 0 4vh #b9ffd6,0 0 9vh #6dffad99,inset 0 .45vh 0 #ffffff66!important;animation:bc-glow 1s ease-in-out infinite alternate}
+body.studio3d .auto-opt.correct b{background:#18c46a!important}
+body.studio3d .auto-opt.dim{opacity:.28;filter:saturate(.3)}
+@keyframes bc-glow{to{box-shadow:0 0 0 .35vh #fff,0 0 6vh #d6ffe6,0 0 12vh #6dffadcc,inset 0 .45vh 0 #ffffff66}}
+
+/* tijdbalk */
+body.studio3d .auto-bar{height:1.4vh!important;max-width:1400px!important;margin:1.2vh auto 0!important;background:#0b1240cc!important;border:.25vh solid #a9c4ff88;border-radius:1vh!important;box-shadow:0 .6vh 1.6vh #0008}
+body.studio3d .auto-bar span{background:linear-gradient(90deg,#ff3b5c,#ffb52a 35%,#ffe066 60%,#4bf0a3)!important;box-shadow:0 0 2vh #ffe06699}
+body.studio3d .buzz-line,body.studio3d .bomb-line{display:inline-block;margin:1vh auto 0!important;padding:.6vh 2vw;border-radius:99px;background:#d8141e;color:#fff!important;
+  border:.3vh solid #fff;box-shadow:0 0 3vh #ff2a3a99;font-size:clamp(18px,2.8vh,34px)!important;animation:bc-pulse .7s ease-in-out infinite alternate}
+@keyframes bc-pulse{to{transform:scale(1.05);box-shadow:0 0 5vh #ff2a3acc}}
+
+/* binnenkomst van een nieuwe vraag (eenmalig per vraag, gezet door gs-broadcast.js) */
+body.studio3d .auto-q.bc-enter .counter{animation:bc-drop .35s cubic-bezier(.2,1.4,.4,1) both}
+body.studio3d .auto-q.bc-enter .question{animation:bc-swing .55s cubic-bezier(.2,1.25,.35,1) .05s both}
+body.studio3d .auto-q.bc-enter .auto-opt{animation:bc-tile .45s cubic-bezier(.2,1.5,.4,1) both}
+body.studio3d .auto-q.bc-enter .auto-opt:nth-child(1){animation-delay:.35s}
+body.studio3d .auto-q.bc-enter .auto-opt:nth-child(2){animation-delay:.47s}
+body.studio3d .auto-q.bc-enter .auto-opt:nth-child(3){animation-delay:.59s}
+body.studio3d .auto-q.bc-enter .auto-opt:nth-child(4){animation-delay:.71s}
+body.studio3d .auto-q.bc-reveal .auto-opt.correct{animation:bc-win .6s cubic-bezier(.2,1.6,.4,1),bc-glow 1s ease-in-out .6s infinite alternate}
+body.studio3d .auto-q.bc-reveal .auto-opt.dim{animation:bc-fall .4s ease-in both}
+@keyframes bc-drop{from{transform:translateY(-120%);opacity:0}}
+@keyframes bc-swing{from{transform:perspective(900px) rotateX(-75deg) scale(.8);opacity:0}}
+@keyframes bc-tile{from{transform:scale(.2) rotate(-6deg);opacity:0}}
+@keyframes bc-win{0%{transform:scale(1)}40%{transform:scale(1.1)}100%{transform:scale(1.03)}}
+@keyframes bc-fall{to{opacity:.28;transform:translateY(.6vh) scale(.97)}}
+
+/* ---------- scorebord links in beeld ---------- */
+.bc-board{position:fixed;z-index:3;left:1.4vw;top:15vh;display:flex;flex-direction:column;gap:.7vh;pointer-events:none;transition:opacity .35s,transform .35s}
+.bc-board.off{opacity:0;transform:translateX(-120%)}
+.bc-chip{--team:#2f7cff;display:grid;grid-template-columns:1.1vh auto auto;align-items:center;gap:0 1vw;min-width:14vw;padding:.6vh 1vw .6vh 0;border-radius:1.2vh;
+  background:linear-gradient(90deg,#0b1240f0,#18247af0);border:.2vh solid #ffffff40;box-shadow:0 .8vh 2vh #0008;color:#fff;overflow:hidden;transition:transform .3s,background .3s}
+.bc-chip i{align-self:stretch;background:var(--team);box-shadow:0 0 1.6vh var(--team)}
+.bc-chip span{font-weight:800;font-size:clamp(13px,2vh,24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:16vw}
+.bc-chip b{justify-self:end;font-size:clamp(16px,2.8vh,34px);font-weight:950;color:var(--bc-gold);font-variant-numeric:tabular-nums;text-shadow:0 0 1.2vh #ffd44766}
+.bc-chip.answered{border-color:#62dfff}.bc-chip.answered span::after{content:" ✓";color:#62dfff}
+.bc-chip.buzzed{background:linear-gradient(90deg,#8c0a14f0,#d8141ef0);border-color:#fff;transform:translateX(1.2vw) scale(1.06);animation:bc-pulse .6s ease-in-out infinite alternate}
+.bc-chip.ok{background:linear-gradient(90deg,#0b5a35f0,#18a35bf0);border-color:#b9ffd6;transform:translateX(1vw)}
+.bc-chip.bad{background:linear-gradient(90deg,#5a0b1df0,#8f1a33f0)}
+.bc-chip.lead b::before{content:"★ ";font-size:.7em;color:#fff}
+.bc-chip.bump b{animation:bc-bump .6s cubic-bezier(.2,1.8,.4,1)}
+@keyframes bc-bump{40%{transform:scale(1.5);color:#fff}}
+
+/* ---------- ronde-intro over het hele scherm ---------- */
+.bc-stinger{position:fixed;inset:0;z-index:20;pointer-events:none;display:grid;place-items:center;overflow:hidden}
+.bc-stinger .bands{position:absolute;inset:-20% -10%;display:grid;grid-template-rows:repeat(4,1fr);transform:rotate(-8deg)}
+.bc-stinger .bands i{display:block;transform:translateX(-120%);animation:bc-band 2.7s cubic-bezier(.7,0,.2,1) both}
+.bc-stinger .bands i:nth-child(1){background:linear-gradient(90deg,#1f6fe5,#4d93ff);animation-delay:0s}
+.bc-stinger .bands i:nth-child(2){background:linear-gradient(90deg,#ef7d16,#ffa54a);animation-delay:.07s}
+.bc-stinger .bands i:nth-child(3){background:linear-gradient(90deg,#21a35b,#4bd585);animation-delay:.14s}
+.bc-stinger .bands i:nth-child(4){background:linear-gradient(90deg,#e2b300,#ffe066);animation-delay:.21s}
+@keyframes bc-band{0%{transform:translateX(-120%)}22%,72%{transform:translateX(0)}100%{transform:translateX(120%)}}
+.bc-stinger .title{position:relative;text-align:center;color:#fff;animation:bc-title 2.7s cubic-bezier(.2,1,.3,1) both}
+.bc-stinger .title small{display:inline-block;padding:.6vh 2vw;border-radius:99px;background:#0b1240;border:.3vh solid #fff;font-weight:900;letter-spacing:.3em;font-size:clamp(14px,2.6vh,30px)}
+.bc-stinger .title b{display:block;margin-top:1.4vh;font-size:clamp(44px,12vh,150px);font-weight:950;line-height:.95;letter-spacing:-.01em;text-transform:uppercase;
+  -webkit-text-stroke:.5vh #0b1240;paint-order:stroke fill;text-shadow:0 1vh 0 #0b1240,0 2vh 4vh #000a}
+.bc-stinger .title em{display:block;margin-top:1.2vh;font-style:normal;font-size:7vh}
+@keyframes bc-title{0%{transform:scale(3) rotate(-6deg);opacity:0}16%{transform:scale(.94) rotate(-2deg);opacity:1}24%{transform:scale(1.02) rotate(-2deg)}74%{transform:scale(1.06) rotate(-2deg);opacity:1}100%{transform:scale(.4) rotate(4deg);opacity:0}}
+.bc-stinger.small .bands{display:none}
+.bc-stinger.small .title b{font-size:clamp(40px,10vh,120px);color:var(--bc-gold)}
+.bc-stinger.small .title{animation-duration:1.6s}
+
+/* ---------- korte flits bij een buzz ---------- */
+.bc-flash{position:fixed;inset:0;z-index:19;pointer-events:none;background:radial-gradient(circle,#ffffff00 40%,var(--c,#ff2a3a));animation:bc-flash .5s ease-out both}
+@keyframes bc-flash{from{opacity:.75}to{opacity:0}}
+
+@media (prefers-reduced-motion:reduce){
+  body.studio3d .auto-q.bc-enter *,body.studio3d .auto-q.bc-reveal *,.bc-chip,.bc-chip b,body.studio3d .auto-opt.correct,.buzz-line,.bomb-line{animation:none!important}
+  .bc-stinger .bands{display:none}.bc-stinger .title{animation:bc-fade 2s both}.bc-flash{display:none}
+  @keyframes bc-fade{0%,100%{opacity:0}15%,80%{opacity:1}}
+}
+
+/* ---------- 0.18: schoon tv-beeld; kop, taalkeuze en knoppen alleen na muisbeweging ---------- */
+body.display.studio3d header,body.display.studio3d .tv-controls,body.display.studio3d .gs-sound-float{transition:opacity .4s}
+body.display.studio3d:not(.bc-ui) header,body.display.studio3d:not(.bc-ui) .tv-controls,body.display.studio3d:not(.bc-ui) .gs-sound-float{opacity:0;pointer-events:none}
+body.display.studio3d:not(.bc-ui){cursor:none}
+
+/* 0.18.1: geen zwarte filmbalken boven en onder het beeld (bij ronde-intro, tussenstand en eindstand) */
+body.studio3d.cinema::before,body.studio3d.cinema::after{display:none!important}
+
+/* De teamklokken blijven bovenin vrij van de vraag en de antwoordtegels. */
+body.studio3d .auto-stage > .finale-lanes {
+  left: 3vw;
+  right: 3vw;
+  top: 8vh;
+  max-width: none;
+}
+body.studio3d .finale-lane { background: #111538f2; }
+body.studio3d .finale-clock {
+  font-size: clamp(1.1rem, 3.4vh, 2.8rem);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Korte tv-meldingen boven het speelveld, buiten het vraagpaneel. */
+.bc-callout {
+  --event-accent: #ffce61;
+  position: fixed;
+  top: 12vh;
+  left: 50%;
+  z-index: 26;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .15em .8em;
+  width: max-content;
+  max-width: min(72vw, 40rem);
+  padding: .7em 1.15em;
+  border: 2px solid var(--event-accent);
+  border-left-width: .55em;
+  border-radius: .65em;
+  background: #10152cf5;
+  box-shadow: 0 .6em 1.7em #020512b0;
+  color: #fff;
+  font-size: clamp(15px, 2.55vh, 28px);
+  text-align: left;
+  pointer-events: none;
+  animation: bc-callout-in 230ms ease-out both;
+}
+.bc-callout.cyan { --event-accent: #61e6ff; }
+.bc-callout.red { --event-accent: #ff858b; }
+.bc-callout small { grid-column: 1 / -1; color: var(--event-accent); font-weight: 800; }
+.bc-callout strong { min-width: 0; overflow-wrap: anywhere; font-size: 1.35em; }
+.bc-callout span { color: var(--event-accent); font-weight: 900; white-space: nowrap; }
+body.display:has(.finale-lanes) .bc-callout { top: 24vh; }
+@keyframes bc-callout-in {
+  from { opacity: 0; transform: translate(-50%, -12px) scale(.96); }
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+
+.sprint-ranking {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .4em;
+  list-style: none;
+  padding: 0;
+  margin: .5em auto 0;
+  color: #f8faff;
+  font-size: clamp(12px, 1.85vh, 21px);
+}
+.sprint-ranking li {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  padding: .24em .62em;
+  max-width: min(36vw, 26rem);
+  border: 1px solid #8eaad8;
+  border-radius: .55em;
+  background: #111936;
+}
+.sprint-ranking strong { color: #ffce61; }
+.sprint-ranking span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sprint-ranking b, .sprint-ranking em { white-space: nowrap; }
+.sprint-ranking em { color: #a3ffcb; font-style: normal; font-weight: 800; }
+.finale-lane.urgent .finale-clock { color: #ffaaaa; }
+.finale-lane.urgent .finale-track span { background: #ff6b77; }
+.finale-lane.locked { border-color: #81e4bc; }
+@media (prefers-reduced-motion: reduce) { .bc-callout { animation: none; } }
+
+/* Vraagbord van de zaterdagavondstudio. De onderkant blijft vrij voor Joep en de kandidaten. */
+body.display[data-arena="gala"].studio3d .auto-q:has(.auto-options),
+body.display[data-arena="theatre"].studio3d .auto-q:has(.auto-options) {
+  top: 5.5vh;
+  bottom: auto;
+  left: 16vw;
+  right: 14vw;
+  width: auto;
+  max-height: 48vh;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: 1.2vh 1.3vw 1.5vh !important;
+  border: .38vh solid #ffce81 !important;
+  border-radius: 2.5vh;
+  background: linear-gradient(145deg,#151d49ed,#080f31f6) !important;
+  box-shadow: 0 0 2.4vh #54e8fc59, inset 0 0 0 .23vh #43e3fa !important;
+}
+body.display[data-arena="gala"].studio3d .auto-q .question,
+body.display[data-arena="theatre"].studio3d .auto-q .question {
+  margin: .25vh 0 1vh;
+  font-size: clamp(18px,3.7vh,51px);
+  line-height: 1.14;
+}
+body.display[data-arena="gala"] .auto-q .auto-opt,
+body.display[data-arena="theatre"] .auto-q .auto-opt {
+  background: #142758 !important;
+  color: #fff !important;
+  border-color: #65ecfb !important;
+}
+body.display[data-arena="theatre"].studio3d .auto-q:has(.auto-options) {
+  box-shadow: 0 0 2.4vh #71ddb668, inset 0 0 0 .23vh #79d7ab !important;
+  background: linear-gradient(145deg,#21484eed,#091e28f6) !important;
+}
+body.display[data-arena="gala"] .auto-q .auto-opt.correct,
+body.display[data-arena="theatre"] .auto-q .auto-opt.correct {
+  background: #136847 !important;
+  border-color: #c7ffc9 !important;
+}
+body[data-arena="arcade"] { --arena-accent:#c9fa42; --arena-warm:#ff913c; }
+body[data-arena="arcade"] .studio-frame { border-color: #c9fa42; }
+@media (max-width: 700px), (max-height: 520px) {
+  body.display[data-arena="gala"].studio3d .auto-q:has(.auto-options),
+  body.display[data-arena="theatre"].studio3d .auto-q:has(.auto-options) {
+    left: 5vw;
+    right: 5vw;
+    max-height: 62vh;
+  }
+}

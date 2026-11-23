@@ -10,6 +10,16 @@
 const esc=GS.esc;
 /* Spellen van het wifi-spelleiderscherm (/host) en de bijbehorende spelvorm. */
 const LAN={pubquiz:'quiz',friends:'quiz',buzz:'buzzer',wordrace:'wordrace',stadskwis:'city'};
+const TV_ROUTES = {
+ year:'/host?spel=buzzer&thema=year',
+ holland:'/host?spel=buzzer&thema=holland',
+ pubquiz:'/host?spel=buzzer&thema=pubquiz',
+ friends:'/host?spel=buzzer&thema=friends',
+ floor:'/shows?game=floor',
+ smart:'/shows?game=smart',
+ hitster:'/shows?game=hitster',
+ musicbingo:'/spel/bingo'
+};
 let lastServer=null;
 async function server(){if(typeof localServerAvailable!=='function')return false;lastServer=await localServerAvailable();return lastServer;}
 
@@ -50,6 +60,8 @@ function open(id){const m=GS.catalog.meta(id),g=m?.game;if(!g){if(typeof detail=
  else if(m.mode==='phones')actions=`<button class="btn" data-gs-phone="${id}">Telefoonspel openen →</button>${m.fallback?`<button class="btn secondary" data-gs-fallback="${id}">Zonder server: één apparaat doorgeven</button>`:''}`;
  else actions=resumeHere?`<button class="btn" data-action="resume">Verder spelen →</button>`:`<button class="btn" data-gs-quick="${id}">Snel starten</button><button class="btn secondary" data-gs-go="${id}">Instellingen kiezen →</button>${m.server==='optional'?`<button class="btn secondary" data-gs-phone="${id}">Met telefoons (spelserver)</button>`:''}`;
  
+ if(id==='musicbingo')actions='';
+ if(Object.hasOwn(TV_ROUTES,id))actions+=`<button class="btn secondary" data-gs-tvshow="${id}">Automatische tv-show →</button>`;
  const serverNote=m.mode==='phones'?`<p class="gs-note">Dit spel heeft een <strong>spelserver</strong> nodig: de Windows-app op een pc (wifi of mobiel internet) of een online spelserver. Op deze tablet of telefoon alleen werkt het niet${m.fallback?', behalve de eenvoudige doorgeefversie':''}.</p>`:'';
  const canResume=resumeHere&&m.mode==='show',read=isRead(id);
  const acknowledged=canResume||read?(read&&!canResume?'<p class="e11-small gs-read-note">✓ Uitleg eerder gelezen op dit apparaat. De spelregels staan hierboven ingeklapt.</p>':''):`<label class="gs-guide-ack"><input type="checkbox" data-gs-ack="${id}"> <span>Ik heb gelezen hoe het spel werkt en weet wat ik moet klaarleggen.</span></label>`;
@@ -90,6 +102,21 @@ async function phone(id){GS.group.touch(id);
  if(GS.server)await Promise.race([GS.server.shareGroup(),new Promise(r=>setTimeout(r,1500))]);
  if(LAN[id]){if(await server()){location.href='/host?spel='+LAN[id];return;}openPhoneShows(id);return;}
  openPhoneShows(id);}
+async function themedTv(id){
+ if(!Object.hasOwn(TV_ROUTES,id))return;
+ if(await server()){
+  GS.group.touch(id);
+  if(GS.server)await Promise.race([GS.server.shareGroup(),new Promise(r=>setTimeout(r,1500))]);
+  if(id==='hitster'){
+    const list=(state.music||[]).filter(song=>song.title&&song.artist&&Number.isInteger(song.year))
+      .map(song=>[song.title,song.artist,song.year].map(x=>String(x).replace(/[|\r\n]/g,' ')).join(' | '));
+    try{sessionStorage.setItem('groepsspel-hitlijn-dj',list.join('\n'));}catch{}
+  }
+  location.href=TV_ROUTES[id];
+  return;
+ }
+ dialog('Automatische tv-show', '<p>Open Groepsspel op de pc met de lokale spelserver. Vanuit het spel kies je Automatische tv-show. Teams sluiten met hun spelcode aan op hetzelfde wifi-netwerk.</p>', '<button class="btn" data-action="close">Sluiten</button>');
+}
 function fallback(id){close();GS.group.touch(id);if(typeof detail==='function')detail(id);}
 
 document.addEventListener('change',e=>{
@@ -100,6 +127,8 @@ document.addEventListener('change',e=>{
 });
 
 document.addEventListener('click',e=>{
+ const tv=e.target.closest('[data-gs-tvshow]');
+ if(tv){e.preventDefault();themedTv(tv.dataset.gsTvshow);return;}
  const t=e.target.closest('[data-gs-open],[data-gs-go],[data-gs-quick],[data-gs-phone],[data-gs-fallback],[data-gs-teams],[data-gs-maketeams],[data-gs-group]');if(!t)return;
  e.preventDefault();const d=t.dataset;
  if(d.gsOpen)open(d.gsOpen);

@@ -140,8 +140,10 @@ class PhoneShow:
         if any(not self.connected(t) for t in s['teams']): raise ShowError('Laat alle teamtelefoons eerst aansluiten.')
         style = data.get('style', 'text')
         if style not in ('text', 'choice'): raise ShowError('Kies typen/spreken of antwoordkeuzes.')
-        if mode == 'floor' and style != 'text': raise ShowError('Vakkenstrijd gebruikt beeldherkenning: typ of spreek wat je ziet, geen meerkeuze.')
-        if mode == 'hitster' and len(s['songs']) < len(ids)+6: raise ShowError('Koppel eerst minimaal ' + str(len(ids)+6) + ' lokale muzieknummers.')
+        external = mode == 'hitster' and data.get('source') == 'dj'
+        songs = self.dj_songs(data.get('playlist')) if external else s['songs']
+        if mode == 'hitster' and len(songs) < len(ids)+6:
+            raise ShowError('Gebruik minimaal ' + str(len(ids)+6) + ' verschillende nummers met titel, artiest en jaar.')
         for k in ('duel', 'finalists', 'tied', 'final_tie', 'leader', 'winner', 'winners'):
             s.pop(k, None)
         s.update(result=None, memory_left=0, mode=mode, phase='play', paused=False, pause_reason='', style=style, history=[], banks={i: 0 for i in ids}, active=ids[0], feedback={}, last_bad=None, appeal=None)
@@ -160,9 +162,9 @@ class PhoneShow:
         else:
             target = data.get('target', 10); level = data.get('level', 'original')
             if target not in (5, 10, 15) or level not in ('original', 'pro', 'expert'): raise ShowError('Ongeldige Hitlijn-instelling.')
-            deck = self.draw(s['songs'], len(s['songs']))
+            deck = self.draw(songs, len(songs))
             timelines = {i: [deck.pop()] for i in ids}
-            s.update(target=target, level=level, deck=deck, timelines=timelines, tokens={i: {'original': 2, 'pro': 5, 'expert': 3}[level] for i in ids}, active=min(ids, key=lambda i: timelines[i][0]['year']))
+            s.update(external_audio=external,target=target, level=level, deck=deck, timelines=timelines, tokens={i: {'original': 2, 'pro': 5, 'expert': 3}[level] for i in ids}, active=min(ids, key=lambda i: timelines[i][0]['year']))
             self.hit_next()
         self.new_question()
 
@@ -282,9 +284,9 @@ class PhoneShow:
 
     def floor_end(self, loser):
         s = self.s; d = s['duel']; winner = next(i for i in d['banks'] if i != loser)
-        if loser == d['attacker']: s['board'][d['source']] = winner
-        else: s['board'][d['cell']] = winner
-        s.update(active=winner, phase='end' if len(set(s['board'])) == 1 else 'board', result={'message': self.name(winner) + ' wint het duel en verovert één vak van ' + self.name(loser) + '.'}, winner=winner)
+        cell = d['source'] if loser == d['attacker'] else d['cell']
+        s['board'][cell] = winner
+        s.update(active=winner, phase='end' if len(set(s['board'])) == 1 else 'board', result={'message': self.name(winner) + ' wint het duel en verovert één vak van ' + self.name(loser) + '.', 'cell': cell}, winner=winner)
         self.new_question()
 
     def floor_next(self):
@@ -303,11 +305,23 @@ class PhoneShow:
             wrong = list({p for p in pool if not (aliases(p) & aliases(answer))}); random.shuffle(wrong)
             choices = [answer] + wrong[:3]; random.shuffle(choices); s['choices'] = choices
 
+    def dj_songs(self, items):
+        if not isinstance(items,list) or not 1 <= len(items) <= 200:
+            raise ShowError('Plak een lijst met maximaal 200 nummers.')
+        songs = {}
+        for item in items:
+            if not isinstance(item,dict): raise ShowError('Gebruik titel, artiest en uitgavejaar.')
+            title,artist,year = item.get('title'),item.get('artist'),item.get('year')
+            if not all(isinstance(v,str) and 0 < len(v.strip()) <= 150 for v in (title,artist)) or type(year) is not int or not 1900 <= year <= 2100:
+                raise ShowError('Controleer titel, artiest en uitgavejaar van de nummers.')
+            songs[(norm(title),norm(artist))] = {'title':title.strip(),'artist':artist.strip(),'year':year}
+        return list(songs.values())
+
     def hit_next(self):
         s = self.s
         if not s['deck']:
             most = max(len(x) for x in s['timelines'].values()); s.update(phase='end', winners=[i for i in self.ids() if len(s['timelines'][i]) == most], result={'message': 'Muzieklijst uitgespeeld; meeste kaarten wint.'}); return
-        s.update(current=s['deck'].pop(), phase='listen', placement=None, challenges=[], challenge_left=0)
+        s.update(current=s['deck'].pop(), phase='prepare' if s.get('external_audio') else 'listen', placement=None, challenges=[], challenge_left=0)
         self.new_question()
 
     def hit_valid_position(self, song, cards, position):
@@ -371,7 +385,7 @@ class PhoneShow:
     def action(self, key, data):
         with self.game.lock:
             self.tick(); s = self.s; action = data.get('action')
-            if action in ('start', 'reset', 'pause', 'resume', 'remove', 'delete_song'):
+            if action in ('start', 'reset', 'pause', 'resume', 'remove', 'delete_song', 'dj_playing'):
                 self.game.host(key)
                 if action == 'start':
                     before = copy.deepcopy(s)
@@ -380,6 +394,13 @@ class PhoneShow:
                         s.clear(); s.update(before); raise
                 elif action == 'reset':
                     s.update(mode=None, phase='lobby', paused=False, appeal=None, history=[]); self.new_question()
+                elif action == 'dj_playing':
+                    if s['mode'] != 'hitster' or s['phase'] != 'prepare' or s['paused']:
+                        raise ShowError('Er staat geen DJ-nummer klaar.')
+                    if data.get('turn_id') != s['turn_id']:
+                        raise ShowError('Er staat inmiddels een ander nummer klaar.', 409)
+                    s['phase'] = 'listen'
+                    self.new_question()
                 elif action == 'pause': s.update(paused=True, pause_reason='Gepauzeerd op de pc.')
                 elif action == 'resume':
                     if s.get('appeal'): raise ShowError('Rond eerst het groepsbezwaar af.')
@@ -453,8 +474,13 @@ class PhoneShow:
         if action != 'answer': raise ShowError('Onbekende actie.')
         q = self.floor_card(); text = data.get('text', '')
         index = matches(text, [q.get('answers', [q['answer']])])
-        if index is None: self.bad(ident, text, 0)
-        else: self.apply_good(0)
+        if index is None and s['style']=='choice':
+            d['lock_left'] = 3
+            self.floor_next()
+        elif index is None:
+            self.bad(ident, text, 0)
+        else:
+            self.apply_good(0)
 
     def smart_action(self, ident, action, data):
         s = self.s; q = self.smart_q()
@@ -518,7 +544,7 @@ class PhoneShow:
             if not s['mode']: return out
             out['banks'] = s['banks']
             if s['mode'] == 'floor':
-                out.update(board=s['board'], topics=s['topics'])
+                out.update(board=s['board'], topics=s['topics'], winner=s.get('winner'))
                 if s['phase'] == 'duel':
                     q = self.floor_card(); out.update(prompt=q['visual'], category=s['duel']['topic'], banks=s['duel']['banks'], lock_left=s['duel']['lock_left'])
                     if me and s['style'] == 'choice': out['choices'] = s['choices']
@@ -536,6 +562,11 @@ class PhoneShow:
                         if s['round'] == 4 and s['memory_left'] > 0: out['story'] = q['story']
             else:
                 out.update(timelines={i: [public_card(c) for c in cards] for i, cards in s['timelines'].items()}, tokens=s['tokens'], target=s['target'], level=s['level'], winners=s.get('winners', []), challenge_left=s.get('challenge_left', 0), placement=s.get('placement', {}).get('position') if s.get('placement') else None, challenges=copy.deepcopy(s.get('challenges', [])))
-                if s['phase'] in ('listen', 'challenge'): out['audio'] = '/show-audio/' + s['current']['id']
+                if s.get('external_audio'):
+                    out['external_audio'] = True
+                    if role=='host' and s['phase'] in ('prepare','listen','challenge'):
+                        out['dj_track'] = {k:s['current'][k] for k in ('title','artist')}
+                elif s['phase'] in ('listen', 'challenge'):
+                    out['audio'] = '/show-audio/' + s['current']['id']
             if me and me['id'] == s.get('active') and not s['paused']: out['answering'] = s['phase'] in ('play', 'duel', 'listen') and s.get('memory_left', 0) <= 0 and (s.get('duel') or {}).get('lock_left', 0) <= 0
             return copy.deepcopy(out)

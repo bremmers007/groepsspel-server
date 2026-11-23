@@ -31,7 +31,6 @@ function roster(withRoles = true) {
 }
 function logList() { return `<ul class="log">${[...view.log].reverse().map(l => `<li><b>Dag ${l.day}</b>${esc(l.text)}</li>`).join('') || '<li>Nog niets gebeurd.</li>'}</ul>`; }
 function joinURL() { const base = (drafts.lan || urls[0] || location.origin); return base + '/verraders/speler?code=' + view.code; }
-function qr(url, size = 5) { try { const c = qrcode(0, 'M'); c.addData(url); c.make(); return `<div class="qr">${c.createImgTag(size, 8, 'Scan om mee te spelen')}</div>`; } catch { return ''; } }
 const phaseTitle = {lobby: 'Wachten op spelers', roles: 'De rollen worden verdeeld', day: 'Dag', mission: 'Opdracht', table: 'De ronde tafel', vote: 'Stemmen', reveal: 'De stemmen', banish: 'Verbannen', night: 'De nacht', morning: 'Het ontbijt', endgame: 'Het eindspel', end: 'Einde'};
 
 /* ------------------------------------------------------------------ CONSOLE */
@@ -53,7 +52,7 @@ function hostScreen() {
   if (ph === 'lobby') {
     const s = v.settings;
     main = `<div class="eyebrow">Stap 1 · spelers verzamelen</div><h1>Het Verraad</h1><p class="lead">Iedereen speelt op een eigen telefoon. Deze pc toont nooit wie de verraders zijn, dus de spelleider mag gewoon meespelen.</p>
-    ${lobbyInstructions()}<div class="cols"><section class="panel"><h2>Laat iedereen scannen</h2><p class="code">${v.code}</p>${urls.length > 1 ? `<label class="field"><span>Wifi-adres</span><select data-draft="lan">${urls.map(u => `<option ${u === drafts.lan ? 'selected' : ''}>${esc(u)}</option>`).join('')}</select></label>` : ''}${qr(joinURL())}<p class="linkline small">${esc(joinURL())}</p>
+    ${lobbyInstructions()}<div class="cols"><section class="panel"><h2>Meedoen met spelcode</h2><p class="code">${v.code}</p>${urls.length > 1 ? `<label class="field"><span>Wifi-adres</span><select data-draft="lan">${urls.map(u => `<option ${u === drafts.lan ? 'selected' : ''}>${esc(u)}</option>`).join('')}</select></label>` : ''}<p>Open Groepsspel → Meedoen met spelcode.</p><p class="linkline small">${esc(drafts.lan||urls[0]||roomBase())}</p>
     <div class="actions"><a class="btn secondary" href="/verraders/scherm" target="_blank" rel="noopener">Open beamer ↗</a><button type="button" class="btn secondary" data-open-tv>📺 TV-scherm</button><a class="btn secondary" href="/verraders/speler?code=${v.code}&nieuw=1" target="_blank" rel="noopener">Zelf meespelen ↗</a></div></section>
     <section class="panel"><h2>Instellingen</h2><label class="field"><span>Aantal verraders</span><select data-setting="traitors"><option value="0">Automatisch (${v.suggested} bij ${v.players.length} spelers)</option>${[1, 2, 3, 4].map(n => `<option value="${n}" ${s.traitors === n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
     <label class="field"><span>Eindspel vanaf</span><select data-setting="endgame_at">${[3, 4, 5, 6].map(n => `<option value="${n}" ${s.endgame_at === n ? 'selected' : ''}>${n} spelers over</option>`).join('')}</select></label>
@@ -132,7 +131,7 @@ function screenView() {
   const v = view, ph = v.phase;
   document.body.classList.toggle('night-mode', ph === 'night');
   const stage = (inner) => `<div class="stage">${inner}</div>`;
-  if (ph === 'lobby') return stage(`<div class="eyebrow">Groepsspel presenteert</div><h1>Het Verraad</h1><div class="lobbybox">${qr(roomBase() + '/verraders/speler?code=' + v.code, 7)}<div><p class="lead" style="margin:0">Scan en vul je naam in.<br>Spelcode</p><p class="code">${v.code}</p><p class="lead">${v.players.length} spelers aan tafel</p></div></div><div style="margin-top:4vh">${roster(false)}</div>`);
+  if (ph === 'lobby') return stage(`<div class="eyebrow">Groepsspel presenteert</div><h1>Het Verraad</h1><div class="lobbybox"><div><p class="lead" style="margin:0">Open Groepsspel → Meedoen met spelcode.<br><span class="linkline">${esc(playerServerAddress||roomBase())}</span></p><p class="code">${v.code}</p><p class="lead">${v.players.length} spelers aan tafel</p></div></div><div style="margin-top:4vh">${roster(false)}</div>`);
   if (ph === 'roles') return stage(`<div class="eyebrow">De selectie</div><h1>Bekijk je rol in stilte</h1><p class="lead">Laat niemand meekijken. Onder jullie zijn ${v.traitors_start} ${v.traitors_start === 1 ? 'verrader' : 'verraders'}.</p><div class="progress" style="max-width:700px;margin:0 auto"><i style="width:${Math.round(100 * v.acks / v.players.length)}%"></i></div>`);
   if (ph === 'day') return stage(`<div class="eyebrow">Dag ${v.day}</div><h1>Wie kun je nog vertrouwen?</h1><div class="pot"><small>In de pot</small>${money(v.pot)}</div><div style="margin-top:4vh">${roster()}</div>`);
   if (ph === 'mission') {
@@ -204,7 +203,7 @@ function joinForm() {
   const code = new URLSearchParams(location.search).get('code') || '';
   const pick = troster?.players?.length ? `<div class="roster-pick"><span class="small">Wie ben jij?${troster.group ? ' · ' + esc(troster.group) : ''}</span><div class="chips">${troster.players.map(r => `<button type="button" class="secondary small" data-pickname="${esc(r.name)}">${esc(r.name)}</button>`).join('')}</div></div>` : '';
   if (!troster) { troster = {players: []}; fetch('/api/groep/namen').then(r => r.ok ? r.json() : {players: []}).then(d => { troster = d; const f = $('#join'); if (f && d.players?.length) { const v = f.elements.name.value, c = f.elements.code.value; $('#root').innerHTML = joinForm(); $('#join').elements.name.value = v; $('#join').elements.code.value = c; } }).catch(() => {}); }
-  return `<h1>Het Verraad</h1><p class="lead">Speel mee op je eigen telefoon. Gebruik dezelfde wifi als de pc.</p><form id="join" class="panel">${pick}<label class="field"><span>Spelcode</span><input name="code" inputmode="numeric" autocomplete="off" value="${esc(code)}"></label><label class="field"><span>Je naam</span><input name="name" maxlength="30" autocomplete="nickname"></label><p class="small">Of kom terug met je persoonlijke code:</p><label class="field"><span>Persoonlijke code</span><input name="access_code" maxlength="6" autocapitalize="characters" autocomplete="off"></label><button class="big">Aan tafel →</button></form>`;
+  return `<h1>Het Verraad</h1><p class="lead">Speel mee op je eigen telefoon.${document.documentElement.dataset.online==='1'?'':' Gebruik dezelfde wifi als de pc.'}</p><form id="join" class="panel">${pick}<label class="field"><span>Spelcode</span><input name="code" inputmode="numeric" autocomplete="off" value="${esc(code)}"></label><label class="field"><span>Je naam</span><input name="name" maxlength="30" autocomplete="nickname"></label><p class="small">Of kom terug met je persoonlijke code:</p><label class="field"><span>Persoonlijke code</span><input name="access_code" maxlength="6" autocapitalize="characters" autocomplete="off"></label><button class="big">Aan tafel →</button></form>`;
 }
 
 /* -------------------------------------------------------------- weergeven */
@@ -341,3 +340,10 @@ function roomBase() { const m = document.cookie.match(/(?:^|; )gs_kamer=([A-Z0-9
 
 /* 0.15.3: gekozen wifi-adres onthouden voor de volgende keer */
 document.addEventListener('change', e => { if (e.target.dataset && e.target.dataset.draft === 'lan') { try { localStorage.setItem('groepsspel-lan-address', e.target.value); } catch {} } });
+
+let playerServerAddress = '';
+if (role === 'public') fetch('/api/lan').then(r => r.json()).then(({urls}) => {
+  const saved = localStorage.getItem('groepsspel-lan-address');
+  playerServerAddress = urls?.includes(saved) ? saved : urls?.[0] || '';
+  if (view?.phase === 'lobby') render();
+}).catch(() => {});

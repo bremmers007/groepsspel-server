@@ -89,7 +89,7 @@ function settings(){const dev=GS.ls.get('groepsspel-development')==='yes',last=G
  <section class="panel e11-development"><h2>Beheer <span class="e11-status test">gevorderd</span></h2><label class="e11-checkbox"><input type="checkbox" data-development-mode ${dev?'checked':''}> Toon beheer- en ontwikkelfuncties</label>${dev?`<div class="e11-actions"><a href="#review">Spelstatus</a><a href="#priorities">Spellen selecteren</a><a href="#chooser">Spelkiezer / programma</a><a href="#cityquest">Stadskwisbeheer</a><a href="#local">Wifi-spelleider</a><a href="#shows">Spelshows</a></div>`:''}</section>`;}
 
 /* ------------------------------------------------------------------ navigatie en render */
-header=function(){const items=[['home','Home'],['library','Spellen'],['group','Mijn groep'],['settings','Instellingen']];const cur=ALIAS[route]||route;
+header=function(){const items=[['home','Home'],['meedoen','Meedoen'],['library','Spellen'],['group','Mijn groep'],['settings','Instellingen']];const cur=ALIAS[route]||route;
  return `<header class="header"><div class="wrap header-inner"><a class="brand" href="#home" aria-label="Groepsspel home"><img src="icon.svg" alt="">groepsspel<span style="color:#b8783e">.</span></a><nav class="nav" aria-label="Hoofdnavigatie">${items.map(([id,t])=>`<a href="#${id}" ${cur===id?'class="active" aria-current="page"':''}>${t}</a>`).join('')}</nav>${document.fullscreenEnabled?`<button type="button" class="gs-fullscreen" data-gs-fullscreen title="Volledig scherm (F11)" aria-label="${document.fullscreenElement?'Volledig scherm verlaten':'Volledig scherm'}">${document.fullscreenElement?'⤡':'⛶'}</button>`:''}</div></header>`;};
 footer=function(){return `<footer class="footer"><span>groepsspel. &nbsp; Samen spelen op jouw manier.</span><span>Versie ${esc(GS.version)} · <a href="#settings">Instellingen</a> · <a href="#offline">Offline hulp</a></span></footer>`;};
 const TITLES={home:'Home',library:'Spellen',group:'Mijn groep',settings:'Instellingen'};
@@ -98,7 +98,7 @@ render=function(){
  if(ALIAS[route]){const to=ALIAS[route];if(['tablet','phones','presentation'].includes(route)){filters={mode:route==='presentation'?'show':route};}route=to;history.replaceState(null,'','#'+to+(to==='group'&&location.hash==='#scores'?'':''));}
  G.recordTablet();
  if(PAGES.has(route)){document.body.classList.remove('presentation');document.title='Groepsspel — '+TITLES[route];
-  const html=route==='home'?home():route==='library'?library():route==='group'?groupPage():settings();
+  const html=route==='home'?'<div class="e11-actions"><a class="btn" href="#meedoen">Meedoen met spelcode</a></div>'+home():route==='library'?library():route==='group'?groupPage():settings();
   $('#app').innerHTML=header()+`<main class="wrap e11-main gs-main">${html}${footer()}</main>`;
   if(typeof showConnectionStatus==='function')showConnectionStatus();}
  else prior();

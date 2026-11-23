@@ -4,14 +4,14 @@
    GPresenter.mount(), GPresenter.say(tekst,{mood,speech}), GPresenter.mood('idle'|'talk'|'happy'|'sad'|'point'|'wave') */
 const GPresenter=(()=>{
   const scope=location.pathname.replace(/\/+$/,'')||'/',KEY='groepsspel-presenter-voice:'+scope;
-  let root=null,bubble=null,figure=null,voiceOn=true,timer=null,moodTimer=null,speaking=false,voices=[],queue=[];
+  let root=null,bubble=null,figure=null,voiceOn=true,timer=null,moodTimer=null,speaking=false,voices=[],queue=[], active=null, line=0;
   try{voiceOn=localStorage.getItem(KEY)!=='0';}catch{}
   const tr=text=>window.GSI18N?.t?GSI18N.t(text):text;
   const locale=()=>window.GSI18N?.locale?.()||'nl-NL';
   const synth=window.speechSynthesis||null;
   function loadVoices(){try{voices=synth?synth.getVoices():[];}catch{voices=[];}}
   if(synth){loadVoices();try{synth.addEventListener('voiceschanged',loadVoices);}catch{}}
-  function voice(){const loc=locale().toLowerCase(),pre=loc.slice(0,2);const list=voices.filter(v=>(v.lang||'').toLowerCase().replace('_','-').startsWith(pre));if(!list.length)return null;const score=v=>((v.lang||'').toLowerCase().replace('_','-')===loc?2:0)+(/natural|online|neural/i.test(v.name)?3:0)+(v.localService?0:1);return list.sort((a,b)=>score(b)-score(a))[0];}
+  function voice(){const loc=locale().toLowerCase(),pre=loc.slice(0,2);const list=voices.filter(v=>(v.lang||'').toLowerCase().replace('_','-').startsWith(pre));if(!list.length)return null;const score=v=>((v.lang||'').toLowerCase().replace('_','-')===loc?2:0)+(/natural|online|neural/i.test(v.name)?3:0)+(v.localService?10:0);return list.sort((a,b)=>score(b)-score(a))[0];}
   const SVG=`<svg viewBox="0 0 220 320" class="gp-svg" aria-hidden="true">
     <ellipse cx="110" cy="310" rx="62" ry="8" class="gp-shadow"/>
     <g class="gp-body">
@@ -56,19 +56,104 @@ const GPresenter=(()=>{
   .gp-studio .gp-bubble{margin:0;max-width:min(80vw,1200px);background:rgba(5,6,18,.78);color:#fff;border:1px solid #ffffff2a;border-radius:14px;font-size:clamp(18px,3.2vh,40px);font-weight:600;text-align:center;backdrop-filter:blur(6px)}
   .gp-studio .gp-bubble:before{display:none}.gp-studio .gp-name{display:block;font-size:.55em;letter-spacing:.25em;color:#ffd447;margin-bottom:.2em}.gp-studio .gp-voice{position:fixed;left:12px;bottom:12px}
   @media (prefers-reduced-motion:reduce){.gp-figure,.gp-eyes,.gp-happy .gp-figure,.gp-sad .gp-head{animation:none}}@media print{.gp-wrap{display:none}}`;
-  function mount(opts={}){if(root)return root;const st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);root=document.createElement('div');root.className='gp-wrap gp-hidden'+(opts.small?' gp-small':'')+(opts.studio?' gp-studio':'');root.setAttribute('aria-live','polite');root.innerHTML=`<div class="gp-figure" title="Joep, de presentator">${SVG}</div><div class="gp-bubble" role="status"><b class="gp-name">JOEP</b><span class="gp-text"></span></div><button type="button" class="gp-voice" data-gp-voice></button>`;document.body.appendChild(root);figure=root.querySelector('.gp-figure');bubble=root.querySelector('.gp-bubble');label();root.querySelector('[data-gp-voice]').addEventListener('click',()=>{voiceOn=!voiceOn;try{localStorage.setItem(KEY,voiceOn?'1':'0');}catch{}if(!voiceOn)synth?.cancel();label();});return root;}
+  function mount(opts={}){if(root)return root;const st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);root=document.createElement('div');root.className='gp-wrap gp-hidden'+(opts.small?' gp-small':'')+(opts.studio?' gp-studio':'');root.setAttribute('aria-live','polite');root.innerHTML=`<div class="gp-figure" title="Joep, de presentator">${SVG}</div><div class="gp-bubble" role="status"><b class="gp-name">JOEP</b><span class="gp-text"></span></div><button type="button" class="gp-voice" data-gp-voice></button>`;document.body.appendChild(root);figure=root.querySelector('.gp-figure');bubble=root.querySelector('.gp-bubble');label();root.querySelector('[data-gp-voice]').addEventListener('click',()=>{voiceOn=!voiceOn;try{localStorage.setItem(KEY,voiceOn?'1':'0');}catch{}if(!voiceOn){stop();bubble.classList.remove('gp-on');}label();});return root;}
   function label(){const b=root?.querySelector('[data-gp-voice]');if(b)b.textContent=voiceOn?'🗣 Stem aan':'🗣 Stem uit';}
   function show(on){if(root)root.classList.toggle('gp-hidden',!on);}
   function mood(m){window.gsStudio?.mood(m);if(!root)return;clearTimeout(moodTimer);root.classList.remove('gp-happy','gp-sad','gp-point','gp-wave');if(m&&m!=='idle'&&m!=='talk')root.classList.add('gp-'+m);if(['happy','sad','wave'].includes(m))moodTimer=setTimeout(()=>root.classList.remove('gp-'+m),2600);}
   function talk(on){speaking=on;root?.classList.toggle('gp-talk',on);window.gsStudio?.talk(on);if(window.GSound?.duck)GSound.duck(on);}
-  function say(text,opt={}){if(!root)mount();if(opt.queue&&(speaking||bubble.classList.contains('gp-on'))){queue.push([text,{...opt,queue:false}]);return;}if(!opt.fromQueue)queue=[];show(true);clearTimeout(timer);const shown=tr(opt.bubble||text),spoken=tr(text);(bubble.querySelector('.gp-text')||bubble).textContent=shown;bubble.classList.add('gp-on');mood(opt.mood||'talk');
-    const done=()=>{talk(false);clearTimeout(timer);if(queue.length){const [t,o]=queue.shift();timer=setTimeout(()=>say(t,{...o,fromQueue:true}),350);return;}timer=setTimeout(()=>bubble.classList.remove('gp-on'),opt.hold||2500);};
-    const fallback=()=>{talk(true);timer=setTimeout(done,Math.min(6000,900+shown.length*55));};
-    const allowed=voiceOn&&synth&&opt.speech!==false&&(typeof GSound==='undefined'||GSound.enabled());
+  function stop(){
+    line++;
+    queue=[];
+    clearTimeout(timer);
+    active=null;
     try{synth?.cancel();}catch{}
-    if(!allowed){fallback();return;}
-    const v=voice();if(!v){fallback();return;}
-    try{const u=new SpeechSynthesisUtterance(spoken);u.voice=v;u.lang=v.lang;u.rate=1.05;u.pitch=1.15;u.onstart=()=>talk(true);u.onend=done;u.onerror=done;synth.speak(u);timer=setTimeout(done,Math.max(8000,spoken.length*120));}catch{fallback();}}
-  function hide(){try{synth?.cancel();}catch{}talk(false);bubble?.classList.remove('gp-on');show(false);}
+    talk(false);
+  }
+
+  function say(text,opt={}){
+    if(!root)mount();
+    if((opt.queue || active?.question) && (active || speaking || bubble.classList.contains('gp-on')) && !opt.fromQueue){
+      // Een nieuwe vraag vervangt oude reacties die nog niet zijn uitgesproken.
+      if(opt.question)queue=[];
+      queue.push([text,{...opt,queue:false}]);
+      return;
+    }
+    if(!opt.fromQueue)stop();
+    clearTimeout(timer);
+    const id=++line;
+    const shown=tr(opt.bubble||text), spoken=tr(text);
+    show(true);
+    bubble.querySelector('.gp-text').textContent=shown;
+    bubble.classList.add('gp-on');
+    mood(opt.mood||'talk');
+
+    const done=()=>{
+      if(id!==line)return;
+      line++;
+      active=null;
+      talk(false);
+      clearTimeout(timer);
+      if(queue.length){
+        timer=setTimeout(()=>{
+          const [next,options]=queue.shift();
+          say(next,{...options,fromQueue:true});
+        },180);
+      }else{
+        timer=setTimeout(()=>bubble.classList.remove('gp-on'),opt.hold||2500);
+      }
+    };
+
+    const allowed=voiceOn&&synth&&opt.speech!==false&&(typeof GSound==='undefined'||GSound.enabled());
+    if(!allowed){
+      if(opt.speech===false){talk(true);timer=setTimeout(done,Math.min(6000,900+shown.length*55));}
+      else done();
+      return;
+    }
+    const words=spoken.match(/\S+\s*/g)||[];
+    const parts=[];
+    let part='';
+    for(const word of words){
+      if(part && part.length+word.length>115){parts.push(part.trim());part='';}
+      part+=word;
+    }
+    if(part.trim())parts.push(part.trim());
+    const preferred=voice();
+    active={question:!!opt.question,utterance:null};
+
+    function speakPart(index,retry=false){
+      if(id!==line)return;
+      if(index===parts.length){done();return;}
+      const selected=retry?null:preferred;
+      const utterance=new SpeechSynthesisUtterance(parts[index]);
+      if(selected)utterance.voice=selected;
+      utterance.lang=selected?.lang||locale();
+      utterance.rate=1.05;
+      utterance.pitch=1.15;
+      active.utterance=utterance;
+      const current=()=>id===line&&active?.utterance===utterance;
+      const advance=()=>{
+        if(!current())return;
+        clearTimeout(timer);
+        active.utterance=null;
+        timer=setTimeout(()=>speakPart(index+1),30);
+      };
+      const failed=()=>{
+        if(!current())return;
+        clearTimeout(timer);
+        active.utterance=null;
+        try{synth.cancel();}catch{}
+        if(retry){done();return;}
+        timer=setTimeout(()=>speakPart(index,true),100);
+      };
+      utterance.onstart=()=>{if(current())talk(true);};
+      utterance.onend=advance;
+      utterance.onerror=failed;
+      timer=setTimeout(failed,Math.max(8500,parts[index].length*125));
+      try{synth.speak(utterance);}catch{failed();}
+    }
+    if(typeof SpeechSynthesisUtterance==='function')speakPart(0);
+    else done();
+  }
+  function hide(){stop();bubble?.classList.remove('gp-on');show(false);}
   return{mount,say,mood,show,hide,hasVoice:()=>!!voice(),voiceOn:()=>voiceOn};
 })();

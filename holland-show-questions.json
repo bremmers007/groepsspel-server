@@ -1,0 +1,299 @@
+[
+  {
+    "q": "Wat is de hoofdstad van Limburg?",
+    "category": "Nederland",
+    "options": [
+      "Maastricht",
+      "Roermond",
+      "Venlo",
+      "Sittard"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Welke rivier stroomt door Maastricht en Roermond?",
+    "category": "Nederland",
+    "options": [
+      "Rijn",
+      "Maas",
+      "IJssel",
+      "Waal"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Welke dijk verbindt Noord-Holland met Friesland?",
+    "category": "Nederland",
+    "options": [
+      "Houtribdijk",
+      "Oesterdam",
+      "Afsluitdijk",
+      "Hondsbossche Zeewering"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Welke stad heeft de Domtoren?",
+    "category": "Nederland",
+    "options": [
+      "Gouda",
+      "Amersfoort",
+      "Dordrecht",
+      "Utrecht"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Welke provincie heeft Middelburg als hoofdstad?",
+    "category": "Nederland",
+    "options": [
+      "Zeeland",
+      "Zuid-Holland",
+      "Flevoland",
+      "Noord-Brabant"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Welk eiland is het grootste Nederlandse Waddeneiland?",
+    "category": "Nederland",
+    "options": [
+      "Vlieland",
+      "Texel",
+      "Ameland",
+      "Schiermonnikoog"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Welke plaats is bekend om de Keukenhof?",
+    "category": "Nederland",
+    "options": [
+      "Aalsmeer",
+      "Delft",
+      "Lisse",
+      "Katwijk"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "In welke plaats ligt de Efteling?",
+    "category": "Nederland",
+    "options": [
+      "Oisterwijk",
+      "Loon op Zand",
+      "Drunen",
+      "Kaatsheuvel"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Welke stad organiseerde in 1928 de Olympische Zomerspelen?",
+    "category": "Nederland",
+    "options": [
+      "Amsterdam",
+      "Rotterdam",
+      "Den Haag",
+      "Utrecht"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Welke kunstenaar schilderde De Nachtwacht?",
+    "category": "Nederland",
+    "options": [
+      "Johannes Vermeer",
+      "Rembrandt van Rijn",
+      "Jan Steen",
+      "Frans Hals"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Maak af: Wie a zegt, moet ook …",
+    "category": "Uitdrukkingen",
+    "options": [
+      "water bij de wijn doen",
+      "de daad bij het woord voegen",
+      "b zeggen",
+      "zijn tong inslikken"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Maak af: Beter een goede buur dan een verre …",
+    "category": "Uitdrukkingen",
+    "options": [
+      "vijand",
+      "neef",
+      "reiziger",
+      "vriend"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Wat betekent de kat uit de boom kijken?",
+    "category": "Uitdrukkingen",
+    "options": [
+      "Afwachten wat er gebeurt",
+      "Iemand verrassen",
+      "Te veel risico nemen",
+      "Een fout toegeven"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Wat betekent met de deur in huis vallen?",
+    "category": "Uitdrukkingen",
+    "options": [
+      "Iemand buitensluiten",
+      "Meteen ter zake komen",
+      "Een geheim vertellen",
+      "Onverwacht langskomen"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Maak af: De appel valt niet ver van de …",
+    "category": "Uitdrukkingen",
+    "options": [
+      "tuin",
+      "muur",
+      "boom",
+      "mand"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Wat betekent iets onder de knie krijgen?",
+    "category": "Uitdrukkingen",
+    "options": [
+      "Iets geheimhouden",
+      "Iets vergeten",
+      "Iets uitstellen",
+      "Iets leren beheersen"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Welke vulling zit traditioneel tussen de wafels van een stroopwafel?",
+    "category": "Eten en tradities",
+    "options": [
+      "Stroop",
+      "Marsepein",
+      "Botercrème",
+      "Appelmoes"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Welke lekkernij eet men traditioneel bij oud en nieuw?",
+    "category": "Eten en tradities",
+    "options": [
+      "Beschuit met muisjes",
+      "Oliebollen",
+      "Banketstaaf",
+      "Paaseieren"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Welke groente gaat traditioneel in hutspot naast ui?",
+    "category": "Eten en tradities",
+    "options": [
+      "Prei",
+      "Boerenkool",
+      "Wortel",
+      "Andijvie"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Welke plaats is bekend om haar traditionele kaasmarkt op het Waagplein?",
+    "category": "Eten en tradities",
+    "options": [
+      "Gouda",
+      "Edam",
+      "Woerden",
+      "Alkmaar"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Welke kleur hoort traditioneel bij Koningsdag?",
+    "category": "Eten en tradities",
+    "options": [
+      "Oranje",
+      "Groen",
+      "Paars",
+      "Geel"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Welk feest wordt gevierd op de avond van 5 december?",
+    "category": "Eten en tradities",
+    "options": [
+      "Oudejaarsavond",
+      "Pakjesavond",
+      "Driekoningen",
+      "Sint-Maarten"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Hoe heet de schaatstocht langs elf Friese steden?",
+    "category": "Sport en cultuur",
+    "options": [
+      "Ronde van Friesland",
+      "Vierdaagse",
+      "Elfstedentocht",
+      "Flevorace"
+    ],
+    "correct": 2
+  },
+  {
+    "q": "Welke club won in 1995 de Champions League?",
+    "category": "Sport en cultuur",
+    "options": [
+      "Feyenoord",
+      "PSV",
+      "FC Twente",
+      "Ajax"
+    ],
+    "correct": 3
+  },
+  {
+    "q": "Welke Nederlander won als eerste het wereldkampioenschap Formule 1?",
+    "category": "Sport en cultuur",
+    "options": [
+      "Max Verstappen",
+      "Jos Verstappen",
+      "Jan Lammers",
+      "Giedo van der Garde"
+    ],
+    "correct": 0
+  },
+  {
+    "q": "Welke zanger werd bekend met Het is een nacht?",
+    "category": "Sport en cultuur",
+    "options": [
+      "Marco Borsato",
+      "Guus Meeuwis",
+      "René Froger",
+      "Boudewijn de Groot"
+    ],
+    "correct": 1
+  },
+  {
+    "q": "Welke Nederlandse schilder maakte Meisje met de parel?",
+    "category": "Sport en cultuur",
+    "options": [
+      "Rembrandt van Rijn",
+      "Vincent van Gogh",
+      "Johannes Vermeer",
+      "Piet Mondriaan"
+    ],
+    "correct": 2
+  }
+]
