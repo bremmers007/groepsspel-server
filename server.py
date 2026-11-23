@@ -21,7 +21,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.21.0'
+VERSION='0.22.0'
 SHOW_THEMES = {'year': 'Terug in de tijd', 'holland': 'Oerhollands', 'pubquiz': 'Pubquiz', 'friends': 'Vriendenquiz'}
 _SHARED={}
 def shared_json(name):

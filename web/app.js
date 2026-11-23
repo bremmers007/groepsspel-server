@@ -94,6 +94,7 @@ function tvControls(){
     <span role="status">${status}</span>
     <span data-tv-cast>${escapeHtml(window.gsStudio?.castStatus?.()||'')}</span>
     ${['light','ready','loading'].includes(studioStatus)?'<a href="/display?tv=1&amp;studio=0">2D kiezen</a>':'<a href="/display?tv=1&amp;studio=1">3D proberen</a>'}
+    ${studioPreference==='lite'?'<a href="/display?tv=1&amp;studio=1">Volle 3D</a>':'<a href="/display?tv=1&amp;studio=lite" title="Voor tragere laptops: lagere resolutie, geen schaduwen en eenvoudiger publiek">Lichte 3D</a>'}
     <button type="button" data-tv-sound>Test geluid en stem</button>
     <button type="button" data-tv-playlist>Muziek</button>
     <span data-tv-music-source>${escapeHtml(GSound.musicSourceLabel())}</span>
@@ -412,7 +413,7 @@ function autoTeam(){const a=state.auto,me=state.me,mine=a.me||{},ph=state.phase,
   return `<div class="auto-me">${teamSymbol(me)}<span translate="no">${escapeHtml(me.name)}</span><b>${me.score} <small>pt</small></b></div>
     <div class="controller-status"><span>${escapeHtml(status)}</span>${isTimed?'<b data-controller-clock></b>':''}</div>
     ${q&&['open','buzzed','reveal','pick'].includes(ph)?`<p class="phone-question">${escapeHtml(q.q)}</p>`:''}${a.finale&&!['finished','round'].includes(ph)?finaleLanes(me.id):''}${body}${state.message&&!['lobby','open'].includes(ph)?`<p class="phone-host">🎤 ${escapeHtml(state.message)}</p>`:''}`; }
-function autoHostControls(){const p=state.phase,a=state.auto;return `<div class="pending"><strong>Spelshow voorbereiden</strong> <small>Groepsspel 0.21.0</small><p>${escapeHtml(a.names.join(' → '))}</p><ol><li>Open de publieksstudio en zet het venster op de tv. <b data-studio-check>${state.tv_status?STUDIO_LABELS[state.tv_status]:remoteStudio?.code===state.code ? STUDIO_LABELS[remoteStudio.status] : ONLINE?'Nog geen tv-scherm open · de show kan ook zonder':'Studio nog niet gemeld'}</b></li><li>Kies op de tv ‘Test geluid en stem’ en daarna ‘Volledig scherm’.</li><li>Laat teams meedoen met de spelcode en start de show.</li></ol></div><div class="actions">${p==='lobby'?button('▶ Start de tv-show','next'):''}${['intro','round'].includes(p)&&state.index===-1?button('Intro opnieuw afspelen','intro-replay','',true):''}${p==='intro'?button('Naar ronde 1','intro-skip','',true):''}${!['lobby','finished'].includes(p)?(a.hold||p==='paused'?button('Hervatten','resume'):button('Pauzeren','pause','',true)):''}${['open','buzzed'].includes(p)?button('Vraag overslaan','reveal','',true):''}${p!=='finished'?button('Spel afronden','finish','',true):button('Terug naar lobby','lobby','',true)}</div>`;}
+function autoHostControls(){const p=state.phase,a=state.auto;return `<div class="pending"><strong>Spelshow voorbereiden</strong> <small>Groepsspel 0.22.0</small><p>${escapeHtml(a.names.join(' → '))}</p><ol><li>Open de publieksstudio en zet het venster op de tv. <b data-studio-check>${state.tv_status?STUDIO_LABELS[state.tv_status]:remoteStudio?.code===state.code ? STUDIO_LABELS[remoteStudio.status] : ONLINE?'Nog geen tv-scherm open · de show kan ook zonder':'Studio nog niet gemeld'}</b></li><li>Kies op de tv ‘Test geluid en stem’ en daarna ‘Volledig scherm’.</li><li>Laat teams meedoen met de spelcode en start de show.</li></ol></div><div class="actions">${p==='lobby'?button('▶ Start de tv-show','next'):''}${['intro','round'].includes(p)&&state.index===-1?button('Intro opnieuw afspelen','intro-replay','',true):''}${p==='intro'?button('Naar ronde 1','intro-skip','',true):''}${!['lobby','finished'].includes(p)?(a.hold||p==='paused'?button('Hervatten','resume'):button('Pauzeren','pause','',true)):''}${['open','buzzed'].includes(p)?button('Vraag overslaan','reveal','',true):''}${p!=='finished'?button('Spel afronden','finish','',true):button('Terug naar lobby','lobby','',true)}</div>`;}
 /* 0.15.4: geluid en muziek op het spelleider- en beamerscherm (niet op teamtelefoons). Knop rechtsonder, per scherm onthouden. */
 const soundScreen=(role==='host'||role==='display')&&typeof GSound!=='undefined';let lastTick=-1;
 function soundUpdate(prev,next){if(!next)return;if(role==='display'&&!next.auto){
@@ -496,7 +497,7 @@ function studioFor(next){
     if(!document.getElementById('gsStudioJs')){
       const script=document.createElement('script');
       script.id='gsStudioJs';
-      script.src='/app/gs-studio3d.js?v=210';
+      script.src='/app/gs-studio3d.js?v=220';
       script.addEventListener('error',()=>{gsStudioTried=true;setStudioStatus('failed');});
       document.head.appendChild(script);
     }
@@ -504,7 +505,8 @@ function studioFor(next){
   }
   gsStudioTried=true;
   if(!GStudio.supported()){setStudioStatus('unsupported');return null;}
-  const st=GStudio.create(document.body,{base:'/app/',onSlow:()=>{
+  const lite=studioPreference==='lite';
+  const st=GStudio.create(document.body,{base:'/app/',lite,onSlow:lite?null:()=>{
     st.renderer.setPixelRatio(.75);
     st.composer.setPixelRatio(.75);
     st.renderer.shadowMap.enabled=false;
@@ -520,7 +522,7 @@ function studioFor(next){
     document.body.classList.remove('studio3d','cinema');
     setStudioStatus('failed');
   },{once:true});
-  setStudioStatus('ready');
+  setStudioStatus(lite?'light':'ready');
   return st;
 }
 function pieImpact(target, points){
