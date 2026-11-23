@@ -1,3 +1,8 @@
 gala/ = de eigen 3D-cast van Groepsspel (Joep, Vonk, Bo en Beat, op basis van concept A) en de tribunefiguren,
 gemaakt voor Groepsspel. Vanaf 0.19.5 zitten de oudere Mixamo-, Xbot- en RobotExpressive-modellen niet meer in het
 pakket, omdat de studio ze niet meer gebruikt.
+
+vonk-rig.glb en bo-rig.glb = Vonk en Bo met een skelet van de Adobe Mixamo auto-rigger (23 november 2026).
+anims.glb = motion-capture-animaties van Adobe Mixamo, gedownload door de eigenaar van Groepsspel met zijn eigen
+Adobe-account. Royaltyvrij te gebruiken in eigen projecten en spellen; niet los verspreiden als animatiebestanden.
+Daarom staat anims.glb niet in de openbare repository van de online server; daar gebruikt de studio het gewone model.

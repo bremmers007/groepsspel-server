@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .data/
+# Mixamo-animaties niet openbaar verspreiden
+pwa/assets/models/gala/anims.glb
