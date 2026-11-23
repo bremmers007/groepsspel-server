@@ -226,7 +226,7 @@ function appearanceFields(team){
     `<button type="button" class="look-choice look-${id}" aria-pressed="${team[field]===id}" data-action="${field}" data-id="${id}">${body}</button>`:
     `<label class="look-choice look-${id}"><input type="radio" name="${field}" value="${id}" ${field==='symbol'&&items[0][0]===id?'checked':''}><span>${body}</span></label>`).join('');
   const symbols=Object.entries(TEAM_SYMBOLS).map(([id,[mark,name]])=>[id,`<b class="look-mark">${mark}</b> ${name}`]);
-  const cast=CAST.map(([id,name,color])=>[id,`<b>${name}</b><small>${color}</small>`]);
+  const cast=CAST.map(([id,name,color])=>[id,`<img class="look-face" src="/app/assets/cast/${id}.webp" alt="" loading="lazy" width="160" height="160"><b>${name}</b><small>${color}</small>`]);   // 0.20: portret van het 3D-personage
   return `<fieldset class="show-look"><legend>1. Teamsymbool</legend><div class="look-grid">${choices('symbol',symbols)}</div></fieldset>
     <fieldset class="show-look"><legend>2. Personage op de tv</legend><div class="look-grid">${choices('character',cast)}</div></fieldset>`;
 }
@@ -412,7 +412,7 @@ function autoTeam(){const a=state.auto,me=state.me,mine=a.me||{},ph=state.phase,
   return `<div class="auto-me">${teamSymbol(me)}<span translate="no">${escapeHtml(me.name)}</span><b>${me.score} <small>pt</small></b></div>
     <div class="controller-status"><span>${escapeHtml(status)}</span>${isTimed?'<b data-controller-clock></b>':''}</div>
     ${q&&['open','buzzed','reveal','pick'].includes(ph)?`<p class="phone-question">${escapeHtml(q.q)}</p>`:''}${a.finale&&!['finished','round'].includes(ph)?finaleLanes(me.id):''}${body}${state.message&&!['lobby','open'].includes(ph)?`<p class="phone-host">🎤 ${escapeHtml(state.message)}</p>`:''}`; }
-function autoHostControls(){const p=state.phase,a=state.auto;return `<div class="pending"><strong>Spelshow voorbereiden</strong> <small>Groepsspel 0.19.5</small><p>${escapeHtml(a.names.join(' → '))}</p><ol><li>Open de publieksstudio en zet het venster op de tv. <b data-studio-check>${state.tv_status?STUDIO_LABELS[state.tv_status]:remoteStudio?.code===state.code ? STUDIO_LABELS[remoteStudio.status] : ONLINE?'Nog geen tv-scherm open · de show kan ook zonder':'Studio nog niet gemeld'}</b></li><li>Kies op de tv ‘Test geluid en stem’ en daarna ‘Volledig scherm’.</li><li>Laat teams meedoen met de spelcode en start de show.</li></ol></div><div class="actions">${p==='lobby'?button('▶ Start de tv-show','next'):''}${['intro','round'].includes(p)&&state.index===-1?button('Intro opnieuw afspelen','intro-replay','',true):''}${p==='intro'?button('Naar ronde 1','intro-skip','',true):''}${!['lobby','finished'].includes(p)?(a.hold||p==='paused'?button('Hervatten','resume'):button('Pauzeren','pause','',true)):''}${['open','buzzed'].includes(p)?button('Vraag overslaan','reveal','',true):''}${p!=='finished'?button('Spel afronden','finish','',true):button('Terug naar lobby','lobby','',true)}</div>`;}
+function autoHostControls(){const p=state.phase,a=state.auto;return `<div class="pending"><strong>Spelshow voorbereiden</strong> <small>Groepsspel 0.20.0</small><p>${escapeHtml(a.names.join(' → '))}</p><ol><li>Open de publieksstudio en zet het venster op de tv. <b data-studio-check>${state.tv_status?STUDIO_LABELS[state.tv_status]:remoteStudio?.code===state.code ? STUDIO_LABELS[remoteStudio.status] : ONLINE?'Nog geen tv-scherm open · de show kan ook zonder':'Studio nog niet gemeld'}</b></li><li>Kies op de tv ‘Test geluid en stem’ en daarna ‘Volledig scherm’.</li><li>Laat teams meedoen met de spelcode en start de show.</li></ol></div><div class="actions">${p==='lobby'?button('▶ Start de tv-show','next'):''}${['intro','round'].includes(p)&&state.index===-1?button('Intro opnieuw afspelen','intro-replay','',true):''}${p==='intro'?button('Naar ronde 1','intro-skip','',true):''}${!['lobby','finished'].includes(p)?(a.hold||p==='paused'?button('Hervatten','resume'):button('Pauzeren','pause','',true)):''}${['open','buzzed'].includes(p)?button('Vraag overslaan','reveal','',true):''}${p!=='finished'?button('Spel afronden','finish','',true):button('Terug naar lobby','lobby','',true)}</div>`;}
 /* 0.15.4: geluid en muziek op het spelleider- en beamerscherm (niet op teamtelefoons). Knop rechtsonder, per scherm onthouden. */
 const soundScreen=(role==='host'||role==='display')&&typeof GSound!=='undefined';let lastTick=-1;
 function soundUpdate(prev,next){if(!next)return;if(role==='display'&&!next.auto){
@@ -496,7 +496,7 @@ function studioFor(next){
     if(!document.getElementById('gsStudioJs')){
       const script=document.createElement('script');
       script.id='gsStudioJs';
-      script.src='/app/gs-studio3d.js?v=195';
+      script.src='/app/gs-studio3d.js?v=200';
       script.addEventListener('error',()=>{gsStudioTried=true;setStudioStatus('failed');});
       document.head.appendChild(script);
     }
@@ -531,6 +531,8 @@ function pieImpact(target, points){
 function studioSync(S,prev,next){const a=next.auto,n=next.phase,p=prev?.phase,pa=prev?.auto,teamName=id=>(next.teams||[]).find(t=>t.id===id)?.name||'';
   S.setTeams(next.teams||[]);
   S.phase?.(n);
+  /* 0.20: het vraagpaneel bedekt de bovenste helft; de 3D-regie kadreert dan in het vrije deel eronder */
+  S.setPanel?.(['countdown','open','buzzed','reveal','pick','stake'].includes(n)&&!(n==='reveal'&&a.effect?.kind==='pie')?.5:0);
   document.body.classList.toggle('cinema',['intro','round','standings','finished'].includes(n));
   const icon=ROUND_ICON[a.type]||'🎲';
   if(n==='intro'){
@@ -583,7 +585,9 @@ function studioSync(S,prev,next){const a=next.auto,n=next.phase,p=prev?.phase,pa
     else if(a.type==='snel')S.focus('high',1.25);
     else S.focus('host',1.15);
   }
-  if(n!==p&&['round','standings'].includes(n))S.focus(n==='round'?'host':'audience',n==='standings'?2.9:0);}
+  /* 0.20: nieuwe ronde = kraanvlucht over het publiek naar Joep; tussenstand = publiek in beeld */
+  if(n!==p&&n==='round'){if(S.crane)S.crane(4.8);else S.focus('host');}
+  if(n!==p&&n==='standings')S.focus('audience',2.9);}
 if(soundScreen)GSound.mount();
 let displayJoin='';if(role==='display')fetch('/api/lan').then(r=>r.json()).then(v=>{let pick='';try{pick=localStorage.getItem('groepsspel-lan-address')||'';}catch{}displayJoin=(v.urls||[]).includes(pick)?pick:(v.urls||[])[0]||'';signature='';}).catch(()=>{});
 (async()=>{try{if(role==='host'){const r=await api('/api/bootstrap',null,'');hostKey=r.host_key;urls=r.urls;}await ping();if(role==='team')setInterval(()=>{if(teamKey&&!document.hidden)ping().catch(()=>{});},60000);await poll();setInterval(poll,500);setInterval(clock,80);}catch(err){$('#root').innerHTML=`<section class="panel"><h1>Verbinding niet beschikbaar</h1><p>${escapeHtml(err.message)}</p><p>Open de spelleider op de server-pc via http://127.0.0.1:8765/host. Laat de server actief en verbind teamtelefoons met dezelfde wifi.</p></section>`;}})();

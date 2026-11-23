@@ -21,7 +21,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.19.5'
+VERSION='0.20.0'
 SHOW_THEMES = {'year': 'Terug in de tijd', 'holland': 'Oerhollands', 'pubquiz': 'Pubquiz', 'friends': 'Vriendenquiz'}
 _SHARED={}
 def shared_json(name):
@@ -1055,7 +1055,7 @@ class Handler(BaseHTTPRequestHandler):
     def send_web(self,name):
         file=ROOT/'web'/name; data=file.read_bytes()
         if name.endswith('.html') and getattr(self.server,'rooms',None) is not None: data=data.replace(b'<html lang="nl"',b'<html lang="nl" data-online="1"',1)   # 0.19.5
-        self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob: https://stream.qmusic.nl; connect-src 'self' blob:; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
+        self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' blob:; media-src 'self' blob: https://stream.qmusic.nl https://*.qmusic.nl https://*.triple-it.nl; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
     def send_file(self,file,mime):
         if not file.is_file(): raise GameError('Bestand ontbreekt.',404)
         size=file.stat().st_size; start=0; end=size-1; partial=False
@@ -1221,7 +1221,7 @@ class Handler(BaseHTTPRequestHandler):
             if path not in files: raise GameError('Pagina niet gevonden.',404)
             file=ROOT/'web'/files[path]; data=file.read_bytes()
             if file.suffix=='.html' and getattr(self.server,'rooms',None) is not None: data=data.replace(b'<html lang="nl"',b'<html lang="nl" data-online="1"',1)   # 0.19.5: online-teksten
-            self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' blob:; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
+            self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' blob:; media-src 'self' blob: https://stream.qmusic.nl https://*.qmusic.nl https://*.triple-it.nl; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
         except (GameError,ShowError,TraitorsError,PlayError) as e: self.json_response({'error':e.message},e.status)
         except (BrokenPipeError,ConnectionResetError): pass
     def do_POST(self):

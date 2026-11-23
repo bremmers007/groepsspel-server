@@ -189,6 +189,7 @@
   function cue(studio,phase,previous){
     studio.spatialPhase=phase;
     if(motion.matches||!studio.spatialSet||phase===previous)return;
+    if(phase==='round'&&studio.crane)return;   // 0.20: de ronde begint met de kraanvlucht van de studio
     const name=['lobby','round'].includes(phase)?'entry':['duel','stake','challenge'].includes(phase)?'tension':null;
     if(!name)return;
     const duration=name==='entry'?2.55:1.6;
