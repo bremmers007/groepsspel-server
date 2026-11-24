@@ -76,3 +76,9 @@ document.addEventListener('click',async e=>{
 });
 
 document.addEventListener('change',e=>{if(!e.target.matches?.('[data-development-mode]'))return;localStorage.setItem('groepsspel-development',e.target.checked?'yes':'no');render();});
+
+/* 0.24: een online spelserver op een gratis plan slaapt na een kwartier. Bij het openen van de app sturen we alvast een
+   seintje naar de laatst gebruikte online server, zodat die wakker is als de spelleider een kamer maakt of spelers meedoen. */
+(()=>{try{const saved=localStorage.getItem(JOIN_SERVER_KEY)||'';const u=new URL(saved);
+  if(u.protocol!=='https:'||u.host===location.host||/^(localhost|\d+\.\d+\.\d+\.\d+)$/.test(u.hostname))return;
+  fetch(u.origin+'/api/ping',{mode:'no-cors',cache:'no-store',credentials:'omit'}).catch(()=>{});}catch{}})();

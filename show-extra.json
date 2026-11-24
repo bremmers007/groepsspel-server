@@ -1,0 +1,512 @@
+{
+ "estimate": [
+  {
+   "q": "Hoeveel meter hoog is de Domtoren in Utrecht?",
+   "answer": 112,
+   "unit": "meter",
+   "level": 1
+  },
+  {
+   "q": "Hoeveel kilometer lang is de Afsluitdijk?",
+   "answer": 32,
+   "unit": "kilometer",
+   "level": 1
+  },
+  {
+   "q": "In welk jaar werd de Eiffeltoren voltooid?",
+   "answer": 1889,
+   "unit": "jaar",
+   "level": 1
+  },
+  {
+   "q": "In welk jaar begon de Tachtigjarige Oorlog?",
+   "answer": 1568,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel meter hoog is de Mount Everest?",
+   "answer": 8849,
+   "unit": "meter",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel kilometer lang is de Rijn?",
+   "answer": 1233,
+   "unit": "kilometer",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel meter hoog is de Vaalserberg?",
+   "answer": 322,
+   "unit": "meter",
+   "level": 1
+  },
+  {
+   "q": "Hoeveel kilometer is de omtrek van de aarde bij de evenaar?",
+   "answer": 40075,
+   "unit": "kilometer",
+   "level": 3
+  },
+  {
+   "q": "Hoeveel kilometer staat de maan gemiddeld van de aarde?",
+   "answer": 384400,
+   "unit": "kilometer",
+   "level": 3
+  },
+  {
+   "q": "Hoeveel snaren heeft een concertharp?",
+   "answer": 47,
+   "unit": "snaren",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel liter water gaat er in een olympisch zwembad (50 bij 25 meter, 2 meter diep)?",
+   "answer": 2500000,
+   "unit": "liter",
+   "level": 3
+  },
+  {
+   "q": "Hoeveel dagen duurt een zwangerschap gemiddeld?",
+   "answer": 280,
+   "unit": "dagen",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel tanden heeft een volledig melkgebit?",
+   "answer": 20,
+   "unit": "tanden",
+   "level": 1
+  },
+  {
+   "q": "In welk jaar werd Rembrandt geboren?",
+   "answer": 1606,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "In welk jaar overleed Vincent van Gogh?",
+   "answer": 1890,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "In welk jaar werd de eerste Elfstedentocht verreden?",
+   "answer": 1909,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "In welk jaar ging de Efteling open?",
+   "answer": 1952,
+   "unit": "jaar",
+   "level": 1
+  },
+  {
+   "q": "In welk jaar werd Ajax opgericht?",
+   "answer": 1900,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel meter hoog is de Euromast in Rotterdam?",
+   "answer": 185,
+   "unit": "meter",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel meter lang is de Zeelandbrug?",
+   "answer": 5022,
+   "unit": "meter",
+   "level": 3
+  },
+  {
+   "q": "Hoeveel meter hoog is het Vrijheidsbeeld inclusief sokkel?",
+   "answer": 93,
+   "unit": "meter",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel meter hoog is de Burj Khalifa in Dubai?",
+   "answer": 828,
+   "unit": "meter",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel jaar was Beatrix koningin der Nederlanden?",
+   "answer": 33,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel ogen heeft een spin meestal?",
+   "answer": 8,
+   "unit": "ogen",
+   "level": 1
+  },
+  {
+   "q": "Hoeveel minuten duurt een rugbywedstrijd zonder blessuretijd?",
+   "answer": 80,
+   "unit": "minuten",
+   "level": 1
+  },
+  {
+   "q": "Hoeveel meter hoog is de Martinitoren in Groningen?",
+   "answer": 97,
+   "unit": "meter",
+   "level": 2
+  },
+  {
+   "q": "In welk jaar werd de slag bij Waterloo uitgevochten?",
+   "answer": 1815,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "In welk jaar kwam de eerste Harry Potter-film in de bioscoop?",
+   "answer": 2001,
+   "unit": "jaar",
+   "level": 1
+  },
+  {
+   "q": "Hoeveel meter diep is de Marianentrog ongeveer?",
+   "answer": 10935,
+   "unit": "meter",
+   "level": 3
+  },
+  {
+   "q": "Hoeveel graden Celsius is het aan het oppervlak van de zon ongeveer?",
+   "answer": 5500,
+   "unit": "graden",
+   "level": 3
+  },
+  {
+   "q": "Hoeveel miljoen jaar geleden stierven de dinosaurussen uit?",
+   "answer": 66,
+   "unit": "miljoen jaar",
+   "level": 2
+  },
+  {
+   "q": "In welk jaar werd Nederland Europees kampioen voetbal bij de mannen?",
+   "answer": 1988,
+   "unit": "jaar",
+   "level": 1
+  },
+  {
+   "q": "In welk jaar werd de Afsluitdijk gesloten?",
+   "answer": 1932,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel dagen heeft een gewoon jaar?",
+   "answer": 365,
+   "unit": "dagen",
+   "level": 1
+  },
+  {
+   "q": "In welk jaar werd de VOC opgericht?",
+   "answer": 1602,
+   "unit": "jaar",
+   "level": 2
+  },
+  {
+   "q": "Hoeveel kilometer per seconde legt licht ongeveer af?",
+   "answer": 299792,
+   "unit": "km per seconde",
+   "level": 3
+  },
+  {
+   "q": "In welk jaar werden de Olympische Spelen in Amsterdam gehouden?",
+   "answer": 1928,
+   "unit": "jaar",
+   "level": 2
+  }
+ ],
+ "order": [
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Piramides van Gizeh",
+    "Stichting van Rome",
+    "Ontdekking van Amerika",
+    "Eerste maanlanding"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Boekdrukkunst",
+    "Stoommachine van Watt",
+    "Telefoon",
+    "World Wide Web"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Begin Tachtigjarige Oorlog",
+    "Oprichting VOC",
+    "Koninkrijk der Nederlanden",
+    "Afsluitdijk klaar"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van dicht bij de zon naar ver weg?",
+   "items": [
+    "Mercurius",
+    "Venus",
+    "Aarde",
+    "Mars"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van dicht bij de zon naar ver weg?",
+   "items": [
+    "Jupiter",
+    "Saturnus",
+    "Uranus",
+    "Neptunus"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van klein naar groot?",
+   "items": [
+    "Mier",
+    "Muis",
+    "Kat",
+    "Paard"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van klein naar groot?",
+   "items": [
+    "Nederland",
+    "Duitsland",
+    "Frankrijk",
+    "Rusland"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van klein naar groot?",
+   "items": [
+    "Millimeter",
+    "Centimeter",
+    "Decimeter",
+    "Meter"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van klein naar groot?",
+   "items": [
+    "Byte",
+    "Kilobyte",
+    "Megabyte",
+    "Gigabyte"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van klein naar groot?",
+   "items": [
+    "Noordelijke IJszee",
+    "Indische Oceaan",
+    "Atlantische Oceaan",
+    "Grote Oceaan"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van kort naar lang?",
+   "items": [
+    "Theems",
+    "Rijn",
+    "Donau",
+    "Nijl"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van laag naar hoog?",
+   "items": [
+    "Vaalserberg",
+    "Zugspitze",
+    "Mont Blanc",
+    "Mount Everest"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van laag naar hoog?",
+   "items": [
+    "Domtoren",
+    "Eiffeltoren",
+    "Empire State Building",
+    "Burj Khalifa"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Val van de Berlijnse Muur",
+    "Oprichting van Facebook",
+    "Eerste iPhone",
+    "Eerste wereldtitel Max Verstappen"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Star Wars",
+    "Titanic",
+    "Avatar",
+    "Barbie"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Love Me Do (The Beatles)",
+    "Waterloo (ABBA)",
+    "Smells Like Teen Spirit (Nirvana)",
+    "Rolling in the Deep (Adele)"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Willem I",
+    "Willem II",
+    "Willem III",
+    "Wilhelmina"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Wilhelmina",
+    "Juliana",
+    "Beatrix",
+    "Willem-Alexander"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van langzaam naar snel?",
+   "items": [
+    "Slak",
+    "Mens",
+    "Paard",
+    "Jachtluipaard"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van koud naar heet?",
+   "items": [
+    "Smeltend ijs",
+    "Kokend water",
+    "Pizzaoven",
+    "Lava"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van noord naar zuid?",
+   "items": [
+    "Groningen",
+    "Zwolle",
+    "Utrecht",
+    "Maastricht"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Amsterdam 1928",
+    "Rome 1960",
+    "Barcelona 1992",
+    "Londen 2012"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van weinig naar veel waard?",
+   "items": [
+    "5 cent",
+    "20 cent",
+    "1 euro",
+    "2 euro"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Steentijd",
+    "Bronstijd",
+    "IJzertijd",
+    "Middeleeuwen"
+   ],
+   "level": 1
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Jheronimus Bosch",
+    "Rembrandt",
+    "Vincent van Gogh",
+    "Piet Mondriaan"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Bach",
+    "Mozart",
+    "Beethoven",
+    "Chopin"
+   ],
+   "level": 2
+  },
+  {
+   "q": "Wat is de juiste volgorde, van vroeg naar laat?",
+   "items": [
+    "Steen der Wijzen",
+    "Geheime Kamer",
+    "Gevangene van Azkaban",
+    "Vuurbeker"
+   ],
+   "level": 1
+  }
+ ],
+ "photo": {
+  "Landen": "Van welk land is deze vlag?",
+  "Vlaggen van de wereld": "Van welk land is deze vlag?",
+  "Dieren": "Welk dier zie je?",
+  "Sport": "Welke sport hoort bij dit plaatje?",
+  "Voorwerpen": "Welk voorwerp zie je?",
+  "Eten & drinken": "Wat staat er op het menu?",
+  "Vervoer": "Welk vervoermiddel zie je?",
+  "Plaatsen & gebouwen": "Welke plek of welk gebouw zie je?",
+  "Natuur & weer": "Wat zie je op het plaatje?",
+  "Kleding & accessoires": "Welk kledingstuk of accessoire zie je?",
+  "Beroepen & figuren": "Welk beroep of figuur zie je?",
+  "In huis": "Wat zie je in huis?"
+ }
+}

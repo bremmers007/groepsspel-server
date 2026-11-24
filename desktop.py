@@ -16,7 +16,7 @@ import traceback
 import urllib.request
 import webbrowser
 
-APP_VERSION = '0.23.0'
+APP_VERSION = '0.24.0'
 APP_DIR = Path(__file__).resolve().parent
 # Embedded Python ignores script directories, PYTHONPATH and the working directory.
 # Trust only the installed app directory; never rely on the shortcut's working folder.
@@ -163,7 +163,7 @@ def load_host():
 
 def validate_app():
     host = load_host()
-    for name in ('questions.json', 'tasks.json', 'show-content.json', 'show_engine.py', 'missions.json', 'bingo-songs.json', 'online.py', 'pwa/index.html', 'pwa/app.js', 'pwa/gs-shell.js', 'pwa/question-pool.js', 'murder-scenarios.json', 'web/games.js'):
+    for name in ('questions.json', 'tasks.json', 'show-content.json', 'show-extra.json', 'show_engine.py', 'missions.json', 'bingo-songs.json', 'online.py', 'pwa/index.html', 'pwa/app.js', 'pwa/gs-shell.js', 'pwa/question-pool.js', 'murder-scenarios.json', 'web/games.js'):
         if not (APP_DIR / name).is_file():
             raise RuntimeError('Installatie is onvolledig: ' + name + '. Installeer Groepsspel opnieuw.')
     packs = json.loads((APP_DIR / 'questions.json').read_text('utf-8'))

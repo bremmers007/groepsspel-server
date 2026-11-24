@@ -21,7 +21,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.23.0'
+VERSION='0.24.0'
 SHOW_THEMES = {'year': 'Terug in de tijd', 'holland': 'Oerhollands', 'pubquiz': 'Pubquiz', 'friends': 'Vriendenquiz'}
 _SHARED={}
 def shared_json(name):
@@ -285,22 +285,25 @@ class Game:
         'bom': {'name': 'De bom', 'seconds': 15, 'mode': 'bomb'},
         'inzet': {'name': 'Alles op het spel', 'seconds': 15, 'mode': 'all'},
         'finale': {'name': 'Finale', 'seconds': 15, 'mode': 'all'},
+        'mix': {'name': 'Kijken & schatten', 'seconds': 25, 'mode': 'all'},   # 0.24: plaatjes, schatten en volgorde
     }
-    AUTO_SHOWS = {'kort': ['jacht', 'buzz', 'taart', 'finale'], 'normaal': ['jacht', 'snel', 'buzz', 'taart', 'roof', 'finale'],
-                  'lang': ['jacht', 'snel', 'buzz', 'taart', 'roof', 'bom', 'finale']}
+    AUTO_SHOWS = {'kort': ['jacht', 'buzz', 'taart', 'finale'], 'normaal': ['jacht', 'mix', 'snel', 'buzz', 'taart', 'roof', 'finale'],
+                  'lang': ['jacht', 'mix', 'snel', 'buzz', 'taart', 'roof', 'bom', 'finale']}
     AUTO_STEP = {'intro': 14, 'round': 7, 'reveal': 6, 'standings': 8, 'pick': 12, 'bomb': 3}
     STAKE_SECONDS = 10
     STAKE_OPTIONS = (0, 1, 3, 5)
 
     QUIZ_SHOWS = {
         'kort': ['jacht', 'snel', 'finale'],
-        'normaal': ['jacht', 'snel', 'inzet', 'finale'],
-        'lang': ['jacht', 'snel', 'jacht', 'inzet', 'finale'],
+        'normaal': ['jacht', 'mix', 'snel', 'inzet', 'finale'],
+        'lang': ['jacht', 'snel', 'mix', 'jacht', 'inzet', 'finale'],
     }
 
-    def _auto_plan(self, count, show, theme=''):
+    def _auto_plan(self, count, show, theme='', mix=True):
         plain = theme in ('pubquiz','friends')
         kinds = (self.QUIZ_SHOWS if plain else self.AUTO_SHOWS)[show]
+        # 0.24: 'Kijken & schatten' alleen bij een gewone quiz en als er genoeg vragen zijn (anders blijven de andere rondes heel)
+        if not mix or theme not in ('', 'pubquiz') or count < 2 * (len(kinds) + 2): kinds = [k for k in kinds if k != 'mix']
         if not plain and show != 'kort' and count >= 2 * (len(kinds) + 1):
             kinds = [*kinds[:-1], 'inzet', kinds[-1]]
         if not plain and show != 'kort':
@@ -313,6 +316,76 @@ class Game:
             size = count // n + (i < count % n); info = self.AUTO_TYPES[kind]
             out.append({'type': kind, 'name': info['name'], 'mode': info['mode'], 'seconds': info['seconds'], 'from': start, 'to': start + size}); start += size
         return out
+    LEVELS = {'easy': 0, 'normal': 1, 'hard': 2}
+    def _arrange_difficulty(self, deck, rounds):
+        """0.24: elke ronde begint makkelijk en loopt op; de finale krijgt de moeilijkste vragen. Binnen een ronde
+        blijft het onderwerp wisselen (nooit twee keer hetzelfde onderwerp achter elkaar als het anders kan)."""
+        lvl = lambda q: self.LEVELS.get(q.get('difficulty'), 1)
+        if not any('difficulty' in q for q in deck): return list(deck)
+        topic = lambda q: q.get('topic') or q.get('category')
+        remaining = list(deck); out = list(deck)
+        for r in sorted(rounds, key=lambda r: r['type'] != 'finale'):
+            n = r['to'] - r['from']
+            if r['type'] == 'finale':
+                chosen = sorted(remaining, key=lambda q: -lvl(q))[:n]
+            else:
+                chosen = remaining[:n]
+            for q in chosen: remaining.remove(q)
+            ordered, last = [], None
+            pool = sorted(chosen, key=lvl)
+            while pool:
+                q = next((x for x in pool if topic(x) != last), pool[0]); pool.remove(q); ordered.append(q); last = topic(q)
+            out[r['from']:r['to']] = ordered
+        return out
+    def _mix_questions(self, n):
+        """0.24: vragen voor 'Kijken & schatten': om de beurt een plaatje, een schatvraag en een volgordevraag."""
+        extra = shared_json('show-extra.json'); floor = shared_json('show-content.json')['floor']
+        src = (ROOT / 'pwa' / 'show-images.js').read_text('utf-8')
+        images = json.loads(src[src.index('{'):src.rindex('}') + 1])
+        est = random.sample(extra['estimate'], len(extra['estimate'])); order = random.sample(extra['order'], len(extra['order']))
+        cats = [c for c in floor if c in extra['photo']]; random.shuffle(cats)
+        lv = {1: 'easy', 2: 'normal', 3: 'hard'}; out = []
+        for i in range(n):
+            kind = ('photo', 'estimate', 'order')[i % 3]
+            if kind == 'photo':
+                cat = cats[i // 3 % len(cats)]; items = [x for x in floor[cat] if x['visual'] in images]
+                right = random.choice(items); wrong = random.sample([x for x in items if x['answer'] != right['answer']], 3)
+                opts = [right['answer']] + [x['answer'] for x in wrong]; random.shuffle(opts)
+                out.append({'q': extra['photo'][cat], 'options': opts, 'correct': opts.index(right['answer']), 'kind': 'photo',
+                            'picture': '/app/' + images[right['visual']], 'category': 'Kijken & schatten', 'topic': cat, 'difficulty': 'easy'})
+            elif kind == 'estimate':
+                e = est[i // 3 % len(est)]
+                out.append({'q': e['q'], 'kind': 'estimate', 'value': e['answer'], 'unit': e['unit'], 'category': 'Kijken & schatten',
+                            'topic': 'Schatten', 'difficulty': lv.get(e['level'], 'normal')})
+            else:
+                o = order[i // 3 % len(order)]; items = o['items']
+                seqs = [list(range(4))]
+                while len(seqs) < 4:
+                    p = random.sample(range(4), 4)
+                    if p not in seqs: seqs.append(p)
+                random.shuffle(seqs)
+                out.append({'q': o['q'], 'kind': 'order', 'seq': [[items[k] for k in p] for p in seqs],
+                            'options': [' → '.join(items[k] for k in p) for p in seqs], 'correct': seqs.index(list(range(4))),
+                            'category': 'Kijken & schatten', 'topic': 'Volgorde', 'difficulty': lv.get(o['level'], 'normal')})
+        return out
+    def _auto_moment(self, scorers):
+        """0.24: bijzondere momenten na een uitslag: een comeback (van laatste naar eerste), een nieuwe koploper of een
+        reeks van drie (vijf, zeven …) goede antwoorden op rij. De tv laat er een eigen shot, geluid en zin bij zien."""
+        s = self.s; a = s['auto']; teams = self._active(); a['moment'] = None
+        if len(teams) < 2 or a.get('finale'): return
+        ranked = sorted(teams, key=lambda t: -t['score']); top, last = ranked[0], ranked[-1]
+        lead = top['id'] if top['score'] > ranked[1]['score'] else None
+        been_last = a.setdefault('been_last', [])
+        moment = None
+        if lead and lead != a.get('leader') and s['index'] >= 2:
+            moment = {'kind': 'comeback' if lead in been_last else 'leader', 'team': lead, 'n': top['score']}
+        else:
+            hot = [(a['streak'].get(tid, 0), tid) for tid in scorers if a['streak'].get(tid, 0) >= 3 and a['streak'][tid] % 2 == 1]
+            if hot:
+                n, tid = max(hot); moment = {'kind': 'streak', 'team': tid, 'n': n}
+        if last['score'] < ranked[-2]['score'] and top['score'] - last['score'] >= 2 and last['id'] not in been_last: been_last.append(last['id'])
+        a['leader'] = lead
+        a['moment'] = moment
     def _auto_round(self):
         a = self.s['auto']; i = a.get('round', 0)
         return a['rounds'][min(i, len(a['rounds']) - 1)]
@@ -325,7 +398,7 @@ class Game:
         s.update(question=copy.deepcopy(s['deck'][s['index']]), question_id=str(uuid.uuid4()), phase='countdown', answers={}, buzzes=[], attempted=[],
                  opens_at=now + self.AUTO_COUNTDOWN, ends_at=now + self.AUTO_COUNTDOWN + r['seconds'], seconds=r['seconds'], remaining=r['seconds'],
                  message=f"Vraag {s['index'] - r['from'] + 1} van {r['to'] - r['from']} · {r['name']}")
-        a.update(until=0, answer_until=0, answer_ms={}, results=[], effect=None, pick=None, tick_at=now, teaser=self._auto_teaser(r))
+        a.update(until=0, answer_until=0, answer_ms={}, results=[], effect=None, pick=None, tick_at=now, teaser=self._auto_teaser(r), moment=None)
         a.pop('stake', None)
         if r['type'] == 'inzet':
             category = s['question'].get('category') or 'Algemene kennis'
@@ -516,10 +589,16 @@ class Game:
             self._auto_score_finale(now)
             return
         ms = a.get('answer_ms', {}); results = []
-        correct = sorted([tid for tid, c in s['answers'].items() if c == q.get('correct')], key=lambda tid: ms.get(tid, 10**9))
+        if q.get('kind') == 'estimate':   # 0.24: wie het dichtst bij zit, heeft het goed (exact: een punt extra)
+            diffs = {tid: abs(c - q['value']) for tid, c in s['answers'].items() if isinstance(c, (int, float))}
+            best = min(diffs.values()) if diffs else None
+            correct = sorted([tid for tid, d in diffs.items() if d == best], key=lambda tid: ms.get(tid, 10**9))
+        else:
+            correct = sorted([tid for tid, c in s['answers'].items() if c == q.get('correct')], key=lambda tid: ms.get(tid, 10**9))
         for t in self._active():
             c = s['answers'].get(t['id']); ok = t['id'] in correct; rank = correct.index(t['id']) + 1 if ok else 0; pts = 0
             if kind == 'jacht': pts = 2 if ok else 0
+            elif kind == 'mix': pts = (3 if q.get('kind') == 'estimate' and c == q.get('value') else 2) if ok else 0
             elif kind == 'snel': pts = max(1, 6 - rank) if ok else 0
             elif kind in ('taart', 'roof', 'wissel'): pts = 1 if ok else 0
             elif kind == 'inzet':
@@ -529,6 +608,9 @@ class Game:
             before = t['score']; t['score'] = max(0, t['score'] + pts)
             results.append({'team_id': t['id'], 'choice': c, 'correct': ok, 'rank': rank, 'points': t['score'] - before, 'ms': ms.get(t['id'])})
         a['results'] = results
+        streak = a.setdefault('streak', {})
+        for t in self._active(): streak[t['id']] = streak.get(t['id'], 0) + 1 if t['id'] in correct else 0
+        self._auto_moment(correct)
         winner = correct[0] if correct else None
         if self.AUTO_TYPES[kind].get('pick') and winner and len(self._active()) >= 2:
             w = self._team(winner)
@@ -541,6 +623,10 @@ class Game:
             return
         s['phase'] = 'reveal'; a['until'] = now + self.AUTO_STEP['reveal']
         s['message'] = (f"Goed: {', '.join(self._team(t)['name'] for t in correct)}" if correct else 'Niemand had het goed.')
+        if q.get('kind') == 'estimate':
+            value = f"{q['value']:,}".replace(',', '.')
+            s['message'] = (f"Het antwoord is {value}. Het dichtst bij: {', '.join(self._team(t)['name'] for t in correct)}" if correct
+                            else f"Het antwoord is {value}. Niemand deed een gok.")
     def _auto_pick(self, target, now):
         s = self.s; a = s['auto']; p = a['pick']; w = self._team(p['team_id']); t = self._team(target)
         if not t and 'targets' in p:
@@ -579,11 +665,14 @@ class Game:
         if t is None: return
         if choice is not None: s['answers'][team_id] = choice
         correct = choice is not None and choice == q.get('correct')
+        streak = a.setdefault('streak', {})
         if correct:
             t['score'] += 2; s['phase'] = 'reveal'; a['until'] = now + self.AUTO_STEP['reveal']
             a['results'] = [{'team_id': team_id, 'choice': choice, 'correct': True, 'rank': 1, 'points': 2}]
             s['message'] = f"Goed! {t['name']} krijgt 2 punten."
+            streak[team_id] = streak.get(team_id, 0) + 1; self._auto_moment([team_id])
             return
+        streak[team_id] = 0
         before = t['score']; t['score'] = max(0, t['score'] - 1)
         a['results'] = (a.get('results') or []) + [{'team_id': team_id, 'choice': choice, 'correct': False, 'rank': 0, 'points': t['score'] - before}]
         s['attempted'].append(team_id); s['buzzes'] = []; a['answer_until'] = 0
@@ -638,7 +727,11 @@ class Game:
                 raise GameError('Dit team heeft geen punten om te kraken.')
             self._auto_pick(target, now); return
         choice = data.get('choice')
-        if type(choice) is not int or not 0 <= choice <= 3: raise GameError('Kies A, B, C of D.')
+        if (s.get('question') or {}).get('kind') == 'estimate' and r['mode'] == 'all':   # 0.24: schatvraag, een getal
+            if type(choice) not in (int, float) or isinstance(choice, bool) or not 0 <= choice <= 10**12 or choice != choice:
+                raise GameError('Vul een getal in.')
+            choice = int(round(choice))
+        elif type(choice) is not int or not 0 <= choice <= 3: raise GameError('Kies A, B, C of D.')
         if r['mode'] == 'buzz':
             if a.get('settle_until'): raise GameError('Even geduld: we kijken wie echt als eerste drukte.', 409)
             if s['phase'] != 'buzzed' or not s['buzzes'] or s['buzzes'][0]['team_id'] != t['id']: raise GameError('Een ander team is aan de beurt.', 403)
@@ -667,6 +760,7 @@ class Game:
                'answered': [tid for tid in s['answers']] if r['mode'] == 'all' else [],
                'effect': copy.deepcopy(a.get('effect')), 'pick': copy.deepcopy(a.get('pick'))}
         if s['phase'] in ('countdown', 'stake') and a.get('teaser'): out['teaser'] = copy.deepcopy(a['teaser'])   # 0.23
+        if s['phase'] in ('reveal', 'pick') and a.get('moment'): out['moment'] = copy.deepcopy(a['moment'])   # 0.24
         if s['phase'] in ('reveal', 'pick') or (r['mode'] == 'buzz' and a.get('results')): out['results'] = copy.deepcopy(a.get('results') or [])
         f = a.get('finale')
         if f:
@@ -717,7 +811,7 @@ class Game:
             if q:
                 if s['phase'] == 'stake' or (s['phase'] in ('ready','countdown') and role!='host'): q=None
                 elif role!='host' and s['phase']!='reveal':
-                    q.pop('correct',None); q.pop('answers',None)
+                    q.pop('correct',None); q.pop('answers',None); q.pop('value',None)
                 if q and s['mode']=='wordrace' and s['phase']!='reveal': q.pop('words',None)
             if q and q.pop('image', None) and s['phase'] not in ('countdown','ready','stake'):
                 q['image'] = '/api/question-image?id=' + s['question_id']
@@ -823,14 +917,18 @@ class Game:
                     if show not in self.AUTO_SHOWS: raise GameError('Kies een korte, normale of lange show.')
                     choice_deck=[q for q in deck if q.get('options') and len(q['options'])==4 and isinstance(q.get('correct'),int)]
                     plans = self.QUIZ_SHOWS if theme in ('pubquiz','friends') else self.AUTO_SHOWS
-                    if len(choice_deck)<len(plans[show])*2: raise GameError('De automatische show heeft meerkeuzevragen nodig (minimaal twee per ronde).')
+                    if len(choice_deck)<len([k for k in plans[show] if k!='mix'])*2: raise GameError('De automatische show heeft meerkeuzevragen nodig (minimaal twee per ronde).')
                 s['game_no']=s.get('game_no',0)+1
                 s.update(name=clean_text(data.get('name','Ons spel'),80) or 'Ons spel',mode=mode,evidence={'mode':'app','link':''},deck=deck,index=-1,question=None,question_id='',phase='lobby',answers={},buzzes=[],attempted=[],tasks=tasks,submissions={},claims={},seconds=seconds,message='Spel klaar. Laat teams aansluiten.')
                 s['active_team']=None; s['word_marks']={}
                 s['auto']=None
                 if mode=='buzzer' and data.get('auto'):
                     s['deck']=choice_deck
-                    s['auto']={'arena_rules':True,'theme':theme,'year':year if theme=='year' else None,'show':show,'rounds':self._auto_plan(len(choice_deck),show,theme),'round':0,'until':0,'answer_until':0,'hold':False,'results':[],'effect':None,'pick':None,'bomb':None,'answer_ms':{}}
+                    rounds=self._auto_plan(len(choice_deck),show,theme,mix=data.get('topic','all') in ('all','',None) and data.get('questions') is None)   # eigen onderwerp of eigen vragen: geen extra ronde
+                    s['deck']=self._arrange_difficulty(choice_deck,rounds)   # 0.24: per ronde makkelijk → moeilijk, finale moeilijk
+                    for r in rounds:
+                        if r['type']=='mix': s['deck'][r['from']:r['to']]=self._mix_questions(r['to']-r['from'])
+                    s['auto']={'arena_rules':True,'theme':theme,'year':year if theme=='year' else None,'show':show,'rounds':rounds,'round':0,'until':0,'answer_until':0,'hold':False,'results':[],'effect':None,'pick':None,'bomb':None,'answer_ms':{}}
                     s['message']='Automatische show klaar. Laat teams aansluiten en een personage kiezen.'
                 if mode=='wordrace': s['seconds']=30
                 for t in s['teams']: t['score']=0
