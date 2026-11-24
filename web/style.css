@@ -420,3 +420,11 @@ body.studio3d[data-arena-phase="standings"] .auto-card:not(.round-card){animatio
 /* 0.20: herhaling van de taartworp */
 body.studio-replay::after{content:"⏪ HERHALING";position:fixed;left:3vw;top:4vh;z-index:40;font:900 clamp(16px,2.6vh,28px)/1 system-ui,sans-serif;letter-spacing:.12em;color:#fff;background:#d01a3c;padding:.45em .8em;border-radius:6px;box-shadow:0 6px 24px #0008}
 body.studio-replay .gs-studio-canvas{filter:saturate(.75) contrast(1.08)}
+/* 0.23: ondertitel van Joep als 'lower third' links onderin (het 3D-beeld schuift dan naar rechts), niet meer midden over Joep */
+body.studio3d .gp-studio,body.studio3d.cinema .gp-studio{left:3vw!important;right:auto!important;transform:none!important;top:auto!important;bottom:13vh!important;justify-content:flex-start!important;z-index:6}
+body.studio3d .gp-studio .gp-bubble{max-width:min(36vw,620px)!important;text-align:left!important;font-size:clamp(16px,2.6vh,32px)!important;border-left:5px solid #ffd447!important}
+body.studio3d:has(.auto-q .question) .gp-studio{bottom:auto!important;top:62vh!important}
+/* 0.23: aftellen tussen de vragen klein linksboven, niet midden over het beeld */
+body.studio3d .auto-q:has(.question-ready){left:3vw;right:auto;top:11vh;bottom:auto;width:auto;max-width:none;padding:1vh 1.4vw;margin:0}
+body.studio3d .auto-q:has(.question-ready) .question-ready{min-width:0;background:transparent;border:0;padding:0}
+.teaser{font-weight:700;color:#ffd447;margin:.2rem 0 .6rem}

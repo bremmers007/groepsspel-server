@@ -21,7 +21,7 @@ import re
 PHASE_NL={'play':'bezig','setup':'voorbereiding','intro':'uitleg','show':'onthulling','day':'dagfase','night':'nachtfase','table':'ronde tafel','vote':'stemmen','reveal':'onthulling','banish':'verbanning','mission':'opdracht','morning':'ochtend','endgame':'eindspel'}
 GAME_CLASSES=(MurderGame,StrategoGame,HollandGame,CrazyGame,SmuggleGame,MissionsGame,HuntedGame,BingoGame)
 ROOT = Path(__file__).resolve().parent
-VERSION='0.22.0'
+VERSION='0.23.0'
 SHOW_THEMES = {'year': 'Terug in de tijd', 'holland': 'Oerhollands', 'pubquiz': 'Pubquiz', 'friends': 'Vriendenquiz'}
 _SHARED={}
 def shared_json(name):
@@ -323,14 +323,35 @@ class Game:
         s['index'] += 1
         s.setdefault('seen_questions', []).append(s['deck'][s['index']]['q']); s['seen_questions'] = s['seen_questions'][-10000:]
         s.update(question=copy.deepcopy(s['deck'][s['index']]), question_id=str(uuid.uuid4()), phase='countdown', answers={}, buzzes=[], attempted=[],
-                 opens_at=now + 3, ends_at=now + 3 + r['seconds'], seconds=r['seconds'], remaining=r['seconds'],
+                 opens_at=now + self.AUTO_COUNTDOWN, ends_at=now + self.AUTO_COUNTDOWN + r['seconds'], seconds=r['seconds'], remaining=r['seconds'],
                  message=f"Vraag {s['index'] - r['from'] + 1} van {r['to'] - r['from']} · {r['name']}")
-        a.update(until=0, answer_until=0, answer_ms={}, results=[], effect=None, pick=None, tick_at=now)
+        a.update(until=0, answer_until=0, answer_ms={}, results=[], effect=None, pick=None, tick_at=now, teaser=self._auto_teaser(r))
         a.pop('stake', None)
         if r['type'] == 'inzet':
             category = s['question'].get('category') or 'Algemene kennis'
             a['stake'] = {'until': now + self.STAKE_SECONDS, 'bets': {}, 'category': category}
             s.update(phase='stake', message='Kies je inzet voor deze vraag.')
+    AUTO_COUNTDOWN = 4   # 0.23: iets langer aftellen, met een tussenstukje (camera, tromgeroffel, Joep)
+    def _auto_teaser(self, r):
+        """0.23: korte aankondiging tussen twee vragen, telkens anders: laatste vraag, nek-aan-nekrace, koploper,
+        achtervolger of het onderwerp van de vraag. Geeft {'kind', 'text', 'team'}."""
+        s = self.s; a = s['auto']; no = s['index'] - r['from'] + 1; total = r['to'] - r['from']
+        teams = sorted(self._active(), key=lambda t: -t['score']); topic = s['question'].get('topic') or s['question'].get('category') or ''
+        options = []
+        if no == total and total > 1: return {'kind': 'last', 'text': 'Laatste vraag van deze ronde. Nu telt het!', 'team': None}
+        if no == 1: return {'kind': 'first', 'text': f"Daar gaan we: {r['name']}!", 'team': None}
+        if len(teams) >= 2 and teams[0]['score'] > 0:
+            if teams[0]['score'] - teams[1]['score'] <= 1:
+                options.append({'kind': 'close', 'text': f"{teams[0]['name']} en {teams[1]['name']} liggen nek aan nek!", 'team': teams[1]['id']})
+            else:
+                options.append({'kind': 'leader', 'text': f"{teams[0]['name']} staat bovenaan met {teams[0]['score']} punten. Wie houdt ze tegen?", 'team': teams[0]['id']})
+            if len(teams) >= 3 and teams[-1]['score'] < teams[0]['score']:
+                options.append({'kind': 'chase', 'text': f"Kom op, {teams[-1]['name']}! Met deze vraag kunnen jullie terugkomen.", 'team': teams[-1]['id']})
+        if topic: options.append({'kind': 'topic', 'text': f"Het onderwerp: {topic}.", 'team': None})
+        options.append({'kind': 'sweep', 'text': random.choice(['Iedereen klaar? Vingers op de knoppen!', 'Concentratie… hier komt hij!', 'Ogen op het scherm!']), 'team': None})
+        last = a.get('teaser_kind'); pick = random.choice([o for o in options if o['kind'] != last] or options)
+        a['teaser_kind'] = pick['kind']
+        return pick
     def _queue_show_intro(self):
         self.s.update(phase='intro', question=None, message='Wachten op het tv-scherm…')
         self.s['auto'].update(until=0, intro_id=uuid.uuid4().hex, intro_remaining=0, hold=False, intro_at=self.clock())
@@ -645,6 +666,7 @@ class Game:
                'names': [x['name'] for x in a['rounds']], 'types': [x['type'] for x in a['rounds']],
                'answered': [tid for tid in s['answers']] if r['mode'] == 'all' else [],
                'effect': copy.deepcopy(a.get('effect')), 'pick': copy.deepcopy(a.get('pick'))}
+        if s['phase'] in ('countdown', 'stake') and a.get('teaser'): out['teaser'] = copy.deepcopy(a['teaser'])   # 0.23
         if s['phase'] in ('reveal', 'pick') or (r['mode'] == 'buzz' and a.get('results')): out['results'] = copy.deepcopy(a.get('results') or [])
         f = a.get('finale')
         if f:
@@ -776,11 +798,14 @@ class Game:
                         random.shuffle(deck)
                     if topic=='all' and data.get('questions') is None and theme in ('','pubquiz'):
                         pools={}
-                        for q in fresh+old: pools.setdefault(q.get('category','Quiz'),[]).append(q)
-                        categories=list(pools)
-                        if len(categories)==4:
-                            deck=[]
-                            for i,category in enumerate(categories): deck.extend(pools[category][:count//4+(i<count%4)])
+                        for q in fresh+old: pools.setdefault(q.get('topic') or q.get('category','Quiz'),[]).append(q)   # 0.23: per onderwerp
+                        # 0.23: alle categorieën om de beurt (eerder kwamen ze in blokken: eerst alle Algemene kennis, dan
+                        # De wereld …); binnen een categorie eerst de nog niet gespeelde vragen
+                        categories=list(pools); random.shuffle(categories)
+                        deck=[]; i=0
+                        while len(deck)<count and any(pools.values()):
+                            c=categories[i%len(categories)]; i+=1
+                            if pools[c]: deck.append(pools[c].pop(0))
                 if mode=='wordrace':
                     if len(s['teams'])>10: raise GameError('Halve Minuut speelt met maximaal tien teams.')
                     deck=word_deck()
@@ -1055,7 +1080,7 @@ class Handler(BaseHTTPRequestHandler):
     def send_web(self,name):
         file=ROOT/'web'/name; data=file.read_bytes()
         if name.endswith('.html') and getattr(self.server,'rooms',None) is not None: data=data.replace(b'<html lang="nl"',b'<html lang="nl" data-online="1"',1)   # 0.19.5
-        self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' blob:; media-src 'self' blob: https://stream.qmusic.nl https://*.qmusic.nl https://*.triple-it.nl; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
+        self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' blob:; media-src 'self' blob:; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
     def send_file(self,file,mime):
         if not file.is_file(): raise GameError('Bestand ontbreekt.',404)
         size=file.stat().st_size; start=0; end=size-1; partial=False
@@ -1221,7 +1246,7 @@ class Handler(BaseHTTPRequestHandler):
             if path not in files: raise GameError('Pagina niet gevonden.',404)
             file=ROOT/'web'/files[path]; data=file.read_bytes()
             if file.suffix=='.html' and getattr(self.server,'rooms',None) is not None: data=data.replace(b'<html lang="nl"',b'<html lang="nl" data-online="1"',1)   # 0.19.5: online-teksten
-            self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' blob:; media-src 'self' blob: https://stream.qmusic.nl https://*.qmusic.nl https://*.triple-it.nl; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
+            self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(file.name)[0] or 'application/octet-stream'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Referrer-Policy','no-referrer'); self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' blob:; media-src 'self' blob:; base-uri 'none'; frame-ancestors 'self'"); self.end_headers(); self.wfile.write(data)
         except (GameError,ShowError,TraitorsError,PlayError) as e: self.json_response({'error':e.message},e.status)
         except (BrokenPipeError,ConnectionResetError): pass
     def do_POST(self):

@@ -7,81 +7,17 @@
 const GSound=(()=>{
   const script=document.currentScript,base=new URL('audio/',script?.src||location.href).href;
   const LOOPS={lobby:'loop-lobby.mp3',quiz:'loop-quiz.mp3',finale:'loop-finale.mp3',mystery:'loop-mystery.mp3',sprint:'loop-sprint.mp3',victory:'loop-victory.mp3'};
-  const CUES={victory:'victory.wav',boom:'boom.wav',splat:'splat.wav',whoosh:'whoosh.wav',buzz:'buzz.wav',correct:'correct.wav',wrong:'wrong.wav',tick:'tick.wav',intro:'intro.wav',end:'end.wav',pass:'pass.wav'};
+  const CUES={victory:'victory.wav',boom:'boom.wav',splat:'splat.wav',whoosh:'whoosh.wav',buzz:'buzz.wav',correct:'correct.wav',wrong:'wrong.wav',tick:'tick.wav',intro:'intro.wav',end:'end.wav',pass:'pass.wav',drumroll:'drumroll.wav'};
   const scope=location.pathname.replace(/\/+$/,'')||'/',key='groepsspel-sound-on:'+scope;
   let on=false,ctx=null,master=null,bedGain=null,current=null,mood=null,wanted=null,buffers=new Map(),volume=.45,background=.22,failed=false,unlocked=false;
   const tvMode=new URLSearchParams(location.search).get('tv')==='1';if(tvMode)document.documentElement.classList.add('tv-mode'),document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('tv-mode'));
   try{const st=localStorage.getItem(key);on=st==='1'||(tvMode&&st!=='0');const p=JSON.parse(localStorage.getItem('groepsspel-sound')||'{}');if(Number.isFinite(p.volume))volume=Math.max(0,Math.min(1,p.volume));if(Number.isFinite(p.background))background=Math.max(0,Math.min(1,Math.max(p.background,.12)));}catch{}
   let playlist=[], trackIndex=0, music=null, musicConnected=false, musicStatus=()=>{};
-  const TOP40=['https://stream.qmusic.nl/top40/mp3','https://stream.qmusic.nl/top40/aac'];
-  const radioKey='groepsspel-tv-top40';
-  let wantsRadio=scope==='/display', radio=null, radioPending=null, radioTimer=0, radioFailed=false, radioIndex=0, radioState='idle', ducked=false;
-  try{if(wantsRadio)wantsRadio=localStorage.getItem(radioKey)!=='0';}catch{}
-  function setRadioState(state){
-    if(radioState===state)return;
-    radioState=state;
-    document.dispatchEvent(new CustomEvent('groepsspel-radio'));
-  }
-  function stopRadio(){
-    clearTimeout(radioTimer);
-    if(radio&&!radio.paused)radio.pause();
-    if(!radioFailed)setRadioState('idle');
-  }
-  function radioError(){
-    if(!wantsRadio||!wanted||!on||radioFailed||playlist.length)return;
-    if(radioIndex+1<TOP40.length){
-      radioIndex++;
-      radio.pause();
-      radioPending=null;
-      radio.src=TOP40[radioIndex];
-      playRadio();
-      return;
-    }
-    radioFailed=true;
-    stopRadio();
-    setRadioState('fallback');
-    notice('Qmusic Top 40 niet bereikbaar. De spelmuziek is ingeschakeld.');
-    applyBed();
-  }
-  function playRadio(){
-    if(current||loading)stopBed();
-    mood=null;
-    if(!radio){
-      radio=new Audio();
-      radio.preload='none';
-      radio.src=TOP40[radioIndex];
-      radio.addEventListener('playing',()=>{clearTimeout(radioTimer);setRadioState('live');});
-      radio.addEventListener('error',radioError);
-      radio.addEventListener('waiting',()=>{setRadioState('connecting');clearTimeout(radioTimer);radioTimer=setTimeout(radioError,10000);});
-    }
-    radio.volume=background*(ducked?.3:1);
-    if(!radio.paused||radioPending)return;
-    setRadioState('connecting');
-    clearTimeout(radioTimer);
-    radioTimer=setTimeout(radioError,10000);
-    const requested=radio.src;
-    const playback=radio.play().catch(error=>{
-      if(radio.src===requested&&error.name!=='AbortError')radioError();
-    }).finally(()=>{if(radioPending===playback)radioPending=null;});
-    radioPending=playback;
-  }
-  function useTop40(value){
-    wantsRadio=!!value;
-    radioFailed=false;
-    radioIndex=0;
-    if(value&&radio){radioPending=null;radio.src=TOP40[0];}
-    try{localStorage.setItem(radioKey,value?'1':'0');}catch{}
-    if(value&&playlist.length)setPlaylist([],musicStatus);
-    applyBed();
-  }
-  function musicSourceLabel(){
-    if(playlist.length)return 'Eigen muziek';
-    if(!wantsRadio)return 'Muziek van Groepsspel';
-    if(radioState==='live')return 'Qmusic Top 40 · live';
-    if(radioState==='connecting')return 'Qmusic Top 40 · verbinden…';
-    if(radioState==='fallback')return 'Top 40 onbereikbaar · spelmuziek';
-    return 'Qmusic Top 40 · wacht op geluid';
-  }
+  // 0.23: geen Qmusic-livestream meer (reclame en dj-praat botsten met de presentator); alleen eigen spelmuziek of eigen bestanden
+  let ducked=false;
+  function stopRadio(){}
+  function useTop40(){}
+  function musicSourceLabel(){ return playlist.length?'Eigen muziek':'Muziek van Groepsspel'; }
   function reportMusic(){
     musicStatus(playlist.length ? `${trackIndex+1}/${playlist.length} · ${playlist[trackIndex].name}` : 'Standaardmuziek');
   }
@@ -128,7 +64,7 @@ const GSound=(()=>{
   async function load(file){if(buffers.has(file))return buffers.get(file);const p=fetch(base+file).then(r=>{if(!r.ok)throw Error(r.status);return r.arrayBuffer();}).then(b=>new Promise((ok,no)=>context().decodeAudioData(b,ok,no)));buffers.set(file,p);p.catch(()=>buffers.delete(file));return p;}
   async function unlock(){const c=context();if(!c){if(!failed){failed=true;notice('Deze browser kan hier geen geluid afspelen.');}return false;}try{if(c.state!=='running')await c.resume();unlocked=c.state==='running';}catch{unlocked=false;}if(unlocked)applyBed();return unlocked;}
   let epoch=0,loading=null;
-  async function applyBed(){const target=wanted;if(!on||!unlocked){music?.pause();stopRadio();stopBed();mood=null;return;}if(playlist.length){stopRadio();playPlaylist();return;}if(wantsRadio&&!radioFailed&&target){playRadio();return;}stopRadio();if(target===mood&&(current||loading===target))return;mood=target;stopBed();const my=++epoch;if(!target)return;loading=target;try{const buf=await load(LOOPS[target]);if(my!==epoch||!on)return;const src=ctx.createBufferSource(),g=ctx.createGain();src.buffer=buf;src.loop=true;g.gain.setValueAtTime(0,ctx.currentTime);g.gain.linearRampToValueAtTime(1,ctx.currentTime+1.2);src.connect(g);g.connect(bedGain);src.start();current={src,g};}catch{if(!failed){failed=true;notice('Achtergrondmuziek kon niet laden. Controleer of de spelserver nog draait.');}}finally{if(my===epoch)loading=null;}}
+  async function applyBed(){const target=wanted;if(!on||!unlocked){music?.pause();stopRadio();stopBed();mood=null;return;}if(playlist.length){stopRadio();playPlaylist();return;}stopRadio();if(target===mood&&(current||loading===target))return;mood=target;stopBed();const my=++epoch;if(!target)return;loading=target;try{const buf=await load(LOOPS[target]);if(my!==epoch||!on)return;const src=ctx.createBufferSource(),g=ctx.createGain();src.buffer=buf;src.loop=true;g.gain.setValueAtTime(0,ctx.currentTime);g.gain.linearRampToValueAtTime(1,ctx.currentTime+1.2);src.connect(g);g.connect(bedGain);src.start();current={src,g};}catch{if(!failed){failed=true;notice('Achtergrondmuziek kon niet laden. Controleer of de spelserver nog draait.');}}finally{if(my===epoch)loading=null;}}
   function stopBed(){epoch++;loading=null;if(!current)return;const {src,g}=current;current=null;try{g.gain.cancelScheduledValues(ctx.currentTime);g.gain.setValueAtTime(g.gain.value,ctx.currentTime);g.gain.linearRampToValueAtTime(0,ctx.currentTime+.8);src.stop(ctx.currentTime+.85);}catch{}}
   function bed(next){next=next&&LOOPS[next]?next:null;wanted=next;applyBed();}
   async function play(name){if(!on||!unlocked||!CUES[name])return;try{const buf=await load(CUES[name]);const src=ctx.createBufferSource(),g=ctx.createGain();g.gain.value=volume*(name==='tick'?.7:1);src.buffer=buf;src.connect(g);g.connect(master);if((current||playlist.length)&&name!=='tick'){bedGain.gain.cancelScheduledValues(ctx.currentTime);bedGain.gain.setValueAtTime(background*.35,ctx.currentTime);bedGain.gain.linearRampToValueAtTime(background,ctx.currentTime+buf.duration+.6);}src.start();}catch{}}
@@ -142,6 +78,6 @@ const GSound=(()=>{
   ['pointerdown','keydown','touchend'].forEach(t=>document.addEventListener(t,first,{passive:true}));
   if(on){const C=window.AudioContext||window.webkitAudioContext;if(C){try{context();ctx.resume().then(()=>{if(ctx.state==='running'){unlocked=true;applyBed();refresh();}}).catch(()=>{});}catch{}}}
   async function set(v){v=!!v;if(v===on){if(on&&!unlocked)await unlock();refresh();return;}await toggle();}
-  function duck(v){ducked=!!v;if(radio)radio.volume=background*(ducked?.3:1);if(!bedGain||!ctx)return;bedGain.gain.cancelScheduledValues(ctx.currentTime);bedGain.gain.setValueAtTime(bedGain.gain.value,ctx.currentTime);bedGain.gain.linearRampToValueAtTime(v?background*.3:background,ctx.currentTime+.3);}
-  return{bed,play,toggle,set,duck,button,mount,refresh,unlock,setPlaylist,advanceMusic,useTop40,musicSourceLabel,enabled:()=>on&&unlocked,isOn:()=>on,mood:()=>wanted,setVolume(v,b){volume=Math.max(0,Math.min(1,v));background=Math.max(0,Math.min(1,b));if(bedGain)bedGain.gain.value=background*(ducked?.3:1);if(radio)radio.volume=background*(ducked?.3:1);}};
+  function duck(v){ducked=!!v;if(!bedGain||!ctx)return;bedGain.gain.cancelScheduledValues(ctx.currentTime);bedGain.gain.setValueAtTime(bedGain.gain.value,ctx.currentTime);bedGain.gain.linearRampToValueAtTime(v?background*.3:background,ctx.currentTime+.3);}
+  return{bed,play,toggle,set,duck,button,mount,refresh,unlock,setPlaylist,advanceMusic,useTop40,musicSourceLabel,enabled:()=>on&&unlocked,isOn:()=>on,mood:()=>wanted,setVolume(v,b){volume=Math.max(0,Math.min(1,v));background=Math.max(0,Math.min(1,b));if(bedGain)bedGain.gain.value=background*(ducked?.3:1);}};
 })();

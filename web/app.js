@@ -106,8 +106,7 @@ function openMusicPanel(){
   if(!panel){
     panel=document.createElement('dialog');panel.id='tvMusicPanel';
     panel.innerHTML=`<h2>Achtergrondmuziek</h2>
-      <p data-top40-source></p>
-      <button type="button" data-track-top40>Speel Qmusic Top 40</button>
+
       <label>Kies eigen nummers <input type="file" accept="audio/*,.mp3,.m4a,.ogg,.wav,.flac" multiple></label>
       <p data-track role="status">Standaardmuziek</p>
       <button type="button" data-track-next>Volgend nummer</button>
@@ -120,20 +119,16 @@ function openMusicPanel(){
       updateMusicSource();
       GSound.set(true);
     });
-    panel.querySelector('[data-track-top40]').addEventListener('click',async()=>{
-      GSound.useTop40(true);
-      updateMusicSource();
-      await GSound.set(true);
-    });
+
     panel.querySelector('[data-track-next]').addEventListener('click',()=>GSound.advanceMusic());
-    panel.querySelector('[data-track-clear]').addEventListener('click',()=>{input.value=''; GSound.useTop40(false);GSound.setPlaylist([],report);updateMusicSource();});
+    panel.querySelector('[data-track-clear]').addEventListener('click',()=>{input.value=''; GSound.setPlaylist([],report);updateMusicSource();});
     document.body.appendChild(panel);
   }
   updateMusicSource();
   panel.showModal();
 }
 function updateMusicSource(){
-  document.querySelectorAll('[data-tv-music-source],[data-top40-source]').forEach(el=>{el.textContent=GSound.musicSourceLabel();});
+  document.querySelectorAll('[data-tv-music-source]').forEach(el=>{el.textContent=GSound.musicSourceLabel();});
 }
 document.addEventListener('groepsspel-radio',updateMusicSource);
 document.addEventListener('click',async event=>{
@@ -396,7 +391,7 @@ function autoTeam(){const a=state.auto,me=state.me,mine=a.me||{},ph=state.phase,
   if(['lobby','finished'].includes(ph))body=`${ph==='finished'?autoScreen():''}${appearanceFields(me)}`;
   else if(['intro','round','standings'].includes(ph))body=autoScreen();
   else if(ph==='stake')body=stakeScreen(true);
-  else if(ph==='countdown')body=`<h2>Let op, de vraag komt eraan…</h2><p class="tiny">${escapeHtml(roundRules(a))}</p>`;
+  else if(ph==='countdown')body=`<h2>Let op, de vraag komt eraan…</h2>${a.teaser?`<p class="teaser">${escapeHtml(a.teaser.text)}</p>`:''}<p class="tiny">${escapeHtml(roundRules(a))}</p>`;
   else if(ph==='paused')body='<h2>De show is gepauzeerd</h2>';
   else if(ph==='pick'&&a.pick?.kind==='vault')body=vaultDecision(a,mine.must_pick==='vault');
   else if(ph==='pick'&&a.pick?.targets)body=mine.must_pick?
@@ -413,7 +408,7 @@ function autoTeam(){const a=state.auto,me=state.me,mine=a.me||{},ph=state.phase,
   return `<div class="auto-me">${teamSymbol(me)}<span translate="no">${escapeHtml(me.name)}</span><b>${me.score} <small>pt</small></b></div>
     <div class="controller-status"><span>${escapeHtml(status)}</span>${isTimed?'<b data-controller-clock></b>':''}</div>
     ${q&&['open','buzzed','reveal','pick'].includes(ph)?`<p class="phone-question">${escapeHtml(q.q)}</p>`:''}${a.finale&&!['finished','round'].includes(ph)?finaleLanes(me.id):''}${body}${state.message&&!['lobby','open'].includes(ph)?`<p class="phone-host">🎤 ${escapeHtml(state.message)}</p>`:''}`; }
-function autoHostControls(){const p=state.phase,a=state.auto;return `<div class="pending"><strong>Spelshow voorbereiden</strong> <small>Groepsspel 0.22.0</small><p>${escapeHtml(a.names.join(' → '))}</p><ol><li>Open de publieksstudio en zet het venster op de tv. <b data-studio-check>${state.tv_status?STUDIO_LABELS[state.tv_status]:remoteStudio?.code===state.code ? STUDIO_LABELS[remoteStudio.status] : ONLINE?'Nog geen tv-scherm open · de show kan ook zonder':'Studio nog niet gemeld'}</b></li><li>Kies op de tv ‘Test geluid en stem’ en daarna ‘Volledig scherm’.</li><li>Laat teams meedoen met de spelcode en start de show.</li></ol></div><div class="actions">${p==='lobby'?button('▶ Start de tv-show','next'):''}${['intro','round'].includes(p)&&state.index===-1?button('Intro opnieuw afspelen','intro-replay','',true):''}${p==='intro'?button('Naar ronde 1','intro-skip','',true):''}${!['lobby','finished'].includes(p)?(a.hold||p==='paused'?button('Hervatten','resume'):button('Pauzeren','pause','',true)):''}${['open','buzzed'].includes(p)?button('Vraag overslaan','reveal','',true):''}${p!=='finished'?button('Spel afronden','finish','',true):button('Terug naar lobby','lobby','',true)}</div>`;}
+function autoHostControls(){const p=state.phase,a=state.auto;return `<div class="pending"><strong>Spelshow voorbereiden</strong> <small>Groepsspel 0.23.0</small><p>${escapeHtml(a.names.join(' → '))}</p><ol><li>Open de publieksstudio en zet het venster op de tv. <b data-studio-check>${state.tv_status?STUDIO_LABELS[state.tv_status]:remoteStudio?.code===state.code ? STUDIO_LABELS[remoteStudio.status] : ONLINE?'Nog geen tv-scherm open · de show kan ook zonder':'Studio nog niet gemeld'}</b></li><li>Kies op de tv ‘Test geluid en stem’ en daarna ‘Volledig scherm’.</li><li>Laat teams meedoen met de spelcode en start de show.</li></ol></div><div class="actions">${p==='lobby'?button('▶ Start de tv-show','next'):''}${['intro','round'].includes(p)&&state.index===-1?button('Intro opnieuw afspelen','intro-replay','',true):''}${p==='intro'?button('Naar ronde 1','intro-skip','',true):''}${!['lobby','finished'].includes(p)?(a.hold||p==='paused'?button('Hervatten','resume'):button('Pauzeren','pause','',true)):''}${['open','buzzed'].includes(p)?button('Vraag overslaan','reveal','',true):''}${p!=='finished'?button('Spel afronden','finish','',true):button('Terug naar lobby','lobby','',true)}</div>`;}
 /* 0.15.4: geluid en muziek op het spelleider- en beamerscherm (niet op teamtelefoons). Knop rechtsonder, per scherm onthouden. */
 const soundScreen=(role==='host'||role==='display')&&typeof GSound!=='undefined';let lastTick=-1;
 function soundUpdate(prev,next){if(!next)return;if(role==='display'&&!next.auto){
@@ -462,9 +457,11 @@ function autoShowEvents(prev,next){const a=next.auto,n=next.phase,p=prev?.phase,
     say(`Zet je punten in. Het onderwerp is ${a.stake.category}.`,{mood:'point'});
   }
   if(n==='countdown'&&p!=='countdown'&&role==='display'){
-    GSound.play('whoosh');
-    if(a.question_no===a.questions&&pa?.question_no!==a.question_no)
-      say(a.finale?'Dit is de laatste finalevraag!':'De laatste vraag van deze ronde!',{mood:'point'});
+    /* 0.23: tussenstukje tussen de vragen: tromgeroffel en een wisselende aankondiging van Joep */
+    GSound.play(a.teaser&&a.question_no>1?'drumroll':'whoosh');
+    if(a.finale&&a.question_no===a.questions&&pa?.question_no!==a.question_no)say('Dit is de laatste finalevraag!',{mood:'point'});
+    else if(a.teaser&&!a.finale)say(a.teaser.text,{mood:a.teaser.kind==='chase'||a.teaser.kind==='leader'?'point':'happy'});
+    else if(a.question_no===a.questions&&pa?.question_no!==a.question_no)say(a.finale?'Dit is de laatste finalevraag!':'De laatste vraag van deze ronde!',{mood:'point'});
   }
   if(n==='open'&&p==='countdown'&&next.question){say(next.question.q,{bubble:`Vraag ${a.question_no}`,mood:'point',question:true});}
   if(n==='buzzed'&&p!=='buzzed'&&next.buzzes[0]){GSound.play('buzz');say(pick([`${next.buzzes[0].name} drukt als eerste!`,`Daar is ${next.buzzes[0].name}! Wat wordt het?`,`${next.buzzes[0].name} was het snelst!`]),{mood:'point'});}
@@ -497,7 +494,7 @@ function studioFor(next){
     if(!document.getElementById('gsStudioJs')){
       const script=document.createElement('script');
       script.id='gsStudioJs';
-      script.src='/app/gs-studio3d.js?v=220';
+      script.src='/app/gs-studio3d.js?v=230';
       script.addEventListener('error',()=>{gsStudioTried=true;setStudioStatus('failed');});
       document.head.appendChild(script);
     }
@@ -588,6 +585,8 @@ function studioSync(S,prev,next){const a=next.auto,n=next.phase,p=prev?.phase,pa
     else S.focus('host',1.15);
   }
   /* 0.20: nieuwe ronde = kraanvlucht over het publiek naar Joep; tussenstand = publiek in beeld */
+  /* 0.23: tussen de vragen een kort intermezzo in de studio (camera langs de teams, spot op een team, publiek) */
+  if(n==='countdown'&&p!=='countdown'&&a.teaser&&!a.finale&&a.question_no>1)S.intermezzo?.(a.teaser.kind,a.teaser.team,3.6);
   if(n!==p&&n==='round'){if(S.crane)S.crane(4.8);else S.focus('host');}
   if(n!==p&&n==='standings')S.focus('audience',2.9);}
 if(soundScreen)GSound.mount();

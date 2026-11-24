@@ -28,7 +28,7 @@
     }
     started=true;
     const script=document.createElement('script');
-    script.src='/app/gs-studio3d.js?v=220';
+    script.src='/app/gs-studio3d.js?v=230';
     status('3D-studio laden…');
     script.onerror=()=>status('2D-tv-weergave · 3D kon niet worden geladen');
     script.onload=()=>{
